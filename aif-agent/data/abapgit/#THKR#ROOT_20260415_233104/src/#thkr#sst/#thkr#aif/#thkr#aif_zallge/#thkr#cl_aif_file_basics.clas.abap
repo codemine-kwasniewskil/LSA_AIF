@@ -428,11 +428,16 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
       rv_has_errors = abap_true.
 
       " First E/A message → FEHLERNUMMER + FEHLERTEXT
-      " READ TABLE clears target on miss, so no explicit CLEAR needed
-      READ TABLE lt_msgs INTO DATA(ls_err) WITH KEY type = 'E'.
-      IF sy-subrc <> 0.
-        READ TABLE lt_msgs INTO ls_err WITH KEY type = 'A'.
-      ENDIF.
+      " VALUE bapiret2() resets ls_err to initial on every iteration
+      DATA(ls_err) = VALUE bapiret2( ).
+      TRY.
+          ls_err = lt_msgs[ type = 'E' ].
+        CATCH cx_sy_itab_line_not_found.
+          TRY.
+              ls_err = lt_msgs[ type = 'A' ].
+            CATCH cx_sy_itab_line_not_found.
+          ENDTRY.
+      ENDTRY.
 
       DATA(lv_errnr) = COND string(
         WHEN ls_err IS NOT INITIAL THEN |{ ls_err-id }/{ ls_err-number }| ).
