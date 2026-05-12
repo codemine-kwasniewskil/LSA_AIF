@@ -1714,49 +1714,43 @@ SELECT SINGLE NSRECIP, RECIPIENT
   METHOD get_err_for_glblid.
     CLEAR: ev_status, et_msgs.
 
-    READ TABLE is_data-ao ASSIGNING FIELD-SYMBOL(<ls_ao>)
-      WITH KEY glblid = iv_glblid.
-    IF sy-subrc = 0.
+    ASSIGN is_data-ao[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_ao>).
+    IF <ls_ao> IS ASSIGNED.
       ev_status = <ls_ao>-ao_proc_status.
       et_msgs   = <ls_ao>-msg.
       RETURN.
     ENDIF.
 
-    READ TABLE is_data-ao_reference ASSIGNING FIELD-SYMBOL(<ls_ao_ref>)
-      WITH KEY glblid = iv_glblid.
-    IF sy-subrc = 0.
+    ASSIGN is_data-ao_reference[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_ao_ref>).
+    IF <ls_ao_ref> IS ASSIGNED.
       ev_status = <ls_ao_ref>-ao_proc_status.
       et_msgs   = <ls_ao_ref>-msg.
       RETURN.
     ENDIF.
 
-    READ TABLE is_data-mb ASSIGNING FIELD-SYMBOL(<ls_mb>)
-      WITH KEY glblid = iv_glblid.
-    IF sy-subrc = 0.
+    ASSIGN is_data-mb[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_mb>).
+    IF <ls_mb> IS ASSIGNED.
       ev_status = <ls_mb>-mv_proc_status.
       et_msgs   = <ls_mb>-msg.
       RETURN.
     ENDIF.
 
-    READ TABLE is_data-mb_up ASSIGNING FIELD-SYMBOL(<ls_mb_up>)
-      WITH KEY glblid = iv_glblid.
-    IF sy-subrc = 0.
+    ASSIGN is_data-mb_up[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_mb_up>).
+    IF <ls_mb_up> IS ASSIGNED.
       ev_status = <ls_mb_up>-mv_up_proc_status.
       et_msgs   = <ls_mb_up>-msg.
       RETURN.
     ENDIF.
 
-    READ TABLE is_data-vr ASSIGNING FIELD-SYMBOL(<ls_vr>)
-      WITH KEY glblid = iv_glblid.
-    IF sy-subrc = 0.
+    ASSIGN is_data-vr[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_vr>).
+    IF <ls_vr> IS ASSIGNED.
       ev_status = <ls_vr>-vr_proc_status.
       et_msgs   = <ls_vr>-msg.
       RETURN.
     ENDIF.
 
-    READ TABLE is_data-storno ASSIGNING FIELD-SYMBOL(<ls_storno>)
-      WITH KEY glblid = iv_glblid.
-    IF sy-subrc = 0.
+    ASSIGN is_data-storno[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_storno>).
+    IF <ls_storno> IS ASSIGNED.
       ev_status = <ls_storno>-proc_status.
       et_msgs   = <ls_storno>-msg.
     ENDIF.
