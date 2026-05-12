@@ -592,8 +592,9 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
 
 
   METHOD escape_csv.
+    DATA(lv_special) = ';"' && cl_abap_char_utilities=>newline.
     rv_escaped = condense( iv_value ).
-    IF rv_escaped CA ';"' || cl_abap_char_utilities=>newline.
+    IF rv_escaped CA lv_special.
       rv_escaped = replace( val = rv_escaped sub = '"' with = '""' occ = 0 ).
       rv_escaped = |"{ rv_escaped }"|.
     ENDIF.
