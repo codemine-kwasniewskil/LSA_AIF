@@ -411,7 +411,8 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
     DATA: lt_msgs      TYPE bapiret2_tt,
           lv_kassz     TYPE xblnr,
           lv_sap_objid TYPE ca_obtab,
-          lv_netdt     TYPE netdt.
+          lv_netdt     TYPE netdt,
+          lv_errtxt    TYPE string.
 
     rv_has_errors = abap_false.
 
@@ -439,7 +440,7 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
 
       DATA(lv_errnr) = COND string(
         WHEN ls_err IS NOT INITIAL THEN |{ ls_err-id }/{ ls_err-number }| ).
-      DATA(lv_errtxt) = ``.
+      CLEAR lv_errtxt.
       IF ls_err IS NOT INITIAL.
         MESSAGE ID ls_err-id TYPE ls_err-type
           NUMBER ls_err-number
