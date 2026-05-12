@@ -428,16 +428,9 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
       rv_has_errors = abap_true.
 
       " First E/A message → FEHLERNUMMER + FEHLERTEXT
-      " VALUE bapiret2() resets ls_err to initial on every iteration
-      DATA(ls_err) = VALUE bapiret2( ).
-      TRY.
-          ls_err = lt_msgs[ type = 'E' ].
-        CATCH cx_sy_itab_line_not_found.
-          TRY.
-              ls_err = lt_msgs[ type = 'A' ].
-            CATCH cx_sy_itab_line_not_found.
-          ENDTRY.
-      ENDTRY.
+      DATA(ls_err) = COND bapiret2(
+        WHEN line_exists( lt_msgs[ type = 'E' ] ) THEN lt_msgs[ type = 'E' ]
+        WHEN line_exists( lt_msgs[ type = 'A' ] ) THEN lt_msgs[ type = 'A' ] ).
 
       DATA(lv_errnr) = COND string(
         WHEN ls_err IS NOT INITIAL THEN |{ ls_err-id }/{ ls_err-number }| ).
