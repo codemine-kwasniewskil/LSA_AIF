@@ -1531,9 +1531,13 @@ SELECT SINGLE NSRECIP, RECIPIENT
 
 
   METHOD write_and_send_file_csv.
-    " concat_lines_of places sep between rows (not after last) — same semantics
-    " as the manual last-row check in write_and_send_file, without the loop.
-    DATA(lv_content)         = concat_lines_of( table = it_rows sep = iv_eol ).
+    " REDUCE joins rows with iv_eol between them; no trailing EOL after last row.
+    DATA(lv_content) = REDUCE string(
+      INIT s = ``
+      FOR idx = 1 UNTIL idx > lines( it_rows )
+      NEXT s = COND #( WHEN idx < lines( it_rows )
+                       THEN s && it_rows[ idx ] && iv_eol
+                       ELSE s && it_rows[ idx ] ) ).
     DATA(lt_mail_recipients) = VALUE bcsy_smtpa( ).
 
     write_file_from_string(
