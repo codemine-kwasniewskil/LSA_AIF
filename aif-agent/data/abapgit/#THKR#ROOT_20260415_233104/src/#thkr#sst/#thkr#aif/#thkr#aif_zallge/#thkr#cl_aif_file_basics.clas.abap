@@ -1712,47 +1712,57 @@ SELECT SINGLE NSRECIP, RECIPIENT
 
 
   METHOD get_err_for_glblid.
+    DATA lv_st TYPE /aif/proc_status.
     CLEAR: ev_status, et_msgs.
 
-    ASSIGN is_data-ao[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_ao>).
-    IF <ls_ao> IS ASSIGNED.
-      ev_status = <ls_ao>-ao_proc_status.
-      et_msgs   = <ls_ao>-msg.
-      RETURN.
+    " All sub-tables are checked independently — a GLBLID can have errors in
+    " more than one (e.g. AO and MB both fail). Status merges with E > A > other.
+    IF line_exists( is_data-ao[ glblid = iv_glblid ] ).
+      lv_st = is_data-ao[ glblid = iv_glblid ]-ao_proc_status.
+      ev_status = COND #( WHEN ev_status = 'E' OR lv_st = 'E' THEN 'E'
+                          WHEN ev_status = 'A' OR lv_st = 'A' THEN 'A'
+                          ELSE lv_st ).
+      APPEND LINES OF is_data-ao[ glblid = iv_glblid ]-msg TO et_msgs.
     ENDIF.
 
-    ASSIGN is_data-ao_reference[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_ao_ref>).
-    IF <ls_ao_ref> IS ASSIGNED.
-      ev_status = <ls_ao_ref>-ao_proc_status.
-      et_msgs   = <ls_ao_ref>-msg.
-      RETURN.
+    IF line_exists( is_data-ao_reference[ glblid = iv_glblid ] ).
+      lv_st = is_data-ao_reference[ glblid = iv_glblid ]-ao_proc_status.
+      ev_status = COND #( WHEN ev_status = 'E' OR lv_st = 'E' THEN 'E'
+                          WHEN ev_status = 'A' OR lv_st = 'A' THEN 'A'
+                          ELSE lv_st ).
+      APPEND LINES OF is_data-ao_reference[ glblid = iv_glblid ]-msg TO et_msgs.
     ENDIF.
 
-    ASSIGN is_data-mb[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_mb>).
-    IF <ls_mb> IS ASSIGNED.
-      ev_status = <ls_mb>-mv_proc_status.
-      et_msgs   = <ls_mb>-msg.
-      RETURN.
+    IF line_exists( is_data-mb[ glblid = iv_glblid ] ).
+      lv_st = is_data-mb[ glblid = iv_glblid ]-mv_proc_status.
+      ev_status = COND #( WHEN ev_status = 'E' OR lv_st = 'E' THEN 'E'
+                          WHEN ev_status = 'A' OR lv_st = 'A' THEN 'A'
+                          ELSE lv_st ).
+      APPEND LINES OF is_data-mb[ glblid = iv_glblid ]-msg TO et_msgs.
     ENDIF.
 
-    ASSIGN is_data-mb_up[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_mb_up>).
-    IF <ls_mb_up> IS ASSIGNED.
-      ev_status = <ls_mb_up>-mv_up_proc_status.
-      et_msgs   = <ls_mb_up>-msg.
-      RETURN.
+    IF line_exists( is_data-mb_up[ glblid = iv_glblid ] ).
+      lv_st = is_data-mb_up[ glblid = iv_glblid ]-mv_up_proc_status.
+      ev_status = COND #( WHEN ev_status = 'E' OR lv_st = 'E' THEN 'E'
+                          WHEN ev_status = 'A' OR lv_st = 'A' THEN 'A'
+                          ELSE lv_st ).
+      APPEND LINES OF is_data-mb_up[ glblid = iv_glblid ]-msg TO et_msgs.
     ENDIF.
 
-    ASSIGN is_data-vr[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_vr>).
-    IF <ls_vr> IS ASSIGNED.
-      ev_status = <ls_vr>-vr_proc_status.
-      et_msgs   = <ls_vr>-msg.
-      RETURN.
+    IF line_exists( is_data-vr[ glblid = iv_glblid ] ).
+      lv_st = is_data-vr[ glblid = iv_glblid ]-vr_proc_status.
+      ev_status = COND #( WHEN ev_status = 'E' OR lv_st = 'E' THEN 'E'
+                          WHEN ev_status = 'A' OR lv_st = 'A' THEN 'A'
+                          ELSE lv_st ).
+      APPEND LINES OF is_data-vr[ glblid = iv_glblid ]-msg TO et_msgs.
     ENDIF.
 
-    ASSIGN is_data-storno[ glblid = iv_glblid ] TO FIELD-SYMBOL(<ls_storno>).
-    IF <ls_storno> IS ASSIGNED.
-      ev_status = <ls_storno>-proc_status.
-      et_msgs   = <ls_storno>-msg.
+    IF line_exists( is_data-storno[ glblid = iv_glblid ] ).
+      lv_st = is_data-storno[ glblid = iv_glblid ]-proc_status.
+      ev_status = COND #( WHEN ev_status = 'E' OR lv_st = 'E' THEN 'E'
+                          WHEN ev_status = 'A' OR lv_st = 'A' THEN 'A'
+                          ELSE lv_st ).
+      APPEND LINES OF is_data-storno[ glblid = iv_glblid ]-msg TO et_msgs.
     ENDIF.
   ENDMETHOD.
 ENDCLASS.
