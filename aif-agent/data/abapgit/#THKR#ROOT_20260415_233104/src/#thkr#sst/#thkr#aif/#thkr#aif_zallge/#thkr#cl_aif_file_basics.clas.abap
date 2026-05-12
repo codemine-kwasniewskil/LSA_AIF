@@ -408,40 +408,26 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
 
 
   METHOD create_csv_err_body.
-    DATA: lt_msgs      TYPE bapiret2_tt,
-          lv_kassz     TYPE xblnr,
-          lv_sap_objid TYPE ca_obtab,
-          lv_netdt     TYPE netdt,
-          lv_errtxt    TYPE string.
+    DATA lv_errtxt TYPE string.
 
     rv_has_errors = abap_false.
 
     LOOP AT it_lst ASSIGNING FIELD-SYMBOL(<ls_lst>).
-      DATA(lv_status) = get_processing_status(
-        EXPORTING
-          is_data      = is_data
-          iv_glblid    = <ls_lst>-glblid
-          iv_sst       = |{ CONV string( <ls_lst>-verfahrenskuerzel ) CASE = UPPER }|
-          iv_btyp      = |{ CONV string( <ls_lst>-typ ) CASE = UPPER }|
-        IMPORTING
-          et_msgs      = lt_msgs
-          ev_kassz     = lv_kassz
-          ev_sap_objid = lv_sap_objid
-          ev_netdt     = lv_netdt ).
+      READ TABLE is_data-ao ASSIGNING FIELD-SYMBOL(<ls_ao>)
+        WITH KEY glblid = <ls_lst>-glblid.
+      CHECK sy-subrc = 0.
 
-      " Include explicit errors; also include status-less records that carry E/A messages
-      " (proc_status can stay initial when the FI posting fails without setting the field).
-      " Exclude records where both status and msgs are empty — those have no AO at all.
-      CHECK lv_status = 'E' OR lv_status = 'A'
-         OR ( lv_status IS INITIAL
-              AND ( line_exists( lt_msgs[ type = 'E' ] )
-                    OR line_exists( lt_msgs[ type = 'A' ] ) ) ).
+      " Include explicit E/A status; also include status-less records that carry
+      " E/A messages (proc_status can stay initial when FI posting fails silently).
+      CHECK <ls_ao>-ao_proc_status = 'E' OR <ls_ao>-ao_proc_status = 'A'
+         OR ( <ls_ao>-ao_proc_status IS INITIAL
+              AND ( line_exists( <ls_ao>-msg[ type = 'E' ] )
+                    OR line_exists( <ls_ao>-msg[ type = 'A' ] ) ) ).
       rv_has_errors = abap_true.
 
-      " First E/A message → FEHLERNUMMER + FEHLERTEXT
       DATA(ls_err) = COND bapiret2(
-        WHEN line_exists( lt_msgs[ type = 'E' ] ) THEN lt_msgs[ type = 'E' ]
-        WHEN line_exists( lt_msgs[ type = 'A' ] ) THEN lt_msgs[ type = 'A' ] ).
+        WHEN line_exists( <ls_ao>-msg[ type = 'E' ] ) THEN <ls_ao>-msg[ type = 'E' ]
+        WHEN line_exists( <ls_ao>-msg[ type = 'A' ] ) THEN <ls_ao>-msg[ type = 'A' ] ).
 
       DATA(lv_errnr) = COND string(
         WHEN ls_err IS NOT INITIAL THEN |{ ls_err-id }/{ ls_err-number }| ).
