@@ -1403,12 +1403,12 @@ SELECT SINGLE NSRECIP, RECIPIENT
 
         CALL METHOD rtf_string_to_binary EXPORTING iv_rtf_string = iv_attachment_content RECEIVING rv_attachment = lv_attachment.
 
-        DATA(lv_att_type) = COND string(
-          WHEN iv_attachment_type IS SUPPLIED AND iv_attachment_type IS NOT INITIAL
-          THEN iv_attachment_type
-          ELSE 'rtf' ).
         lo_doc_bcs->add_attachment(
-          i_attachment_type    = lv_att_type
+          i_attachment_type    = CONV so_obj_tp( COND #(
+                                   WHEN iv_attachment_type IS SUPPLIED
+                                    AND iv_attachment_type IS NOT INITIAL
+                                   THEN iv_attachment_type
+                                   ELSE 'rtf' ) )
           i_attachment_subject = lv_attachment_name
           i_att_content_hex    = lv_attachment ).
 
