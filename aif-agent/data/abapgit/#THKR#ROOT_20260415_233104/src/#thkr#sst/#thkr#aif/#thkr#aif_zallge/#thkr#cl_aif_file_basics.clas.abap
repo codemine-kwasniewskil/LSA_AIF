@@ -251,6 +251,13 @@ private section.
       !IV_GJAHR type GJAHR
     returning
       value(RV_NETDT) type NETDT .
+  methods GET_ERR_FOR_GLBLID
+    importing
+      !IS_DATA   type /THKR/S_AIF_SAP
+      !IV_GLBLID type /THKR/AIF_GLBLID
+    exporting
+      !EV_STATUS type /AIF/PROC_STATUS
+      !ET_MSGS   type BAPIRET2_TT .
 ENDCLASS.
 
 
@@ -408,26 +415,33 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
 
 
   METHOD create_csv_err_body.
-    DATA lv_errtxt TYPE string.
+    DATA: lt_msgs   TYPE bapiret2_tt,
+          lv_status TYPE /aif/proc_status,
+          lv_errtxt TYPE string.
 
     rv_has_errors = abap_false.
 
     LOOP AT it_lst ASSIGNING FIELD-SYMBOL(<ls_lst>).
-      READ TABLE is_data-ao ASSIGNING FIELD-SYMBOL(<ls_ao>)
-        WITH KEY glblid = <ls_lst>-glblid.
-      CHECK sy-subrc = 0.
+      get_err_for_glblid(
+        EXPORTING
+          is_data   = is_data
+          iv_glblid = <ls_lst>-glblid
+        IMPORTING
+          ev_status = lv_status
+          et_msgs   = lt_msgs ).
 
       " Include explicit E/A status; also include status-less records that carry
       " E/A messages (proc_status can stay initial when FI posting fails silently).
-      CHECK <ls_ao>-ao_proc_status = 'E' OR <ls_ao>-ao_proc_status = 'A'
-         OR ( <ls_ao>-ao_proc_status IS INITIAL
-              AND ( line_exists( <ls_ao>-msg[ type = 'E' ] )
-                    OR line_exists( <ls_ao>-msg[ type = 'A' ] ) ) ).
+      " Exclude records not found in any sub-table (status and msgs both empty).
+      CHECK lv_status = 'E' OR lv_status = 'A'
+         OR ( lv_status IS INITIAL
+              AND ( line_exists( lt_msgs[ type = 'E' ] )
+                    OR line_exists( lt_msgs[ type = 'A' ] ) ) ).
       rv_has_errors = abap_true.
 
       DATA(ls_err) = COND bapiret2(
-        WHEN line_exists( <ls_ao>-msg[ type = 'E' ] ) THEN <ls_ao>-msg[ type = 'E' ]
-        WHEN line_exists( <ls_ao>-msg[ type = 'A' ] ) THEN <ls_ao>-msg[ type = 'A' ] ).
+        WHEN line_exists( lt_msgs[ type = 'E' ] ) THEN lt_msgs[ type = 'E' ]
+        WHEN line_exists( lt_msgs[ type = 'A' ] ) THEN lt_msgs[ type = 'A' ] ).
 
       DATA(lv_errnr) = COND string(
         WHEN ls_err IS NOT INITIAL THEN |{ ls_err-id }/{ ls_err-number }| ).
@@ -1694,5 +1708,57 @@ SELECT SINGLE NSRECIP, RECIPIENT
       CHANGING
         ct_return_tab      = ct_return_tab
         cv_success         = cv_success.
+  ENDMETHOD.
+
+
+  METHOD get_err_for_glblid.
+    CLEAR: ev_status, et_msgs.
+
+    READ TABLE is_data-ao ASSIGNING FIELD-SYMBOL(<ls_ao>)
+      WITH KEY glblid = iv_glblid.
+    IF sy-subrc = 0.
+      ev_status = <ls_ao>-ao_proc_status.
+      et_msgs   = <ls_ao>-msg.
+      RETURN.
+    ENDIF.
+
+    READ TABLE is_data-ao_reference ASSIGNING FIELD-SYMBOL(<ls_ao_ref>)
+      WITH KEY glblid = iv_glblid.
+    IF sy-subrc = 0.
+      ev_status = <ls_ao_ref>-ao_proc_status.
+      et_msgs   = <ls_ao_ref>-msg.
+      RETURN.
+    ENDIF.
+
+    READ TABLE is_data-mb ASSIGNING FIELD-SYMBOL(<ls_mb>)
+      WITH KEY glblid = iv_glblid.
+    IF sy-subrc = 0.
+      ev_status = <ls_mb>-mv_proc_status.
+      et_msgs   = <ls_mb>-msg.
+      RETURN.
+    ENDIF.
+
+    READ TABLE is_data-mb_up ASSIGNING FIELD-SYMBOL(<ls_mb_up>)
+      WITH KEY glblid = iv_glblid.
+    IF sy-subrc = 0.
+      ev_status = <ls_mb_up>-mv_up_proc_status.
+      et_msgs   = <ls_mb_up>-msg.
+      RETURN.
+    ENDIF.
+
+    READ TABLE is_data-vr ASSIGNING FIELD-SYMBOL(<ls_vr>)
+      WITH KEY glblid = iv_glblid.
+    IF sy-subrc = 0.
+      ev_status = <ls_vr>-vr_proc_status.
+      et_msgs   = <ls_vr>-msg.
+      RETURN.
+    ENDIF.
+
+    READ TABLE is_data-storno ASSIGNING FIELD-SYMBOL(<ls_storno>)
+      WITH KEY glblid = iv_glblid.
+    IF sy-subrc = 0.
+      ev_status = <ls_storno>-proc_status.
+      et_msgs   = <ls_storno>-msg.
+    ENDIF.
   ENDMETHOD.
 ENDCLASS.
