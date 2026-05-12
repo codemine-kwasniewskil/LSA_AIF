@@ -408,66 +408,56 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
 
 
   METHOD create_csv_err_body.
-    DATA: lt_msgs      TYPE bapiret2_tt,
-          lv_kassz     TYPE xblnr,
-          lv_netdt     TYPE netdt,
-          lv_sap_objid TYPE ca_obtab,
-          lv_errnr     TYPE string,
-          lv_errtxt    TYPE string.
-
-    FIELD-SYMBOLS: <ls_errmsg> TYPE bapiret2.
-
     rv_has_errors = abap_false.
 
     LOOP AT it_lst ASSIGNING FIELD-SYMBOL(<ls_lst>).
-      CLEAR: lt_msgs, lv_kassz, lv_netdt, lv_sap_objid.
-
       DATA(lv_status) = get_processing_status(
         EXPORTING
-          is_data   = is_data
-          iv_glblid = <ls_lst>-glblid
-          iv_sst    = |{ CONV string( <ls_lst>-verfahrenskuerzel ) CASE = UPPER }|
-          iv_btyp   = |{ CONV string( <ls_lst>-typ ) CASE = UPPER }|
+          is_data      = is_data
+          iv_glblid    = <ls_lst>-glblid
+          iv_sst       = |{ CONV string( <ls_lst>-verfahrenskuerzel ) CASE = UPPER }|
+          iv_btyp      = |{ CONV string( <ls_lst>-typ ) CASE = UPPER }|
         IMPORTING
-          et_msgs      = lt_msgs
-          ev_kassz     = lv_kassz
-          ev_sap_objid = lv_sap_objid
-          ev_netdt     = lv_netdt
-      ).
+          et_msgs      = DATA(lt_msgs)
+          ev_kassz     = DATA(lv_kassz)
+          ev_sap_objid = DATA(lv_sap_objid)
+          ev_netdt     = DATA(lv_netdt) ).
 
       " Same condition as CREATE_LST_BODY — skip successes
       CHECK lv_status = 'E' OR lv_status = 'A' OR lv_status IS INITIAL.
       rv_has_errors = abap_true.
 
-      " Take first E or A message for FEHLERNUMMER / FEHLERTEXT
-      CLEAR: lv_errnr, lv_errtxt.
-      LOOP AT lt_msgs ASSIGNING <ls_errmsg>
-        WHERE type = 'E' OR type = 'A'.
-        lv_errnr = |{ <ls_errmsg>-id }/{ <ls_errmsg>-number }|.
-        MESSAGE ID <ls_errmsg>-id TYPE <ls_errmsg>-type
-          NUMBER <ls_errmsg>-number
-          WITH <ls_errmsg>-message_v1 <ls_errmsg>-message_v2
-               <ls_errmsg>-message_v3 <ls_errmsg>-message_v4
+      " First E/A message → FEHLERNUMMER + FEHLERTEXT
+      " READ TABLE clears target on miss, so no explicit CLEAR needed
+      READ TABLE lt_msgs INTO DATA(ls_err) WITH KEY type = 'E'.
+      IF sy-subrc <> 0.
+        READ TABLE lt_msgs INTO ls_err WITH KEY type = 'A'.
+      ENDIF.
+
+      DATA(lv_errnr) = COND string(
+        WHEN ls_err IS NOT INITIAL THEN |{ ls_err-id }/{ ls_err-number }| ).
+      DATA(lv_errtxt) = ``.
+      IF ls_err IS NOT INITIAL.
+        MESSAGE ID ls_err-id TYPE ls_err-type
+          NUMBER ls_err-number
+          WITH ls_err-message_v1 ls_err-message_v2
+               ls_err-message_v3 ls_err-message_v4
           INTO lv_errtxt.
-        EXIT.
-      ENDLOOP.
+      ENDIF.
 
-      " Build CSV row using && (method calls not supported inside || templates)
-      DATA(lv_row) =
-        escape_csv( |{ <ls_lst>-typ }|     ) && ';' &&
-        escape_csv( |{ <ls_lst>-quelle }|  ) && ';' &&
-        escape_csv( |{ <ls_lst>-satznr }|  ) && ';' &&
-        escape_csv( |{ <ls_lst>-pos }|     ) && ';' &&
-        escape_csv( |{ <ls_lst>-kap }|     ) && ';' &&
-        escape_csv( |{ <ls_lst>-titel }|   ) && ';' &&
-        escape_csv( |{ <ls_lst>-ukto }|    ) && ';' &&
-        escape_csv( |{ <ls_lst>-oeh }|     ) && ';' &&
-        escape_csv( |{ <ls_lst>-faellig }| ) && ';' &&
-        escape_csv( |{ <ls_lst>-soll }|    ) && ';' &&
-        escape_csv( lv_errnr               ) && ';' &&
-        escape_csv( lv_errtxt              ).
-
-      APPEND lv_row TO ct_csv_table.
+      APPEND escape_csv( |{ <ls_lst>-typ }|     ) && ';' &&
+             escape_csv( |{ <ls_lst>-quelle }|  ) && ';' &&
+             escape_csv( |{ <ls_lst>-satznr }|  ) && ';' &&
+             escape_csv( |{ <ls_lst>-pos }|     ) && ';' &&
+             escape_csv( |{ <ls_lst>-kap }|     ) && ';' &&
+             escape_csv( |{ <ls_lst>-titel }|   ) && ';' &&
+             escape_csv( |{ <ls_lst>-ukto }|    ) && ';' &&
+             escape_csv( |{ <ls_lst>-oeh }|     ) && ';' &&
+             escape_csv( |{ <ls_lst>-faellig }| ) && ';' &&
+             escape_csv( |{ <ls_lst>-soll }|    ) && ';' &&
+             escape_csv( lv_errnr               ) && ';' &&
+             escape_csv( lv_errtxt              )
+        TO ct_csv_table.
     ENDLOOP.
   ENDMETHOD.
 
@@ -593,11 +583,11 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
 
   METHOD escape_csv.
     DATA(lv_special) = ';"' && cl_abap_char_utilities=>newline.
-    rv_escaped = condense( iv_value ).
-    IF rv_escaped CA lv_special.
-      rv_escaped = replace( val = rv_escaped sub = '"' with = '""' occ = 0 ).
-      rv_escaped = |"{ rv_escaped }"|.
-    ENDIF.
+    DATA(lv_trimmed) = condense( iv_value ).
+    rv_escaped = COND #(
+      WHEN lv_trimmed CA lv_special
+      THEN |"{ replace( val = lv_trimmed sub = '"' with = '""' occ = 0 ) }"|
+      ELSE lv_trimmed ).
   ENDMETHOD.
 
 
@@ -1415,12 +1405,12 @@ SELECT SINGLE NSRECIP, RECIPIENT
 
         CALL METHOD rtf_string_to_binary EXPORTING iv_rtf_string = iv_attachment_content RECEIVING rv_attachment = lv_attachment.
 
+        DATA(lv_att_type) = COND string(
+          WHEN iv_attachment_type IS SUPPLIED AND iv_attachment_type IS NOT INITIAL
+          THEN iv_attachment_type
+          ELSE 'rtf' ).
         lo_doc_bcs->add_attachment(
-          i_attachment_type    = COND string(
-                                   WHEN iv_attachment_type IS SUPPLIED
-                                    AND iv_attachment_type IS NOT INITIAL
-                                   THEN iv_attachment_type
-                                   ELSE 'rtf' )
+          i_attachment_type    = lv_att_type
           i_attachment_subject = lv_attachment_name
           i_att_content_hex    = lv_attachment ).
 
@@ -1543,27 +1533,21 @@ SELECT SINGLE NSRECIP, RECIPIENT
 
 
   METHOD write_and_send_file_csv.
-    DATA: lv_content         TYPE string VALUE '',
-          lt_mail_recipients TYPE bcsy_smtpa.
+    " concat_lines_of places sep between rows (not after last) — same semantics
+    " as the manual last-row check in write_and_send_file, without the loop.
+    DATA(lv_content)         = concat_lines_of( table = it_rows sep = iv_eol ).
+    DATA(lt_mail_recipients) = VALUE bcsy_smtpa( ).
 
-    LOOP AT it_rows INTO DATA(lv_row).
-      IF sy-tabix = lines( it_rows ).
-        lv_content = lv_content && lv_row.
-      ELSE.
-        lv_content = lv_content && lv_row && iv_eol.
-      ENDIF.
-    ENDLOOP.
-
-    CALL METHOD write_file_from_string
+    write_file_from_string(
       EXPORTING
         iv_output_filename = iv_output_filename
         iv_content         = lv_content
       CHANGING
         ct_return_tab      = ct_return_tab
-        cv_success         = cv_success.
+        cv_success         = cv_success ).
 
     IF cv_success = 'N'.
-      EXIT.
+      RETURN.
     ENDIF.
 
     DATA(ls_recipient_list) = get_recipient_list(
@@ -1571,21 +1555,25 @@ SELECT SINGLE NSRECIP, RECIPIENT
       iv_ifname    = iv_ifname
       iv_ifversion = iv_ifversion ).
 
-    IF ls_recipient_list IS NOT INITIAL.
-      CALL METHOD get_mails_for_recipient_list
-        EXPORTING
-          is_recipient_list  = ls_recipient_list
-        CHANGING
-          ct_mail_recipients = lt_mail_recipients.
-
-      IF lt_mail_recipients IS NOT INITIAL.
-        cv_success = send_mail(
-          it_mail_recipients    = lt_mail_recipients
-          iv_attachment_content = lv_content
-          iv_attachment_name    = iv_output_filename
-          iv_attachment_type    = 'txt' ).
-      ENDIF.
+    IF ls_recipient_list IS INITIAL.
+      RETURN.
     ENDIF.
+
+    get_mails_for_recipient_list(
+      EXPORTING
+        is_recipient_list  = ls_recipient_list
+      CHANGING
+        ct_mail_recipients = lt_mail_recipients ).
+
+    IF lt_mail_recipients IS INITIAL.
+      RETURN.
+    ENDIF.
+
+    cv_success = send_mail(
+      it_mail_recipients    = lt_mail_recipients
+      iv_attachment_content = lv_content
+      iv_attachment_name    = iv_output_filename
+      iv_attachment_type    = 'txt' ).
   ENDMETHOD.
 
 
