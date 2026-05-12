@@ -408,6 +408,11 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
 
 
   METHOD create_csv_err_body.
+    DATA: lt_msgs      TYPE bapiret2_tt,
+          lv_kassz     TYPE xblnr,
+          lv_sap_objid TYPE ca_obtab,
+          lv_netdt     TYPE netdt.
+
     rv_has_errors = abap_false.
 
     LOOP AT it_lst ASSIGNING FIELD-SYMBOL(<ls_lst>).
@@ -418,10 +423,10 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
           iv_sst       = |{ CONV string( <ls_lst>-verfahrenskuerzel ) CASE = UPPER }|
           iv_btyp      = |{ CONV string( <ls_lst>-typ ) CASE = UPPER }|
         IMPORTING
-          et_msgs      = DATA(lt_msgs)
-          ev_kassz     = DATA(lv_kassz)
-          ev_sap_objid = DATA(lv_sap_objid)
-          ev_netdt     = DATA(lv_netdt) ).
+          et_msgs      = lt_msgs
+          ev_kassz     = lv_kassz
+          ev_sap_objid = lv_sap_objid
+          ev_netdt     = lv_netdt ).
 
       " Same condition as CREATE_LST_BODY — skip successes
       CHECK lv_status = 'E' OR lv_status = 'A' OR lv_status IS INITIAL.
