@@ -429,8 +429,13 @@ CLASS /THKR/CL_AIF_FILE_BASICS IMPLEMENTATION.
           ev_sap_objid = lv_sap_objid
           ev_netdt     = lv_netdt ).
 
-      " Same condition as CREATE_LST_BODY — skip successes
-      CHECK lv_status = 'E' OR lv_status = 'A' OR lv_status IS INITIAL.
+      " Include explicit errors; also include status-less records that carry E/A messages
+      " (proc_status can stay initial when the FI posting fails without setting the field).
+      " Exclude records where both status and msgs are empty — those have no AO at all.
+      CHECK lv_status = 'E' OR lv_status = 'A'
+         OR ( lv_status IS INITIAL
+              AND ( line_exists( lt_msgs[ type = 'E' ] )
+                    OR line_exists( lt_msgs[ type = 'A' ] ) ) ).
       rv_has_errors = abap_true.
 
       " First E/A message → FEHLERNUMMER + FEHLERTEXT
