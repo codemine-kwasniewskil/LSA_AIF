@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funktiongruppe für Z_FICA_TRG</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LRUB_FICA_TRGTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLRUB_FICA_TRG</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/CHECK_FICA_TRG</FUNCNAME>
+     <SHORT_TEXT>Dynamischer Z_FICA_TRG Check</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ACTIVITY</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHACT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_AREA</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FIKRS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_FINCODE_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGRF</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_FMFCTR_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGRC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_FIPEX_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGRP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_MEASURE_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGR_MEASURE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_FAREA_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGR_FAREA</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_USER</PARAMETER>
+       <DEFAULT>SY-UNAME</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SY-UNAME</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EX_SUBRC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>N</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ACTIVITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aktivität Berechtigungsprüfung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_AREA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Finanzkreis</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_FINCODE_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Berechtigungsgruppe des Fonds</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_FMFCTR_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Berechtigungsgruppe der Finanzstelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_FIPEX_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Berechtigungsgruppe der Finanzposition</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_MEASURE_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Berechtigungsgruppe des Haushaltsprogramms</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_FAREA_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>HHM: Berechtigungsgruppe des Funktionsbereichs</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_USER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ABAP-Systemfeld: Name des aktuellen Benutzers</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_SUBRC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ergebniss der Prüfung</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/CHECK_FICA_UTK</FUNCNAME>
+     <SHORT_TEXT>Dynamischer Z_FICA_UTK Prüfbaustein</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ACTIVITY</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHACT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_AREA</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FIKRS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_FINCODE_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGRF</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_FMFCTR_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGRC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_FIPEX</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_FIPEX</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_MEASURE_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGR_MEASURE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FM_FAREA_AUTHGRP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FM_AUTHGR_FAREA</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_USER</PARAMETER>
+       <DEFAULT>SY-UNAME</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SY-UNAME</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EX_SUBRC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>N</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ACTIVITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aktivität Berechtigungsprüfung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_AREA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Finanzkreis</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_FINCODE_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Berechtigungsgruppe des Fonds</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_FMFCTR_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Berechtigungsgruppe der Finanzstelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_FIPEX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Finanzposition</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_MEASURE_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Berechtigungsgruppe des Haushaltsprogramms</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FM_FAREA_AUTHGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>HHM: Berechtigungsgruppe des Funktionsbereichs</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_USER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ABAP-Systemfeld: Name des aktuellen Benutzers</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_SUBRC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ergebniss der Prüfung</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

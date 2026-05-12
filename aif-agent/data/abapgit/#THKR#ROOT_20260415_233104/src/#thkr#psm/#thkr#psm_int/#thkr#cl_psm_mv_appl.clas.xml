@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_MV_APPL</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>PSM interne SST Mittelvormerkungen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHANGE_PSM_MV</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ändern einer Mittelvormerkung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_MV_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfmethode</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PSM_MV</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlage einer Mittelvormerkung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>PSM interne SST Mittelvormerkungen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DTO_TO_MV_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping DTO Daten zu Mittellvormerkung Positionsdaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DTO_TO_MV_DATA_CHANGE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping DTO Daten zu Mittellvormerkung Positionsdaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DTO_TO_MV_HEAD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping DTO Daten zu Mittellvormerkung Kopfdaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DTO_TO_MV_HEAD_CHANGE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping DTO Daten zu Mittellvormerkung Kopfdaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_FI_TO_DTO_PSM</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping FI Daten zu DTO Struktur</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_MV_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping Mittellvormerkungdaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_KOART</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>AO Kontoart Abhängig vom PSOTYP</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_PSM_MV</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lesen einer Mittellvormerkung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_PSM_MV_VALUE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Werteerhöhung und Senkung einer MV</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHANGE_PSM_MV</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHANGE_PSM_MV</CMPNAME>
+     <SCONAME>E_KBLNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegnummer Mittelvormerkung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHANGE_PSM_MV</CMPNAME>
+     <SCONAME>I_DTO_PSM_MV_BEL_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen für Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHANGE_PSM_MV</CMPNAME>
+     <SCONAME>R_KBLNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegnummer Mittelvormerkung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_MV_DATA</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_MV_DATA</CMPNAME>
+     <SCONAME>C_DTO_PSM_MV_BEL_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen für Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_MV_DATA</CMPNAME>
+     <SCONAME>C_HEAD_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Direct Input für Mittelvormerkungen: Kopfdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_MV</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_MV</CMPNAME>
+     <SCONAME>E_KBLNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegnummer Mittelvormerkung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_MV</CMPNAME>
+     <SCONAME>I_DTO_PSM_MV_BEL_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen für Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_MV</CMPNAME>
+     <SCONAME>R_KBLNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegnummer Mittelvormerkung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>R_INSTANCE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>PSM interne SST Mittelvormerkungen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_TO_MV_DATA</CMPNAME>
+     <SCONAME>C_DTO_PSM_MV_BEL_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen für Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_TO_MV_DATA_CHANGE</CMPNAME>
+     <SCONAME>C_DTO_PSM_MV_BEL_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen für Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_TO_MV_HEAD</CMPNAME>
+     <SCONAME>C_DTO_PSM_MV_BEL_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen für Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_TO_MV_HEAD</CMPNAME>
+     <SCONAME>C_HEAD_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Direct Input für Mittelvormerkungen: Kopfdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_TO_MV_HEAD_CHANGE</CMPNAME>
+     <SCONAME>C_DTO_PSM_MV_BEL_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen für Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_TO_MV_HEAD_CHANGE</CMPNAME>
+     <SCONAME>C_HEAD_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Direct Input für Mittelvormerkungen: Kopfdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_FI_TO_DTO_PSM</CMPNAME>
+     <SCONAME>IT_KBLK</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle für KBLK</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_FI_TO_DTO_PSM</CMPNAME>
+     <SCONAME>IT_KBLP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sortierte Tabelle mit KBLP-Sätzen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_FI_TO_DTO_PSM</CMPNAME>
+     <SCONAME>R_DTO_PSM_MV_BEL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_MV_DATA</CMPNAME>
+     <SCONAME>C_DTO_PSM_MV_BEL_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen für Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_PSM_MV</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_PSM_MV</CMPNAME>
+     <SCONAME>E_DTO_PSM_MV_BEL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_PSM_MV</CMPNAME>
+     <SCONAME>I_KBLNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegnummer Mittelvormerkung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_PSM_MV</CMPNAME>
+     <SCONAME>R_DTO_PSM_MV_BEL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: PSM-Mittelvormerkungen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_MV_VALUE</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_MV_VALUE</CMPNAME>
+     <SCONAME>E_RETURN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Returntabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_MV_VALUE</CMPNAME>
+     <SCONAME>I_DTO_PSM_MV_UPDATE_VAL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlegen von Wertanpassungen für Mittelvormerkungen</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

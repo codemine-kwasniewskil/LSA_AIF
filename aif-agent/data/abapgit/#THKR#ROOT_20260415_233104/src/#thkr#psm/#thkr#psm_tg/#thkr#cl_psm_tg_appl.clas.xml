@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_TG_APPL</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Anwendungsklasse für die Titlegruppe</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>M_FIKRS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_FKBER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionsbereich</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_GJAHR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_TITELGRP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Titelgruppe</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>FIKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>FKBER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionsbereich</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>GJAHR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>TITELGRP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Titelgruppe</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>R_INSTANCE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungsklasse für die Titlegruppe</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>TITELGRP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Titelgruppe</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

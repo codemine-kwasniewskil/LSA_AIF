@@ -1,0 +1,7 @@
+PROCESS BEFORE OUTPUT.
+  MODULE status_0100.
+
+  MODULE set_alv.
+*
+PROCESS AFTER INPUT.
+  MODULE user_command_0100.

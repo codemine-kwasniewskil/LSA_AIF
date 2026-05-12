@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_DEGRP_HELPER</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>PSM Deckungsgruppen Upload/Download</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TESTMODE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Testmode = &apos;X&apos;</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADJUST_ASSIGNED_ADDRESS</CMPNAME>
+     <SCONAME>ASSIGNED_ADDRESS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetkontierung, die einer Deckungsgruppe zugeordnet sind</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>TESTMODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Testmodus = &apos;X&apos;</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ALL_COVERGRPS</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_TOOLS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exceptionclass PSM Tools</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ALL_COVERGRPS</CMPNAME>
+     <SCONAME>CVGRPS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Transfertable for CoverGrps</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ALL_COVERGRPS</CMPNAME>
+     <SCONAME>CVGRP_TYPE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kategorie der Deckungsgruppe</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_COVERGRP</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_TOOLS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exceptionclass PSM Tools</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_COVERGRP</CMPNAME>
+     <SCONAME>CVGRP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Deckungsgruppe</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_COVERGRP</CMPNAME>
+     <SCONAME>CVGRP_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Transferstructure for CoverGrps</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_COVERGRP</CMPNAME>
+     <SCONAME>FISCYEAR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_COVERGRP</CMPNAME>
+     <SCONAME>FM_AREA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_COVERGRP</CMPNAME>
+     <SCONAME>LEDGER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nummer des Ledgers</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_COVERGRP</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_TOOLS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exceptionclass PSM Tools</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_COVERGRP</CMPNAME>
+     <SCONAME>CVGRP_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Transferstructure for CoverGrps</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_COVERGRPS</CMPNAME>
+     <SCONAME>CVGRPS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Transfertable for CoverGrps</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>/THKR/CO_LEIST_INPUT</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>Inputstruktur der Leistungsverrechnung</DDTEXT>
+    <EXCLASS>2</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>DIENSTSTELLE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Dienststelle</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>MA_NUMMER</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>KLR-Mitarbeiternummer</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>LG_MA_NUMMER</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000020</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000010</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>LvermGeo Mitarbeiternummer</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>BESOLD_GR</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000012</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000006</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Besoldungsgruppe</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>MENG1</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000012</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000006</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Menge für MJ umd für LvermGeo</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>KOSTL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000020</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000010</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Kostenstelle</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>IAUFTR</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000024</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000012</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Innnenauftrag</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ABORD</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Abordnungsstelle</DDTEXT>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

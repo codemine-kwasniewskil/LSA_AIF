@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>/THKR/S_DTO_PSM_AO_BEL_CREATE</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <LANGDEP>X</LANGDEP>
+    <DDTEXT>DTO: Anlegen eines Beleges zu einer PSM-Anordnung</DDTEXT>
+    <EXCLASS>4</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>.INCLUDE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <PRECFIELD>/THKR/S_DTO_PSM_AO_HEADER</PRECFIELD>
+     <MASK>      S</MASK>
+     <DDTEXT>DTO: Kopf PSM-Anordnung</DDTEXT>
+     <COMPTYPE>S</COMPTYPE>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>.INCLUDE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <PRECFIELD>/THKR/S_DTO_PSM_AO_BELEG</PRECFIELD>
+     <MASK>      S</MASK>
+     <DDTEXT>DTO: Beleg einer Anordnung</DDTEXT>
+     <COMPTYPE>S</COMPTYPE>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>.INCLUDE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <PRECFIELD>/THKR/S_DTO_PSM_AO_PARAM</PRECFIELD>
+     <MASK>      S</MASK>
+     <DDTEXT>Zusatzparmeter für AO APPL Methoden</DDTEXT>
+     <COMPTYPE>S</COMPTYPE>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>.INCLUDE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <PRECFIELD>/THKR/S_DTO_PSM_AO_SETTINGS</PRECFIELD>
+     <MASK>      S</MASK>
+     <DDTEXT>Steuerungsstuktur für Anordnungserstellung</DDTEXT>
+     <COMPTYPE>S</COMPTYPE>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

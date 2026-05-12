@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_WAPA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <ATTRIBUTES>
+    <APPLNAME>ZJUMP2GUI</APPLNAME>
+    <APPLEXT>ZJUMP2GUI</APPLEXT>
+    <ORIGLANG>D</ORIGLANG>
+    <MODIFLANG>D</MODIFLANG>
+    <TEXT>GUI Launcher</TEXT>
+   </ATTRIBUTES>
+   <PAGES>
+    <item>
+     <ATTRIBUTES>
+      <APPLNAME>ZJUMP2GUI</APPLNAME>
+      <PAGEKEY>CREATESAPGUISHORTCUT.HTM</PAGEKEY>
+      <PAGENAME>createSapGuiShortcut.htm</PAGENAME>
+      <MIMETYPE>text/html</MIMETYPE>
+      <LAYOUTLANGU>D</LAYOUTLANGU>
+      <VERSION>A</VERSION>
+      <LANGU>D</LANGU>
+     </ATTRIBUTES>
+     <EVENT_HANDLERS>
+      <O2PAGEVHS>
+       <APPLNAME>ZJUMP2GUI</APPLNAME>
+       <PAGEKEY>CREATESAPGUISHORTCUT.HTM</PAGEKEY>
+       <EVHANDLER>ONREQUEST</EVHANDLER>
+       <VERSION>A</VERSION>
+       <EVHNAME>OnRequest</EVHNAME>
+       <SOURCE>
+        <item>* the handler is called whenever a request is made for a particular page</item>
+        <item>* it is used to restore the internal data structures from the request</item>
+        <item/>
+        <item>DATA:</item>
+        <item>  mysapsso2      TYPE string,</item>
+        <item>  shortcut_file  TYPE string,</item>
+        <item>  host           TYPE string,</item>
+        <item>  instancenumber TYPE instanz-systemnr.</item>
+        <item/>
+        <item>DATA: httpnvps TYPE tihttpnvp.</item>
+        <item/>
+        <item>runtime-&gt;server-&gt;request-&gt;get_form_fields( CHANGING fields = httpnvps ).</item>
+        <item/>
+        <item>TRY.</item>
+        <item>    DATA(ta) = httpnvps[ name = &apos;transaction&apos; ].</item>
+        <item>    transaction = ta-value.</item>
+        <item>  CATCH cx_sy_itab_line_not_found .</item>
+        <item>    transaction = &apos;SMEN&apos;.</item>
+        <item>ENDTRY.</item>
+        <item/>
+        <item>CALL FUNCTION &apos;CREATE_RFC_REENTRANCE_TICKET&apos;</item>
+        <item>  IMPORTING</item>
+        <item>    ticket                 = mysapsso2</item>
+        <item>  EXCEPTIONS</item>
+        <item>    ticket_logon_disabled  = 1</item>
+        <item>    ticket_creation_failed = 2</item>
+        <item>    kernel_too_old         = 3</item>
+        <item>    OTHERS                 = 4.</item>
+        <item/>
+        <item>CALL FUNCTION &apos;GET_SYSTEM_NUMBER&apos; IMPORTING  instancenumber = instancenumber.</item>
+        <item/>
+        <item>runtime-&gt;server-&gt;get_location( IMPORTING  host = host ).</item>
+        <item/>
+        <item>CONCATENATE              &apos;[System]&apos;                      cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;Name=&apos;          sy-sysid      cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;Client=&apos;        sy-mandt      cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>*CONCATENATE shortcut_file &apos;GuiParm=&apos;       host                                        INTO shortcut_file.</item>
+        <item>*CONCATENATE shortcut_file instancenumber                                               INTO shortcut_file SEPARATED BY &apos; &apos;.</item>
+        <item>*CONCATENATE shortcut_file                                cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;[User]&apos;                       cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;Name=&apos;          sy-uname      cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;at=&quot;MYSAPSSO2=&apos; mysapsso2 &apos;&quot;&apos; cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;[Function]&apos;                   cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;Command=&apos;       transaction   cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;Type=Transaction&apos;                      cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;Title=TA_&apos;   transaction                    cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;[Options]&apos;                    cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item>CONCATENATE shortcut_file &apos;Reuse=0&apos;                      cl_abap_char_utilities=&gt;cr_lf INTO shortcut_file.</item>
+        <item/>
+        <item>*runtime-&gt;server-&gt;response-&gt;GET_XSRF_TOKEN( IMPORTING = data(token) ).</item>
+        <item>runtime-&gt;server-&gt;response-&gt;set_header_field( name = &apos;content-type&apos; value = &apos;application/x-sapshortcut&apos; ).</item>
+        <item>*runtime-&gt;server-&gt;response-&gt;set_header_field( name = &apos;x-csrf-token&apos; value = token ).</item>
+        <item>runtime-&gt;server-&gt;response-&gt;set_cdata( data = shortcut_file ).</item>
+       </SOURCE>
+      </O2PAGEVHS>
+     </EVENT_HANDLERS>
+     <PARAMETERS>
+      <O2PAGPARS>
+       <APPLNAME>ZJUMP2GUI</APPLNAME>
+       <PAGEKEY>CREATESAPGUISHORTCUT.HTM</PAGEKEY>
+       <COMPNAME>TRANSACTION</COMPNAME>
+       <VERSION>A</VERSION>
+       <PARDECLTYP>1</PARDECLTYP>
+       <TYPTYPE>1</TYPTYPE>
+       <TYPE>STRING</TYPE>
+       <ALIASNAME>transaction</ALIASNAME>
+      </O2PAGPARS>
+     </PARAMETERS>
+    </item>
+    <item>
+     <ATTRIBUTES>
+      <APPLNAME>ZJUMP2GUI</APPLNAME>
+      <PAGEKEY>DEFAULT.HTM</PAGEKEY>
+      <PAGENAME>default.htm</PAGENAME>
+      <MIMETYPE>text/html</MIMETYPE>
+      <IS_START_PAGE>X</IS_START_PAGE>
+      <LAYOUTLANGU>D</LAYOUTLANGU>
+      <VERSION>A</VERSION>
+      <LANGU>D</LANGU>
+     </ATTRIBUTES>
+     <EVENT_HANDLERS>
+      <O2PAGEVHS>
+       <APPLNAME>ZJUMP2GUI</APPLNAME>
+       <PAGEKEY>DEFAULT.HTM</PAGEKEY>
+       <EVHANDLER>ONREQUEST</EVHANDLER>
+       <VERSION>A</VERSION>
+       <EVHNAME>OnRequest</EVHNAME>
+       <SOURCE>
+        <item>* the handler is called whenever a request is made for a particular page</item>
+        <item>* it is used to restore the internal data structures from the request</item>
+        <item>*</item>
+        <item>DATA: httpnvps TYPE tihttpnvp.</item>
+        <item/>
+        <item>runtime-&gt;server-&gt;request-&gt;get_form_fields( CHANGING fields = httpnvps ).</item>
+        <item/>
+        <item>TRY.</item>
+        <item>    DATA(ta) = httpnvps[ name = &apos;transaction&apos; ].</item>
+        <item>    transaction = ta-value.</item>
+        <item>  CATCH cx_sy_itab_line_not_found .</item>
+        <item>    transaction = &apos;&apos;.</item>
+        <item>ENDTRY.</item>
+       </SOURCE>
+      </O2PAGEVHS>
+     </EVENT_HANDLERS>
+     <PARAMETERS>
+      <O2PAGPARS>
+       <APPLNAME>ZJUMP2GUI</APPLNAME>
+       <PAGEKEY>DEFAULT.HTM</PAGEKEY>
+       <COMPNAME>TRANSACTION</COMPNAME>
+       <VERSION>A</VERSION>
+       <PARDECLTYP>1</PARDECLTYP>
+       <TYPTYPE>1</TYPTYPE>
+       <TYPE>STRING</TYPE>
+       <ALIASNAME>transaction</ALIASNAME>
+      </O2PAGPARS>
+     </PARAMETERS>
+    </item>
+   </PAGES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

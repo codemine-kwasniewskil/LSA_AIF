@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:vmf="http://www.altova.com/MapForce/UDF/vmf" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="vmf xs" version="1.0">
+  <xsl:template name="vmf:vmf1_inputtoresult">
+    <xsl:param name="input" select="/.."/>
+    <xsl:choose>
+      <xsl:when test="$input='Einnahmen'">
+        <xsl:value-of select="'VE'"/>
+      </xsl:when>
+      <xsl:when test="$input='Ausgaben'">
+        <xsl:value-of select="'VA'"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="''"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <xsl:output encoding="UTF-8" indent="yes" method="xml"/>
+  <xsl:template match="/">
+    <xsl:variable name="var1_initial" select="."/>
+    <abap xmlns="http://www.sap.com/abapxml">
+      <values>
+        <FILE xmlns="">
+          <xsl:variable name="HHModus" select="GP/@HHModus"/>
+          <xsl:variable name="Basisjahr" select="GP/@Basisjahr"/>
+          <T_EINZELPLAN>
+            <xsl:for-each select="GP/EP">
+              <xsl:variable name="var2_cur" select="."/>
+              <_-THKR_-S_DE_HVW_EINZELPLAN>
+                <HHMODUS>
+                  <xsl:value-of select="$HHModus"/>
+                </HHMODUS>
+                <GJAHR>
+                  <xsl:value-of select="$Basisjahr"/>
+                </GJAHR>
+                <EINZELPLAN>
+                  <xsl:value-of select="@Nummer"/>
+                </EINZELPLAN>
+                <BEZEICHNUNG>
+                  <xsl:value-of select="@Bezeichnung"/>
+                </BEZEICHNUNG>
+                <T_KAPITEL>
+                  <xsl:for-each select="K">
+                    <xsl:variable name="var3_cur" select="."/>
+                    <_-THKR_-S_DE_HVW_KAPITEL>
+                      <KAPITEL>
+                        <xsl:value-of select="@Nummer"/>
+                      </KAPITEL>
+                      <BEZEICHNUNG>
+                        <xsl:value-of select="@Bezeichnung"/>
+                      </BEZEICHNUNG>
+                      <T_VERMERK>
+                        <xsl:for-each select="VS/V">
+                          <xsl:variable name="var4_cur" select="."/>
+                          <_-THKR_-S_DE_HVW_VERMERK>
+                            <TYP>
+                              <xsl:value-of select="@Typ"/>
+                            </TYP>
+                            <SORT_NR>
+                              <xsl:value-of select="number(@SortNr)"/>
+                            </SORT_NR>
+                            <TEXT>
+                              <xsl:value-of select="@Text"/>
+                            </TEXT>
+                          </_-THKR_-S_DE_HVW_VERMERK>
+                        </xsl:for-each>
+                      </T_VERMERK>
+                      <T_TITEL_GR>
+                        <xsl:for-each select="EA">
+                          <xsl:variable name="var5_cur" select="."/>
+                          <xsl:for-each select="TG">
+                            <xsl:variable name="var6_cur" select="."/>
+                            <_-THKR_-S_DE_HVW_TITEL_GR>
+                              <TITEL_GR>
+                                <xsl:value-of select="@Nummer"/>
+                              </TITEL_GR>
+                              <xsl:variable name="var7_nested">
+                                <xsl:call-template name="vmf:vmf1_inputtoresult">
+                                  <xsl:with-param name="input" select="string($var5_cur/@Bereich)"/>
+                                </xsl:call-template>
+                              </xsl:variable>
+                              <xsl:if test="string($var7_nested)">
+                                <KZ_EA>
+                                  <xsl:variable name="var8_nested">
+                                    <xsl:call-template name="vmf:vmf1_inputtoresult">
+                                      <xsl:with-param name="input" select="string($var5_cur/@Bereich)"/>
+                                    </xsl:call-template>
+                                  </xsl:variable>
+                                  <xsl:value-of select="substring($var8_nested, 2)"/>
+                                </KZ_EA>
+                              </xsl:if>
+                              <BEZEICHNUNG>
+                                <xsl:value-of select="@Bezeichnung"/>
+                              </BEZEICHNUNG>
+                              <T_VERMERK>
+                                <xsl:for-each select="VS/V">
+                                  <xsl:variable name="var9_cur" select="."/>
+                                  <_-THKR_-S_DE_HVW_VERMERK>
+                                    <TYP>
+                                      <xsl:value-of select="@Typ"/>
+                                    </TYP>
+                                    <SORT_NR>
+                                      <xsl:value-of select="number(@SortNr)"/>
+                                    </SORT_NR>
+                                    <TEXT>
+                                      <xsl:value-of select="@Text"/>
+                                    </TEXT>
+                                  </_-THKR_-S_DE_HVW_VERMERK>
+                                </xsl:for-each>
+                              </T_VERMERK>
+                              <T_TITEL>
+                                <xsl:for-each select="TS/T">
+                                  <xsl:variable name="var10_cur" select="."/>
+                                  <_-THKR_-S_DE_HVW_TITEL>
+                                    <TITEL>
+                                      <xsl:value-of select="@Nummer"/>
+                                    </TITEL>
+                                    <FUNKTION>
+                                      <xsl:value-of select="@FZ"/>
+                                    </FUNKTION>
+                                    <BEZEICHNUNG>
+                                      <xsl:value-of select="@Bezeichnung"/>
+                                    </BEZEICHNUNG>
+                                    <T_ANSATZ>
+                                      <xsl:for-each select="AS/A">
+                                        <xsl:variable name="var11_cur" select="."/>
+                                        <_-THKR_-S_DE_HVW_ANSATZ>
+                                          <JAHR>
+                                            <xsl:value-of select="@Jahr"/>
+                                          </JAHR>
+                                          <ANSATZ>
+                                            <xsl:value-of select="number(@Ansatz)"/>
+                                          </ANSATZ>
+                                        </_-THKR_-S_DE_HVW_ANSATZ>
+                                      </xsl:for-each>
+                                    </T_ANSATZ>
+                                    <T_FP_VERMERK>
+                                      <xsl:for-each select="VS/V">
+                                        <xsl:variable name="var12_cur" select="."/>
+                                        <_-THKR_-S_DE_HVW_VERMERK>
+                                          <TYP>
+                                            <xsl:value-of select="@Typ"/>
+                                          </TYP>
+                                          <SORT_NR>
+                                            <xsl:value-of select="number(@SortNr)"/>
+                                          </SORT_NR>
+                                          <TEXT>
+                                            <xsl:value-of select="@Text"/>
+                                          </TEXT>
+                                        </_-THKR_-S_DE_HVW_VERMERK>
+                                      </xsl:for-each>
+                                    </T_FP_VERMERK>
+                                    <T_VE>
+                                      <xsl:for-each select="VES/VE">
+                                        <xsl:variable name="var13_cur" select="."/>
+                                        <xsl:for-each select="Belastung">
+                                          <xsl:variable name="var14_cur" select="."/>
+                                          <_-THKR_-S_DE_HVW_VE>
+                                            <JAHR>
+                                              <xsl:value-of select="$var13_cur/@Jahr"/>
+                                            </JAHR>
+                                            <VE_JAHR>
+                                              <xsl:value-of select="@Jahr"/>
+                                            </VE_JAHR>
+                                            <VE>
+                                              <xsl:value-of select="number(@VE)"/>
+                                            </VE>
+                                          </_-THKR_-S_DE_HVW_VE>
+                                        </xsl:for-each>
+                                      </xsl:for-each>
+                                    </T_VE>
+                                    <T_ZT>
+                                      <xsl:for-each select="TZS/ZT">
+                                        <xsl:variable name="var15_cur" select="."/>
+                                        <xsl:for-each select="Z">
+                                          <xsl:variable name="var16_cur" select="."/>
+                                          <_-THKR_-S_DE_HVW_ZT>
+                                            <NUMMER>
+                                              <xsl:value-of select="$var15_cur/@Nummer"/>
+                                            </NUMMER>
+                                            <VALUE>
+                                              <xsl:value-of select="@Nummer"/>
+                                            </VALUE>
+                                          </_-THKR_-S_DE_HVW_ZT>
+                                        </xsl:for-each>
+                                      </xsl:for-each>
+                                    </T_ZT>
+                                  </_-THKR_-S_DE_HVW_TITEL>
+                                </xsl:for-each>
+                              </T_TITEL>
+                            </_-THKR_-S_DE_HVW_TITEL_GR>
+                          </xsl:for-each>
+                        </xsl:for-each>
+                      </T_TITEL_GR>
+                    </_-THKR_-S_DE_HVW_KAPITEL>
+                  </xsl:for-each>
+                </T_KAPITEL>
+              </_-THKR_-S_DE_HVW_EINZELPLAN>
+            </xsl:for-each>
+          </T_EINZELPLAN>
+        </FILE>
+      </values>
+    </abap>
+  </xsl:template>
+</xsl:stylesheet>

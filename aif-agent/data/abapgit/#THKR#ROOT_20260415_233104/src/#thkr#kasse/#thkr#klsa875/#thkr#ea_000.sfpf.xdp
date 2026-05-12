@@ -1,0 +1,1642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V11.0.9.20240424.1.48_SAP" APIVersion="3.6.24095.0"?><xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2024-07-29T08:13:51Z" uuid="cb475eb2-9687-46c6-b1d9-78940f7bf76b">
+<template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <subform layout="tb" locale="de_DE" name="data" restoreState="auto">
+      <pageSet>
+         <pageArea id="Page1" name="Seite1">
+            <contentArea h="242mm" name="TextArea" w="173mm" x="17.5mm" y="47.5mm"/>
+            <medium long="297mm" short="210mm" stock="a4"/>
+            <field access="protected" h="12mm" name="TEXTNAM_HEADER" w="207mm" y="30.5mm">
+               <ui>
+                  <textEdit hScrollPolicy="off" multiLine="1" vScrollPolicy="off">
+                     <border presence="hidden">
+                        <?templateDesigner StyleID aped0?></border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <caption reserve="0in"/>
+               <bind match="dataRef" ref="$.ES_SENDER.TEXTNAM_HEADER"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <desc>
+                  <text name="Schema-Anmerkung">Textnamen für Formulartextbaustein Briefkopf</text>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_KOP 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+               </desc>
+            </field>
+            <field h="20.75mm" name="GV_LOGO_LBW" w="90.6mm" x="78mm" y="8mm">
+               <ui>
+                  <imageEdit/>
+               </ui>
+               <bind match="dataRef" ref="$.GV_LOGO_LBW"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Grafikknoten Logo
+URL-FIELD = GV_LOGO_LBW</exData>
+               </desc>
+            </field>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform layout="lr-tb" name="FormularSeite1" w="173mm">
+         <bind match="none"/>
+         <subform h="14.327mm" name="Rücksendeadresse" w="117.078mm">
+            <bind match="none"/>
+            <field access="protected" h="5mm" name="TEXTNAM_ADR" w="101.6mm" y="0mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Times New Roman"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <bind match="dataRef" ref="$.ES_SENDER.TEXTNAM_ADR"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_ADR 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+               </desc>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform h="49.5mm" name="Adresse" w="95mm">
+            <bind match="none"/>
+            <field h="38mm" name="GV_ANSCHRIFT_BANK" w="95mm" x="0.001mm" y="9.999mm">
+               <ui>
+                  <textEdit hScrollPolicy="off" multiLine="1" vScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Arial"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="1mm" topInset="0.5mm"/>
+               <bind match="dataRef" ref="$.GV_ANSCHRIFT_BANK"/>
+               <desc>
+                  <text name="Schema-Anmerkung">Text 30 Stellen</text>
+                  <text name="Schema-Anmerkung">Bankanschrift</text>
+               </desc>
+               <validate nullTest="warning"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform h="41.025mm" name="Infofenster" w="78mm">
+            <bind match="none"/>
+            <field access="protected" h="4mm" name="Ort" w="30mm" x="6.001mm" y="1.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Times New Roman"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para hAlign="right" vAlign="middle"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <bind match="dataRef" ref="$.ES_SENDER.TEXTNAM_ORT"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_ORT 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+               </desc>
+            </field>
+            <field access="protected" h="4mm" name="DATE" w="41.5mm" x="36.5mm" y="1.025mm">
+               <ui>
+                  <dateTimeEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </dateTimeEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.GLOBALE_DATEN.DATE">
+                  <picture>date{YYYY-MM-DD}</picture>
+               </bind>
+               <value>
+                  <date/>
+               </value>
+               <desc>
+                  <text name="Schema-Anmerkung">Systemdatum</text>
+               </desc>
+            </field>
+            <field access="protected" h="4mm" name="Bez_Bearbeiter" w="30mm" x="6.001mm" y="5.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Times New Roman"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para hAlign="right" vAlign="middle"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <bind match="dataRef" ref="$.TEXT_ELEMENTE.I001.TEXT"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+               </desc>
+            </field>
+            <field access="protected" h="4mm" name="Bearbeiter" w="41.5mm" x="36.5mm" y="5.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.GLOBALE_DATEN.GS_USER_DATA.NAME"/>
+            </field>
+            <field access="protected" h="4mm" name="Bez_Tel" w="30mm" x="6.001mm" y="9.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Times New Roman"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para hAlign="right" vAlign="middle"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <bind match="dataRef" ref="$.TEXT_ELEMENTE.I002.TEXT"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+               </desc>
+            </field>
+            <field access="protected" h="4mm" name="Tel" w="41.5mm" x="36.5mm" y="9.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.GLOBALE_DATEN.GS_USER_DATA.TEL"/>
+            </field>
+            <field access="protected" h="4mm" name="Bez_Fax" w="30mm" x="6.001mm" y="13.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Times New Roman"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para hAlign="right" vAlign="middle"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <bind match="dataRef" ref="$.TEXT_ELEMENTE.I003.TEXT"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+               </desc>
+            </field>
+            <field access="protected" h="4mm" name="Fax" w="41.5mm" x="36.5mm" y="13.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.GLOBALE_DATEN.GS_USER_DATA.FAX"/>
+            </field>
+            <field access="protected" h="4mm" name="Bez_Belegnummer" w="30mm" x="6.001mm" y="17.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Times New Roman"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para hAlign="right" vAlign="middle"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <bind match="dataRef" ref="$.TEXT_ELEMENTE.I004.TEXT"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+               </desc>
+            </field>
+            <field access="protected" h="4mm" name="GV_BELEG_FUNKTION_TEXT" w="41.5mm" x="36.5mm" y="17.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.GLOBALE_DATEN.GV_BELEG_FUNKTION_TEXT"/>
+               <value>
+                  <text maxChars="30"/>
+               </value>
+            </field>
+            <field access="protected" h="4mm" name="TEXT" w="41.5mm" x="36.5mm" y="21.025mm">
+               <ui>
+                  <textEdit hScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.TEXT_ELEMENTE.I005.TEXT"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+               </desc>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform h="169mm" name="Hauptfenster" w="172.999mm">
+            <bind match="none"/>
+            <field h="3.22mm" name="GV_LOGO_LOEWE" w="7.5mm" x="0.001mm" y="3.4mm">
+               <ui>
+                  <imageEdit/>
+               </ui>
+               <bind match="dataRef" ref="$.GV_LOGO_LOEWE"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Grafikknoten Logo
+URL-FIELD = G_LOGO_LOEWE</exData>
+                  <exData name="Schema-Anmerkung">Grafikknoten Logo
+URL-FIELD = GV_LOGO_LOEWE</exData>
+               </desc>
+            </field>
+            <subform h="16.695mm" name="Betreff" w="165mm" x="8mm" y="0.305mm">
+               <bind match="none"/>
+               <field access="protected" h="6mm" name="TEXT" w="165mm" y="2.695mm">
+                  <ui>
+                     <textEdit hScrollPolicy="off" multiLine="1" vScrollPolicy="off">
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="1mm" rightInset="1mm" topInset="0.5mm"/>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M001.TEXT"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <subform name="Kassenzeichen_TAB" w="165.6mm" x="7.4mm" y="29.875mm">
+               <bind match="none"/>
+               <field h="10mm" name="Anschreiben" w="165mm" x="0.6mm" y="14.125mm">
+                  <ui>
+                     <textEdit multiLine="1"/>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M003.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="Bez_Kontoinhaber" w="41mm" x="0.6mm" y="30.05mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M004.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field h="5mm" name="Kontoinhaber" w="124mm" x="41.6mm" y="30.05mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.ES_FP_DATA.ENAME"/>
+                  <value>
+                     <text maxChars="60"/>
+                  </value>
+                  <desc>
+                     <text name="Schema-Anmerkung">Textfeld der Länge 60</text>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="Bez_IBAN" w="41mm" x="0.6mm" y="35.05mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M005.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="PIBAN" w="124mm" x="41.6mm" y="35.05mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.ES_WORKLIST_FE.PIBAN"/>
+                  <desc>
+                     <text name="Schema-Anmerkung">Absenderbankkonto: IBAN</text>
+                  </desc>
+                  <format>
+                     <picture>text{AA99 9999 9999 9999 9999 99}</picture>
+                  </format>
+               </field>
+               <field access="protected" h="5mm" name="Bez_Betrag" w="41mm" x="0.6mm" y="40.05mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M006.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field access="readOnly" h="9mm" id="floatingField000041" name="Betrag" presence="hidden" w="62mm" x="0.6mm" y="7.825mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text maxChars="100"/>
+                  </value>
+                  <bind match="dataRef" ref="$.GLOBALE_DATEN.GV_BETRAG_TEXT"/>
+                  <desc>
+                     <text name="Schema-Anmerkung">Charakter 100</text>
+                  </desc>
+               </field>
+               <draw h="5mm" name="Betrag" w="124mm" x="41.6mm" y="40.05mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in"><span xfa:embed="#floatingField000041" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+                  <font baselineShift="0pt" size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+               </draw>
+               <field access="protected" h="5mm" name="Bez_Verwendungszweck" w="41mm" x="0.6mm" y="45.05mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M007.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field access="protected" h="20mm" name="Verwendungszweck" w="124mm" x="41.6mm" y="45.55mm">
+                  <ui>
+                     <textEdit hScrollPolicy="off" multiLine="1" vScrollPolicy="off">
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <bind match="dataRef" ref="$.GV_VZWECK"/>
+                  <desc>
+                     <text name="Schema-Anmerkung">Verwendungszweck in String Form</text>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="Bez_Empfänger" w="41mm" x="0.5mm" y="65.625mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M008.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="Empfänger" w="124mm" x="41.5mm" y="65.625mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.ES_SENDER.ENAME"/>
+                  <value>
+                     <text maxChars="40"/>
+                  </value>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_KOP 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+                     <text name="Schema-Anmerkung">Empfängername</text>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="Bez_BIC_Empfänger" w="41mm" x="0.5mm" y="70.625mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M009.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="BIC" w="124mm" x="41.5mm" y="70.625mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.ES_SENDER.BIC"/>
+                  <value>
+                     <text maxChars="11"/>
+                  </value>
+                  <desc>
+                     <text name="Schema-Anmerkung">SWIFT/BIC  für internationale Zahlungen</text>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="Bez_IBAN_Empfänger" w="41mm" x="0.5mm" y="75.625mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M010.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="IBAN" w="124mm" x="41.5mm" y="75.625mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.ES_SENDER.IBAN"/>
+                  <value>
+                     <text maxChars="34"/>
+                  </value>
+                  <desc>
+                     <text name="Schema-Anmerkung">IBAN (International Bank Account Number)</text>
+                  </desc>
+               </field>
+               <field access="protected" minH="5mm" name="Bez_Buchungstag" w="41mm" x="0.5mm" y="80.625mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M011.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <field access="protected" h="5mm" name="BUDAT" w="124mm" x="41.5mm" y="80.625mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <bind match="dataRef" ref="$.ES_WORKLIST_FE.BUDAT">
+                     <picture>date{YYYY-MM-DD}</picture>
+                  </bind>
+                  <desc>
+                     <text name="Schema-Anmerkung">Buchungsdatum im Beleg</text>
+                  </desc>
+                  <validate nullTest="error"/>
+               </field>
+               <field h="6mm" name="Einleitung" w="80mm" x="0.6mm" y="0.125mm">
+                  <ui>
+                     <textEdit multiLine="1"/>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0.5mm" leftInset="1mm" rightInset="1mm" topInset="0.5mm"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M002.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+                  <para vAlign="bottom"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform name="Anschreiben_Teil2" x="8mm" y="115mm">
+               <bind match="none"/>
+               <field access="protected" h="38mm" name="Anschreiben" w="165mm" y="5mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0.5mm" leftInset="1mm" rightInset="1mm" topInset="0.5mm"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M012.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+                  <para lineHeight="18pt"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform name="Maschinell_erstellt" x="8mm" y="134.9mm">
+               <bind match="none"/>
+               <field access="protected" h="6mm" name="maschinell_erstellt" w="165mm" y="25.1mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M013.TEXT"/>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
+         <subform name="Fusszeile">
+            <bind match="none"/>
+            <field access="protected" h="10mm" name="Fusszeile" w="165mm" x="8mm" y="5.5mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="8pt" typeface="Times New Roman"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para hAlign="center" vAlign="middle"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <bind match="dataRef" ref="$.ES_SENDER.TEXTNAM_FOOTER"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_FUS 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+               </desc>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <keep intact="contentArea"/>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">11.0.1.20160216.1.905378.null</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 32 8 002500440048004A00550057005E0060Baegrt{}?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner DefaultCaptionFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner Grid show:0, snap:1, units:1, color:ff8080, origin:(0,0), interval:(79375,79375), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner SaveTaggedPDF 1?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 139?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+      <common>
+         <template>
+            <base>https://EHMS.HKR.LSA-NET.DE:443/sap/bc/fp/form/layout/</base>
+         </template>
+      </common>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection dataDescription="data" name="_THKR_EA_000">
+      <uri/>
+      <rootElement>data</rootElement>
+   </xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="data">
+      <data>
+         <GV_VARIANT/>
+         <GV_ANSCHRIFT/>
+         <GV_ANSCHRIFT_BANK/>
+         <GV_FORMTYPE/>
+         <GV_BEARBEITER/>
+         <GV_BELEGNR/>
+         <GV_KASSENZEICHEN/>
+         <GV_LOGO_LSA/>
+         <GV_VZWECK/>
+         <GV_DATUM/>
+         <GV_DATUM14/>
+         <GV_DATUM28/>
+         <GV_DATUM49/>
+         <GV_BUDAT/>
+         <GV_BUDAT14/>
+         <GV_BUDAT42/>
+         <GLOBALE_DATEN>
+            <GV_KASSENZEICHEN/>
+            <GV_EINZAHLER/>
+            <DATE/>
+            <GV_BETRAG_TEXT/>
+            <GS_USER_DATA>
+               <NAME/>
+               <TEL/>
+               <FAX/>
+               <FUNCTION/>
+               <KASSENZE/>
+            </GS_USER_DATA>
+            <GS_VZWECK>
+               <VWEZW1/>
+               <VWEZW2/>
+               <VWEZW3/>
+               <VWEZW4/>
+            </GS_VZWECK>
+            <GV_BELEG_FUNKTION_TEXT/>
+         </GLOBALE_DATEN>
+         <ES_SENDER>
+            <TDID/>
+            <TDSPRAS/>
+            <TXNAM_ORT/>
+            <TXNAM_KOP/>
+            <TXNAM_ADR/>
+            <TXNAM_FUS/>
+            <TXNAM_RUE/>
+            <IBAN/>
+            <BIC/>
+            <ENAME/>
+            <TEXTNAM_ORT/>
+            <TEXTNAM_HEADER/>
+            <TEXTNAM_ADR/>
+            <TEXTNAM_RUECK/>
+            <TEXTNAM_FOOTER/>
+         </ES_SENDER>
+         <ES_WORKLIST_FE>
+            <VB1OK/>
+            <ICON_VB1/>
+            <VB2OK/>
+            <ICON_VB2/>
+            <BUKRS/>
+            <HBKID/>
+            <HKTID/>
+            <BANK_KEY/>
+            <BANK_ACCT/>
+            <KUKEY/>
+            <AZNUM/>
+            <ESNUM/>
+            <AZDAT/>
+            <AZPGNO/>
+            <VORGC/>
+            <TATYP/>
+            <TATXT/>
+            <VALUT/>
+            <KWAER/>
+            <KWBTR/>
+            <FWAER/>
+            <FWBTR/>
+            <CURR_RATE/>
+            <AVKOA/>
+            <AVKOATX/>
+            <AVKON/>
+            <PARTN/>
+            <VGINT/>
+            <ICON_GOTO_GOS/>
+            <ICON_STORED/>
+            <VB2BA/>
+            <N2PCH/>
+            <AVSID/>
+            <B1APP/>
+            <B1STD/>
+            <B2APP/>
+            <B2STD/>
+            <SVKOA/>
+            <SVKON/>
+            <SVAVS/>
+            <BVDAT/>
+            <BUDAT/>
+            <BUTIM/>
+            <VGEXT/>
+            <BUTXT/>
+            <BUSAB/>
+            <KOSTL/>
+            <GSBER/>
+            <PRCTR/>
+            <VERTN/>
+            <VERTT/>
+            <PNOTA/>
+            <CHECT/>
+            <PIPRE/>
+            <GRPNR/>
+            <ESTAT/>
+            <BELNR/>
+            <GJAHR/>
+            <VOZEI/>
+            <SPESK/>
+            <SPESF/>
+            <TEXTS/>
+            <KFMOD/>
+            <VGSAP/>
+            <ANZSP/>
+            <XBLNR/>
+            <ZUONR/>
+            <PABKS/>
+            <PABLZ/>
+            <PASWI/>
+            <PAKTO/>
+            <STAVV/>
+            <TXTVV/>
+            <EPVOZ/>
+            <INFO1/>
+            <INFO2/>
+            <INTAG/>
+            <NBBLN/>
+            <AK1BL/>
+            <AKBLN/>
+            <KNRZA/>
+            <BATCH/>
+            <ITMNR/>
+            <KURSF/>
+            <SGTXT/>
+            <JPDAT/>
+            <POSAG/>
+            <SDOC2/>
+            <VGREF/>
+            <XBENR/>
+            <XBTYP/>
+            <ARRSK/>
+            <PFORM/>
+            <KIDNO/>
+            <KKREF/>
+            <KKRF2/>
+            <MANSP/>
+            <FNAM1/>
+            <FVAL1/>
+            <FKOA1/>
+            <FNAM2/>
+            <FVAL2/>
+            <FKOA2/>
+            <FNAM3/>
+            <FVAL3/>
+            <FKOA3/>
+            <IDENR/>
+            <B1ERR/>
+            <B1DOC/>
+            <B1TYP/>
+            <B2ERR/>
+            <B2DOC/>
+            <B2TYP/>
+            <PIBAN/>
+            <ANWND/>
+            <ABSND/>
+            <AZIDT/>
+            <EMKEY/>
+            <ASTAT/>
+            <DSTAT/>
+            <KIPRE/>
+            <VFDAT/>
+            <GRP01/>
+            <XKEP1/>
+            <GRP02/>
+            <XKEP2/>
+            <WVDAT/>
+            <WVTIM/>
+            <WVART/>
+            <HKONT/>
+            <KTONR/>
+            <KTOIH/>
+            <KTOSB/>
+            <AZSNR/>
+            <KTOPL/>
+            <WAERS/>
+            <SSTYP/>
+            <SSVOZ/>
+            <SSBTR/>
+            <SUMSO/>
+            <SUMHA/>
+            <ESTYP/>
+            <ESVOZ/>
+            <ESBTR/>
+            <BLAUF/>
+            <ELAUF/>
+            <HZINS/>
+            <TEILN/>
+            <BKTOA/>
+            <ANZES/>
+            <VGTYP/>
+            <EFART/>
+            <EUSER/>
+            <EDATE/>
+            <ETIME/>
+            <BKREF/>
+            <XFDIS/>
+            <DSART/>
+            <XVERD/>
+            <SEQ_NUMBER/>
+            <SEQ_STATUS/>
+            <INPUT_FORMAT/>
+            <SIBAN/>
+            <LINE_COLOR/>
+            <ML_STATUS/>
+         </ES_WORKLIST_FE>
+         <ES_FP_DATA>
+            <MANDT/>
+            <ADDR_Z1/>
+            <ADDR_Z2/>
+            <ADDR_Z3/>
+            <ADDR_Z4/>
+            <ADDR_Z5/>
+            <FTEXT_Z1/>
+            <FTEXT_Z2/>
+            <FTEXT_Z3/>
+            <ENAME/>
+            <VZTEXT/>
+            <VARIANT/>
+            <STATUS/>
+            <FORMTYPE/>
+            <ADDR_Z6/>
+            <AKTZE/>
+            <KASZE/>
+            <E_STUFE/>
+            <FICTR/>
+            <AO_IST_BETRAG_TEXT/>
+            <AO_SOLL_BETRAG_TEXT/>
+            <AO_KASZE/>
+            <AO_EINZAHLER/>
+            <BANK_ADDR_Z1/>
+            <BANK_ADDR_Z2/>
+            <BANK_ADDR_Z3/>
+            <BANK_ADDR_Z4/>
+            <BANK_ADDR_Z5/>
+            <BANK_ADDR_Z6/>
+            <FAELLIG/>
+            <DATUM14/>
+            <DATUM28/>
+            <DATUM49/>
+            <GEBUEHR/>
+            <G_BETRAG/>
+            <DATUM/>
+            <BUDAT/>
+            <BUDAT14/>
+            <BUDAT42/>
+            <FRIST/>
+            <AO_BUDAT/>
+            <AO_FAELLIG/>
+            <EADRESSE/>
+            <NADAT/>
+            <XTHKRXOPTION/>
+            <AO_FIPEX/>
+            <AO_VOM/>
+            <FORMID/>
+            <FERTIG/>
+            <FAXNR/>
+            <AZ_ID/>
+            <BANKVERMERK/>
+            <VZ_EREF/>
+            <VZ_ABWA/>
+            <VZ_ABWE/>
+            <VZ_TXID/>
+            <VZ_CRED/>
+            <POSTVERMERK/>
+            <PKH_DATEN>
+               <AKTENZEICHEN/>
+               <VERWENDUNGSZWECK/>
+               <BELEGREFERENZ/>
+               <FINANZPOSITION/>
+               <DIENSTSTELLEN_NR/>
+               <ART_FORDERUNG/>
+               <BANKREFERENZ/>
+               <GESCHAEFTSZEICHEN/>
+               <FISTL/>
+               <ADRESSE_LOK>
+                  <NAME/>
+                  <PLZ_ORT/>
+                  <ORT/>
+                  <STR/>
+                  <HNR/>
+                  <POSTFACH/>
+                  <PLZ_POSTFACH/>
+                  <ORT_POSTFACH/>
+                  <TELNR/>
+                  <FAXNR/>
+                  <MAIL/>
+                  <AUSSENSTELLE/>
+                  <ADRESSE_DATUM/>
+                  <ADRESSE_ABSENDER/>
+                  <ADRESSE_POSTFACH/>
+                  <ADRESSE_PLZ/>
+               </ADRESSE_LOK>
+               <ABSENDER_LOK/>
+               <SACHBEARBEITER/>
+               <SB_TELNR/>
+               <SB_TELFX/>
+               <VERZUG_BIS/>
+               <ANORDNUNGSBETRAG/>
+               <GEFORDERTE_LEISTUNG/>
+               <RATENBETRAG/>
+               <RATEN_BIS/>
+               <ANZAHL_RATEN/>
+               <FAELLIGE_RATEN/>
+               <ANZAHL_FAELLIGE_RATEN/>
+               <GELEISTETE_ZAHLUNGEN/>
+               <SALDO/>
+               <SALDO_ART/>
+               <OFD_HEADER/>
+               <RATENAENDERUNGEN dd:minOccur="0">
+                  <DATA dd:maxOccur="-1">
+                     <FKDAT/>
+                     <FAKWR/>
+                     <WAERS/>
+                  </DATA>
+               </RATENAENDERUNGEN>
+               <RECIPIENT/>
+               <KONTOSTAND/>
+               <KONTOAENDERUNG/>
+            </PKH_DATEN>
+         </ES_FP_DATA>
+         <TEXT_ELEMENTE>
+            <M001 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M001>
+            <M002 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M002>
+            <M003 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M003>
+            <M004 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M004>
+            <M005 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M005>
+            <M006 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M006>
+            <M007 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M007>
+            <M008 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M008>
+            <M009 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M009>
+            <M010 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M010>
+            <M011 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M011>
+            <M012 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M012>
+            <M013 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M013>
+            <M014 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M014>
+            <M015 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M015>
+            <N001 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </N001>
+            <I001 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </I001>
+            <I002 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </I002>
+            <I003 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </I003>
+            <I004 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </I004>
+            <I005 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </I005>
+            <M016 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M016>
+            <M017 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M017>
+            <M018 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M018>
+            <M019 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M019>
+            <M020 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M020>
+            <M021 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M021>
+            <M022 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M022>
+            <M023 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M023>
+            <M024 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M024>
+            <M025 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M025>
+            <M026 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M026>
+            <M027 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M027>
+            <M028 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M028>
+            <M029 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M029>
+            <M030 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M030>
+            <M031 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M031>
+            <M032 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M032>
+            <M033 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M033>
+            <M034 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M034>
+            <M035 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M035>
+         </TEXT_ELEMENTE>
+      </data>
+   </dd:dataDescription>
+</xfa:datasets>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale desc="Deutsch (Deutschland)" name="de_DE">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>Januar</month>
+            <month>Februar</month>
+            <month>März</month>
+            <month>April</month>
+            <month>Mai</month>
+            <month>Juni</month>
+            <month>Juli</month>
+            <month>August</month>
+            <month>September</month>
+            <month>Oktober</month>
+            <month>November</month>
+            <month>Dezember</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mrz</month>
+            <month>Apr</month>
+            <month>Mai</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Okt</month>
+            <month>Nov</month>
+            <month>Dez</month>
+         </monthNames>
+         <dayNames>
+            <day>Sonntag</day>
+            <day>Montag</day>
+            <day>Dienstag</day>
+            <day>Mittwoch</day>
+            <day>Donnerstag</day>
+            <day>Freitag</day>
+            <day>Samstag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>So</day>
+            <day>Mo</day>
+            <day>Di</day>
+            <day>Mi</day>
+            <day>Do</day>
+            <day>Fr</day>
+            <day>Sa</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>vorm.</meridiem>
+            <meridiem>nachm.</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>v. Chr.</era>
+            <era>n. Chr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMMM YYYY</datePattern>
+         <datePattern name="med">DD.MM.YYYY</datePattern>
+         <datePattern name="short">DD.MM.YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H:MM' Uhr 'Z</timePattern>
+         <timePattern name="long">HH:MM:SS Z</timePattern>
+         <timePattern name="med">HH:MM:SS</timePattern>
+         <timePattern name="short">HH:MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GjMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">€</currencySymbol>
+         <currencySymbol name="isoname">EUR</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2024-07-29T08:13:51Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer 11.0</xmp:CreatorTool>
+         <pdf:Producer>Adobe LiveCycle Designer 11.0</pdf:Producer>
+         <xmpMM:DocumentID>uuid:cb475eb2-9687-46c6-b1d9-78940f7bf76b</xmpMM:DocumentID>
+         <pdfuaid:part>1</pdfuaid:part>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>11.0.1.20160216.1.905378.null</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

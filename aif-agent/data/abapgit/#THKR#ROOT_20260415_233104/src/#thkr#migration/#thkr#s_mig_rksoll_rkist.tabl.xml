@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>/THKR/S_MIG_RKSOLL_RKIST</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>Migration: Rückstandskonto_Fälligkeit_Position Soll-Ist</DDTEXT>
+    <EXCLASS>1</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>SOLL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Buchung: Nebenforderung pro Position</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>IST</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Ist-Buchung: Nebenforderung pro Position</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ADF_SCHLUESSEL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000004</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000002</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Buchung: Art der Forderung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>NEF_SCHLUESSEL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Buchung: Art der Nebenforderung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>HAUP_NEBEN_FORDERUNG</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000002</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000001</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Buchung: Kennzeichen Haupt-/Nebenforderung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>DAT_EINZAHL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000020</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000010</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Ist-Buchung: Datum der Ist-Einzahlung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>POSNR_DKW</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Ist-Buchung: Positionnummer der Buchung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>GRUND</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000216</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000108</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Zahlungsgrund</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>QUELLE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000016</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000008</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Ist-Buchung: Quelle der Buchung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>BUCH_KAZ</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000050</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000025</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Buchung: Buchungskassenzeichen</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>DAT_NF_GUELTIG_AB</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Buchung: ab wann die Nebenforderung gültig</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ZINS_SCHLUESSEL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Historie der Soll-Buchung: Zinsschlüssel</DDTEXT>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

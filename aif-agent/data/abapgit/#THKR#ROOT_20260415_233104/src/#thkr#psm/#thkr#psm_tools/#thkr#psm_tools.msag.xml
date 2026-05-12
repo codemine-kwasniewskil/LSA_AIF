@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Deckungsgruppe /-elemente nicht gefunden: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Deckungsgruppenanlage &amp;1 mit Fehler: siehe folgend</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Deckungsgruppeanlage &amp;1 mit Fehler beim Save</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>BeE Regel nicht gefunden: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>BeE Regel &amp;1 anlegen mit Fehler: siehe folgend</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>BeE Regel &amp;1 mit Fehler beim Save</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>BeE Regel &amp;1 angelegt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Deckungsgruppe &amp;1 angelegt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Import BSP über &amp;1. Aber es wurde &amp;2 angegeben. Bitte Eingabe prüfen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_TOOLS</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Fehler bei Verzeichnisauswahldialog. Fehlercode: &amp;1 Fehlertyp: &amp;2</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

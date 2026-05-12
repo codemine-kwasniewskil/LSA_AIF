@@ -1,0 +1,3562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>/THKR/RFUMSV00</NAME>
+    <SQLX>R</SQLX>
+    <DBAPL>F</DBAPL>
+    <DBNA>BR</DBNA>
+    <CLAS>BAAA</CLAS>
+    <TYPE>901</TYPE>
+    <SUBC>1</SUBC>
+    <APPL>F</APPL>
+    <RSTAT>P</RSTAT>
+    <RLOAD>D</RLOAD>
+    <LDBNAME>BRF</LDBNAME>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>0**</KEY>
+     <ENTRY>*     Report-Titel / Selektionsparameter</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Umsatzsteuer-Voranmeldung: Buchungsdatum &amp;DAT1 bis &amp;DAT2</ENTRY>
+     <LENGTH>56</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Umsatzsteuer-Voranmeldung: Periode &amp;PER1 bis &amp;PER2</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Allgemeine Abgrenzungen Land Sachsen-Anhalt</ENTRY>
+     <LENGTH>86</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>Umsatzsteuer-Voranmeldung: Belegdatum &amp;DAT1 bis &amp;DAT2</ENTRY>
+     <LENGTH>53</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Nur für Wiederholungslauf:                        ;</ENTRY>
+     <LENGTH>51</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>USt-Voranmeldung: Wiederholung des Laufes vom &amp;DATE um &amp;TIME</ENTRY>
+     <LENGTH>62</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>Geschäftsort ist &amp;1</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>Ust-Voranmeldung: Wiederholung der Läufe &amp;DAT1 bis &amp;DAT2</ENTRY>
+     <LENGTH>60</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>Umsatzsteuer-Voranmeldung: Meldedatum &amp;DAT1 bis &amp;DAT2</ENTRY>
+     <LENGTH>56</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>019</KEY>
+     <ENTRY>Layout</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>020</KEY>
+     <ENTRY>Ausgabelisten</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>021</KEY>
+     <ENTRY>Ausgangssteuer: Einzelposten</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>022</KEY>
+     <ENTRY>Ausgangssteuer: Summe</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>023</KEY>
+     <ENTRY>Vorsteuer: Einzelposten</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>024</KEY>
+     <ENTRY>Vorsteuer: Summe</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>025</KEY>
+     <ENTRY>Steuerdifferenz: Einzelposten</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>026</KEY>
+     <ENTRY>Saldo pro Buchungskreis</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>027</KEY>
+     <ENTRY>Salden aller Buchungskreise</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>028</KEY>
+     <ENTRY>Konfigurieren</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>051</KEY>
+     <ENTRY>Weitere Abgrenzungen</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>052</KEY>
+     <ENTRY>Buchungsparameter</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>053</KEY>
+     <ENTRY>Ausgabesteuerung</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>054</KEY>
+     <ENTRY>Ausgabelisten</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>055</KEY>
+     <ENTRY>Belegnummerierung</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>056</KEY>
+     <ENTRY>Formulardruck</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>057</KEY>
+     <ENTRY>Zahllast-Buchung</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>058</KEY>
+     <ENTRY>DTA File</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>059</KEY>
+     <ENTRY>Elektronische Voranmeldung</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>060</KEY>
+     <ENTRY>Joint Venture Abgrenzungen</ENTRY>
+     <LENGTH>52</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>1**</KEY>
+     <ENTRY>*     List-Überschriften</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>101</KEY>
+     <ENTRY>File &amp; wurde erstellt.</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>102</KEY>
+     <ENTRY>Es wurde kein File erstellt.</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>167</KEY>
+     <ENTRY>Batch-Input-Mappe &amp;BATCHINPUTM</ENTRY>
+     <LENGTH>45</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>168</KEY>
+     <ENTRY>2 Batch Input Mappen &amp;BATCHINPUTM</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>169</KEY>
+     <ENTRY>Buchungskreis mit Belegaufteilung</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>170</KEY>
+     <ENTRY>Daten für den Formulardruck vorbereitet</ENTRY>
+     <LENGTH>100</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>171</KEY>
+     <ENTRY>mit Laufdatum &amp;LAUFDATUM&amp; und Laufidentifikation &amp;LIDENTIF&amp; für</ENTRY>
+     <LENGTH>100</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>172</KEY>
+     <ENTRY>Buchungskreis ohne Belegaufteilung</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>173</KEY>
+     <ENTRY>Kommentar</ENTRY>
+     <LENGTH>9</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>180</KEY>
+     <ENTRY>Daten für die elektronische Steuermeldung vorbereitet für</ENTRY>
+     <LENGTH>100</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>190</KEY>
+     <ENTRY>Steuersalden, die keinem Steuerfeld zugeordnet werden konnten</ENTRY>
+     <LENGTH>104</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>191</KEY>
+     <ENTRY>Steuerbasisbetrag</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>192</KEY>
+     <ENTRY>Steuerbetrag</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>193</KEY>
+     <ENTRY>S/H</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>194</KEY>
+     <ENTRY>Ausführ.am</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>195</KEY>
+     <ENTRY>Lauf-ID</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>196</KEY>
+     <ENTRY>Land/Region</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>197</KEY>
+     <ENTRY>Vorg.Schl.</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>2**</KEY>
+     <ENTRY>*     Informationstexte</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>201</KEY>
+     <ENTRY>In den Beleg-Steuerzeilen werden Laufdatum &amp;DATE und Uhrzeit &amp;TIME gemerkt.</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>202</KEY>
+     <ENTRY>Aus diesem Zeitraum wurden nur Beleg-Steuerzeilen selektiert mit Laufdatum &amp;DATE und Uhrzeit &amp;TIME.</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>204</KEY>
+     <ENTRY>Aus diesem Zeitraum wurden nur Beleg-Steuerzeilen selektiert mit Laufdatum &amp;DAT1 bis &amp;DAT2.</ENTRY>
+     <LENGTH>91</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>300</KEY>
+     <ENTRY>Achtung: Die Basisbeträge dieser Meldung sind falsch. Beachten Sie den OSS Hinweis 204972.</ENTRY>
+     <LENGTH>130</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>400</KEY>
+     <ENTRY>Geschäftspartnername</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>401</KEY>
+     <ENTRY>Basisbetrag in Fremdw.</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>402</KEY>
+     <ENTRY>Ausgangssteuer in Fremdw.</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>403</KEY>
+     <ENTRY>Eingangssteuer in Fremdw.</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>404</KEY>
+     <ENTRY>Beschreibung</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>405</KEY>
+     <ENTRY>ISO-Code für Land/Region</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>406</KEY>
+     <ENTRY>ISO</ENTRY>
+     <LENGTH>3</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>407</KEY>
+     <ENTRY>Länder-/Regionenname</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>408</KEY>
+     <ENTRY>Land/Region</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>501</KEY>
+     <ENTRY>Zusatzparameter</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Umsatzsteuer-Voranmeldung</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PARPCORR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>32</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PARPDPER</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>38</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PARPDYEA</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>38</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PARPEUVA</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>34</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ADAT</KEY>
+     <ENTRY>Ausführungstermin</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_AVER</KEY>
+     <ENTRY>Internationale Adressversion</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BDAT</KEY>
+     <ENTRY>Buchungsdatum</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BINA</KEY>
+     <ENTRY>Name der Mappe</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BINP</KEY>
+     <ENTRY>Batch-Input gewünscht</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BLAR</KEY>
+     <ENTRY>Belegart der Buchungen</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BODO</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>22</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BSUD</KEY>
+     <ENTRY>Belege aktualisieren: Echtlauf</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BUPL</KEY>
+     <ENTRY>Belege aktualisieren: Testlauf</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_CAOS</KEY>
+     <ENTRY>nicht abzugsf. Vorst. getrennt</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_CORI</KEY>
+     <ENTRY>RI des altern. Kostenobjekts</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_DEF</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>37</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_FDAT</KEY>
+     <ENTRY>Fälligkeitsdatum der Zahllast</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_FILE</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>17</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_KEEP</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>32</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_KUKP</KEY>
+     <ENTRY>Belege nicht aktualisieren</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LANG</KEY>
+     <ENTRY>Ausgabesprache</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LAUD</KEY>
+     <ENTRY>Programmlaufdatum</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LAUI</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>22</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LINE</KEY>
+     <ENTRY>Zusatztitel</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LIS1</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>32</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LIS2</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>35</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LIS3</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>31</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LIS4</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>30</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LIS5</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>23</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LIS6</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>38</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LIS7</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>34</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LSEP</KEY>
+     <ENTRY>Listseparation gewünscht</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_MIKF</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>33</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_MONA</KEY>
+     <ENTRY>Buchungsperiode</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_MOSS</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>32</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_NAVA</KEY>
+     <ENTRY>Basisbetrag um NAV erhöhen</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_NOHE</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>35</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ORIG</KEY>
+     <ENTRY>Auf Originalkostenobj. buchen</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_RCTY</KEY>
+     <ENTRY>Steuer-L/R zum Steuerrunden</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_REID</KEY>
+     <ENTRY>Report-Nr.</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_SNIN</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>30</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_SNOU</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>34</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_SOFA</KEY>
+     <ENTRY>Mappe sofort abspielen</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_SORT</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>26</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_STAT</KEY>
+     <ENTRY>kein Druck statistischer Infos</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_STRU</KEY>
+     <ENTRY>MWSKZ zum Steuerrunden</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_TRID</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>18</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_UDTR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>37</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_UMSV</KEY>
+     <ENTRY>Formulardruck vorbereiten</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_VAR1</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>14</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_VAR2</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>14</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_VAR3</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>14</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_VAR4</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>14</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_VAR5</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>14</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_VAR6</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>14</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_VAR7</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>14</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XADR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>29</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XALW</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XCAS</KEY>
+     <ENTRY>Quittungsdaten lesen</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XDTA</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>25</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XFWA</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>26</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XJVS</KEY>
+     <ENTRY>Joint Venture Aufteilung</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XML</KEY>
+     <ENTRY>Ausgabe im XML-Format</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XSAU</KEY>
+     <ENTRY>Ausgangssteuer selektieren</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XSHT</KEY>
+     <ENTRY>Summe nach Soll/Haben</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XSTW</KEY>
+     <ENTRY>Landeswährung statt Hauswährg</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XSVO</KEY>
+     <ENTRY>Vorsteuer selektieren</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ZEIT</KEY>
+     <ENTRY>Zeit für das Abspielen</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ZKTO</KEY>
+     <ENTRY>Abweichendes Zahllastkonto</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_BLDT</KEY>
+     <ENTRY>Belegdatum</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_BUPL</KEY>
+     <ENTRY>Geschäftsort</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_CPUD</KEY>
+     <ENTRY>CPU-Datum</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_GROU</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>26</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_KTOS</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>15</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_LSTM</KEY>
+     <ENTRY>Steuermeldeland/-region</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_MONA</KEY>
+     <ENTRY>Geschäftsmonat</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_MWKZ</KEY>
+     <ENTRY>Umsatzsteuerkennzeichen</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_TAXC</KEY>
+     <ENTRY>Steuermeldeland/-region</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_TMDT</KEY>
+     <ENTRY>Datum der Steuermeldung</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_TMTI</KEY>
+     <ENTRY>Uhrzeit der Steuermeldung</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_UKRS</KEY>
+     <ENTRY>Umsatzsteuerkreis</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_UMSK</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>27</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_VNAM</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>21</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_VTDT</KEY>
+     <ENTRY>Steuermeldedatum</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SKONTO</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>22</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_DIAC</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>20</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_GSBER</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_PRCTR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_SEGMT</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>E</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>0**</KEY>
+       <ENTRY>*     Report Title / Selection Parameter</ENTRY>
+       <LENGTH>40</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Tax on Sls/Purch. Adv. Ret.: Posting Date &amp;DAT1 to &amp;DAT2</ENTRY>
+       <LENGTH>56</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Tax on Sls/Purch. Adv.Ret.: Periods &amp;PER1 to &amp;PER2</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>004</KEY>
+       <ENTRY>General Boundaries of Saxony-Anhalt Land</ENTRY>
+       <LENGTH>86</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>005</KEY>
+       <ENTRY>Tax on Sls/Purch. Adv. Ret.: Doc. Date &amp;DAT1 to &amp;DAT2</ENTRY>
+       <LENGTH>53</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>006</KEY>
+       <ENTRY>Only for Repeat Run:</ENTRY>
+       <LENGTH>51</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>007</KEY>
+       <ENTRY>Tax on Sls/Purch. Adv. Ret.: Repeat Run from &amp;DATE at &amp;TIME</ENTRY>
+       <LENGTH>62</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>008</KEY>
+       <ENTRY>Business Place is &amp;1</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>009</KEY>
+       <ENTRY>Tax on Sls/Purch. Adv. Ret.: Repeat Runs &amp;DAT1 to &amp;DAT2</ENTRY>
+       <LENGTH>60</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>010</KEY>
+       <ENTRY>Advance Tax Return: Report Date &amp;DAT1 to &amp;DAT2</ENTRY>
+       <LENGTH>56</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>019</KEY>
+       <ENTRY>Layout</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>020</KEY>
+       <ENTRY>Output Lists</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>021</KEY>
+       <ENTRY>Output Tax: Line Items</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>022</KEY>
+       <ENTRY>Output Tax: Total</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>023</KEY>
+       <ENTRY>Input Tax: Line Items</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>024</KEY>
+       <ENTRY>Input Tax: Total</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>025</KEY>
+       <ENTRY>Tax Difference: Line Items</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>026</KEY>
+       <ENTRY>Balance per Company Code</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>027</KEY>
+       <ENTRY>Balance of All Company Codes</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>028</KEY>
+       <ENTRY>Configure</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>051</KEY>
+       <ENTRY>Further Selections</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>052</KEY>
+       <ENTRY>Posting Parameters</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>053</KEY>
+       <ENTRY>Output Control</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>054</KEY>
+       <ENTRY>Output Lists</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>055</KEY>
+       <ENTRY>Document Numbering</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>056</KEY>
+       <ENTRY>Print Form</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>057</KEY>
+       <ENTRY>Tax Payable Posting</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>058</KEY>
+       <ENTRY>DME File</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>059</KEY>
+       <ENTRY>Electronic Advance Tax Return</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>060</KEY>
+       <ENTRY>JVA Parameters</ENTRY>
+       <LENGTH>52</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>1**</KEY>
+       <ENTRY>*     List Headings</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>101</KEY>
+       <ENTRY>File &amp; created.</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>102</KEY>
+       <ENTRY>No file created.</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>167</KEY>
+       <ENTRY>Batch Input Session &amp;BATCHINPUTM</ENTRY>
+       <LENGTH>45</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>168</KEY>
+       <ENTRY>2 Batch Input Sess. &amp;BATCHINPUTM</ENTRY>
+       <LENGTH>33</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>169</KEY>
+       <ENTRY>Company Code with Document Split</ENTRY>
+       <LENGTH>33</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>170</KEY>
+       <ENTRY>Data Prepared for Printing Forms</ENTRY>
+       <LENGTH>100</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>171</KEY>
+       <ENTRY>With Run Date &amp;LAUFDATUM&amp; and Run ID &amp;LIDENTIF&amp; for</ENTRY>
+       <LENGTH>100</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>172</KEY>
+       <ENTRY>Company Code Without Doc. Split</ENTRY>
+       <LENGTH>34</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>173</KEY>
+       <ENTRY>Comment</ENTRY>
+       <LENGTH>9</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>180</KEY>
+       <ENTRY>Data for Electronic Tax Return Prepared for</ENTRY>
+       <LENGTH>100</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>190</KEY>
+       <ENTRY>Tax Balances That Could Not Be Assigned to a Tax Box</ENTRY>
+       <LENGTH>104</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>191</KEY>
+       <ENTRY>Tax Base Amount</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>192</KEY>
+       <ENTRY>Tax Amount</ENTRY>
+       <LENGTH>27</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>193</KEY>
+       <ENTRY>Debit/Credit</ENTRY>
+       <LENGTH>13</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>194</KEY>
+       <ENTRY>Run On</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>195</KEY>
+       <ENTRY>Run ID</ENTRY>
+       <LENGTH>18</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>196</KEY>
+       <ENTRY>Country/Region</ENTRY>
+       <LENGTH>14</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>197</KEY>
+       <ENTRY>Trans. Key</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>2**</KEY>
+       <ENTRY>*     Information Texts</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>201</KEY>
+       <ENTRY>Run date &amp;DATE and time &amp;TIME were noted in the tax items.</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>202</KEY>
+       <ENTRY>Only tax items with run date &amp;DATE and time &amp;TIME were selected from this period.</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>204</KEY>
+       <ENTRY>Only tax items with run date &amp;DAT1 to &amp;DAT2 were selected from this period.</ENTRY>
+       <LENGTH>91</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>300</KEY>
+       <ENTRY>Caution: The base amounts in this report are incorrect. See note 204972.</ENTRY>
+       <LENGTH>130</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>400</KEY>
+       <ENTRY>BP Name</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>401</KEY>
+       <ENTRY>Base Amount in F.Crcy</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>402</KEY>
+       <ENTRY>Output Tax in F. Crcy</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>403</KEY>
+       <ENTRY>Input Tax in F. Crcy</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>404</KEY>
+       <ENTRY>Description</ENTRY>
+       <LENGTH>12</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>405</KEY>
+       <ENTRY>Country/Region ISO Code</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>406</KEY>
+       <ENTRY>ISO</ENTRY>
+       <LENGTH>3</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>407</KEY>
+       <ENTRY>Name of Country/Region</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>408</KEY>
+       <ENTRY>Country/Region</ENTRY>
+       <LENGTH>15</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>501</KEY>
+       <ENTRY>Add. Parameters</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Advance Return for Tax on Sales/Purchases</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ADAT</KEY>
+       <ENTRY>Run Deadline</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_AVER</KEY>
+       <ENTRY>International Address Version</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BDAT</KEY>
+       <ENTRY>Posting Date</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BINA</KEY>
+       <ENTRY>Folder Name</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BINP</KEY>
+       <ENTRY>Batch Input Session Required</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BLAR</KEY>
+       <ENTRY>Postings Document Type</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BSUD</KEY>
+       <ENTRY>Update Documents: Update Run</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BUPL</KEY>
+       <ENTRY>Update Documents: Test Run</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_CAOS</KEY>
+       <ENTRY>Sep. Non-Deduct. Input Tax</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_CORI</KEY>
+       <ENTRY>RI of Alternative Cost Object</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_FDAT</KEY>
+       <ENTRY>Due Date of the Tax Payable</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_KUKP</KEY>
+       <ENTRY>Do not Update Documents</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LANG</KEY>
+       <ENTRY>Output Language</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LAUD</KEY>
+       <ENTRY>Program Run Date</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LINE</KEY>
+       <ENTRY>Additional Title</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LSEP</KEY>
+       <ENTRY>List Separation Required</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_MONA</KEY>
+       <ENTRY>Posting Period</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_NAVA</KEY>
+       <ENTRY>Incr.Bse Amt by Non-Ded.Inp.Tx</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ORIG</KEY>
+       <ENTRY>Post to Original Cost Object</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_RCTY</KEY>
+       <ENTRY>Tax C/R for Tax Rounding</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_REID</KEY>
+       <ENTRY>Report Number</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SOFA</KEY>
+       <ENTRY>Process Session Immediately</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_STAT</KEY>
+       <ENTRY>Statistical Info not Printed</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_STRU</KEY>
+       <ENTRY>TSP ID for Tax Rounding</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_UMSV</KEY>
+       <ENTRY>Prepare Printing of Forms</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XCAS</KEY>
+       <ENTRY>Read Receipt Data</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XJVS</KEY>
+       <ENTRY>Activate JVA Splitting</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XML</KEY>
+       <ENTRY>Output in XML Format</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XSAU</KEY>
+       <ENTRY>Select Output Tax</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XSHT</KEY>
+       <ENTRY>Total by Debit/Credit</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XSTW</KEY>
+       <ENTRY>Nat.Crcy Instead of Local Crcy</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XSVO</KEY>
+       <ENTRY>Select Input Tax</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ZEIT</KEY>
+       <ENTRY>Time for Processing</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ZKTO</KEY>
+       <ENTRY>Alternative Tax Payable Acct</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_BLDT</KEY>
+       <ENTRY>Document Date</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_BUPL</KEY>
+       <ENTRY>Business Place</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_CPUD</KEY>
+       <ENTRY>CPU Date</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_LSTM</KEY>
+       <ENTRY>Tax Reporting Country/Region</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_MONA</KEY>
+       <ENTRY>Fiscal Period</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_MWKZ</KEY>
+       <ENTRY>Tax on Sales/Purchases Code</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_TAXC</KEY>
+       <ENTRY>Tax Reporting Country/Region</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_TMDT</KEY>
+       <ENTRY>Date of Tax Return</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_TMTI</KEY>
+       <ENTRY>Time of Tax Return</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_UKRS</KEY>
+       <ENTRY>Taxes on Sales/Purchases Group</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_VTDT</KEY>
+       <ENTRY>Tax Reporting Date</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PARPCORR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>32</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PARPDPER</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>38</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PARPDYEA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>38</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PARPEUVA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>34</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BODO</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>22</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_DEF</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>37</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_FILE</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>17</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_KEEP</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>32</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LAUI</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>22</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LIS1</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>32</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LIS2</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>35</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LIS3</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>31</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LIS4</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>30</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LIS5</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>23</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LIS6</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>38</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LIS7</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>34</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_MIKF</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>33</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_MOSS</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>32</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_NOHE</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>35</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SNIN</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>30</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SNOU</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>34</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SORT</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_TRID</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_UDTR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>37</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VAR1</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>14</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VAR2</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>14</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VAR3</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>14</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VAR4</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>14</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VAR5</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>14</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VAR6</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>14</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_VAR7</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>14</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XADR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>29</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XALW</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XDTA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>25</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XFWA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_GROU</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_KTOS</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>15</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_UMSK</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>27</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_VNAM</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>21</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SKONTO</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>22</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SO_DIAC</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>20</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SO_GSBER</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SO_PRCTR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SO_SEGMT</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>/THKR/RFUMSV00</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0026</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00218</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/RFUMSV00</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00026</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DESCRIPTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Hier können Sie die Umsatzsteuervoranmeldung und, falls gewünscht, eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Batch-Input-Mappe für das maschinelle Umbuchen der Zahllast erstellen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>lassen. Auf Wunsch wird auch das Ausfüllen der Umsatzsteuervoranmeldung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vorbereitet.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Je Steuerart (Ausgangssteuer und Vorsteuer) können die Einzelposten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>dargestellt werden. Auch wenn Sie die Einzelposten nicht anzeigen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>lassen, werden die Daten aus den einzelnen Belegen gewonnen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Wählen Sie die Belege anhand der folgenden Kriterien aus:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Buchungsdatum</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Buchungsperiode (Geschäftsjahr und -monat)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Belegdatum</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Angaben zu Datum und Uhrzeit, die während eines früheren Laufs in den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Belegsteuerzeilen gespeichert wurden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Wenn Sie das Feld</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE> &lt;DS:DE.UMSVBSUD&gt;Belege aktualisieren: Echtlauf&lt;/&gt; markieren, werden nur</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Beleg-Steuerzeilen ohne Datums- und Uhrzeiteintrag eines früheren Laufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selektiert. In diesen Steuerzeilen werden dann das Datum und die Uhrzeit</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>des Steuermeldungslaufs vermerkt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;[SWITCH]S4H_DOCU_CLOUD&amp; = &apos;X&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Wählen Sie die gewünschten Buchungskreise aus.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ELSE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Wählen Sie die gewünschten Buchungskreise aus oder geben Sie die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Umsatzsteuerkreise an, zu denen alle zugehörigen Buchungskreise</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>automatisch geholt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Beim Erstellen einer Batch-Input-Mappe für die Zahllast-Umbuchung wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>je ausgewähltem Buchungskreis ein Beleg vorbereitet. In diesem Beleg</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden je Steuerkonto eine Position für die Buchung auf das Steuerkonto</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>und eine für die Buchung auf das Zahllastkonto erzeugt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;[SWITCH]S4H_DOCU_CLOUD&amp; = &apos;X&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Auf Wunsch wird das Formular für die Umsatzsteuervoranmeldung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vorbereitet. Dafür werden die Steuersalden pro Buchungskreis,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Umsatzsteuerkennzeichen, Vorgangsschlüssel und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Gesamt/Soll/Haben-Kennzeichen sowie der gewählte Zeitraum in Tabellen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>bereitgestellt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ELSE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Auf Wunsch wird das Formular für die Umsatzsteuervoranmeldung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vorbereitet. Dafür werden die Steuersalden pro Buchungskreis,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Umsatzsteuerkennzeichen, Vorgangsschlüssel und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Gesamt/Soll/Haben-Kennzeichen sowie der gewählte Zeitraum in Tabellen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>bereitgestellt. Aus diesen Tabellen ermittelt der anschließende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Druckreport die für den Druck benötigten Daten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Um die elektronische Umsatzsteuervoranmeldung zu nutzen, nehmen Sie die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>notwendigen Einstellungen unter &lt;LS&gt;Elektronische Voranmeldung&lt;/&gt; vor.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Weitere Informationen finden Sie unter www.help.sap.com in der Product</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Assistance für Ihr Produkt. Geben Sie &lt;LS&gt;Elektronische Voranmeldung&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in das Suchfeld ein.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;[SWITCH]S4H_DOCU_CLOUD&amp; = &apos;X&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Joint Venture Aufteilung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Falls Joint Venture Accounting im System installiert ist und mindestens</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ein Buchungskreis JVA-aktiv ist, wird eine neue Auswahlgruppe &quot;Joint</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Venture Abgrenzungen&quot; angezeigt. Folgende Auswahlmöglichkeiten stehen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zur Verfügung:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Wenn das Feld &quot;Joint Venture Aufteilung&quot; markiert ist,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird die JVA-spezifische Funktionalität aktiviert (siehe vollständige</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Beschreibung unten)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Joint Venture, Beteiligungsgruppe: hier können für die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Verarbeitung relevante Joint Ventures und Beteiligungsgruppen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>eingegrenzt werden. Nur Belege mit entsprechender Kontierung werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verarbeitet.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             RK des Ersatz-Kostenträgers: wenn dieses Feld gefüllt ist,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird das ausgewählte Recovery-Kennzeichen verwendet, um die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Ersatzkostenträger für die Buchung abzuleiten. Dieser Parameter wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ignoriert, wenn Originalkostenträger für die Buchung verwendet werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Ankreuzfeld &quot;Auf Orig. Kostenträger buchen&quot; ist ausgewählt)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Auf Orig. Kostenträger buchen: Wenn dieses Ankreuzfeld</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>markiert ist, werden Kostenobjekte aus Originalbelegen für die Buchung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verwendet</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Joint Venture Aufteilung erlaubt eine Aufteilung der Steuerzeilen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>basierend auf dem Joint Venture und der Beteiligungsgruppe. Dies</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>beeinflusst die Steuerpositionen und Zahllastbuchungen, die angezeigt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden. Das Ergebnis des Reports mit eingeschalteter JV-Aufteilung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ändert sich so, dass einzelne Belegzeilen nach Joint Ventures und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Beteiligungsgruppen gemäß Belegaufteilungskriterien aufgeteilt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>JV-Aufteilung basiert auf dem Ergebnis der Belegaufteilung der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Originalbuchung. Eine notwendige Voraussetzung für die korrekte Funktion</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ist die Aktivierung der Steuerzeilenaufteilung in den allgemeinen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Einstellungen der Belegaufteilung im System. Die resultierende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Batch-Input Buchung der Umsatzsteuer-Voranmeldung basiert auf der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Originalbelegaufteilung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ELSE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Darüber hinaus können Sie die Daten für Ihre Umsatzsteuer-Voranmeldung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>im XML-Format aufbereiten und sie anschließend elektronisch an Ihre</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Finanzbehörde weiterleiten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Weitere Informationen finden unter www.help.sap.com in der Product</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Assistance für Ihr Produkt. Geben Sie &lt;LS&gt;Elektronische</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datenübermittlung an Behörden&lt;/&gt; in das Suchfeld ein.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Joint Venture Aufteilung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Falls Joint Venture Accounting im System installiert ist und mindestens</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ein Buchungskreis JVA-aktiv ist, wird eine neue Auswahlgruppe &quot;Joint</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Venture Abgrenzungen&quot; angezeigt. Folgende Auswahlmöglichkeiten stehen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zur Verfügung:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Wenn das Feld &quot;Joint Venture Aufteilung&quot; markiert ist,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird die JVA-spezifische Funktionalität aktiviert (siehe vollständige</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Beschreibung unten)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Joint Venture, Beteiligungsgruppe: hier können für die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Verarbeitung relevante Joint Ventures und Beteiligungsgruppen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>eingegrenzt werden. Nur Belege mit entsprechender Kontierung werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verarbeitet.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             RK des Ersatz-Kostenträgers: wenn dieses Feld gefüllt ist,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird das ausgewählte Recovery-Kennzeichen verwendet, um die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Ersatzkostenträger für die Buchung abzuleiten. Dieser Parameter wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ignoriert, wenn Originalkostenträger für die Buchung verwendet werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Ankreuzfeld &quot;Auf Orig. Kostenträger buchen&quot; ist ausgewählt)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Auf Orig. Kostenträger buchen: Wenn dieses Ankreuzfeld</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>markiert ist, werden Kostenobjekte aus Originalbelegen für die Buchung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verwendet</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Joint Venture Aufteilung erlaubt eine Aufteilung der Steuerzeilen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>basierend auf dem Joint Venture und der Beteiligungsgruppe. Dies</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>beeinflusst die Steuerpositionen und Zahllastbuchungen, die angezeigt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden. Das Ergebnis des Reports mit eingeschalteter JV-Aufteilung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ändert sich so, dass einzelne Belegzeilen nach Joint Ventures und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Beteiligungsgruppen gemäß Belegaufteilungskriterien aufgeteilt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>JV-Aufteilung basiert auf dem Ergebnis der Belegaufteilung der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Originalbuchung. Eine notwendige Voraussetzung für die korrekte Funktion</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ist die Aktivierung der Steuerzeilenaufteilung in den allgemeinen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Einstellungen der Belegaufteilung im System. Die resultierende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Batch-Input Buchung der Umsatzsteuer-Voranmeldung basiert auf der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Originalbelegaufteilung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PRECONDITION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;[SWITCH]S4H_DOCU_CLOUD&amp; = &apos;X&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ELSE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Für die Meldung in EURO müssen Sie im Einführungsleitfaden des</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Finanzwesens folgende Schritte ausführen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Aktivieren Sie die Hauswährung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Wählen Sie &lt;LS&gt;Hauptbuchhaltung -&gt; Periodische Arbeiten -&gt; Melden -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Umsatzsteuermeldung -&gt; Alternative Hauswährung für Umsatzsteuervoranm.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aktivieren&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Um den Report auszuführen, markieren Sie das Feld &lt;LS&gt;Alternative</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Hauswährung aktiv&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Wählen Sie &lt;LS&gt;Hauptbuchhaltung -&gt; Periodische Arbeiten -&gt; Melden -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Umsatzsteuermeldung -&gt; Alternative Hauswährung für Umsatzsteuermeldung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>angeben&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Ordnen Sie dem Report RFUMSV00 die EURO-Währung zu.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Bevor die Batch-Input-Funktion zum maschinellen Zahllast-Umbuchen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>genutzt werden kann, sind im Customizing die folgenden Einstellungen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vorzunehmen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Für den verwendeten Kontenplan sind dem Vorgangsschlüssel &apos;UMS&apos; ein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>eigenes Zahllastkonto und die Buchungsschlüssel für Soll- und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Habenbuchungen auf dieses Konto zuzuordnen. Prüfen Sie bitte, ob diese</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Voraussetzung erfüllt ist.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Auf dieses Konto werden die Steuersalden umgebucht, sofern Sie es nicht</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>durch die Angabe eines anderen Zahllastkontos auf dem Selektionsbild</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>übersteuern.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Weitere Informationen finden Sie im Customizing.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Sie können Varianten für den Report pflegen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Wenn Sie das Buchungsdatum, den Geschäftsmonat oder das Belegdatum</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ausgewählt haben, wird gegebenenfalls ausgewiesen, welches Laufdatum und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>welche Uhrzeit in den Beleg-Steuerzeilen fortgeschrieben wurde.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Die Steuerdaten lassen sich in den folgenden Listen ausgeben; Ihre</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Gestaltung können Sie an Ihre Anforderungen anpassen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Einzelpostenliste der Ausgangssteuer pro Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Summenliste der Ausgangssteuer pro Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Einzelpostenliste der Vorsteuer pro Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Summenliste der Vorsteuer pro Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Einzelpostenliste der Belege mit Steuerdifferenzen pro Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Summenliste der Steuersalden pro Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Summenliste über die Steuersalden aller Buchungskreise</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Auf Einzelpostenebene lassen sich folgende Daten ausweisen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Umsatzsteuerkennzeichen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Vorgangsschlüssel</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Buchungsperiode und -datum</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Belegnummer und Referenzbelegnummer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Steuerbasisbetrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Ausgangs- bzw. Vorsteuerbetrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Nicht abzuführende Ausgangssteuer bzw. nichtabzugsfähige Vorsteuer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;DS:DE.UMSVXADR2&gt;Adressdaten des Debitors/Kreditors&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;DS:DE.UMSVXCAS&gt;Quittungsdaten&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Um sich Adress- oder Quittungsdaten ausgeben zu lassen, markieren Sie</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die Felder &lt;LS&gt;Anschrifts- bzw. Quittungsdaten lesen&lt;/&gt;, und wählen Sie</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE> &lt;DS:DE.SLIS_VARI&gt;Anzeigevarianten&lt;/&gt; der Ausgabelisten, die die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>entsprechenden Felder enthalten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Zu jeder Steuerart können in der Steuerartenübersicht (Summenliste</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Ausgangssteuer und Vorsteuer) folgende Daten ausgeben werden:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Umsatzsteuerkennzeichen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Vorgangsschlüssel</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Steuerbezeichnung und -satz</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Steuerbasisbetrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Ausgangssteuer- bzw. Vorsteuerbetrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Nicht abzuführende Ausgangssteuer bzw. nichtabzugsfähige Vorsteuer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>In der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE> &lt;DS:DE.USMVXSEP&gt;Einzelpostenliste der Steuerdifferenzen&lt;/&gt; werden die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Belege mit einer entsprechenden Meldung ausgewiesen, bei denen der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gebuchte von dem errechneten Steuerbetrag abweicht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Zu jedem Buchungskreis stehen Ihnen in der Buchungskreisübersicht</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Summenliste Steuersaldo pro Buchungskreis) folgende Daten zur</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Verfügung:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Umsatzsteuerkennzeichen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Vorgangsschlüssel</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Steuerbezeichnung und -satz</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Steuerbasisbetrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>abzuführende Ausgangssteuer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>abzugsfähige Vorsteuer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Steuersaldo</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Die Beträge in den zuvor beschriebenen Listen können neben der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Meldewährung auch in Fremdwährung ausgegeben werden. Wählen Sie unter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;LS&gt;Ausgabesteuerung&lt;/&gt; die Option &lt;LS&gt;Fremdwährung lesen&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Als letzte Liste kann man eine Übersicht über die Salden aller</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Buchungskreise (Summenliste über alle Buchungskreise) ausgeben. Es</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>stehen dieselben Daten wie in den Buchungskreisübersichten zur</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Verfügung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Bei Wahl des Batch-Input-Verfahrens für die maschinelle Umbuchung der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Zahllast werden pro Buchungskreis auch Informationen über den hierfür</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vorbereiteten Beleg ausgegeben. Für jede Position dieses Belegs werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>folgende Daten ausgewiesen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Nummer der Position</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Buchungsschlüssel</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Kontonummer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Kontobezeichnung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Währung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Betrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FOT_RFUMSV00_2 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>/THKR/RFUMSV00</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0026</VERSION>
+      <TXTLINES>00202</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/RFUMSV00</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00026</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DESCRIPTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Here, you can create the advance return for tax on sales/purchases, and,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>if required, also create a batch input session for automatic transfer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>posting of tax payable. Filling out of the tax return can also be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>prepared, if required.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>The line items can be displayed for each tax type (input tax and output</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>tax). Even if the line items cannot be displayed, data is acquired from</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the individual documents.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Select the documents on the basis of the following criteria:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Posting date</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Posting period (fiscal year and month)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Document date</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Date and time details saved in the document tax items during an earlier</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>run</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>If you select the &lt;DS:DE.UMSVBSUD&gt;Update Documents: Update Run&lt;/&gt; field,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>only document tax items without date- and time entries of an earlier run</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>are selected. The date and time of the tax return run are noted in these</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>tax items.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;[SWITCH]S4H_DOCU_CLOUD&amp; = &apos;X&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Select the relevant company codes.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ELSE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Select the company codes required or specify the taxes on</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sales/purchases groups for which all associated company codes are got</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>automatically.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>When the batch input session for the tax payable transfer posting is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>being created, a document is prepared for each country code selected. In</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>this document, one item for the posting to the tax account, and one item</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>for the posting to the tax payable account is created for each tax</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>account.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;[SWITCH]S4H_DOCU_CLOUD&amp; = &apos;X&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>On request, the form for the advance return for tax on sales/purchases</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is prepared. To do this, the tax balances per company code, the tax on</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sales/purchases code, the transaction key, and the total/debit/credit</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>indicator, as well as the selected time period in the tables are</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>retrieved.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ELSE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>On request, the form for the advance return for tax on sales/purchases</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is prepared. To do this, the tax balances per company code, the tax on</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sales/purchases code, the transaction key, and the total/debit/credit</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>indicator, as well as the selected time period in the tables are</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>retrieved. The print program the uses these tables to determine the data</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>required for printing the tax return.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>To use the electronic advance return for tax on sales/purchases, make</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the necessary settings under &lt;LS&gt;Electronic Advance Tax Return&lt;/&gt;. For</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>more information, see www.help.sap.com in the product assistance for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>your product. Enter &lt;LS&gt;Electronic Advance Tax Return&lt;/&gt; in the search</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>field.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;[SWITCH]S4H_DOCU_CLOUD&amp; = &apos;X&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Joint Venture Splitting</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>If Joint Venture Accounting is installed in the system and at least one</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>company code is active for JVA, a new selection group, &quot;Joint Venture</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Accruals and Deferrals&quot;, is displayed. You have the following selection</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>options:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             if the &quot;Joint Venture Splitting&quot; field is selected, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>JVA-specific functionality is activated (see full description below)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Joint Venture, Equity Group: Here, the relevant joint</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ventures and equity groups can be narrowed down for processing. Only</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>documents with the appropriate account assignments are processed.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             RI of the Substitute Cost Object: If this field is filled,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the selected recovery indicator is used to derive the substitute cost</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>objects for the posting. This parameter is ignored if original cost</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>objects are used for posting (checkbox “Post to Original Cost Object” is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selected).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Post to Original Cost Object: If this checkbox is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selected, cost objects from original documents are used for posting.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Joint Venture splitting allows splitting of the tax items, based on the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>joint venture and the equity group. This impacts the tax line items and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>tax payable postings that are displayed. The result of the report with</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>switched-on JV splitting changes so that individual line items split by</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>joint ventures and equity groups in accordance with document splitting</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>criteria.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>JV splitting based on the result of document splitting of the original</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>posting. An essential prerequisite for the correct function is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>activation of tax line splitting in the general settings for document</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>splitting in the system. The resulting batch input processing of the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>advance return for VAT is based on the original document splitting.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ELSE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>You can also prepare the data for your advance return for tax on</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sales/purchases in XML format and then send them to the tax authorities</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>electronically.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>For more information, see www.help.sap.com in the product assistance for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>your product. Enter &lt;LS&gt;Electronic Data Transfer to Authorities&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the search field.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Joint Venture Splitting</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>If Joint Venture Accounting is installed in the system and at least one</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>company code is active for JVA, a new selection group, &quot;Joint Venture</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Accruals and Deferrals&quot;, is displayed. You have the following selection</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>options:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             if the &quot;Joint Venture Splitting&quot; field is selected, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>JVA-specific functionality is activated (see full description below)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Joint Venture, Equity Group: Here, the relevant joint</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ventures and equity groups can be narrowed down for processing. Only</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>documents with the appropriate account assignments are processed.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             RI of the Substitute Cost Object: If this field is filled,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the selected recovery indicator is used to derive the substitute cost</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>objects for the posting. This parameter is ignored if original cost</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>objects are used for posting (checkbox “Post to Original Cost Object” is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selected).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>•             Post to Original Cost Object: If this checkbox is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selected, cost objects from original documents are used for posting.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Joint Venture splitting allows splitting of the tax items, based on the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>joint venture and the equity group. This impacts the tax line items and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>tax payable postings that are displayed. The result of the report with</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>switched-on JV splitting changes so that individual line items split by</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>joint ventures and equity groups in accordance with document splitting</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>criteria.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>JV splitting based on the result of document splitting of the original</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>posting. An essential prerequisite for the correct function is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>activation of tax line splitting in the general settings for document</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>splitting in the system. The resulting batch input processing of the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>advance return for VAT is based on the original document splitting.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PRECONDITION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;[SWITCH]S4H_DOCU_CLOUD&amp; = &apos;X&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ELSE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>For reporting in Euros, you have to perform the following activities in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Customizing for Financial Accounting:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Activate the local currency.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Choose &lt;LS&gt;General Ledger Accounting -&gt; Periodic Processing -&gt; Reporting</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>-&gt; Sales/Purchases Tax Returns -&gt; Activate Alternative Local Currency</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>for Advance Tax Return&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>To run the program, select the &lt;LS&gt;Alternative Local Currency&lt;/&gt; field.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Choose &lt;LS&gt;General Ledger Accounting -&gt; Periodic Processing -&gt; Reporting</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>-&gt; Sales/Purchases Tax Return -&gt; Specify Alternative Local Currency for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sales/Purchases Tax Return&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Assign the Euro currency to program RFUMSV00.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Before you can use the batch input function for the automatic tax</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>payable transfer posting, you have to make the following settings in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Customizing:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>For the chart of accounts used, assign a tax payable account and the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>posting key for debit and credit postings to this account to the &apos;UMS’</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>transaction key. Check whether this prerequisite has been fulfilled.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Tax balances are transferred to this account if you do not override this</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>by specifying a different tax payable account on the selection screen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>For further information, see Customizing.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>You can maintain variants for the program.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>If you have selected the posting date, fiscal month, or document date,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the run date and time updated in the document tax items is also</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>reported.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>The tax data is output in the following lists, whose form you can adjust</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>to meet your own requirements:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Line item list with output tax for each company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Totals list of output tax for each company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Line item list of input tax for each company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Totals list of input tax for each company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Line item list of documents with tax differences for each company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Totals list of tax balances for each company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Totals list of tax balances for all company codes</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>The following data is displayed at line item level:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax on sales/purchases code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Transaction key</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Posting period and date</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Document number and reference document number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax base amount</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Output/input tax amount</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Non-payable output tax/non-deductible input tax</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>&lt;DS:DE.UMSVXADR2&gt;Customer/vendor address data&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>&lt;DS:DE.UMSVXCAS&gt;Receipt data&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>To output address or receipt data, select the &lt;LS&gt;Read Address/Receipt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Data&lt;/&gt; fields and select the &lt;DS:DE.SLIS_VARI&gt;layouts&lt;/&gt; for output</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>lists that contain the appropriate fields.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>The following data can be output for each tax type in the tax type</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>overview (totals list output tax and input tax):</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax on sales/purchases code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Transaction key</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax name and rate</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax base amount</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Output/input tax amount</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Non-payable output tax/non-deductible input tax</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>In the &lt;DS:DE.USMVXSEP&gt;line item list for tax differences&lt;/&gt;, documents</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>where the posted tax amount differs from the calculated tax amount are</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>output with an appropriate message.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>The following data is displayed in the company code overview (totals</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>list of tax balances per company code) for each company code:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax on sales/purchases code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Transaction key</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax name and rate</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax base amount</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Payable output tax</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Deductible input tax</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Tax balance</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>The amounts in the lists detailed above can be output in a foreign</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>currency as well as the reporting currency. Under &lt;LS&gt;Output Control&lt;/&gt;,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>select the &lt;LS&gt;Read Foreign Currency&lt;/&gt; option.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>You can also output an overview of the balances of all company codes</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(totals list of all company codes). The same data is displayed as in the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>company code overviews.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>When you select the batch input procedure for automatic transfer posting</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of tax payable, information about the document prepared for this is also</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>output for each company code. For each item in this document, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following data is displayed:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Item number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Posting key</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Account number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Account Name</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Currency</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Amount</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FOT_RFUMSV00_2 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

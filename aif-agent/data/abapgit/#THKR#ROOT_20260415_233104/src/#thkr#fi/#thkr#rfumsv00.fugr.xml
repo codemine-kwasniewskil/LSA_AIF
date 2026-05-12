@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funkt.Gruppe Fur die RFUMSVxy-Reports</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LRFUMSV00TOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLRFUMSV00</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/CHK_NEW_GL</FUNCNAME>
+     <SHORT_TEXT>FM den Report RFUMSV00</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IT_GJAHR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BKK_R_GJAHR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_BELNR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BKK_R_BELNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_BUKRS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ICL_BUKRS_RANGE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_GSBER</PARAMETER>
+       <TYP>BKK_R_GSBER</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_PRCTR</PARAMETER>
+       <TYP>HRPP_SEL_PRCTR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_SEGMENT</PARAMETER>
+       <TYP>HRPP_SEL_SEGMT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SEL_KTOS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FKK_RT_KTOSL</TYP>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CT_NEW_GL</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>STANDARD TABLE</TYP>
+      </RSCHA>
+     </CHANGING>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOT_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges Tabellentyp für Geschäftsjahr (FKBX)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges Tabellentyp für Belegnummer (FKBX)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Range for BUKRS</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_GSBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges Tabellentyp für Geschäftsbereich</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_PRCTR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Select-Option für &quot;Profit Center&quot;</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_SEGMENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Select-Option für &quot;Segment&quot;</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SEL_KTOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Range tabelle Art der Steuerposition</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_NEW_GL</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOT_FOUND</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/CHK_NEW_GL_10</FUNCNAME>
+     <SHORT_TEXT>FM den Report RFUMSV00</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IT_GJAHR</PARAMETER>
+       <TYP>BKK_R_GJAHR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_BELNR</PARAMETER>
+       <TYP>BKK_R_BELNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_BUKRS</PARAMETER>
+       <TYP>ICL_BUKRS_RANGE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_GSBER</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BKK_R_GSBER</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_PRCTR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>HRPP_SEL_PRCTR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_SEGMENT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>HRPP_SEL_SEGMT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CT_NEW_GL</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>STANDARD TABLE</TYP>
+      </RSCHA>
+     </CHANGING>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOT_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges Tabellentyp für Geschäftsjahr (FKBX)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges Tabellentyp für Belegnummer (FKBX)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Range for BUKRS</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_GSBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges Tabellentyp für Geschäftsbereich</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_PRCTR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Select-Option für &quot;Profit Center&quot;</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_SEGMENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Select-Option für &quot;Segment&quot;</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CT_NEW_GL</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOT_FOUND</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

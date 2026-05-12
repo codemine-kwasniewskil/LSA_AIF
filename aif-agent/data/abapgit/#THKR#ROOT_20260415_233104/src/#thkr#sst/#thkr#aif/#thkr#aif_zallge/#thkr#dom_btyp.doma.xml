@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>/THKR/DOM_BTYP</DOMNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000003</LENG>
+    <OUTPUTLEN>000003</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>01_BTYP</DDTEXT>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>*</DOMVALUE_L>
+     <DDTEXT>alle anderen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>AUF</DOMVALUE_L>
+     <DDTEXT>Ansatz u. Freigabe</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>ANS</DOMVALUE_L>
+     <DDTEXT>Ansatz</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>FRE</DOMVALUE_L>
+     <DDTEXT>Freigabe</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>EAN</DOMVALUE_L>
+     <DDTEXT>Einnahme-Ansatzbuchungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0006</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>FEB</DOMVALUE_L>
+     <DDTEXT>Neue Festlegung</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0007</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>FAE</DOMVALUE_L>
+     <DDTEXT>Festlegungs-Änderungsbuchung</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0008</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SST</DOMVALUE_L>
+     <DDTEXT>Sollstellung auf Einnahmetitel / -gruppierungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0009</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SSR</DOMVALUE_L>
+     <DDTEXT>Sollstellung auf Ausgabetitel / -gruppierungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0010</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>UBE</DOMVALUE_L>
+     <DDTEXT>Umbuchung Einnahme</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0011</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>ANE</DOMVALUE_L>
+     <DDTEXT>Anordnung zu vorhandener Festlegung</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0012</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>AOE</DOMVALUE_L>
+     <DDTEXT>Auszahlungsanordnung von Einnahmetitel/-gruppierung</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0013</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>ALL</DOMVALUE_L>
+     <DDTEXT>Allgemeine Auszahlungs-Anordnung</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0014</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>FUA</DOMVALUE_L>
+     <DDTEXT>Festlegungen und Auszahlungs-Anordnungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0015</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SZU</DOMVALUE_L>
+     <DDTEXT>Sollzugangs</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0016</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SAB</DOMVALUE_L>
+     <DDTEXT>Sollabganges</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0017</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>KOR</DOMVALUE_L>
+     <DDTEXT>Umbuchung Auszahlung mit Referenz</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0018</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>APU</DOMVALUE_L>
+     <DDTEXT>Pauschale Umbuchung zwischen Ausgabetiteln / -gruppierungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0019</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>EPU</DOMVALUE_L>
+     <DDTEXT>Pauschale Umbuchung zwischen Einnahmetiteln / -gruppierungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0020</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>IBE</DOMVALUE_L>
+     <DDTEXT>Istbuchung Einnahme</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0021</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>IBA</DOMVALUE_L>
+     <DDTEXT>Istbuchung Ausgabe</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0022</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>DAG</DOMVALUE_L>
+     <DDTEXT>Datenaggregation</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0023</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>HPL</DOMVALUE_L>
+     <DDTEXT>Planwerteingabe Haushaltsplandatei</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0024</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>RVD</DOMVALUE_L>
+     <DDTEXT>Änderung Ratenauszahlungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0025</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>RVZ</DOMVALUE_L>
+     <DDTEXT>Änderung Zahlungspartner in Ratenauszahlungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0026</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>AES</DOMVALUE_L>
+     <DDTEXT>Änderung fester Daten einer Sollstellung</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0027</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>STU</DOMVALUE_L>
+     <DDTEXT>Stundungen und Niederschlagungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0028</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>LIF</DOMVALUE_L>
+     <DDTEXT>Erfassung Zahlungspartner</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0029</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>AEA</DOMVALUE_L>
+     <DDTEXT>Änderung allgemeine Auszahlungsanordnung</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0030</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>RMI</DOMVALUE_L>
+     <DDTEXT>Rückmeldung Mahninformationen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0031</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>HRE</DOMVALUE_L>
+     <DDTEXT>Haushaltsreste</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0032</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>MEW</DOMVALUE_L>
+     <DDTEXT>Meldesatz für Dienstleistungen, Kapitaltransaktionen und Son</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0033</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>MEV</DOMVALUE_L>
+     <DDTEXT>Meldesatz Transithandel</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0034</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>KRK</DOMVALUE_L>
+     <DDTEXT>Kostenrechnungskontierung</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0035</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>MER</DOMVALUE_L>
+     <DDTEXT>Mandant erfassen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0036</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>MAE</DOMVALUE_L>
+     <DDTEXT>Mandant ändern</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0037</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>BPK</DOMVALUE_L>
+     <DDTEXT>Bruttopersonalkosten (Buchungscode aus KIDIKAP, nicht in Pro</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0038</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>ABS</DOMVALUE_L>
+     <DDTEXT>Abschlagszahlungen (Buchungscode aus KIDIKAP, nicht in ProFi</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0039</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>RCK</DOMVALUE_L>
+     <DDTEXT>Versorgungsrücklage (Buchungscode aus KIDIKAP, nicht in ProF</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

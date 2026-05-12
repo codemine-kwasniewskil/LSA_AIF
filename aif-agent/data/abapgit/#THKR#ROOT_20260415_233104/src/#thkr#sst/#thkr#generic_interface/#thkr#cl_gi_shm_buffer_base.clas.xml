@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_GI_SHM_BUFFER_BASE</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Basis-Klasse für SHM-Puffer</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <CLSSHAREDMEMORY>X</CLSSHAREDMEMORY>
+   </VSEOCLASS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ENTRY_FROM_BUFFER</CMPNAME>
+     <SCONAME>I_GI_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ID Generische Schnittstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>NEW_ENTRY_START</CMPNAME>
+     <SCONAME>I_GI_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ID Generische Schnittstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PUT_ENTRY_TO_BUFFER</CMPNAME>
+     <SCONAME>I_GI_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ID Generische Schnittstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REMOVE_ENTRY_FROM_BUFFER</CMPNAME>
+     <SCONAME>I_GI_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ID Generische Schnittstelle</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

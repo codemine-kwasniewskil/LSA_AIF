@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Fuba für SCL-Directory (Hinweis 1680894)</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFKLSA032_FUBASTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFKLSA032_FUBAS</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFILL_BNKA_XFIELDS_SCL</FUNCNAME>
+     <SHORT_TEXT>Schnittstellenbeschreibung</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BANKS</PARAMETER>
+       <DBFIELD>BNKA-BANKS</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_VERS</PARAMETER>
+       <DBFIELD>T005BU-VERS</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_XPC</PARAMETER>
+       <DBFIELD>RF02B-BANKXFPR</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_MAX_REC</PARAMETER>
+       <DBFIELD>RFPDO_BF-MAX_REC</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_KEYTYPE</PARAMETER>
+       <DBFIELD>T005-BNKEY</DBFIELD>
+       <DEFAULT>&apos;1&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>CNT_SREADTO</PARAMETER>
+       <DBFIELD>RF02B-COUNTER</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_OPTIMIZED</PARAMETER>
+       <TYP>XFELD</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ITAB_BNKA</PARAMETER>
+       <DBSTRUCT>BNKA</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TAB_FILE</PARAMETER>
+       <DBSTRUCT>RLGRAP</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BANKS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bankland</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_VERS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Format einer Datei</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_XPC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kennzeichen: Präsentationsserver aktiv</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_MAX_REC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Max. Anzahl Sätze</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_KEYTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bedeutung des Bankschlüssels</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CNT_SREADTO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Anzahl: gelesene Sätze</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_OPTIMIZED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>X - Bankschlüssel optimiert</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ITAB_BNKA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>BNKA-Felder aus der Datei</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TAB_FILE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Dateipfadname</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <LONGTEXTS_ZFILL_BNKA_XFIELDS_SCL>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0031</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00001</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00031</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;DS:TX.DOC_RFBVALL_SAMPLE&gt;Anleitung&lt;/&gt;</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0031</VERSION>
+      <TXTLINES>00001</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00031</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;DS:TX.DOC_RFBVALL_SAMPLE&gt;General task list.&lt;/&gt;</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        ITAB_BNKA</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        ITAB_BNKA</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Die interne Tabelle enthält die Daten, die aus der Datei kommen und die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>für die Datenbanktabelle BNKA relevant sind.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        ITAB_BNKA</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        ITAB_BNKA</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The internal table contains the data that come from the file and that</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>are relevant for the BNKA table.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        I_BANKS</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        I_BANKS</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Länderschlüssel der Bank</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Länderschlüssel für das Land, in dem die Bank ihren Sitz hat.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        I_BANKS</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        I_BANKS</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Bank country key</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Country key for the country where the bank has its registered office.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        I_MAX_REC</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00004</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        I_MAX_REC</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFINITION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In diesem Feld können Sie die Anzahl der einzulesenden Sätze festlegen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Als Vorgabe ist der Wert 99999 angegeben, der das Einlesen aller Sätze</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der verwendeten Datei veranlaßt. Die Anzahl der eingelesenen Sätze kann</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in diesem Fall größer als 99999 sein.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        I_VERS</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00001</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        I_VERS</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;DS:DE.VERS_BF&gt;Format einer Datei&lt;/&gt;</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        I_VERS</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <TXTLINES>00001</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        I_VERS</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;DS:DE.VERS_BF&gt;File format.&lt;/&gt;</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        I_XPC</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00006</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        I_XPC</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Kennzeichen: Datei auf Präsentationsserver</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>Definition</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Hier legen Sie fest, daß die Datei mit dem Bankenverzeichnis auf dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Präsentationsserver (Ihrem lokalen Rechner) liegt. Befindet sich die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datei auf dem zentralen Applikationsserver, so müssen Sie den Parameter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ausschalten.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>ZFILL_BNKA_XFIELDS_SCL        I_XPC</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <TXTLINES>00006</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZFILL_BNKA_XFIELDS_SCL        I_XPC</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Indicator: File on presentation server</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>Definition</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This is where you specify that the file with the bank directory is on</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the presentation server (your local server). If the file</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is on the central application server, then you need to deactivate the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>parameter.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS_ZFILL_BNKA_XFIELDS_SCL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

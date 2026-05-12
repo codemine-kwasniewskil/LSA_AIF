@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_AIF_FMAP_NAME</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Ermittlung des Namen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>DELETE_AD_TITLE1_FROM_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>akademischen Titel aus Namen entfernen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_AD_TITLE1</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>akademischen Titel ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_AD_TITLE1</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldnamen zusammensetzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldnamen zusammensetzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_ORG_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping Name einer Organisation</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_PERSON_FIRST_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping Vorname einer Person</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_PERSON_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping Name einer Person</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_FULLNAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>vollständigen Namen zusammensetzen (38_RES und 46_NAME2)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_NAME2</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Setzen der Variable NAME2 (Beschränkung auf 54 Zeichen)</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_AD_TITLE1</CMPNAME>
+     <SCONAME>/THKR/CX_AIF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>AIF Ausnahmeklasse</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_AD_TITLE1</CMPNAME>
+     <SCONAME>IV_BU_TYPE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnertyp</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_NAME</CMPNAME>
+     <SCONAME>IV_BU_TYPE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnertyp</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

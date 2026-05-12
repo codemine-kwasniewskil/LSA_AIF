@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_CO_ANLAGE_STAMMDATEN</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>CO: Anlagen vomn Stammdaten</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>AUFTRAG_ANLEGEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Auftrag anlegen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einlesen der TXT-Datei für Anlage von CO-Stammdaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>KST_ANLEGEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kostenstelle anlegen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>STK_ANLEGEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Stat.Kennzahl anlegen</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>AUFTRAG_ANLEGEN</CMPNAME>
+     <SCONAME>I_DATEN_AUF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datensatzaufbau der Textdatei zur Anlage von Kostenstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>AUFTRAG_ANLEGEN</CMPNAME>
+     <SCONAME>I_SIMU</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>E_DATEN_AUF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TT: Importstruktur für CO-Aufträge</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>E_DATEN_KST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TT: Importstruktur CO-Kostenstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>E_DATEN_STK</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TT: Importstruktor für CO-Stat.Kennzahlen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>E_RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>I_ART</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datenart: KST, AUF, STK</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>KST_ANLEGEN</CMPNAME>
+     <SCONAME>I_DATEN_KST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datensatzaufbau der Textdatei zur Anlage von Kostenstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>KST_ANLEGEN</CMPNAME>
+     <SCONAME>I_SIMU</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STK_ANLEGEN</CMPNAME>
+     <SCONAME>I_DATEN_STK</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datensatzaufbau der Textdatei zur Anlage von Stat.Kennzahlen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STK_ANLEGEN</CMPNAME>
+     <SCONAME>I_SIMU</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/THKR/RK_SI_LAUF_VORGANG</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <HEADLEN>19</HEADLEN>
+    <SCRLEN1>09</SCRLEN1>
+    <SCRLEN2>19</SCRLEN2>
+    <SCRLEN3>19</SCRLEN3>
+    <DDTEXT>Historie der Soll-Ist Buchung: Laufende Vorgangsnummer</DDTEXT>
+    <REPTEXT>Lfd. Vorgangsnummer</REPTEXT>
+    <SCRTEXT_S>LfdVorgNr</SCRTEXT_S>
+    <SCRTEXT_M>Lfd. Vorgangsnummer</SCRTEXT_M>
+    <SCRTEXT_L>Lfd. Vorgangsnummer</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000020</LENG>
+    <OUTPUTLEN>000020</OUTPUTLEN>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

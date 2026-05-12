@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LFI_APAR_SEPA_MANDATEF01</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/LFI_APAR_SEPA_MANDATETOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLFI_APAR_SEPA_MANDATE</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/FI_APAR_MANDATE_AUTHCHCK</FUNCNAME>
+     <SHORT_TEXT>Berechtigungsprüfung --&gt; View V_SEPA_CTRL / F</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_MANDATE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SEPA_MANDATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_ACT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>C</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_AUTHORITY</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_MANDATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>SEPA Mandate</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_ACT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aktivität:Anlage= &apos;01&apos;, Ändern = &apos;02&apos;, Anzeigen =&apos;03&apos;</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_AUTHORITY</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Keine Berechtigung</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/FI_APAR_MANDATE_CHECK</FUNCNAME>
+     <SHORT_TEXT>Prüft Mandatsdaten --&gt; View V_SEPA_CTRL / F</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_MANDATE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SEPA_MANDATE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_MESSAGES</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPIRET1_LIST</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_MANDATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>SEPA-Mandat</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_MESSAGES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Liste von Meldungen des Typs BAPIRET1</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/FI_APAR_MANDATE_DEFMNDID</FUNCNAME>
+     <SHORT_TEXT>Ermittelt die Mandatskennung MNDID --&gt; View V_SEPA_CTRL / F</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_WA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>RFSEPA_WA</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_COUNT_NUMBER</PARAMETER>
+       <DEFAULT>1</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>I</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_MNDID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SEPA_MNDID</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_FIRST_NUMBER</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>N</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_LAST_NUMBER</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>N</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_WA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>SEPA Mandate Management: Work Area</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_COUNT_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Anzahl gewünschter Nummern</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_MNDID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Eindeutige Referenz auf ein SEPA-Mandat</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_FIRST_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Erste Nummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_LAST_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Letzte Nummer</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/FI_APAR_MANDATE_GEN_REFT</FUNCNAME>
+     <SHORT_TEXT>Steuerung der Referenztypen - Musterbaustein</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CT_REFTYPES</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>VRM_VALUES</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CT_REFTYPES</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

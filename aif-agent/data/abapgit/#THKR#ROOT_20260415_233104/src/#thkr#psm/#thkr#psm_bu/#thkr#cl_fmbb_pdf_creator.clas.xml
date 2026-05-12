@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_FMBB_PDF_CREATOR</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Budget: FMBB PDF Creator</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>FORM_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name eines Formularobjektes</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>OUTPUT_DESTINATION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Spool: Ausgabegerät</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_FORM</CMPNAME>
+     <SCONAME>DOC_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ID des HHM-Erfassungsbelegs (echt und gemerkt)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_FORM</CMPNAME>
+     <SCONAME>FIRKS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_FORM</CMPNAME>
+     <SCONAME>FM_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionsname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_FORM</CMPNAME>
+     <SCONAME>HEADER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kopfstruktur des Erfassungsbelegs (effektiv und gemerkt)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_FORM</CMPNAME>
+     <SCONAME>LINES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Erfassungsbelegpositionen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_FORM</CMPNAME>
+     <SCONAME>PDF_FILE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Formularausgabe (PDF, PDL)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PDF</CMPNAME>
+     <SCONAME>/THKR/CX_FMBB_PDF_CREATOR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Error Handler Budget FMBB PDF Creator</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PDF</CMPNAME>
+     <SCONAME>DOC_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ID des HHM-Erfassungsbelegs (echt und gemerkt)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PDF</CMPNAME>
+     <SCONAME>FIRKS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PDF</CMPNAME>
+     <SCONAME>HEADER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kopfstruktur des Erfassungsbelegs (effektiv und gemerkt)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PDF</CMPNAME>
+     <SCONAME>LINES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Erfassungsbelegpositionen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_OUTPUTPARAMS</CMPNAME>
+     <SCONAME>FILENAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Spool-Beschreibungstext</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INIT_FORM</CMPNAME>
+     <SCONAME>/THKR/CX_FMBB_PDF_CREATOR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Error Handler Budget FMBB PDF Creator</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INIT_FORM</CMPNAME>
+     <SCONAME>FM_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionsname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INIT_FORM</CMPNAME>
+     <SCONAME>OUTPUTPARAMS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Formularprozessierung Ausgabeparameter</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_PDF_FILE</CMPNAME>
+     <SCONAME>/THKR/CX_FMBB_PDF_CREATOR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Error Handler Budget FMBB PDF Creator</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_PDF_TO_GOS</CMPNAME>
+     <SCONAME>/THKR/CX_FMBB_PDF_CREATOR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Error Handler Budget FMBB PDF Creator</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_PDF_TO_GOS</CMPNAME>
+     <SCONAME>OBJECT_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SAP ArchiveLink: Objekt-Id (Objektidentifikator)</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

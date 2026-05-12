@@ -1,0 +1,1352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>/THKR/RFASLM00</NAME>
+    <DBAPL>F</DBAPL>
+    <DBNA>BR</DBNA>
+    <CLAS>BAAA</CLAS>
+    <TYPE>901</TYPE>
+    <SUBC>1</SUBC>
+    <APPL>F</APPL>
+    <RLOAD>D</RLOAD>
+    <LDBNAME>BRF</LDBNAME>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>0**</KEY>
+     <ENTRY>*     Reporttitel und Selektionsparameter</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Zusammenfassende Meldung für das Quartal &amp;Q/&amp;Y</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>USt-Id-Nr.: &amp;UIN</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Zusammenfassende Meldung für den Monat &amp;M/&amp;Y</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>Berichtsquartal</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>/</ENTRY>
+     <LENGTH>1</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>Berichtsmonat</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>028</KEY>
+     <ENTRY>Drucksteuerung</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>029</KEY>
+     <ENTRY>Druckparameter (Formular)</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>030</KEY>
+     <ENTRY>Formularname (Meldung)</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>050</KEY>
+     <ENTRY>Zusammenfassende Meldung: Einzelpostenliste</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>051</KEY>
+     <ENTRY>Zusammenfassende Meldung: Formular</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>052</KEY>
+     <ENTRY>Zusammenfassende Meldung: Begleitschreiben zum Datenträger</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>053</KEY>
+     <ENTRY>Zusammenfassende Meldung: Fehlerliste</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>070</KEY>
+     <ENTRY>Vertragskontokorrent</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>1**</KEY>
+     <ENTRY>*     Listüberschrift</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>100</KEY>
+     <ENTRY>|Bukr|USt-Id-Nr. des      |Lohn|Drei|Beleg-    |Bu-|Buchg-    |Buch-  |         Warenwert |                                        |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>101</KEY>
+     <ENTRY>|    |Erwerbers           |Ind.|-eck|nummer    |zei|datum     |periode|         in &amp;WAERS |                                        |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>102</KEY>
+     <ENTRY>|    |                    |    |    |          |   |          |       |                   |                                        |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>9**</KEY>
+     <ENTRY>*     Fehlerausgabe</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>902</KEY>
+     <ENTRY>|Im Beleg fehlt die USt-Id-Nr. des Debitors oder Buchungsschlüssel nicht umsatzwirksam.                                            |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>903</KEY>
+     <ENTRY>|Die Beleginformationen erscheinen nicht in der zusammenfassenden Meldung!                                                         |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>906</KEY>
+     <ENTRY>| Bukr Belegnummer Buchungszeile                                                                                                   |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>907</KEY>
+     <ENTRY>|W a r n u n g                                                                                                                     |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>908</KEY>
+     <ENTRY>|Die Angabe des Berichtsquartals oder des Berichtsmonats fehlt auf dem Datenträger oder der Meldung                                |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>909</KEY>
+     <ENTRY>|(durch die Abgrenzung über den Berichtszeitraum)                                                                                  |</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Zusammenfassende Meldung</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_ADDR</KEY>
+     <ENTRY>Anschriftsdaten hinzulesen</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_BSET</KEY>
+     <ENTRY>Basisbetrag aus Steuerzeilen</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_CORR</KEY>
+     <ENTRY>Berichtigte Meldung</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_DEL</KEY>
+     <ENTRY>Warenlieferung selektieren</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_DEST</KEY>
+     <ENTRY>RFC-Destination</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_DOWN</KEY>
+     <ENTRY>Anzahlungen anzeigen</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_DREI</KEY>
+     <ENTRY>Dreiecksgeschäft kumulieren</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_EPOS</KEY>
+     <ENTRY>Ausweis der Einzelposten</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_FICA</KEY>
+     <ENTRY>Daten aus Vertragskontokorrent</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_FORM</KEY>
+     <ENTRY>Formularname (Meldung)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_H_XI</KEY>
+     <ENTRY>XI UIN im Kopf anzeigen</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_I_XI</KEY>
+     <ENTRY>XI UIN aus Stammsatz nachlesen</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_JAHR</KEY>
+     <ENTRY>Berichtsjahr</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_JAMO</KEY>
+     <ENTRY>Berichtsjahr zum Kalendermonat</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_KNA1</KEY>
+     <ENTRY>UIN aus Stammsatz nachlesen</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LIST</KEY>
+     <ENTRY>Nur Listausgabe</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LOHN</KEY>
+     <ENTRY>Lohnveredelung kumulieren</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LPP</KEY>
+     <ENTRY>Zeilen pro Seite</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_LSEP</KEY>
+     <ENTRY>Listseparation gewünscht</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_MIKF</KEY>
+     <ENTRY>Mikrofiche-Zeile drucken</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_MONA</KEY>
+     <ENTRY>Berichtsmonat</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_PDF</KEY>
+     <ENTRY>Formularname (Meldung)</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_QUAR</KEY>
+     <ENTRY>Berichtsquartal</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_SKIP</KEY>
+     <ENTRY>Ausgabe je Steuernummer</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_SRV</KEY>
+     <ENTRY>Dienstleistung  selektieren</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PAR_XALW</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>PDF_FORM</KEY>
+     <ENTRY>PDF Formularausgabe</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_BYBUDT</KEY>
+     <ENTRY>Abgrenzung Buchungsdatum</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_BYVTDT</KEY>
+     <ENTRY>Abgrenzung Steuermeldedatum</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FICAEP</KEY>
+     <ENTRY>Übernahme von Einzelposten</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SCR_FORM</KEY>
+     <ENTRY>SAP Script Formularausgabe</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_LSTM</KEY>
+     <ENTRY>Meldeland/-region</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_MWKZ</KEY>
+     <ENTRY>Ausgangssteuerkennzeichen</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_TAXC</KEY>
+     <ENTRY>Meldeland/region</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_UKRS</KEY>
+     <ENTRY>Umsatzsteuerkreis</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SEL_VTDT</KEY>
+     <ENTRY>Steuermeldedatum</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_STCEG</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>26</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_GSBER</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_PRCTR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>E</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>0**</KEY>
+       <ENTRY>*     Program Title and Selection Parameters</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>EC Sales List for the quarter &amp;Q/&amp;Y</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>VAT reg.no.: &amp;UIN</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>003</KEY>
+       <ENTRY>EC Sales List for Month &amp;M/&amp;Y</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>010</KEY>
+       <ENTRY>Reporting quarter</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>011</KEY>
+       <ENTRY>/</ENTRY>
+       <LENGTH>1</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>012</KEY>
+       <ENTRY>Reporting Period</ENTRY>
+       <LENGTH>30</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>028</KEY>
+       <ENTRY>Print control</ENTRY>
+       <LENGTH>14</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>029</KEY>
+       <ENTRY>Print parameter (form)</ENTRY>
+       <LENGTH>25</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>030</KEY>
+       <ENTRY>Form name (notifictn)</ENTRY>
+       <LENGTH>22</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>050</KEY>
+       <ENTRY>EC sales list: open items list</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>051</KEY>
+       <ENTRY>EC sales list: form</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>052</KEY>
+       <ENTRY>EC sales list: accompanying letter to data medium</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>053</KEY>
+       <ENTRY>EC sales list: Error list</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>070</KEY>
+       <ENTRY>Contract A/R + A/P</ENTRY>
+       <LENGTH>35</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>1**</KEY>
+       <ENTRY>*     List Header</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>100</KEY>
+       <ENTRY>|CoCd| VAT reg.no.of      |Sub-|Tri-|Document  |Lne|Posting   |Posting|    Value of goods |                                        |</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>101</KEY>
+       <ENTRY>|    |purchaser           |cont|ang.|number    |itm|date      |period |         in &amp;WAERS |                                        |</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>102</KEY>
+       <ENTRY>|    |                    |    |    |          |   |          |       |                   |                                        |</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>9**</KEY>
+       <ENTRY>*     Error display</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>902</KEY>
+       <ENTRY>|The customer VAT reg.no. is missing in the document or posting key is not relevant to sales                                       |</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>903</KEY>
+       <ENTRY>The document information does not appear in the EC sales list.</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>906</KEY>
+       <ENTRY>| CoCd Doc.number  Line item                                                                                                       |</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>907</KEY>
+       <ENTRY>|W A R N I N G                                                                                                                     |</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>908</KEY>
+       <ENTRY>|Reporting quarter/period not specified on either the data carrier or the sales list                                               |</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>909</KEY>
+       <ENTRY>|(due to the selection via the reporting period)                                                                                   |</ENTRY>
+       <LENGTH>132</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>EC Sales List</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_ADDR</KEY>
+       <ENTRY>Also read address data</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_BSET</KEY>
+       <ENTRY>Base amount from tax items</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_CORR</KEY>
+       <ENTRY>Corrected Return</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_DEL</KEY>
+       <ENTRY>Select Goods Delivery</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_DEST</KEY>
+       <ENTRY>RFC Destination</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_DOWN</KEY>
+       <ENTRY>Display Down Payments</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_DREI</KEY>
+       <ENTRY>Aggregate triangular deals</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_EPOS</KEY>
+       <ENTRY>Line item display</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_FICA</KEY>
+       <ENTRY>Data from Contract A/R and A/P</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_FORM</KEY>
+       <ENTRY>Form name (sales list)</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_H_XI</KEY>
+       <ENTRY>Display XI VAT No. in Header</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_I_XI</KEY>
+       <ENTRY>Read XI VAT No from MasterRec.</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_JAHR</KEY>
+       <ENTRY>Reporting year</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_JAMO</KEY>
+       <ENTRY>Reporting Year of Calendar Mth</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_KNA1</KEY>
+       <ENTRY>Read VAT No from Master Record</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LIST</KEY>
+       <ENTRY>Only list printout</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LOHN</KEY>
+       <ENTRY>Accumulate subcontracting</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LPP</KEY>
+       <ENTRY>Lines per Page</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_LSEP</KEY>
+       <ENTRY>List Separation Required</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_MIKF</KEY>
+       <ENTRY>Print microfiche line</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_MONA</KEY>
+       <ENTRY>Reporting Period</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_PDF</KEY>
+       <ENTRY>Form name (sales list)</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_QUAR</KEY>
+       <ENTRY>Reporting quarter</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SKIP</KEY>
+       <ENTRY>Output per Tax Number</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_SRV</KEY>
+       <ENTRY>Select Service</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PDF_FORM</KEY>
+       <ENTRY>PDF Form Output</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_BYBUDT</KEY>
+       <ENTRY>Posting Date Selection</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_BYVTDT</KEY>
+       <ENTRY>Tax Reporting Date Selection</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_FICAEP</KEY>
+       <ENTRY>Line Item Transfer</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SCR_FORM</KEY>
+       <ENTRY>SAPscript Form Output</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_LSTM</KEY>
+       <ENTRY>Reporting Country/Region</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_MWKZ</KEY>
+       <ENTRY>Output Tax Code</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_TAXC</KEY>
+       <ENTRY>Reporting Country/Region</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_UKRS</KEY>
+       <ENTRY>Taxes on sales/purchases group</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SEL_VTDT</KEY>
+       <ENTRY>Tax Reporting Date</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>PAR_XALW</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SO_STCEG</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>26</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_GSBER</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_PRCTR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>/THKR/RFASLM00</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0016</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00067</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/RFASLM00</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00016</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DESCRIPTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Report erstellt ein Formular für die Zusammenfassende Meldung. Die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Meldung ist vierteljährlich oder jährlich zu erstellen, kann aber auch</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in einem anderen Rhythmus ausgegeben werden (zu Testzwecken oder falls</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die zuständige Finanzbehörde dies erlaubt).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In der Meldung werden normale Belege behandelt, deren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Ausgangssteuerkennzeichen in der Systemeinstellung als EG-Kennzeichen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>mit Wert &quot;1&quot; oder &quot;3&quot; gekennzeichnet wurde.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Fehlt die USt-Id-Nr des Debitors im Beleg, so erfolgt eine detaillierte</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Fehlermeldung. In diesem Fall werden die Informationen nicht in der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Meldung aufgeführt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Auf Wunsch kann eine &lt;DS:DE.ALLGEPOS&gt;Einzelpostenliste&lt;/&gt; angefordert</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden, die die zu meldenden Informationen auf Belegebene auflistet und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>folgende Summierung vornimmt:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>    *,,Summe pro Lohnbearbeitungsindikator (0/1)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>   **,,Summe pro USt-Id-Nr des Debitors</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>  ***,,Summe pro Buchungskreis</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Aufbau der Zusammenfassenden Meldung selbst ist in einem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TRAN.SE71&gt;SAPscript-Formular&lt;/&gt; hinterlegt. Vorgeschlagen wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>F_ASL_DE für die deutsche Zusammenfassende Meldung; dieses Formular</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wurde von der deutschen Finanzbehörde genehmigt. Ferner ist das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Formular F_ASL_DE_LISTE vorhanden, das neben den für die Meldung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>notwendigen Daten auch die Anschriftsdaten des Debitors ausgibt. Dazu</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ist der Parameter &lt;DS:DE.ASLMADDR&gt;Anschriftsdaten hinzulesen&lt;/&gt; zu</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>markieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Die Meldung sollte je USt-Id-Nr des Debitors den Warenwert in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;GL:Hauswährung&gt;Hauswährung&lt;/&gt; ausweisen. Felder, die im Formular als</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Symbole hinterlegt werden können, sind der &lt;DS:TRAN.SE12&gt;Struktur&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ASLM zu entnehmen. Zum Buchungskreis können Sie unter den Zusatzangaben</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>einen Zulassungsvermerk (mit der Zulassungsnummer des Erstellers)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>hinterlegen (beispielsweise notwendig in Deutschland).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U3</TDFORMAT>
+       <TDLINE>Meldung in EURO</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Für die Meldung in EURO müssen Sie im Einführungsleitfaden des</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Finanzwesens folgende Schritte ausführen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Aktivieren Sie die alternative Hauswährung:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>&lt;LS&gt;Hauptbuchhaltung -&gt; Geschäftsvorfälle -&gt; Abschluß -&gt; Melden -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Umsatzsteuermeldung -&gt; Alternative Hauswährung für Umsatzsteuervoranm.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aktivieren&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Ordnen Sie dem Report RFASLM00 die EURO-Währung zu:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>&lt;LS&gt;Hauptbuchhaltung -&gt; Geschäftsvorfälle -&gt; Abschluß -&gt; Melden -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Umsatzsteuermeldung -&gt; Alternative Hauswährung für Umsatzsteuermeldung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>angeben&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Wenn Sie den Report ausführen, markieren Sie das Feld &lt;ls&gt;Alternative</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Hauswährung&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U3</TDFORMAT>
+       <TDLINE>Besonderheiten für Belgien</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Für Belgien ist das Formular F_ASL_BE bzw. F_ASL_BE_EUR für die Meldung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in EURO zu verwenden. Über die entsprechenden Parameter ist das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Programm anzuweisen, die Anschriftsdaten hinzuzulesen und die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:DE.ASLMSKIP&gt;Ausgabe je Steuernummer&lt;/&gt; vorzunehmen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U3</TDFORMAT>
+       <TDLINE>Besonderheiten für Großbritannien</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Für Großbritannien wurde das Formular F_ASL_GB mit der Referenznummer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>VOPS/ESL/1719 von den britischen Finanzbehörden genehmigt. Es wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>darauf hingewiesen, daß jeder Anwender dieses Formulars eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>individuelle Genehmigung benötigt, die er unter Angabe obiger</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Referenznummer erhält.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PRECONDITION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>RESET N1</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Sie können Zusatzangaben zum Buchungskreis in der Systemeinstellung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>hinterlegen (unter dem Argument &apos;Zulassungsvermerk ZM&apos;). Sie gelangen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>auf das entsprechende Eingabebild vom Detailbild des Buchungskreises</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aus. Prüfen Sie, ob diese Voraussetzung erfüllt ist.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;DEVICE&amp; = &apos;SCREEN&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>&lt;DS:TRAN.OBY6&gt;Funktion ausführen&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Das Steuerkennzeichen muß in der Systemeinstellung als EG-Kennzeichen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gekennzeichnet sein. Prüfen Sie, ob diese Voraussetzung erfüllt ist.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;DEVICE&amp; = &apos;SCREEN&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>&lt;DS:TRAN.FTXP&gt;Funktion ausführen&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>/THKR/RFASLM00</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0016</VERSION>
+      <TXTLINES>00065</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/RFASLM00</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00016</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DESCRIPTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This program creates a form for the EC sales list. The report must be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>created quarterly or annually but can also be issued at different</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>intervals (for testing purposes or if the appropriate tax authorities</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>allow this).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The program deals with standard documents, whose output VAT code in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>configuration was marked as an EC code with value &quot;1&quot; or &quot;3&quot;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>If the VAT registration number of the customer is missing in the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>document, a detailed error message will follow. In this case,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>information is not listed in the report.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>If required, you can request a &lt;DS:DE.ALLGEPOS&gt;line item list&lt;/&gt; which</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>lists the information to be reported at document level and totals the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>    *,,total per subcontracting indicator (0/1)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>   **,,total per VAT registration number of the customer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>  ***,,total per company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The structure of the EC sales list itself is stored in a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TRAN.SE71&gt;SAPscript form&lt;/&gt;. &quot;F_ASL_DE&quot; is the default form for the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>German EC sales list; this form has been authorized by the German tax</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>authorities. Furthermore, the form &quot;F_ASL_DE_LISTE&quot; is available which</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in addition to issuing the necessary data for the report also issues</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the address data of the customer. To have this happen, you must select</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the parameter &lt;DS:DE.ASLMADDR&gt;&apos;Import address data&apos;&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The report should display the invoiced value of goods in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;GL:local_currency&gt;local currency&lt;/&gt; for each VAT registration number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of the customer. Fields which can be stored as symbols in the form are</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>to be taken from the ASLM &lt;DS:TRAN.SE12&gt;structure&lt;/&gt;. A registration</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>comment (with the registration number of the creator) can be stored</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>under the additional specifications for the company code (this is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>necessary in Germany, for example).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U3</TDFORMAT>
+       <TDLINE>Report in euro</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>To carry out the report in euro, you have to carry out the following</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>activities in the IMG:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Activate the alternative local currency:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>&lt;LS&gt;General Ledger Accounting -&gt; Accounting Transactions -&gt; Closing -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Reporting -&gt; Sales/Purchases Tax Returns -&gt; Activate Alternative Local</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Currency for Advance Tax Return&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Assign the euro currency to the report RFASLM00:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>&lt;LS&gt;General Ledger Accounting -&gt; Accounting Transactions -&gt; Closing -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Reporting -&gt; Sales/Purchases Tax Return -&gt; Specify Alternative Local</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Currency for Sales/Purchases Tax Returns&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>When you carry out the report, select the field &lt;LS&gt;Alternative local</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>currency&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U3</TDFORMAT>
+       <TDLINE>Special features for Belgium</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In Belgium, use the form F_ASL_BE or F_ASL_BE_EUR for reporting in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>euro. If you set the appropriate parameters, the program reads the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>address data and carries out the &lt;DS:DE.ASLMSKIP&gt;output per tax number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U3</TDFORMAT>
+       <TDLINE>Special features for Great Britain</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>For Great Britain, the form F_ASL_GB with reference number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>VOPS/ELS/1719 has been approved by the tax authorities. However, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>users of this form also require an individual authorization that can be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>obtained by giving the reference number above.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PRECONDITION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>RESET N1</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>You can store additional specifications for the company code within the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>configuration functions (under &apos;ZM registration comment&apos;). To reach the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>corresponding entry screen, you must first be in the company code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>detail screen. Check whether this requirement has been fulfilled.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;DEVICE&amp; = &apos;SCREEN&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>&lt;DS:TRAN.OBY6&gt;Proceed&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>The tax code must be marked as an EC code in your system configuration.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Check whether this requirement is fulfilled.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>IF &amp;DEVICE&amp; = &apos;SCREEN&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AL</TDFORMAT>
+       <TDLINE>&lt;DS:TRAN.FTXP&gt;Proceed&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>ENDIF</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

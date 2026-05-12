@@ -1,0 +1,17 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "I_ADDRESS",
+      "I_BUPAIDENTIFICATION",
+      "I_BUSINESSPARTNER",
+      "I_BUSINESSPARTNERBANK_2",
+      "I_BUSINESSPARTNERDEFAULTADDR",
+      "I_COUNTRY",
+      "I_COUNTRYTEXT",
+      "I_CUSTOMER",
+      "I_CUSTOMERCOMPANY",
+      "I_SUPPLIER",
+      "I_SUPPLIERCOMPANY"
+    ]
+  }
+}

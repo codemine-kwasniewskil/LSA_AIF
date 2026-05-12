@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_GUI_SALV</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Basisklasse für SALV</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <RSTAT>K</RSTAT>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ALV_GRID</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV List Viewer</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECKBOXES_AS_HOTSPOTS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld zum Ankreuzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>COLOR_COLUMN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV-Control: Feldname internes Tabellenfeld</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CURRENT_CELL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Zelleninformation</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GUI_STATUS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GUI-Status</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GUI_TITLE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV-Control: Text der Titelzeile</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_CHANGEABLE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld zum Ankreuzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_FULLSCREEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld zum Ankreuzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>NAME_FUGR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ABAP-Programm, aktuelles Rahmenprogramm</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>REPORT_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Abap-Reportname</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SALV</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Basisklasse für einfache Tabellen</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>DISPLAY</CMPNAME>
+     <SCONAME>CX_SALV_NOT_FOUND</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV: Allg. Fehlerklasse (wird bei Syntaxprüfung geprüft)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DISPLAY</CMPNAME>
+     <SCONAME>I_CONTAINER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Abstracter Container fuer GUI Controls</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DISPLAY</CMPNAME>
+     <SCONAME>I_VARI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Layout</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_CURRENT_CELL</CMPNAME>
+     <SCONAME>E_CURRENT_CELL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Zelleninformation</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SELECTED_ROWS</CMPNAME>
+     <SCONAME>ET_ROWS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Zeilen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REFRESH</CMPNAME>
+     <SCONAME>REFRESH_MODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV: Datenelement für Konstanten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REFRESH</CMPNAME>
+     <SCONAME>S_STABLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV-Control: Refresh-Stabilität</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_CURRENT_CELL</CMPNAME>
+     <SCONAME>I_ROW</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>4 Byte Signed Integer</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/TH_BASE</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Globale Test Helper Klasse</DESCRIPT>
+    <CATEGORY>05</CATEGORY>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <RSTAT>T</RSTAT>
+    <DURATION_TYPE>12</DURATION_TYPE>
+    <RISK_LEVEL>11</RISK_LEVEL>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Variantenauswahl</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Auszuführende Varianten ankreuzen</ENTRY>
+     <LENGTH>66</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CLASS_SETUP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CLASS_SETUP für lokale Testklassen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DECIDE_VARIANT_LIST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Auswahl der zu selektierenden Varianten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_VARIANTS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einlesen der Varianten zu TDC</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_OK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Flag Verarbeitung fehlerfrei</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TDC_API</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>eCATT TDC API - Testdatencontainer-Zugriffsklasse</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TDC_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TDC Name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TEST_RUN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Flag Testlauf Ja/Nein</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>T_TDC_VARIANTS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit Variantennamen</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_TDC_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>eCATT Objekt</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DECIDE_VARIANT_LIST</CMPNAME>
+     <SCONAME>I_METHOD</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Vollständiger Komponentenname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_VARIANTS</CMPNAME>
+     <SCONAME>I_TDC_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>eCATT Objekt</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

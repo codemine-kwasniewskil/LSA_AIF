@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_DEF</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Konstanten &amp; Einstellungen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>EVENT_CATEGORY_TRACE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ereignis-Kategorie für Trace</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konstanten &amp; Einstellungen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TESTMODE_IS_SET</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittelt, ob Testmode zu übergebenem Flag gesetzt ist</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TEST_MODE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Test-Modus: Binäres Flag</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TMBIN_ENABLE_TEST_FEATURES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Test-Modus: Testfunktionalitäten einschalten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TMBIN_TRACE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Test-Modus: Meldungung für Fehlersuche</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>TESTMODE_IS_SET</CMPNAME>
+     <SCONAME>I_FLAG</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Test-Modus: Binäres Flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>TESTMODE_IS_SET</CMPNAME>
+     <SCONAME>R_IS_SET</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld zum Ankreuzen</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

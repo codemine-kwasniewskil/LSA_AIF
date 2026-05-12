@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SUSO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOBJ>
+    <OBJCT>Z_BUPA_GRP</OBJCT>
+    <FIEL1>ACTVT</FIEL1>
+    <FIEL2>BEGRU</FIEL2>
+    <FIEL3>GSBER</FIEL3>
+    <OCLSS>ZLSA</OCLSS>
+   </TOBJ>
+   <TOBJT>
+    <LANGU>D</LANGU>
+    <OBJECT>Z_BUPA_GRP</OBJECT>
+    <TTEXT>Geschäftspartner: Berechtigungsgruppen &amp; Geschäftsbereiche</TTEXT>
+   </TOBJT>
+   <TOBJVORFLG>
+    <OBJCT>Z_BUPA_GRP</OBJCT>
+    <FLAG3>N</FLAG3>
+    <FLAG4>A</FLAG4>
+    <FLAG5>A</FLAG5>
+   </TOBJVORFLG>
+   <TACTZ>
+    <TACTZ>
+     <BROBJ>Z_BUPA_GRP</BROBJ>
+     <ACTVT>01</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_BUPA_GRP</BROBJ>
+     <ACTVT>02</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_BUPA_GRP</BROBJ>
+     <ACTVT>03</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_BUPA_GRP</BROBJ>
+     <ACTVT>05</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_BUPA_GRP</BROBJ>
+     <ACTVT>06</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_BUPA_GRP</BROBJ>
+     <ACTVT>08</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_BUPA_GRP</BROBJ>
+     <ACTVT>43</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_BUPA_GRP</BROBJ>
+     <ACTVT>F4</ACTVT>
+    </TACTZ>
+   </TACTZ>
+  </asx:values>
+ </asx:abap>
+</abapGit>

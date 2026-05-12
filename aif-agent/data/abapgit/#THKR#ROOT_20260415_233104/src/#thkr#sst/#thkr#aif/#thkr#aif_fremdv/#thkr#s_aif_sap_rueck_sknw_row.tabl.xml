@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>/THKR/S_AIF_SAP_RUECK_SKNW_ROW</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>IST Rückmeldung Sachkundenachweis</DDTEXT>
+    <EXCLASS>1</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>REGISTRIERNUMMER</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000026</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000013</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>RegistrierNummer</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>GEBUEHRBEZAHLT</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000010</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000005</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Boolean (True = Gezahlt, False = nicht gezahlt)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>DATUMGEBUHRENBESCHEID</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000020</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000010</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Datum</DDTEXT>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

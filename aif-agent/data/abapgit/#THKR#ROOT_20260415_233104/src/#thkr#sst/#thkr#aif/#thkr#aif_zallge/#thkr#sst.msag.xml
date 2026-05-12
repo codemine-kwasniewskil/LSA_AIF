@@ -1,0 +1,882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/SST</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>LST Protokoll bekommt keine Daten</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Bankland &amp;1 nicht unterstützt. Bitte Funktionsbaustein &amp;2 anpassen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Datei erfolgreich verarbeitet. Verarbeitungstatus aus &amp;1 gelöscht.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Datei fehlerhaft verarbeitet. Verarbeitungsstatus in &amp;1 wird beibehalten.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Keine abgebrochene Nachrichten für &amp;1 &amp;2 &amp;3 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>abgebrochene Nachricht &amp;1 für Schnittstelle &amp;2 aus Tabelle &amp;3 gelöscht.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Struktur &amp;1 keinem Geschäftsobjekt zugeordnet (AIF Mapping: &amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Feld &amp;1 in Struktur &amp;2 nicht vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Kein Identifikationsfeld für Stuktur &amp;1 gepflegt. (AIF Mapping: &amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Struktur &amp;1 keinem Verarbeitungstyp zugeordnet (AIF Mapping: &amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>No Action will be processed due to entry in table /THKR/ACTION_OFF.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Kein Buchungskreis für DST_OLD &amp;1 und EP&amp;2 in Tabelle &amp;3 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Komponente &amp;1 in Struktur &amp;2 nicht gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Keine Allgemeine Anordnung zum Kassenzeichen &amp;1 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Fehler Anlage Annahmeanordnung. Auszahlung mit Referenz nicht möglich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Kein Beleg zum Kassenzeichen &amp;1 gefunden. Storno nicht möglich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Storno für Anordnung &amp;1 (Belegnummer:&amp;2) an Workflow übergeben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Kein Statusfeld für Struktur &amp;1 gepflegt. (AIF Mapping: &amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Kein Kassenzeichen vom Fremdverfahren. Belegermittlung nicht möglich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>&amp;1 Anordnungen dem Workflow übergeben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Keine Daten für IST-Rückmeldung vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Zentrales Mapping für &amp;1 mit Schlüssel &amp;2 / &amp;3 nicht erfolgreich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Datei mit &amp;1 wurde mit Nachricht &amp;2 am &amp;3 übertragen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Generationsnummer &amp;1 kleiner als letzte Datenlieferung mit &amp;2 am &amp;3.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Lücken in Datenlieferung: Generationsnr. Datei: &amp;1 - Letzte Nr.: &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>Kein LST-Protokoll erzeugt. Daten fehlen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>027</MSGNR>
+     <TEXT>Anordnung erfolgreich verarbeitet</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>028</MSGNR>
+     <TEXT>Kein Feld Quelle in Single Index Tabelle &amp;1 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>029</MSGNR>
+     <TEXT>Keinen Beleg zum Schlüssel GJAHR &amp;1 und LOTKZ &amp;2 in Datei gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Fehler DB-Aktualisierung Feld: XREF1_HD (BUKRS: &amp;1 GJAHR:&amp;2 BELNR: &amp;3)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>XREF1_HD:&amp;1 an Anordnung &amp;2 (Beleg: &amp;3) aktualisiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Fehler in Verarbeitungskette. Fehler bei &amp;1. &amp;2 wird nicht verarbeitet.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>033</MSGNR>
+     <TEXT>Keine Annordnung mit Kassenzeichen &amp;1 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>034</MSGNR>
+     <TEXT>Datei &amp;1 existiert bereits im Verzeichnis &amp;2. Verarbeitung unterbrochen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>035</MSGNR>
+     <TEXT>Kein Kassenzeichen für &amp;1 gefunden. Schnittstelle PTravel prüfen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>036</MSGNR>
+     <TEXT>Unbekannte Belegart. Keine SAP-Buchung erzeugt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>037</MSGNR>
+     <TEXT>Datenlieferung für Ukrassenzeichen &amp;1 unvollständig. Nur Belegart &amp;2 gel.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>038</MSGNR>
+     <TEXT>Annahmeanordnung zum Kassenzeichen &amp;1 nicht in Datenlieferung vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>039</MSGNR>
+     <TEXT>Fehler Erzeugung Anordnung mit Kassenzeichen &amp;1. Kein Sollzugang möglich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>040</MSGNR>
+     <TEXT>Keine Änderung mögl. FI-Beleg &amp;1 am &amp;2 mit &amp;3 ausgegl.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>041</MSGNR>
+     <TEXT>Keine Referenz zur Mittelbindung mit Urkassenzeichen(41_URKASS) gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>042</MSGNR>
+     <TEXT>Datensatz aus &amp;1 mit BTYP: &amp;2 QUELLE: &amp;3 QBELNR: &amp;4 gelöscht.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>043</MSGNR>
+     <TEXT>Fehler beim Löschen aus &amp;1 mit BTYP: &amp;2 QUELLE: &amp;3 QBELNR: &amp;4.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>044</MSGNR>
+     <TEXT>Keine relevanten Daten für Schnittstelle vorhanden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>045</MSGNR>
+     <TEXT>Anordnung mit Betrag 0,00 identifieziert. Keine Verarbeitung in SAP.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>046</MSGNR>
+     <TEXT>Zeichen konnten nicht interpretiert werden. Code-Page prüfen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>047</MSGNR>
+     <TEXT>GP mit ext. ID &amp;1 bereits vorhanden. Anlegen wird nicht durchgeführt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>048</MSGNR>
+     <TEXT>Mittelbindung mit Belegnummer &amp;1 in Quellstruktur nicht gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>049</MSGNR>
+     <TEXT>Keine Betragsänderung durch manuelle Anpassung (KBLE).</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>050</MSGNR>
+     <TEXT>Keine Änderung des reservierten Betrages (KBLP-WTGES). Keine Buchung.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>051</MSGNR>
+     <TEXT>AIF-Status zur Nachricht &amp;1 konnte nicht aus &amp;2 ermittelt werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>052</MSGNR>
+     <TEXT>Keine alten erfolgreichen Nachrichten gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>053</MSGNR>
+     <TEXT>erfolgreiche Nachrichten &amp;1 für Schnittstelle &amp;2 aus Tabelle &amp;3 gelöscht.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>054</MSGNR>
+     <TEXT>Felder BELNR oder GJAHR leer. Keine Verarbeitung des Geschäftspartners.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>055</MSGNR>
+     <TEXT>Kein Beleg mit BELNR &amp;1, GJAHR &amp;2 und BUZEI &amp;3 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>056</MSGNR>
+     <TEXT>Zeitstempel muss größer sein. (zuletzt MSGID: &amp;1 TSTMP: &amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>057</MSGNR>
+     <TEXT>Belegart konfiguriert. Keine Datenänderungen. Keine Verarbeitung.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>058</MSGNR>
+     <TEXT>Allg. AO &amp;1 zum Kassenzeichen &amp;2 vorhanden. Keine AnnahmeAo erzeugt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>059</MSGNR>
+     <TEXT>Betrag 0. Beleg (HHJ: &amp;1 Quelle: &amp;2 Quellbelegnr: &amp;3) in Tab. gespeichert</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>060</MSGNR>
+     <TEXT>Eintrag mit Kassenzeichen &amp;1 aus Tabelle &amp;4 gelöscht.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>061</MSGNR>
+     <TEXT>Bezug zur Mittelbindung fehlt. Urkassenzeichen oder int. Belegnummer leer</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>062</MSGNR>
+     <TEXT>Keine Mittelbindung mit Belegnummer &amp;1 gefunden. Prüfung Feld REFER.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>063</MSGNR>
+     <TEXT>Langtext zu &amp;1 hinzugefügt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>064</MSGNR>
+     <TEXT>Fehler beim Anlegen des Langtextes für &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>065</MSGNR>
+     <TEXT>AnnahmeAO &amp;1 mit &amp;2. AusAO über Kassenzeichen &amp;3 referenziert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>066</MSGNR>
+     <TEXT>Keine AnnAO mit BUKRS &amp;1, GJAHR &amp;2 und BELNR &amp;3 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>067</MSGNR>
+     <TEXT>AnnahmeAO &amp;1 mit &amp;2. AnnAO über Kassenzeichen &amp;3 referenziert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>068</MSGNR>
+     <TEXT>Zufallsnummer: &amp;1; Nachrichen-ID:&amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>069</MSGNR>
+     <TEXT>Feld &amp;1 in Struktur &amp;2 mit &amp;3 überschrieben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>070</MSGNR>
+     <TEXT>Keine AO mit globaler ID &amp;1 gefunden. Kassenzeichen nicht ermittelbar</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>071</MSGNR>
+     <TEXT>Unvollständie Bankdaten: BANKS: &amp;1 BANKL:&amp;2 BANKN &amp;3.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>072</MSGNR>
+     <TEXT>Fehler IBAN Generierung für BANKS: &amp;1 BANKL:&amp;2 BANKN &amp;3.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>073</MSGNR>
+     <TEXT>Abweichende ext. Nummer bei Bankv. &amp;1. im SAP: &amp;2; geliefert: &amp;3.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>074</MSGNR>
+     <TEXT>IBAN &amp;1 für Geschäftspartner &amp;2 nicht gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>075</MSGNR>
+     <TEXT>externe Bank-ID &amp;1 an Bankverbindung &amp;2 für GP &amp;3 hinterlegt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>076</MSGNR>
+     <TEXT>ext. Bank-ID identischt. Keine Änderung für Bankverbindung &amp;1 beim GP &amp;2.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>077</MSGNR>
+     <TEXT>Für Partner &amp;1 (ext. ID: &amp;2) keine IBAN geliefert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>078</MSGNR>
+     <TEXT>Globale ID &amp;1 nicht in LST-Protokoll gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>079</MSGNR>
+     <TEXT>Keine Belegart für AIF-SSt &amp;1 &amp;2 &amp;3 in Tabelle &amp;4 gepflegt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>100</MSGNR>
+     <TEXT>Nachricht &amp;1 nicht gefunden. Kein Neustart möglich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>101</MSGNR>
+     <TEXT>Nachricht &amp;1 nicht fehlerhaft. Kein Neustart möglich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>102</MSGNR>
+     <TEXT>kundenspezif. Wiederverarbeitung für Schnittstelle &amp;1 / &amp;2 nicht aktiv.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>103</MSGNR>
+     <TEXT>Zeile &amp;1 in Origialnachricht erfolgreich gebucht. Kein Neustart möglich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>104</MSGNR>
+     <TEXT>Schlüssel &amp;1 in Origialnachricht erfolgreich gebucht. Kein Neustart mögl.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>105</MSGNR>
+     <TEXT>Keine Zeilen für Wiederverarbeitung mehr vorhanden. Kein Neustart möglich</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>106</MSGNR>
+     <TEXT>Option Übertragung AIF deaktiviert. Keine Nachricht ans AIF übertragen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>107</MSGNR>
+     <TEXT>Option Nachricht abbrechen akitv. Neuer Status für Nachricht &amp;1 gesetzt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>108</MSGNR>
+     <TEXT>Option Nachricht abbrechen deaktiv: Status von Nachricht &amp;1 unverändert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>109</MSGNR>
+     <TEXT>Keine fehlerhaften Nachrichten für Schnittstelle &amp;1 / &amp;2 /&amp;3 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>110</MSGNR>
+     <TEXT>Alte Nachricht &amp;1 -&gt; Neue Nachricht &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>111</MSGNR>
+     <TEXT>Beginn Bearbeitung alter Nachricht &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/SST</ARBGB>
+     <MSGNR>112</MSGNR>
+     <TEXT>Ende Bearbeitung alter Nachricht &amp;1</TEXT>
+    </T100>
+   </T100>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>NA</ID>
+      <OBJECT>/THKR/SST007</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00015</TXTLINES>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/SST007</TDNAME>
+      <TDID>NA</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;CAUSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Für das Wiederanlaufverfahren werden SAP Geschäftsobjekte in der Tabelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>/THKR/T_AIF_OBJ mit ihrem Verarbeitungsstatus gespeichert. Als SAP</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Geschäftsobjekt zählen Geschäftspartner, Anordnungen Mittelbindungen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>usw.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Anhand der Zielstruktur konnte kein Geschäftsobjekt zugeordnet werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYSTEM_RESPONSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;WHAT_TO_DO&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Geschäftsobjekt in Domäne aufnehmen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Domäne: /THKR/DOM_OBJTYP</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Struktur im AIF Mappingtabelle eines Objekttyps zuordnen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Transaktion: /AIF/VMAP</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Namensraum: ZALLGE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Mapping: MAP_REPROC_STRUC_2_O</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Struktur im AIF Mappingmapping einen Feld zuordnen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Transaktion: /AIF/VMAP</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Namensraum: ZALLGE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Mapping: MAP_REPROC_STRUC_2_F</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYS_ADMIN&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>NA</ID>
+      <OBJECT>/THKR/SST014</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00008</TXTLINES>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/SST014</TDNAME>
+      <TDID>NA</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;CAUSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Es wird versucht eine Auszahlunganordnung mit Referenz auf eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Einnahmesollstellung anzulegen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Allerdings konnte die Einnahmesollstellung zuvor nicht angelegt werden,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>weil keine Allgemeine Anordnung mit dem entsprechenden Kassenzeichen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>existiert. Aus dieser Allgemeinen Anordnung werden die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Buchungsinformation für die Annahmeanordnung ermittelt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYSTEM_RESPONSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;WHAT_TO_DO&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Anlegen einer Allgemeinen Anordnung mit Referenz auf das Kassenzeichen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Feld XBLNR im Belegkopf).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYS_ADMIN&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>NA</ID>
+      <OBJECT>/THKR/SST025</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0005</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00004</TXTLINES>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/SST025</TDNAME>
+      <TDID>NA</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00005</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;CAUSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zwischen den Datenlieferungen dürfen keine Lücken entstehen. D.h. Die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Generationsnummer der aktuellen Datei entspricht nicht der nächsten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Nummer (zuletzt übertragene Datei + 1), sondern ist viel größer (zuletzt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>übertragene Datei + n (n &gt; 1) ).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYSTEM_RESPONSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;WHAT_TO_DO&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYS_ADMIN&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>NA</ID>
+      <OBJECT>/THKR/SST035</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00007</TXTLINES>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/SST035</TDNAME>
+      <TDID>NA</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;CAUSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Die Schnittstelle PTravel (I_0009_001) hat Datensätze für die Polizei</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>geliefert. Allerdings ist bei der Buchung der Auszahlungsanordnung ein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Fehler aufgetreten und es wurde kein Kassenzeichen für die Anordnung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erzeugt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYSTEM_RESPONSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;WHAT_TO_DO&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Es müssen für das Aktenzeichen die Reisekosten aus PTravel erfolgreich</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verabeitet worden sein, bevor sie an die Polizei weitergeleitet werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>können.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYS_ADMIN&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

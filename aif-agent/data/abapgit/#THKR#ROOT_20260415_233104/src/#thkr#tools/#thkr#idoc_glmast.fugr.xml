@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>THKR: Copy for ALE</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LIDOC_GLMASTTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLIDOC_GLMAST</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/MASTERIDOC_CREATE_GLMAST</FUNCNAME>
+     <SHORT_TEXT>Erzeugen MasterIDOC GLMAST</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SKA1KEY</PARAMETER>
+       <DBFIELD>BDISKA1KEY</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>RCVPFC</PARAMETER>
+       <DBFIELD>BDALEDC-RCVPFC</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>RCVPRN</PARAMETER>
+       <DBFIELD>BDALEDC-RCVPRN</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>RCVPRT</PARAMETER>
+       <DBFIELD>BDALEDC-RCVPRT</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SNDPFC</PARAMETER>
+       <DBFIELD>BDALEDC-SNDPFC</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SNDPRN</PARAMETER>
+       <DBFIELD>BDALEDC-SNDPRN</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SNDPRT</PARAMETER>
+       <DBFIELD>BDALEDC-SNDPRT</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>MESTYP</PARAMETER>
+       <DBFIELD>TBDME-MESTYP</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>CREATED_COMM_IDOCS</PARAMETER>
+       <DBFIELD>SY-TABIX</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>SKATKEY</PARAMETER>
+       <DBSTRUCT>BDISKATKEY</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>SKB1KEY</PARAMETER>
+       <DBSTRUCT>BDISKB1KPL</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SKA1KEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Versendete Konten: Schlüsselfelder Kontenplan</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RCVPFC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Empfänger - Partnerrolle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RCVPRN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Empfänger - Partnernummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RCVPRT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Empfänger - Partnerart</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SNDPFC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sender - Partnerrolle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SNDPRN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sender - Partnernummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SNDPRT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sender - Partnerart</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MESTYP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nachrichtentyp des (reduzierten) IDOCs</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CREATED_COMM_IDOCS</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SKATKEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Schlüsselfelder: Texte</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SKB1KEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Schlüsselfelder: Buchungskreis</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <LONGTEXTS__-THKR_-MASTERIDOC_CREATE_GLMAST>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/MASTERIDOC_CREATE_GLMAST</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00004</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/MASTERIDOC_CREATE_GLMAST</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U4</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Erzeugen des Maximal-Daten-IDOCs zu dem durch die übergebenen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Schlüsseldaten spezifizierten Sachkonto und Übergabe des IDOCs an die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>ALE-Schicht.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/MASTERIDOC_CREATE_GLMAST</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/MASTERIDOC_CREATE_GLMAST</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U4</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Generation of the maximum data IDOCs for the G/L account specified by</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the key data and transfer of the IDOC to the ALE level.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-MASTERIDOC_CREATE_GLMAST>
+  </asx:values>
+ </asx:abap>
+</abapGit>

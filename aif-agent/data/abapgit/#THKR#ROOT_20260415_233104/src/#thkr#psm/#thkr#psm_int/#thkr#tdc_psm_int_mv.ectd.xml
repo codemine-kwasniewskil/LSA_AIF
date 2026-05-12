@@ -1,0 +1,1062 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ECTD" serializer_version="v1.0.0">
+ <VERSIONS>
+  <VERSION>
+   <ECTD VERSION="1.5">
+    <ATTRIBUTES>
+     <ETOBJ_GNDT>
+      <VERSION>00000001</VERSION>
+      <TWB_TITLE>Testdaten für PSM Mittelvormerkungen</TWB_TITLE>
+      <SOFTCOMP/>
+      <TWB_DEP_RF/>
+      <TWB_DEP_RT/>
+      <TWB_STATUS>X</TWB_STATUS>
+      <TWB_RELE>N</TWB_RELE>
+      <FUSER></FUSER>
+      <FDATE></FDATE>
+      <LUSER></LUSER>
+      <LDATE></LDATE>
+      <LTIME></LTIME>
+      <REL_BAS_F/>
+      <REL_BAS_T/>
+      <SERVICE/>
+      <PVNR/>
+      <BACKUP/>
+     </ETOBJ_GNDT>
+     <ETOBJNOVER>
+      <NAME>/THKR/TDC_PSM_INT_MV</NAME>
+      <TYPE>ECTD</TYPE>
+      <TWB_RESP></TWB_RESP>
+      <TWB_DISTL>B</TWB_DISTL>
+      <TWB_EUBOBJ/>
+      <TWB_EUTYPE/>
+      <DEVCLASS></DEVCLASS>
+      <MASTERLANG>D</MASTERLANG>
+      <TADIR_RESP></TADIR_RESP>
+      <FRANGE>PSM-FM</FRANGE>
+      <BCSET_MODE/>
+      <API_MODE/>
+      <COL_TSTOBJDATA/>
+      <NO_TRANSLATION/>
+     </ETOBJNOVER>
+     <ETOBJ_DOC>
+      <SEARCH_1/>
+      <SEARCH_2/>
+      <SEARCH_3/>
+      <SEARCH_4/>
+      <SEARCH_5/>
+      <SEARCH_6/>
+      <SEARCH_7/>
+      <SEARCH_8/>
+      <SEARCH_9/>
+      <SEARCH_10/>
+      <S_DOC_ID/>
+      <S_OBJ_ID/>
+      <S_DOC_TITL/>
+     </ETOBJ_DOC>
+     <ETOBJ_CNST>
+      <TWB_DEP_S/>
+      <TWB_DEPV_S/>
+      <TWB_DEP_L/>
+      <TWB_DEPV_L/>
+      <TWB_USE_A/>
+      <TWB_USE_P/>
+      <TWB_USE_H/>
+      <TWB_USE_E/>
+      <REUSE/>
+      <TWB_DEP_C/>
+      <TWB_DEP_VC/>
+      <TWB_DEP_F/>
+      <TWB_DEP_VF/>
+      <TWB_DEP_P/>
+      <TWB_DEP_VP/>
+      <TWB_DEP_DB/>
+      <TWB_DEPVDB/>
+      <TWB_WKREQ>0.0</TWB_WKREQ>
+      <TWB_WKUNIT>MIN</TWB_WKUNIT>
+      <TWB_PRIO>3</TWB_PRIO>
+     </ETOBJ_CNST>
+     <ETSC_TSYS>
+      <SYSTEMDATA/>
+      <TESTSYSTEM/>
+     </ETSC_TSYS>
+     <ETSYS_COMP_TABTYPE/>
+     <ETSYS_REL_TABTYPE/>
+     <ETBF_OBJ_TABTYPE/>
+     <ETBF_VER_TABTYPE/>
+    </ATTRIBUTES>
+    <PARAMETERS>
+     <ETPAR_GUIX>
+      <item>
+       <PNAME>DTO_PSM_MV</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>DTO: PSM-Mittelvormerkungen</PDESC>
+       <PINDEX>0001</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>/THKR/S_DTO_PSM_MV</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0001</SORT_LNR>
+       <PREF_NAME2>/THKR/S_DTO_PSM_MV</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="_-THKR_-S_DTO_PSM_MV">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_DTO_PSM_MV=A=v=L=000000=doc=DTO: PSM-Mittelvormerkungen</documentation>
+          </annotation>
+          <sequence>
+           <element name="BELNR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=KBLNR_DY=A=C=L=000010=doc=Belegnummer Mittelvo</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BLTYP" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=KBLTYP=A=N=L=000003=doc=Belegtyp Mittelvormerk</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="3"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BLART" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMRE_BLART=A=C=L=000002=doc=Belegart Mittelvor</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BUKRS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKRS=A=C=L=000004=doc=Buchungskreis</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BLDAT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BLDAT=A=D=L=000008=doc=Belegdatum im Beleg</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BUDAT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUDAT=A=D=L=000008=doc=Buchungsdatum im Beleg</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="WAERS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=WAERS=A=C=L=000005=doc=Währungsschlüssel</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="5"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="KTXT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BKTXT=A=C=L=000025=doc=Belegkopftext</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="25"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="XBLNR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=XBLNR=A=C=L=000016=doc=Referenz-Belegnummer</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOTKZ" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=LOTKZ=A=C=L=000010=doc=Bündelungskennzeichen f</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="T_KONT" minOccurs="0" type="_-THKR_-T_DTO_PSM_MV_BELEG_KONT"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-T_DTO_PSM_MV_BELEG_KONT">
+          <annotation>
+           <documentation>I==O==C=T=K==D=/THKR/T_DTO_PSM_MV_BELEG_KONT=A=h=L=000000=do</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="_-THKR_-S_DTO_PSM_MV_BELEG_KONT" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-S_DTO_PSM_MV_BELEG_KONT">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_DTO_PSM_MV_BELEG_KONT=A=u=L=000000=do</documentation>
+          </annotation>
+          <sequence>
+           <element name="WTORIG" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMWTORIG=A=P=L=000015=doc=Originalbetrag in Tr</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="decimal">
+              <totalDigits value="15"/>
+              <fractionDigits value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="PARTNER" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=PARTNER=A=C=L=000017=doc=Partnernummer</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="17"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="KBLNR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=KBLNR=A=C=L=000010=doc=Belegnummer Mittelvorme</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="SGTXT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=SGTXT=A=C=L=000050=doc=Positionstext</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="50"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FIPEX" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FIPEX=A=C=L=000024=doc=Finanzposition (Nicht m</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FISTL" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FISTL=A=C=L=000016=doc=Finanzstelle</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FIKRS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FIKRS=A=C=L=000004=doc=Finanzkreis</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="KOSTL" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=KOSTL=A=C=L=000010=doc=Kostenstelle</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZUONR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DZUONR=A=C=L=000018=doc=Zuordnungsnummer</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="18"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FKBER" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FKBER=A=C=L=000016=doc=Funktionsbereich</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="GEBER" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BP_GEBER=A=C=L=000010=doc=Fonds</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HKONT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=HKONT=A=C=L=000010=doc=Sachkonto der Hauptbuch</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FDATK" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_RE_FDAT=A=D=L=000008=doc=Fälligkeitsdatum M</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:_-THKR_-S_DTO_PSM_MV xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+         <BELNR/>
+         <BLTYP/>
+         <BLART/>
+         <BUKRS/>
+         <BLDAT/>
+         <BUDAT/>
+         <WAERS/>
+         <KTXT/>
+         <XBLNR/>
+         <LOTKZ/>
+         <T_KONT empty="true">
+          <item>
+           <WTORIG/>
+           <PARTNER/>
+           <KBLNR/>
+           <SGTXT/>
+           <FIPEX/>
+           <FISTL/>
+           <FIKRS/>
+           <KOSTL/>
+           <ZUONR/>
+           <FKBER/>
+           <GEBER/>
+           <HKONT/>
+           <FDATK/>
+          </item>
+         </T_KONT>
+        </ddic:_-THKR_-S_DTO_PSM_MV>
+       </DEEP_DATA>
+      </item>
+      <item>
+       <PNAME>DTO_PSM_MV_CREATE</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>DTO: PSM-Mittelvormerkungen für Anlage</PDESC>
+       <PINDEX>0002</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>/THKR/S_DTO_PSM_MV_CREATE</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0002</SORT_LNR>
+       <PREF_NAME2>/THKR/S_DTO_PSM_MV_CREATE</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="_-THKR_-S_DTO_PSM_MV_CREATE">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_DTO_PSM_MV_CREATE=A=v=L=000000=doc=DTO: PSM-Mittelvormerkungen für Anlage</documentation>
+          </annotation>
+          <sequence>
+           <element name="BELNR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=KBLNR_DY=A=C=L=000010=doc=Belegnummer Mittelvo</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BLTYP" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=KBLTYP=A=N=L=000003=doc=Belegtyp Mittelvormerk</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="3"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BLART" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMRE_BLART=A=C=L=000002=doc=Belegart Mittelvor</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BUKRS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKRS=A=C=L=000004=doc=Buchungskreis</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BLDAT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BLDAT=A=D=L=000008=doc=Belegdatum im Beleg</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BUDAT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUDAT=A=D=L=000008=doc=Buchungsdatum im Beleg</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="WAERS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=WAERS=A=C=L=000005=doc=Währungsschlüssel</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="5"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="KTXT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BKTXT=A=C=L=000025=doc=Belegkopftext</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="25"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="XBLNR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=XBLNR=A=C=L=000016=doc=Referenz-Belegnummer</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOTKZ" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=LOTKZ=A=C=L=000010=doc=Bündelungskennzeichen f</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="T_KONT" minOccurs="0" type="_-THKR_-T_DTO_PSM_MV_BELEG_KONT"/>
+           <element name="TEST_RUN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/D_PS_FM_TEST_RUN=A=C=L=000001=doc=Flag T</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-T_DTO_PSM_MV_BELEG_KONT">
+          <annotation>
+           <documentation>I==O==C=T=K==D=/THKR/T_DTO_PSM_MV_BELEG_KONT=A=h=L=000000=do</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="_-THKR_-S_DTO_PSM_MV_BELEG_KONT" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-S_DTO_PSM_MV_BELEG_KONT">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_DTO_PSM_MV_BELEG_KONT=A=u=L=000000=do</documentation>
+          </annotation>
+          <sequence>
+           <element name="WTORIG" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMWTORIG=A=P=L=000015=doc=Originalbetrag in Tr</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="decimal">
+              <totalDigits value="15"/>
+              <fractionDigits value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="PARTNER" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=PARTNER=A=C=L=000017=doc=Partnernummer</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="17"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="KBLNR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=KBLNR=A=C=L=000010=doc=Belegnummer Mittelvorme</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="SGTXT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=SGTXT=A=C=L=000050=doc=Positionstext</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="50"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FIPEX" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FIPEX=A=C=L=000024=doc=Finanzposition (Nicht m</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FISTL" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FISTL=A=C=L=000016=doc=Finanzstelle</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FIKRS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FIKRS=A=C=L=000004=doc=Finanzkreis</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="KOSTL" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=KOSTL=A=C=L=000010=doc=Kostenstelle</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZUONR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DZUONR=A=C=L=000018=doc=Zuordnungsnummer</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="18"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FKBER" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FKBER=A=C=L=000016=doc=Funktionsbereich</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="GEBER" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BP_GEBER=A=C=L=000010=doc=Fonds</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HKONT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=HKONT=A=C=L=000010=doc=Sachkonto der Hauptbuch</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FDATK" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_RE_FDAT=A=D=L=000008=doc=Fälligkeitsdatum M</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_MWSKZ" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=MWSKZ=A=C=L=000002=doc=Umsatzsteuerkennzeichen</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:_-THKR_-S_DTO_PSM_MV_CREATE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+         <BELNR/>
+         <BLTYP/>
+         <BLART/>
+         <BUKRS/>
+         <BLDAT/>
+         <BUDAT/>
+         <WAERS/>
+         <KTXT/>
+         <XBLNR/>
+         <LOTKZ/>
+         <T_KONT empty="true">
+          <item>
+           <WTORIG/>
+           <PARTNER/>
+           <KBLNR/>
+           <SGTXT/>
+           <FIPEX/>
+           <FISTL/>
+           <FIKRS/>
+           <KOSTL/>
+           <ZUONR/>
+           <FKBER/>
+           <GEBER/>
+           <HKONT/>
+           <FDATK/>
+           <ZZ_MWSKZ/>
+          </item>
+         </T_KONT>
+         <TEST_RUN/>
+        </ddic:_-THKR_-S_DTO_PSM_MV_CREATE>
+       </DEEP_DATA>
+      </item>
+      <item>
+       <PNAME>KBLNR</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>Belegnummer Mittelvormerkung</PDESC>
+       <PINDEX>0004</PINDEX>
+       <PREF_TYPE>DTEL</PREF_TYPE>
+       <PREF_NAME>KBLNR_DY</PREF_NAME>
+       <PDOM>KBLNR</PDOM>
+       <PDATTYP>CHAR</PDATTYP>
+       <PDATLEN>0010</PDATLEN>
+       <PINTTYP>C</PINTTYP>
+       <PINTLEN>000020</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0003</SORT_LNR>
+       <PREF_NAME2>KBLNR_DY</PREF_NAME2>
+       <TAB_INDEX>0</TAB_INDEX>
+      </item>
+      <item>
+       <PNAME>MANDT</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>Mandant</PDESC>
+       <PINDEX>0005</PINDEX>
+       <PREF_TYPE>_CBTSIM_</PREF_TYPE>
+       <PREF_NAME>SY-MANDT</PREF_NAME>
+       <PDOM>MANDT</PDOM>
+       <PDATTYP>CLNT</PDATTYP>
+       <PDATLEN>0003</PDATLEN>
+       <PINTTYP>C</PINTTYP>
+       <PINTLEN>000006</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0004</SORT_LNR>
+       <PREF_NAME2>SY-MANDT</PREF_NAME2>
+       <TAB_INDEX>0</TAB_INDEX>
+      </item>
+      <item>
+       <PNAME>DTO_UPDATE_VAL</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>Anlegen von Wertanpassungen für Mittelvormerkungen</PDESC>
+       <PINDEX>0003</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>/THKR/S_DTO_PSM_MV_UPDATE_VAL</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0005</SORT_LNR>
+       <PREF_NAME2>/THKR/S_DTO_PSM_MV_UPDATE_VAL</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="_-THKR_-S_DTO_PSM_MV_UPDATE_VAL">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_DTO_PSM_MV_UPDATE_VAL=A=u=L=000000=do=doc=Anlegen von Wertanpassungen für Mittelvormerkungen</documentation>
+          </annotation>
+          <sequence>
+           <element name="XMINUS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMSUPPSUB=A=C=L=000001=doc=Kennzeichen: Wertan</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="PMBLDAT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMR_SUPPBLDAT=A=D=L=000008=doc=Belegdatum im W</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BELNR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMR_SBELNR=A=C=L=000010=doc=Belegnummer Mittel</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BLPOS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMR_SBLPOS=A=N=L=000003=doc=Belegposition Mitt</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="3"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="WTSUPP" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMWTSUPP=A=P=L=000015=doc=Wertanpassungsbeleg:</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="decimal">
+              <totalDigits value="15"/>
+              <fractionDigits value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BTEXT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMSUPPTEXT=A=C=L=000050=doc=Wertanpassungsbele</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="50"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TESTRUN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BOOLE_D=A=C=L=000001=doc=Datenelement zur Domä</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:_-THKR_-S_DTO_PSM_MV_UPDATE_VAL xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+         <XMINUS/>
+         <PMBLDAT/>
+         <BELNR/>
+         <BLPOS/>
+         <WTSUPP/>
+         <BTEXT/>
+         <TESTRUN/>
+        </ddic:_-THKR_-S_DTO_PSM_MV_UPDATE_VAL>
+       </DEEP_DATA>
+      </item>
+     </ETPAR_GUIX>
+     <ETPAR_VARI>
+      <item>
+       <VAR_NAME>CREATE_MV_VAR1</VAR_NAME>
+       <VAR_DESC>Auszahlung AO Anlage Mittelbindung</VAR_DESC>
+       <VINDEX>0001</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>DTO_PSM_MV_CREATE</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0002</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-S_DTO_PSM_MV_CREATE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <BLTYP>050</BLTYP>
+           <BLART>AU</BLART>
+           <BUKRS>R090</BUKRS>
+           <WAERS>EUR</WAERS>
+           <KTXT>Kopftext</KTXT>
+           <XBLNR>Ref 1</XBLNR>
+           <T_KONT>
+            <item>
+             <WTORIG>100</WTORIG>
+             <PARTNER>0200000004</PARTNER>
+             <SGTXT>Postext</SGTXT>
+             <FIPEX>112068502</FIPEX>
+             <FISTL>1101000001</FISTL>
+             <KOSTL>1101000002</KOSTL>
+             <FKBER>1120</FKBER>
+             <GEBER>11</GEBER>
+             <HKONT>2680011000</HKONT>
+             <ZZ_MWSKZ>V1</ZZ_MWSKZ>
+            </item>
+           </T_KONT>
+           <TEST_RUN>X</TEST_RUN>
+          </ddic:_-THKR_-S_DTO_PSM_MV_CREATE>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+      <item>
+       <VAR_NAME>READ_MV1</VAR_NAME>
+       <VAR_DESC>LEsen Alll. Ausz. AO</VAR_DESC>
+       <VINDEX>0005</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>KBLNR</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0004</PINDEX>
+         <VALUE>4700000002</VALUE>
+        </item>
+       </PAR_VALUES>
+      </item>
+      <item>
+       <VAR_NAME>CREATE_MV_VAR2</VAR_NAME>
+       <VAR_DESC>MB Anlage Mittelbindung Festlegung</VAR_DESC>
+       <VINDEX>0002</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>DTO_PSM_MV_CREATE</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0002</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-S_DTO_PSM_MV_CREATE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <BLTYP>050</BLTYP>
+           <BLART>M0</BLART>
+           <BUKRS>R090</BUKRS>
+           <WAERS>EUR</WAERS>
+           <KTXT>Test MV</KTXT>
+           <XBLNR>Ref 1</XBLNR>
+           <T_KONT>
+            <item>
+             <WTORIG>10.00</WTORIG>
+             <SGTXT>Postext</SGTXT>
+             <FIPEX>112068505</FIPEX>
+             <FISTL>1101502002</FISTL>
+             <KOSTL>1212010001</KOSTL>
+             <FKBER>9999</FKBER>
+             <GEBER>11</GEBER>
+             <HKONT>6105300000</HKONT>
+             <FDATK>20241231</FDATK>
+             <ZZ_MWSKZ>V1</ZZ_MWSKZ>
+            </item>
+           </T_KONT>
+           <TEST_RUN>X</TEST_RUN>
+          </ddic:_-THKR_-S_DTO_PSM_MV_CREATE>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+      <item>
+       <VAR_NAME>CREATE_MV_VAR3</VAR_NAME>
+       <VAR_DESC>MB BLART = MB</VAR_DESC>
+       <VINDEX>0003</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>DTO_PSM_MV_CREATE</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0002</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-S_DTO_PSM_MV_CREATE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <BLTYP>050</BLTYP>
+           <BLART>MB</BLART>
+           <BUKRS>R090</BUKRS>
+           <WAERS>EUR</WAERS>
+           <KTXT>Test MV</KTXT>
+           <XBLNR>Ref 1</XBLNR>
+           <T_KONT>
+            <item>
+             <WTORIG>10.00</WTORIG>
+             <SGTXT>Postext</SGTXT>
+             <FIPEX>112068505</FIPEX>
+             <FISTL>1101502002</FISTL>
+             <KOSTL>1212010001</KOSTL>
+             <FKBER>9999</FKBER>
+             <GEBER>11</GEBER>
+             <HKONT>6105300000</HKONT>
+             <FDATK>20241231</FDATK>
+             <ZZ_MWSKZ>V1</ZZ_MWSKZ>
+            </item>
+           </T_KONT>
+           <TEST_RUN>X</TEST_RUN>
+          </ddic:_-THKR_-S_DTO_PSM_MV_CREATE>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+      <item>
+       <VAR_NAME>UPDATE_VAL_VAR1</VAR_NAME>
+       <VAR_DESC>Werteerhöhung +20</VAR_DESC>
+       <VINDEX>0006</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>DTO_UPDATE_VAL</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0003</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-S_DTO_PSM_MV_UPDATE_VAL xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <PMBLDAT>20241129</PMBLDAT>
+           <BELNR>5000000001</BELNR>
+           <WTSUPP>20</WTSUPP>
+           <BTEXT>Test + 20</BTEXT>
+          </ddic:_-THKR_-S_DTO_PSM_MV_UPDATE_VAL>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+      <item>
+       <VAR_NAME>UPDATE_VAL_VAR2</VAR_NAME>
+       <VAR_DESC>Werteeminderung -5</VAR_DESC>
+       <VINDEX>0007</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>DTO_UPDATE_VAL</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0003</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-S_DTO_PSM_MV_UPDATE_VAL xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <XMINUS>X</XMINUS>
+           <PMBLDAT>20241129</PMBLDAT>
+           <BELNR>5000000001</BELNR>
+           <WTSUPP>5</WTSUPP>
+           <BTEXT>Test - 5</BTEXT>
+          </ddic:_-THKR_-S_DTO_PSM_MV_UPDATE_VAL>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+     </ETPAR_VARI>
+    </PARAMETERS>
+    <VARIANT_MODE>
+     <ETVAR_EXT></ETVAR_EXT>
+    </VARIANT_MODE>
+   </ECTD>
+  </VERSION>
+ </VERSIONS>
+</abapGit>

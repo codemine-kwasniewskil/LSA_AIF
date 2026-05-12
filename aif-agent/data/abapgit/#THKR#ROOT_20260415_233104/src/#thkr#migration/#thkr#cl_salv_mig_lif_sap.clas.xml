@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_SALV_MIG_LIF_SAP</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Migration - Zahlungspartner</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>APPL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendung: Migration</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_GUI_STATUS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GUI-Status</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_GUI_TITLE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV-Control: Text der Titelzeile</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_LINE_STRUCTURE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabellenname</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_NAME_FUGR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ABAP-Programm, aktuelles Rahmenprogramm</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_REPORT_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Abap-Reportname</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>T_DTO_MIG_LIF_SAP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TDTO: Migration - Zahlungspartner</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

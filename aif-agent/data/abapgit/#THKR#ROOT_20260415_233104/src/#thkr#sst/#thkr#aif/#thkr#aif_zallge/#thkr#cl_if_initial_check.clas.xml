@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IF_INITIAL_CHECK</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Prüfklasse für Schnittstellenprüfungen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_BTYP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfung Erlaubte Buchungstypen pro Schnittstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_FILE_ORDER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfung der Dateireihenfolge</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_IGNORE_FILE_ORDER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfen, ob Dateireihenfolge geprüft werden soll</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_QBELNR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfung 06_QBELNR auf Eindeutigkeit</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GEN_CHECK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Passt die Nummer ?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GEN_GEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Generierung einer neuen Nummer zur Schnittstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GEN_SAVE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sichern der Generations-Nummer</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_BTYP_FOR_SST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittlung der Buchungtypen pro Schnittstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SINGLE_INDEX_TAB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nachrichtenindex-Tabelle ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittlung der Schnittstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_UNSUPPORTED_BTYP_FROM_IF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittlung nicht unterstütze Buchungstypen aus Sst.</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_BTYP</CMPNAME>
+     <SCONAME>IV_EMPF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld der Laenge 3 Bytes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_FILE_ORDER</CMPNAME>
+     <SCONAME>IV_GENNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nicht näher def. Bereich, evtl. für Patchlevels verwendbar</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_IGNORE_FILE_ORDER</CMPNAME>
+     <SCONAME>RV_IGNORE_GENNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GEN_CHECK</CMPNAME>
+     <SCONAME>ET_RETURN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit BAPI Return Informationen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GEN_CHECK</CMPNAME>
+     <SCONAME>E_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GEN_CHECK</CMPNAME>
+     <SCONAME>I_DATA_STRING</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld der Laenge 17</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GEN_GEN</CMPNAME>
+     <SCONAME>ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Eintrag konnte nicht gefunden werden.</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GEN_GEN</CMPNAME>
+     <SCONAME>I_VERFAHREN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Verfahren</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GEN_GEN</CMPNAME>
+     <SCONAME>R_GENNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Generationsnummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GEN_SAVE</CMPNAME>
+     <SCONAME>I_PATH</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld der Länge 16</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GEN_SAVE</CMPNAME>
+     <SCONAME>I_VARIANTE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_BTYP_FOR_SST</CMPNAME>
+     <SCONAME>IV_SST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nicht näher def. Bereich, evtl. für Patchlevels verwendbar</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SINGLE_INDEX_TAB</CMPNAME>
+     <SCONAME>RV_INDEX_TABLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name Nachrichtenindextabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SST</CMPNAME>
+     <SCONAME>IV_EMPF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld der Laenge 3 Bytes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SST</CMPNAME>
+     <SCONAME>RV_SST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nicht näher def. Bereich, evtl. für Patchlevels verwendbar</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

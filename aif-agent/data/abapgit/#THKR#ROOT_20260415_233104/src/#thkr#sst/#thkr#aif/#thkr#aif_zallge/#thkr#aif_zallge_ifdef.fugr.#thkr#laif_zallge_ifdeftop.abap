@@ -1,0 +1,3 @@
+FUNCTION-POOL /THKR/AIF_ZALLGE_IFDEF.       "MESSAGE-ID ..
+
+* INCLUDE /THKR/LAIF_ZALLGE_IFDEFD...        " Local class definition

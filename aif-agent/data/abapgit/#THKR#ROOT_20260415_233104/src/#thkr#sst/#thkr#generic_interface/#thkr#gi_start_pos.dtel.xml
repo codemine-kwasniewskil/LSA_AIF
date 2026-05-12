@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/THKR/GI_START_POS</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <HEADLEN>13</HEADLEN>
+    <SCRLEN1>09</SCRLEN1>
+    <SCRLEN2>13</SCRLEN2>
+    <SCRLEN3>13</SCRLEN3>
+    <DDTEXT>Startposition</DDTEXT>
+    <REPTEXT>Startposition</REPTEXT>
+    <SCRTEXT_S>Startpos.</SCRTEXT_S>
+    <SCRTEXT_M>Startposition</SCRTEXT_M>
+    <SCRTEXT_L>Startposition</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <DATATYPE>INT2</DATATYPE>
+    <LENG>000005</LENG>
+    <OUTPUTLEN>000006</OUTPUTLEN>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

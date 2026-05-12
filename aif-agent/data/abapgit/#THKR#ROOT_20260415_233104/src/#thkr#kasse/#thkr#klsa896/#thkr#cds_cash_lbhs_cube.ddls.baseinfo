@@ -1,0 +1,10 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "/THKR/CDS_BJBSEG2",
+      "/THKR/CDS_HLGFMIFIIT",
+      "I_COMMITMENTITEM",
+      "I_COMMITMENTITEMTEXT"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IM_ELKO_KIDI_BZG_MAP</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Badi Impl</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FEBEP_LINE</CMPNAME>
+     <SCONAME>VORZEICHEN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Soll / Haben</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FEBKO_DATA</CMPNAME>
+     <SCONAME>FEBKO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>FEBKO für XML Kontoauszug</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_KIDICAP_CUST</CMPNAME>
+     <SCONAME>CUSTOMIZING</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SST Kidicap Custmozing</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

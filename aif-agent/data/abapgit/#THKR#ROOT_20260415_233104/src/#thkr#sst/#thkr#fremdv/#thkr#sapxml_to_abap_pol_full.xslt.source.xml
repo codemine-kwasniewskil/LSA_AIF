@@ -1,0 +1,108 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <xsl:template match="/">
+    <asx:abap version="1.0">
+      <asx:values>
+        <FILE>
+          <VALUES>
+            <TSTMP>
+               <xsl:value-of  select="//asx:values/VALUES/item/KEY/TSTMP"/>
+            </TSTMP>
+            <ITEMS>
+              <xsl:for-each select="//asx:values/VALUES/item">
+                <_-THKR_-S_DE_PSO_XML>
+                  <KEY>
+                    <xsl:copy-of select="KEY/*"/>
+                  </KEY>
+
+                  <LT_PSO02>
+                    <xsl:for-each select="LT_PSO02/PSO02">
+                      <PSO02>
+                        <xsl:copy-of select="*"/>
+                      </PSO02>
+                    </xsl:for-each>
+                  </LT_PSO02>
+                  <LT_PSO02S>
+                    <xsl:for-each select="LT_PSO02S/PSO02S">
+                      <PSO02S>
+                        <xsl:copy-of select="*"/>
+                      </PSO02S>
+                    </xsl:for-each>
+                  </LT_PSO02S>
+
+                  <LT_PSSEC>
+                    <xsl:for-each select="LT_PSSEC/FMBSEC">
+                      <FMBSEC>
+                        <ITABKEY>
+                          <xsl:value-of select="ITABKEY"/>
+                        </ITABKEY>
+                        <BSEC>
+                          <xsl:copy-of select="BSEC/*"/>
+                        </BSEC>
+                      </FMBSEC>
+                    </xsl:for-each>
+                  </LT_PSSEC>
+
+                  <LS_IADDR_PSO>
+                    <xsl:copy-of select="LS_IADDR_PSO/*"/>
+                  </LS_IADDR_PSO>
+
+                  <LS_SEPA_MND>
+                        <xsl:copy-of select="LS_SEPA_MND/*"/>
+                  </LS_SEPA_MND>
+
+                  <LT_KBLK>
+                    <xsl:for-each select="LT_KBLK/KBLK">
+                      <KBLK>
+                        <xsl:copy-of select="*"/>
+                      </KBLK>
+                    </xsl:for-each>
+                  </LT_KBLK>
+
+                  <LT_KBLP>
+                    <xsl:for-each select="LT_KBLP/KBLP">
+                      <KBLP>
+                        <xsl:copy-of select="*"/>
+                      </KBLP>
+                    </xsl:for-each>
+                  </LT_KBLP>
+
+                  <LT_KBLE>
+                    <xsl:for-each select="LT_KBLE/KBLE">
+                      <KBLE>
+                        <xsl:copy-of select="*"/>
+                      </KBLE>
+                    </xsl:for-each>
+                  </LT_KBLE>
+
+                  <LT_BPDK>
+                    <xsl:for-each select="LT_BPDK/BPDK">
+                      <BPDK>
+                        <xsl:copy-of select="*"/>
+                      </BPDK>
+                    </xsl:for-each>
+                  </LT_BPDK>
+
+                  <LT_BPDJ>
+                    <xsl:for-each select="LT_BPDJ/BPDJ">
+                      <BPDJ>
+                        <xsl:copy-of select="*"/>
+                      </BPDJ>
+                    </xsl:for-each>
+                  </LT_BPDJ>
+
+                  <LT_BPDZ>
+                    <xsl:for-each select="LT_BPDZ/BPDZ">
+                      <BPDZ>
+                        <xsl:copy-of select="*"/>
+                      </BPDZ>
+                    </xsl:for-each>
+                  </LT_BPDZ>
+                </_-THKR_-S_DE_PSO_XML>
+              </xsl:for-each>
+            </ITEMS>
+          </VALUES>
+        </FILE>
+      </asx:values>
+    </asx:abap>
+  </xsl:template>
+</xsl:stylesheet>

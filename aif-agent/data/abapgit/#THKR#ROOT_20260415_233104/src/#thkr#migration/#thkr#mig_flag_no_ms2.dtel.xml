@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/THKR/MIG_FLAG_NO_MS2</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DOMNAME>XFELD</DOMNAME>
+    <HEADLEN>24</HEADLEN>
+    <SCRLEN1>08</SCRLEN1>
+    <SCRLEN2>16</SCRLEN2>
+    <SCRLEN3>24</SCRLEN3>
+    <DDTEXT>Flag: Mahnstufe 2 nicht setzen</DDTEXT>
+    <REPTEXT>Mahnstufe 2 nicht setzen</REPTEXT>
+    <SCRTEXT_S>Ohne MS2</SCRTEXT_S>
+    <SCRTEXT_M>ohne Mahnstufe 2</SCRTEXT_M>
+    <SCRTEXT_L>Mahnstufe 2 nicht setzen</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

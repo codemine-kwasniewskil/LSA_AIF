@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/THKR/DE_GI_ID_BELEG1</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DOMNAME>/THKR/GI_ID</DOMNAME>
+    <HEADLEN>38</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>17</SCRLEN2>
+    <SCRLEN3>38</SCRLEN3>
+    <DDTEXT>Gen.SSt.: 2. Belegung /THKR/S_DE_BELEG</DDTEXT>
+    <REPTEXT>Gen.SSt.: 2. Belegung /THKR/S_DE_BELEG</REPTEXT>
+    <SCRTEXT_S>Gen.SSt. 2</SCRTEXT_S>
+    <SCRTEXT_M>Gen.SSt. 2: Beleg</SCRTEXT_M>
+    <SCRTEXT_L>Gen.SSt.: 2. Belegung /THKR/S_DE_BELEG</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

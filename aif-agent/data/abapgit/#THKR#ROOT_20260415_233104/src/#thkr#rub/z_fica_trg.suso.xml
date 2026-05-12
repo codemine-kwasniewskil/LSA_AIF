@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SUSO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOBJ>
+    <OBJCT>Z_FICA_TRG</OBJCT>
+    <FIEL1>FM_AUTHACT</FIEL1>
+    <FIEL2>FM_FIKRS</FIEL2>
+    <FIEL3>FM_AUTHGRF</FIEL3>
+    <FIEL4>FM_AUTHGRC</FIEL4>
+    <FIEL5>FM_AUTHGRP</FIEL5>
+    <FIEL6>FM_AUTHGRM</FIEL6>
+    <FIEL7>FM_GRP_FAR</FIEL7>
+    <OCLSS>ZLSA</OCLSS>
+   </TOBJ>
+   <TOBJT>
+    <LANGU>D</LANGU>
+    <OBJECT>Z_FICA_TRG</OBJECT>
+    <TTEXT>5-dimensionale Prüfung auf HMS-Kontierung</TTEXT>
+   </TOBJT>
+   <TOBJVORFLG>
+    <OBJCT>Z_FICA_TRG</OBJCT>
+    <FLAG3>N</FLAG3>
+    <FLAG4>A</FLAG4>
+    <FLAG5>A</FLAG5>
+   </TOBJVORFLG>
+  </asx:values>
+ </asx:abap>
+</abapGit>

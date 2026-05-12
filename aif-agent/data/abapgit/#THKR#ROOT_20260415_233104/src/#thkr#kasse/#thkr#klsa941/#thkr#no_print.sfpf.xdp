@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V11.0.9.20240424.1.48_SAP" APIVersion="3.6.24095.0"?><xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2025-03-31T06:11:57Z" uuid="8be5c498-dc3a-4048-8ab3-2f78b0c1343d">
+<template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/2.8/">
+   <tags xmlns="http://www.xfa.org/schema/xfa-xliff/1.0/"><value id="N1006">Our account with you</value><value id="N1111">Postings are included upto and including</value><value id="N1116"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4348.0"><p>Postings are included up to<span style="xfa-spacerun:yes">   </span></p><p>and including</p></body></value><value id="N169"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p><span style="xfa-spacerun:yes"> </span><span xfa:embed="#floatingField009333" xfa:embedMode="raw" xfa:embedType="uri"/><span style="xfa-spacerun:yes">    </span><span style="font-size:10pt">Dunning</span></p></body></value><value id="N2105">Street</value><value id="N2177">Pincode</value><value id="N2249">City</value><value id="N297">Text Field</value><value id="N3011">Text Field</value><value id="N3030">#</value><value id="N3039">Current Page</value><value id="N3094">Text Field</value><value id="N3113">##</value><value id="N3122">Total Number of pages</value><value id="N3143"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p>
+                    Page
+                    <span style="xfa-spacerun:yes"> </span><span xfa:embed="#floatingField027835" xfa:embedMode="raw" xfa:embedType="uri"/>
+                    of
+                    <span style="xfa-spacerun:yes"> </span><span xfa:embed="#floatingField009033" xfa:embedMode="raw" xfa:embedType="uri"/></p></body></value><value id="N3191">Page Number</value><value id="N334"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p>Sample Print out</p></body></value><value id="N3413"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p style="tab-interval:0.393in;tab-stops:left 1.377in">Dear Sir/Madam,</p><p style="tab-interval:0.393in;tab-stops:left 1.377in"><span style="xfa-spacerun:yes"> </span></p><p style="tab-interval:0.393in;tab-stops:left 1.377in">The invoices listed below are due for payment. If you have paid the amounts due in the intervening period, please disregard this letter.</p><p style="tab-interval:0.393in;tab-stops:left 1.377in"><span style="xfa-spacerun:yes"> </span></p><p style="tab-interval:0.393in;tab-stops:left 1.377in"><span style="xfa-spacerun:yes"> </span></p></body></value><value id="N3510"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p style="tab-interval:0.393in;tab-stops:left 1.377in">Dear Sir/Madam,</p><p style="tab-interval:0.393in;tab-stops:left 1.377in"><span style="xfa-spacerun:yes"> </span></p><p style="tab-interval:0.393in;tab-stops:left 1.377in">We have already sent you a reminder about the due date of our invoices. We have, however, so far been unable to find any record of incoming payment for these invoices.</p><p style="tab-interval:0.393in;tab-stops:left 1.377in">Please transfer these overdue amounts immediately. If this dunning notice once again fails to elicit any action on your part, we will unfortunately have no option but to calculate interest on arrears.</p></body></value><value id="N3561">LOGO</value><value id="N363">Sample Print out</value><value id="N3641">Debit interest rate</value><value id="N3710">Date/Time Field</value><value id="N3720">Target date</value><value id="N3797">Currency</value><value id="N3870">Total due itemsin dunning currency from dunning level</value><value id="N3891"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p style="tab-interval:0.393in;tab-stops:left 1.377in">Dear Sir/Madam,</p><p style="tab-interval:0.393in;tab-stops:left 1.377in"><span style="xfa-spacerun:yes"> </span></p><p style="tab-interval:0.393in;tab-stops:left 1.377in">
+                        Since you have not reacted to our previous dunning notices, we have had to calculate interest on arrears to the amount of
+                        <span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField003164" xfa:embedMode="raw" xfa:embedType="uri"/>
+                        %.
+                        <span style="xfa-spacerun:yes"> </span></p><p style="tab-interval:0.393in;tab-stops:left 1.377in">
+                        For the items due, as well as for the interest on arrears, we are now giving you a final payment period up until
+                        <span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField008488" xfa:embedMode="raw" xfa:embedType="uri"/>
+                        . If you do not adhere to this payment deadline, we will unfortunately have to apply for a court order for our receivables to the amount of
+                        <span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField005945" xfa:embedMode="raw" xfa:embedType="uri"/><span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField018521" xfa:embedMode="raw" xfa:embedType="uri"/>
+                        .
+                        <span style="xfa-spacerun:yes">  </span></p></body></value><value id="N4066">Debit interest rate</value><value id="N4135">Date/Time Field</value><value id="N4145">Target date</value><value id="N4222">Currency</value><value id="N4295">Total due itemsin dunning currency from dunning level</value><value id="N4316"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p style="tab-interval:0.393in;tab-stops:left 1.377in">Dear Sir/Madam,</p><p style="tab-interval:0.393in;tab-stops:left 1.377in"><span style="xfa-spacerun:yes"> </span></p><p style="tab-interval:0.393in;tab-stops:left 1.377in">
+                        Since you have not reacted to our previous dunning notices, we have had to calculate interest on arrears to the amount of
+                        <span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField022666" xfa:embedMode="raw" xfa:embedType="uri"/>
+                        %.
+                        <span style="xfa-spacerun:yes"> </span></p><p style="tab-interval:0.393in;tab-stops:left 1.377in">
+                        For the items due, as well as for the interest on arrears, we are now giving you a final payment period up until
+                        <span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField008926" xfa:embedMode="raw" xfa:embedType="uri"/>
+                        .
+                        <span style="xfa-spacerun:yes">  </span>
+                        If you do not adhere to this payment deadline, we will unfortunately have to apply for a court order for our receivables to the amount of
+                        <span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField011689" xfa:embedMode="raw" xfa:embedType="uri"/><span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField001892" xfa:embedMode="raw" xfa:embedType="uri"/>
+                        .
+                        <span style="xfa-spacerun:yes"> </span></p></body></value><value id="N4512"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p style="tab-interval:0.393in;tab-stops:left 1.377in;font-weight:bold">For internal purposes only</p><p style="tab-interval:0.393in;tab-stops:left 1.377in"><span style="xfa-spacerun:yes"> </span></p><p style="tab-interval:0.393in;tab-stops:left 1.377in">Since the last dunning run, there has been movement in the account of the business partner against whom a legal dunning procedure has</p><p style="tab-interval:0.393in;tab-stops:left 1.377in">
+                        Date of legal dunning procedure:
+                        <span style="xfa-spacerun:yes"> </span><span xfa:embed="#floatingField021504" xfa:embedMode="raw" xfa:embedType="uri"/></p></body></value><value id="N4638">Text Field</value><value id="N4754"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p><span style="xfa-spacerun:yes"> </span></p><p><span style="xfa-spacerun:yes"> </span></p></body></value><value id="N4825"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p style="tab-interval:0.393in;tab-stops:left 1.377in">List of items</p></body></value><value id="N49">LOGO</value><value id="N492">Date</value><value id="N4951">Document</value><value id="N4973">Document</value><value id="N4994">Date</value><value id="N5016">Date</value><value id="N5051">Currency</value><value id="N5058">Currency</value><value id="N5085">Amount</value><value id="N5108">Amount</value><value id="N5129">Due</value><value id="N515">Date</value><value id="N5151">Due</value><value id="N5172">Arrears</value><value id="N5194">Arrears</value><value id="N5215">DL</value><value id="N5238">DL</value><value id="N5268">Interest</value><value id="N5291">Interest</value><value id="N5432">Long text</value><value id="N5511">Long Text</value><value id="N5574">Accounting Document Number</value><value id="N5654">Document Date</value><value id="N5725">Currency Key</value><value id="N577">Our Clerk</value><value id="N5805">Amount</value><value id="N5884">Due Date</value><value id="N5963">Days in Arrears by Net due date</value><value id="N598">Clerk First Name</value><value id="N6035">Dunning Level</value><value id="N6122">Interest Amount</value><value id="N6210">Text</value><value id="N6267"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p style="font-size:10pt">
+                      Dunning Charge
+                      <span style="font-family:'Courier New'"><span style="xfa-spacerun:yes"> </span></span><span style="xfa-spacerun:yes"> </span><span style="font-size:12pt"><span style="xfa-spacerun:yes">             </span></span></p></body></value><value id="N6388">Currency </value><value id="N6465">Amount</value><value id="N6497">Line</value><value id="N6500">Line</value><value id="N664">Last Name</value><value id="N6853">Account balance</value><value id="N6943">Currency</value><value id="N7020">Amount</value><value id="N7073"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="1.4.4065.0"><p>Account balance</p></body></value><value id="N7161">Total of due items</value><value id="N7162">Currency</value><value id="N7239">Amount</value><value id="N726">Telephone</value><value id="N747">Telephone</value><value id="N809">Fax</value><value id="N830">Fax</value><value id="N923">Your Account with us</value><value id="N935"><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xft-xliff="http://www.xfa.org/schema/xfa-xliff/1.0/" xfa:APIVersion="2.3.5062.0"><p style="font-family:Arial;font-size:8pt">Your Account with us</p></body></value><value id="N985">Our account with you</value></tags>
+   <?formServer defaultPDFRenderFormat acrobat9.0static?>
+   <subform layout="tb" locale="ambient" name="data">
+      <pageSet name="MasterPages">
+         <pageArea id="Page1" name="MP1">
+            <occur max="1" min="1"/>
+            <medium long="297mm" short="210mm" stock="a4"/>
+            <contentArea h="284.302mm" name="MAIN" w="175mm" x="17.539mm" y="12.698mm"/>
+            <field access="readOnly" h="9mm" id="floatingField000041" name="Kassenzeichen" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.KASSZ"/>
+            </field>
+            <draw h="38.095mm" name="Text1" w="128.806mm" x="44.444mm" y="88.889mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html" xliff:rid="25BD16AA-B1D1-4C28-A730-CFA2FEA52E6C">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">Hinweis<span style="xfa-spacerun:yes"> </span></p><p style="font-weight:normal;letter-spacing:0in">Mahnung mit Kassenzeichen<span style="xfa-spacerun:yes"> </span></p><p style="font-weight:normal;letter-spacing:0in"><span xfa:embed="#floatingField000041" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="font-weight:normal;letter-spacing:0in">ist nicht zum Mahndruck vorgesehen.</p></body>
+                  </exData>
+               </value>
+               <font baselineShift="0pt" size="20pt" typeface="Arial" weight="bold"/>
+               <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+               <para hAlign="center" marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
+            </draw>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 108 27 00030011002E0030003700440046004700480049004A004B004C004E004F00500051005200550056005700580059005B005D005E0060 .KMTacdefghiklmnorstuvxz{}?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 28 7 0003002B0048004C00510056005A Heinsw?>
+   </subform>
+   <?templateDesigner DefaultLanguage FormCalc?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/2.2/?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(158730,158730), objsnap:0, guidesnap:0, pagecentersnap:61725370?>
+   <?templateDesigner FormTargetVersion 28?>
+   <?templateDesigner Zoom 91?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/2.8/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+      <common>
+         <template>
+            <base>https://EHMS.HKR.LSA-NET.DE:443/sap/bc/fp/form/layout/</base>
+         </template>
+         <log>
+            <to>memory</to>
+         </log>
+         <log>
+            <to>memory</to>
+         </log>
+         <log>
+            <to>memory</to>
+         </log>
+         <log>
+            <to>memory</to>
+         </log>
+      </common>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <version>1.7</version>
+         <adobeExtensionLevel>3</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="data">
+      <data>
+         <KASSZ/>
+      </data>
+   </dd:dataDescription>
+</xfa:datasets>
+<sourceSet xmlns="http://www.xfa.org/schema/xfa-source-set/2.8/">
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-source-set/1.0/?></sourceSet>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection dataDescription="data" name="_THKR_NO_PRINT">
+      <uri/>
+      <rootElement>data</rootElement>
+   </xsdConnection>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-connection-set/2.1/?></connectionSet>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale desc="English (United States)" name="en_US">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+   </locale>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-locale-set/2.1/?></localeSet>
+<PDFSecurity xmlns="http://ns.adobe.com/xtd/" accessibleContent="1" change="1" contentCopy="1" documentAssembly="1" formFieldFilling="1" metadata="1" modifyAnnots="1" print="1" printHighQuality="1"/>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.2.1-c043 52.454262, 2011/01/31-17:27:06        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" rdf:about="">
+         <xmp:MetadataDate>2025-03-31T06:11:57Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer 11.0</xmp:CreatorTool>
+         <pdf:Producer>Adobe LiveCycle Designer 11.0</pdf:Producer>
+         <xmpMM:DocumentID>uuid:8be5c498-dc3a-4048-8ab3-2f78b0c1343d</xmpMM:DocumentID>
+         <pdfuaid:part>1</pdfuaid:part>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

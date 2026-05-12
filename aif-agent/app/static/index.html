@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAP AIF Knowledge Agent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    /* Markdown output */
+    .md-content h1,.md-content h2{font-size:1.1em;font-weight:700;margin:.8em 0 .3em;color:#111827}
+    .md-content h3{font-size:1em;font-weight:600;margin:.6em 0 .2em;color:#374151}
+    .md-content p{margin:.4em 0;line-height:1.6}
+    .md-content ul,.md-content ol{padding-left:1.4em;margin:.3em 0}
+    .md-content li{margin:.15em 0}
+    .md-content code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:3px;padding:1px 5px;font-family:'Courier New',monospace;font-size:.85em;color:#0f172a}
+    .md-content pre{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:.8em 1em;overflow-x:auto;margin:.5em 0}
+    .md-content pre code{background:none;border:none;padding:0;color:#1e293b;font-size:.82em}
+    .md-content table{border-collapse:collapse;width:100%;margin:.5em 0;font-size:.85em}
+    .md-content th{background:#f1f5f9;color:#475569;padding:5px 10px;text-align:left;border:1px solid #e2e8f0}
+    .md-content td{padding:4px 10px;border:1px solid #e2e8f0;color:#374151}
+    .md-content tr:nth-child(even){background:#f8fafc}
+    .md-content blockquote{border-left:3px solid #94a3b8;margin:.5em 0;padding:.3em .8em;background:#f8fafc;border-radius:0 4px 4px 0}
+    /* Streaming cursor */
+    .streaming-cursor::after{content:'▋';animation:blink .8s step-end infinite;color:#64748b}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    /* Scrollbar */
+    ::-webkit-scrollbar{width:5px}
+    ::-webkit-scrollbar-track{background:#f1f5f9}
+    ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+    /* Textarea */
+    #input{field-sizing:content;min-height:44px;max-height:200px}
+    /* Stats bar slide */
+    #stats-bar{transition:max-height .2s ease,opacity .2s ease;overflow:hidden}
+    #stats-bar.collapsed{max-height:0!important;opacity:0}
+    /* Activity log slide */
+    #log-panel{transition:width .2s ease,opacity .2s ease;overflow:hidden}
+    #log-panel.collapsed{width:0!important;opacity:0;padding:0!important}
+    /* Token progress bar fill animation */
+    #token-fill{transition:width .4s ease}
+    #req-fill{transition:width .4s ease}
+    /* Toggle button active state */
+    .toggle-active{background:#1f2937!important;color:#fff!important;border-color:#1f2937!important}
+    /* Sparkline bars */
+    .spark-bar{display:inline-block;width:4px;border-radius:2px 2px 0 0;background:#6366f1;vertical-align:bottom;transition:height .3s ease}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 h-screen flex flex-col overflow-hidden">
+
+  <!-- ── Admin token modal ────────────────────────────────────────────── -->
+  <div id="admin-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+    <div class="bg-white rounded-xl shadow-2xl w-80 p-5 flex flex-col gap-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span class="font-semibold text-sm text-gray-800">Admin Dashboard</span>
+        </div>
+        <button onclick="closeAdminModal()" class="text-gray-400 hover:text-gray-700 text-lg leading-none">&times;</button>
+      </div>
+      <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1.5">Admin token</label>
+        <input id="admin-token-input" type="password"
+          class="w-full border border-gray-300 focus:border-gray-500 rounded-lg px-3 py-2 text-sm focus:outline-none text-gray-800"
+          placeholder="Enter admin token" />
+      </div>
+      <div class="flex gap-2 justify-end">
+        <button onclick="closeAdminModal()"
+          class="text-xs text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-400 px-3 py-2 rounded-lg transition-colors bg-white">
+          Cancel
+        </button>
+        <button onclick="goAdmin()"
+          class="text-xs bg-gray-800 hover:bg-gray-700 text-white px-3 py-2 rounded-lg transition-colors font-medium">
+          Open Admin
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── History sidebar ───────────────────────────────────────────────── -->
+  <div id="history-overlay" class="hidden fixed inset-0 z-20 bg-black/30" onclick="closeHistory()"></div>
+  <aside id="history-panel"
+    class="fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-30 flex flex-col transform -translate-x-full transition-transform duration-200">
+    <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200">
+      <span class="font-semibold text-sm text-gray-800">Conversations</span>
+      <button onclick="closeHistory()" class="text-gray-400 hover:text-gray-700 text-lg leading-none">&times;</button>
+    </div>
+    <div id="history-list" class="flex-1 overflow-y-auto py-2 space-y-0.5 px-2"></div>
+  </aside>
+
+  <!-- ── Header ────────────────────────────────────────────────────────── -->
+  <header class="flex-none border-b border-gray-200 px-4 py-2.5 flex items-center justify-between bg-white shadow-sm">
+    <div class="flex items-center gap-2.5">
+      <button id="btn-history" onclick="openHistory()"
+        class="text-xs text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-400 px-2.5 py-1.5 rounded-md transition-colors bg-white">
+        History
+      </button>
+      <div class="w-7 h-7 rounded-md bg-gray-800 flex items-center justify-center text-[11px] font-bold tracking-tight select-none text-white">AIF</div>
+      <div class="leading-tight">
+        <span class="font-semibold text-sm text-gray-900">SAP AIF Knowledge Agent</span>
+        <span class="text-gray-400 text-xs ml-1.5">THKR · Sachsen-Anhalt</span>
+      </div>
+    </div>
+    <!-- Right-side controls -->
+    <div class="flex items-center gap-1.5">
+      <!-- Provider badge -->
+      <span id="provider-badge"
+        class="hidden text-[10px] font-medium bg-indigo-50 text-indigo-700 border border-indigo-200 px-2 py-1 rounded-full">
+        –
+      </span>
+      <!-- Stats toggle -->
+      <button id="btn-stats" onclick="toggleStats()"
+        title="Token usage stats"
+        class="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-400 px-2.5 py-1.5 rounded-md transition-colors bg-white">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+        </svg>
+        Stats
+      </button>
+      <!-- Log toggle -->
+      <button id="btn-log" onclick="toggleLog()"
+        title="Agent activity log"
+        class="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-400 px-2.5 py-1.5 rounded-md transition-colors bg-white">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+        </svg>
+        Log
+      </button>
+      <!-- Admin link -->
+      <button onclick="openAdmin()" title="Admin dashboard"
+        class="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-400 px-2.5 py-1.5 rounded-md transition-colors bg-white">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        Admin
+      </button>
+      <div class="w-px h-4 bg-gray-200 mx-0.5"></div>
+      <button id="btn-new"
+        class="text-xs text-gray-500 hover:text-gray-800 border border-gray-300 hover:border-gray-400 px-2.5 py-1.5 rounded-md transition-colors bg-white">
+        New
+      </button>
+    </div>
+  </header>
+
+  <!-- ── Stats bar ─────────────────────────────────────────────────────── -->
+  <div id="stats-bar" style="max-height:72px"
+    class="flex-none bg-white border-b border-gray-100 px-4 py-2 collapsed">
+    <div class="max-w-5xl mx-auto flex items-center gap-4 flex-wrap">
+
+      <!-- Token metrics -->
+      <div class="flex items-center gap-3 text-[11px]">
+        <!-- Input -->
+        <div class="flex items-center gap-1 text-gray-600" title="Input tokens sent">
+          <svg class="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M14.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L17.586 10l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span class="text-blue-600 font-semibold" id="stat-input">0</span>
+          <span class="text-gray-400">in</span>
+        </div>
+        <!-- Output -->
+        <div class="flex items-center gap-1 text-gray-600" title="Output tokens received">
+          <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M17 10a1 1 0 01-1 1H4a1 1 0 110-2h12a1 1 0 011 1z" clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M5.707 5.293a1 1 0 010 1.414L2.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          <span class="text-emerald-600 font-semibold" id="stat-output">0</span>
+          <span class="text-gray-400">out</span>
+        </div>
+        <!-- Cache -->
+        <div class="flex items-center gap-1 text-gray-600" title="Cache read tokens (cheaper)">
+          <svg class="w-3 h-3 text-violet-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+          </svg>
+          <span class="text-violet-500 font-semibold" id="stat-cache">0</span>
+          <span class="text-gray-400">cached</span>
+        </div>
+        <!-- Requests -->
+        <div class="flex items-center gap-1 text-gray-600" title="API calls made this session">
+          <svg class="w-3 h-3 text-orange-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <span class="text-orange-500 font-semibold"><span id="stat-requests">0</span>/<span id="stat-req-limit">30</span></span>
+          <span class="text-gray-400">req</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-px h-4 bg-gray-200"></div>
+
+      <!-- Token progress bar -->
+      <div class="flex items-center gap-2 flex-1 min-w-[140px]" title="Session token usage">
+        <div class="flex-1 bg-gray-100 rounded-full h-1.5 overflow-hidden min-w-[80px] max-w-[180px]">
+          <div id="token-fill" class="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500" style="width:0%"></div>
+        </div>
+        <span id="stat-pct" class="text-[10px] text-gray-400 tabular-nums w-8">0%</span>
+        <span class="text-[10px] text-gray-400">of <span id="stat-limit">50k</span></span>
+      </div>
+
+      <!-- Request progress bar -->
+      <div class="flex items-center gap-2" title="Session request usage">
+        <div class="w-16 bg-gray-100 rounded-full h-1.5 overflow-hidden">
+          <div id="req-fill" class="h-full rounded-full bg-orange-400" style="width:0%"></div>
+        </div>
+        <span class="text-[10px] text-gray-400">requests</span>
+      </div>
+
+      <!-- Mini sparkline (last 8 output token counts) -->
+      <div class="flex items-end gap-0.5 h-5" id="sparkline" title="Output tokens per request"></div>
+
+    </div>
+  </div>
+
+  <!-- ── Main area (messages + optional log panel) ─────────────────────── -->
+  <div class="flex flex-1 overflow-hidden">
+
+    <!-- Messages -->
+    <div id="messages" class="flex-1 overflow-y-auto px-4 py-6 space-y-5">
+
+      <!-- Welcome card -->
+      <div id="welcome" class="max-w-2xl mx-auto">
+        <div class="text-center mb-6">
+          <div class="text-3xl mb-3">🔌</div>
+          <p class="text-gray-800 font-semibold mb-1">Ask anything about the AIF interfaces</p>
+          <p class="text-gray-500 text-sm">
+            Interface definitions · ABAP source code · Field mappings · Data flows
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <button class="quick-q text-left border border-gray-200 hover:border-gray-400 hover:bg-white rounded-lg px-3 py-2.5 text-xs text-gray-600 transition-colors bg-white shadow-sm">What does interface I_0004_001 (EMSA) do?</button>
+          <button class="quick-q text-left border border-gray-200 hover:border-gray-400 hover:bg-white rounded-lg px-3 py-2.5 text-xs text-gray-600 transition-colors bg-white shadow-sm">List all FREMDV inbound interfaces</button>
+          <button class="quick-q text-left border border-gray-200 hover:border-gray-400 hover:bg-white rounded-lg px-3 py-2.5 text-xs text-gray-600 transition-colors bg-white shadow-sm">How does the IST-Rückmeldung outbound work?</button>
+          <button class="quick-q text-left border border-gray-200 hover:border-gray-400 hover:bg-white rounded-lg px-3 py-2.5 text-xs text-gray-600 transition-colors bg-white shadow-sm">Show the action pipeline for I_0013_002 (EDAS)</button>
+          <button class="quick-q text-left border border-gray-200 hover:border-gray-400 hover:bg-white rounded-lg px-3 py-2.5 text-xs text-gray-600 transition-colors bg-white shadow-sm">Which interfaces involve the Polizei system?</button>
+          <button class="quick-q text-left border border-gray-200 hover:border-gray-400 hover:bg-white rounded-lg px-3 py-2.5 text-xs text-gray-600 transition-colors bg-white shadow-sm">What ABAP FM does ACT_GP_INS call?</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Activity log panel ──────────────────────────────────────────── -->
+    <aside id="log-panel"
+      class="flex-none bg-white border-l border-gray-200 flex flex-col collapsed"
+      style="width:260px">
+      <div class="flex items-center justify-between px-3 py-2 border-b border-gray-100">
+        <div class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+          </svg>
+          <span class="text-xs font-semibold text-gray-700">Activity Log</span>
+          <span id="log-count" class="hidden text-[10px] bg-gray-100 text-gray-500 rounded-full px-1.5 py-0.5">0</span>
+        </div>
+        <button onclick="clearLog()" class="text-[10px] text-gray-400 hover:text-gray-600 transition-colors">clear</button>
+      </div>
+      <div id="log-list" class="flex-1 overflow-y-auto py-1.5 space-y-0"></div>
+      <div class="px-3 py-2 border-t border-gray-100">
+        <p class="text-[10px] text-gray-400 text-center" id="log-footer">Tool calls appear here</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ── Input bar ─────────────────────────────────────────────────────── -->
+  <div class="flex-none border-t border-gray-200 bg-white px-4 py-3 shadow-sm">
+    <div class="max-w-3xl mx-auto flex gap-2 items-end">
+      <textarea id="input"
+        class="flex-1 bg-white border border-gray-300 focus:border-gray-500 rounded-xl px-4 py-3 text-sm resize-none focus:outline-none transition-colors placeholder-gray-400 text-gray-800"
+        placeholder="Ask about interfaces, ABAP code, field mappings…"
+        rows="1"></textarea>
+      <button id="btn-send"
+        class="flex-none bg-gray-800 hover:bg-gray-700 text-white disabled:opacity-40 disabled:cursor-not-allowed px-4 py-3 rounded-xl text-sm font-medium transition-colors h-[44px]">
+        Send
+      </button>
+      <button id="btn-stop"
+        class="flex-none hidden bg-red-600 hover:bg-red-500 text-white px-4 py-3 rounded-xl text-sm font-medium transition-colors h-[44px]">
+        Stop
+      </button>
+    </div>
+    <p id="session-info" class="text-center text-gray-300 text-[10px] mt-1"></p>
+  </div>
+
+  <script>
+    marked.setOptions({ breaks: true, gfm: true });
+
+    // ── State ──────────────────────────────────────────────────────────────
+    let sessionId = localStorage.getItem('aif_session_id') || null;
+    let isStreaming = false;
+    let abortController = null;
+    let statsVisible = localStorage.getItem('aif_stats') !== 'false';
+    let logVisible   = localStorage.getItem('aif_log')   !== 'false';
+    let logEntries   = [];            // {id, ts, tool, status, elapsed}
+    let sparkData    = [];            // last 8 output-token counts per request
+    let sessionStats = null;
+
+    // ── DOM refs ───────────────────────────────────────────────────────────
+    const $messages   = document.getElementById('messages');
+    const $input      = document.getElementById('input');
+    const $btnSend    = document.getElementById('btn-send');
+    const $btnStop    = document.getElementById('btn-stop');
+    const $btnNew     = document.getElementById('btn-new');
+    const $welcome    = document.getElementById('welcome');
+    const $sessInfo   = document.getElementById('session-info');
+    const $statsBar   = document.getElementById('stats-bar');
+    const $logPanel   = document.getElementById('log-panel');
+    const $btnStats   = document.getElementById('btn-stats');
+    const $btnLog     = document.getElementById('btn-log');
+    const $logList    = document.getElementById('log-list');
+    const $logCount   = document.getElementById('log-count');
+    const $logFooter  = document.getElementById('log-footer');
+    const $provBadge  = document.getElementById('provider-badge');
+
+    // ── Panel toggles ──────────────────────────────────────────────────────
+    function applyPanels() {
+      if (statsVisible) {
+        $statsBar.classList.remove('collapsed');
+        $btnStats.classList.add('toggle-active');
+      } else {
+        $statsBar.classList.add('collapsed');
+        $btnStats.classList.remove('toggle-active');
+      }
+      if (logVisible) {
+        $logPanel.classList.remove('collapsed');
+        $btnLog.classList.add('toggle-active');
+      } else {
+        $logPanel.classList.add('collapsed');
+        $btnLog.classList.remove('toggle-active');
+      }
+    }
+    function toggleStats() {
+      statsVisible = !statsVisible;
+      localStorage.setItem('aif_stats', statsVisible);
+      applyPanels();
+    }
+    function toggleLog() {
+      logVisible = !logVisible;
+      localStorage.setItem('aif_log', logVisible);
+      applyPanels();
+    }
+    applyPanels();
+
+    // ── Stats update ───────────────────────────────────────────────────────
+    function fmtK(n) {
+      if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+      return String(n);
+    }
+    function updateStats(s) {
+      sessionStats = s;
+      document.getElementById('stat-input').textContent    = fmtK(s.input);
+      document.getElementById('stat-output').textContent   = fmtK(s.output);
+      document.getElementById('stat-cache').textContent    = fmtK(s.cache_read);
+      document.getElementById('stat-requests').textContent = s.requests;
+      document.getElementById('stat-req-limit').textContent= s.session_request_limit;
+      document.getElementById('stat-limit').textContent    = fmtK(s.session_token_limit);
+      const pct = Math.min(s.token_pct, 100);
+      document.getElementById('stat-pct').textContent      = pct.toFixed(1) + '%';
+      document.getElementById('token-fill').style.width    = pct + '%';
+      // colour the bar: green→yellow→red
+      const fill = document.getElementById('token-fill');
+      if (pct > 80) fill.className = fill.className.replace(/from-\S+ to-\S+/, 'from-red-400 to-red-600');
+      else if (pct > 50) fill.className = fill.className.replace(/from-\S+ to-\S+/, 'from-yellow-400 to-orange-500');
+      const reqPct = Math.min(100 * s.requests / s.session_request_limit, 100);
+      document.getElementById('req-fill').style.width = reqPct + '%';
+      // sparkline
+      sparkData.push(s.output - (sparkData.length ? sparkData.reduce((a,b)=>a+b,0) : 0));
+      if (sparkData.length > 8) sparkData = sparkData.slice(-8);
+      renderSparkline();
+    }
+
+    function renderSparkline() {
+      const container = document.getElementById('sparkline');
+      const maxVal = Math.max(...sparkData, 1);
+      container.innerHTML = '';
+      sparkData.forEach(v => {
+        const h = Math.max(3, Math.round(20 * v / maxVal));
+        const bar = document.createElement('span');
+        bar.className = 'spark-bar';
+        bar.style.height = h + 'px';
+        // Colour by magnitude
+        if (v > maxVal * 0.7) bar.style.background = '#6366f1';
+        else if (v > maxVal * 0.3) bar.style.background = '#818cf8';
+        else bar.style.background = '#c7d2fe';
+        bar.title = fmtK(v) + ' out tokens';
+        container.appendChild(bar);
+      });
+    }
+
+    async function fetchInitialStats() {
+      if (!sessionId) return;
+      try {
+        const r = await fetch(`/chat/usage/${sessionId}`);
+        if (r.ok) {
+          const s = await r.json();
+          if (s.requests > 0) updateStats(s);
+        }
+      } catch (_) {}
+    }
+
+    async function fetchProvider() {
+      try {
+        const r = await fetch('/chat/provider');
+        if (r.ok) {
+          const d = await r.json();
+          $provBadge.textContent = d.label;
+          $provBadge.classList.remove('hidden');
+        }
+      } catch (_) {}
+    }
+
+    // ── Activity log ───────────────────────────────────────────────────────
+    let _logIdSeq = 0;
+
+    function addLogEntry(tool) {
+      const id = 'log-' + (++_logIdSeq);
+      const ts = new Date().toLocaleTimeString(undefined, {hour:'2-digit', minute:'2-digit', second:'2-digit'});
+      const entry = { id, ts, tool, status: 'running', start: Date.now() };
+      logEntries.push(entry);
+      renderLogEntry(entry);
+      updateLogCount();
+      return id;
+    }
+
+    function renderLogEntry(entry) {
+      const el = document.createElement('div');
+      el.id = entry.id;
+      el.className = 'flex items-start gap-2 px-3 py-1.5 hover:bg-gray-50 transition-colors group';
+      el.innerHTML = logEntryHTML(entry);
+      $logList.appendChild(el);
+      $logList.scrollTop = $logList.scrollHeight;
+    }
+
+    function logEntryHTML(entry) {
+      const statusIcon = entry.status === 'running'
+        ? `<svg class="w-3 h-3 animate-spin text-blue-400 mt-0.5 flex-none" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg>`
+        : entry.status === 'done'
+        ? `<svg class="w-3 h-3 text-emerald-500 mt-0.5 flex-none" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>`
+        : `<svg class="w-3 h-3 text-red-400 mt-0.5 flex-none" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>`;
+      const elapsed = entry.status !== 'running' && entry.elapsed
+        ? `<span class="text-gray-300">${entry.elapsed}ms</span>`
+        : '';
+      const toolShort = entry.tool.length > 22 ? entry.tool.slice(0, 21) + '…' : entry.tool;
+      return `
+        ${statusIcon}
+        <div class="flex-1 min-w-0">
+          <div class="text-[11px] font-medium text-gray-700 truncate" title="${escHtml(entry.tool)}">${escHtml(toolShort)}</div>
+          <div class="text-[10px] text-gray-400 flex gap-1.5">${entry.ts} ${elapsed}</div>
+        </div>`;
+    }
+
+    function resolveLogEntry(id, status) {
+      const entry = logEntries.find(e => e.id === id);
+      if (!entry) return;
+      entry.status = status;
+      entry.elapsed = Date.now() - entry.start;
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = logEntryHTML(entry);
+    }
+
+    function updateLogCount() {
+      $logCount.textContent = logEntries.length;
+      $logCount.classList.toggle('hidden', logEntries.length === 0);
+      $logFooter.textContent = logEntries.length === 0
+        ? 'Tool calls appear here'
+        : `${logEntries.length} call${logEntries.length !== 1 ? 's' : ''} this session`;
+    }
+
+    function clearLog() {
+      logEntries = [];
+      $logList.innerHTML = '';
+      updateLogCount();
+    }
+
+    // ── Session display ────────────────────────────────────────────────────
+    function updateSessionInfo() {
+      $sessInfo.textContent = sessionId ? `Session: ${sessionId.slice(0, 8)}…` : '';
+    }
+
+    // ── Scroll to bottom ───────────────────────────────────────────────────
+    function scrollToBottom() {
+      $messages.scrollTop = $messages.scrollHeight;
+    }
+
+    // ── Add a message bubble ───────────────────────────────────────────────
+    function addMessage(role, htmlContent, id) {
+      const isUser = role === 'user';
+      const wrap = document.createElement('div');
+      wrap.className = 'max-w-3xl mx-auto flex ' + (isUser ? 'justify-end' : 'justify-start');
+      if (id) wrap.id = id;
+      const bubble = document.createElement('div');
+      bubble.className = isUser
+        ? 'bg-gray-800 text-white rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%] text-sm'
+        : 'bg-white border border-gray-200 shadow-sm rounded-2xl rounded-tl-sm px-4 py-3 max-w-[90%] text-sm md-content text-gray-800';
+      bubble.innerHTML = htmlContent;
+      wrap.appendChild(bubble);
+      $messages.appendChild(wrap);
+      scrollToBottom();
+      return bubble;
+    }
+
+    function escHtml(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    // ── Tool-call pills in message bubble ──────────────────────────────────
+    function addToolPill(name, container) {
+      const pill = document.createElement('span');
+      pill.className = 'inline-flex items-center gap-1 text-[11px] bg-gray-100 border border-gray-200 text-gray-500 rounded-full px-2.5 py-0.5 mr-1 mb-1';
+      pill.innerHTML = `<svg class="w-3 h-3 animate-spin text-gray-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg>${escHtml(name)}`;
+      container.appendChild(pill);
+      return pill;
+    }
+
+    function markPillDone(pill) {
+      if (!pill) return;
+      pill.innerHTML = pill.innerHTML.replace(/<svg.*?<\/svg>/, '✓');
+      pill.classList.remove('border-gray-200','text-gray-500');
+      pill.classList.add('border-green-200','text-green-600');
+    }
+
+    // ── Send a message ─────────────────────────────────────────────────────
+    async function sendMessage(text) {
+      if (isStreaming || !text.trim()) return;
+      isStreaming = true;
+      abortController = new AbortController();
+      $btnSend.classList.add('hidden');
+      $btnStop.classList.remove('hidden');
+      $input.value = '';
+      $input.style.height = 'auto';
+
+      if ($welcome) $welcome.style.display = 'none';
+      addMessage('user', escHtml(text));
+
+      const assistantId = 'msg-' + Date.now();
+      const bubble = addMessage('assistant', '<span class="streaming-cursor"></span>', assistantId);
+      let rawText = '';
+      let toolsWrap = null;
+      let activePill = null;
+      let activeLogId = null;
+
+      try {
+        const resp = await fetch('/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text, session_id: sessionId }),
+          signal: abortController.signal,
+        });
+
+        const newSid = resp.headers.get('X-Session-Id');
+        if (newSid) {
+          sessionId = newSid;
+          localStorage.setItem('aif_session_id', sessionId);
+          updateSessionInfo();
+        }
+
+        const reader = resp.body.getReader();
+        const decoder = new TextDecoder();
+        let buf = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buf += decoder.decode(value, { stream: true });
+          const lines = buf.split('\n');
+          buf = lines.pop();
+
+          for (const line of lines) {
+            if (!line.startsWith('data: ')) continue;
+            let evt;
+            try { evt = JSON.parse(line.slice(6)); } catch { continue; }
+
+            if (evt.type === 'text') {
+              if (activePill) { markPillDone(activePill); activePill = null; }
+              if (activeLogId) { resolveLogEntry(activeLogId, 'done'); activeLogId = null; }
+              rawText += evt.content;
+              bubble.innerHTML = marked.parse(rawText) + '<span class="streaming-cursor"></span>';
+              scrollToBottom();
+
+            } else if (evt.type === 'tool_call') {
+              if (activePill) markPillDone(activePill);
+              if (activeLogId) resolveLogEntry(activeLogId, 'done');
+              // Bubble pill
+              if (!toolsWrap) {
+                toolsWrap = document.createElement('div');
+                toolsWrap.className = 'mt-2 flex flex-wrap';
+                bubble.appendChild(toolsWrap);
+              }
+              activePill = addToolPill(evt.name, toolsWrap);
+              // Activity log entry
+              activeLogId = addLogEntry(evt.name);
+              scrollToBottom();
+
+            } else if (evt.type === 'usage') {
+              // Real-time stats update
+              updateStats(evt);
+              // Show stats bar if hidden and there are tokens
+              if (!statsVisible && evt.total > 0) {
+                // don't auto-show — respect user preference
+              }
+
+            } else if (evt.type === 'done') {
+              if (activePill) markPillDone(activePill);
+              if (activeLogId) resolveLogEntry(activeLogId, 'done');
+              bubble.innerHTML = marked.parse(rawText || '*(empty response)*');
+              if (toolsWrap && rawText) bubble.appendChild(toolsWrap);
+              scrollToBottom();
+
+            } else if (evt.type === 'error') {
+              if (activePill) markPillDone(activePill);
+              if (activeLogId) resolveLogEntry(activeLogId, 'error');
+              bubble.innerHTML = `<span class="text-red-500">⚠ ${escHtml(evt.content)}</span>`;
+              scrollToBottom();
+            }
+          }
+        }
+      } catch (err) {
+        if (err.name === 'AbortError') {
+          if (activeLogId) resolveLogEntry(activeLogId, 'error');
+          bubble.querySelectorAll('.streaming-cursor').forEach(el => el.remove());
+          if (rawText) {
+            bubble.innerHTML = marked.parse(rawText);
+            if (toolsWrap) bubble.appendChild(toolsWrap);
+          } else {
+            bubble.innerHTML = '<span class="text-gray-400 italic">Stopped.</span>';
+          }
+        } else {
+          if (activeLogId) resolveLogEntry(activeLogId, 'error');
+          bubble.innerHTML = `<span class="text-red-500">⚠ Connection error: ${escHtml(String(err))}</span>`;
+        }
+      } finally {
+        bubble.querySelectorAll('.streaming-cursor').forEach(el => el.remove());
+        isStreaming = false;
+        abortController = null;
+        $btnStop.classList.add('hidden');
+        $btnSend.classList.remove('hidden');
+        $input.focus();
+      }
+    }
+
+    // ── Event listeners ────────────────────────────────────────────────────
+    $btnSend.addEventListener('click', () => sendMessage($input.value));
+    $btnStop.addEventListener('click', () => { if (abortController) abortController.abort(); });
+    $input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage($input.value); }
+    });
+    $input.addEventListener('input', () => {
+      $input.style.height = 'auto';
+      $input.style.height = Math.min($input.scrollHeight, 200) + 'px';
+    });
+    document.querySelectorAll('.quick-q').forEach(btn => {
+      btn.addEventListener('click', () => sendMessage(btn.textContent.trim()));
+    });
+
+    // New conversation
+    $btnNew.addEventListener('click', () => {
+      sessionId = null;
+      localStorage.removeItem('aif_session_id');
+      sparkData = [];
+      document.getElementById('sparkline').innerHTML = '';
+      clearLog();
+      // Reset stats display
+      ['stat-input','stat-output','stat-cache','stat-requests','stat-pct'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = id === 'stat-pct' ? '0%' : '0';
+      });
+      document.getElementById('token-fill').style.width = '0%';
+      document.getElementById('req-fill').style.width = '0%';
+      $messages.innerHTML = '';
+      $messages.appendChild($welcome);
+      $welcome.style.display = '';
+      $sessInfo.textContent = '';
+      $input.focus();
+    });
+
+    // ── History sidebar ────────────────────────────────────────────────────
+    const $historyPanel   = document.getElementById('history-panel');
+    const $historyOverlay = document.getElementById('history-overlay');
+    const $historyList    = document.getElementById('history-list');
+
+    function openHistory() {
+      loadHistoryList();
+      $historyPanel.classList.remove('-translate-x-full');
+      $historyOverlay.classList.remove('hidden');
+    }
+    function closeHistory() {
+      $historyPanel.classList.add('-translate-x-full');
+      $historyOverlay.classList.add('hidden');
+    }
+
+    async function loadHistoryList() {
+      $historyList.innerHTML = '<p class="text-xs text-gray-400 px-2 py-2">Loading…</p>';
+      try {
+        const resp = await fetch('/chat/sessions');
+        const sessions = await resp.json();
+        if (!sessions.length) {
+          $historyList.innerHTML = '<p class="text-xs text-gray-400 px-2 py-2">No saved conversations.</p>';
+          return;
+        }
+        $historyList.innerHTML = '';
+        for (const s of sessions) {
+          const btn = document.createElement('button');
+          const isActive = s.session_id === sessionId;
+          btn.className = ['w-full text-left px-3 py-2.5 rounded-lg text-sm transition-colors',
+            isActive ? 'bg-gray-100 text-gray-900 font-medium' : 'hover:bg-gray-50 text-gray-700'].join(' ');
+          const date = new Date(s.updated_at + 'Z').toLocaleString(undefined, {
+            month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+          btn.innerHTML = `<div class="truncate">${escHtml(s.preview)}</div>
+            <div class="text-[10px] text-gray-400 mt-0.5">${escHtml(date)}</div>`;
+          btn.addEventListener('click', () => switchSession(s.session_id));
+          $historyList.appendChild(btn);
+        }
+      } catch (e) {
+        $historyList.innerHTML = '<p class="text-xs text-red-400 px-2 py-2">Failed to load.</p>';
+      }
+    }
+
+    async function switchSession(sid) {
+      if (sid === sessionId) { closeHistory(); return; }
+      closeHistory();
+      sessionId = sid;
+      localStorage.setItem('aif_session_id', sessionId);
+      updateSessionInfo();
+      clearLog();
+      sparkData = [];
+      $messages.innerHTML = '';
+      $messages.appendChild($welcome);
+      $welcome.style.display = 'none';
+      await fetchInitialStats();
+      await initHistory();
+    }
+
+    // ── Load saved history on page init ───────────────────────────────────
+    async function initHistory() {
+      if (!sessionId) return;
+      try {
+        const resp = await fetch(`/chat/history/${sessionId}`);
+        if (!resp.ok) return;
+        const msgs = await resp.json();
+        if (!msgs.length) return;
+        if ($welcome) $welcome.style.display = 'none';
+        for (const m of msgs) {
+          if (m.role === 'user') addMessage('user', escHtml(m.text));
+          else addMessage('assistant', marked.parse(m.text));
+        }
+        scrollToBottom();
+      } catch (_) {}
+    }
+
+    // ── Admin modal ────────────────────────────────────────────────────────
+    const DEFAULT_ADMIN_TOKEN = 'lsademo1';
+
+    function openAdmin() {
+      const stored = localStorage.getItem('aif_admin_token') || DEFAULT_ADMIN_TOKEN;
+      document.getElementById('admin-token-input').value = stored;
+      document.getElementById('admin-modal').classList.remove('hidden');
+      setTimeout(() => document.getElementById('admin-token-input').focus(), 50);
+    }
+
+    function closeAdminModal() {
+      document.getElementById('admin-modal').classList.add('hidden');
+    }
+
+    function goAdmin() {
+      const token = document.getElementById('admin-token-input').value.trim();
+      if (token) localStorage.setItem('aif_admin_token', token);
+      closeAdminModal();
+      const url = token ? `/admin?token=${encodeURIComponent(token)}` : '/admin';
+      window.open(url, '_blank');
+    }
+
+    // Close modal on backdrop click
+    document.getElementById('admin-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeAdminModal();
+    });
+
+    // Submit on Enter in token input
+    document.getElementById('admin-token-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') goAdmin();
+    });
+
+    // ── Init ───────────────────────────────────────────────────────────────
+    updateSessionInfo();
+    fetchProvider();
+    fetchInitialStats();
+    initHistory().then(() => $input.focus());
+  </script>
+</body>
+</html>

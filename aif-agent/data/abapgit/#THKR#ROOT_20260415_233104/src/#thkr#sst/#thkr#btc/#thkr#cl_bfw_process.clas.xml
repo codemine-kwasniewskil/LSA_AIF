@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_BFW_PROCESS</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Basisklasse für Prozesse</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_EVENT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ereignis hinzufügen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_EVENT_1</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ereignis hinzufügen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DEF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konstanten &amp; Einstellungen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HELPERS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Hilfsfunktionen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prozess lesen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SAVE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prozess speichern</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SAVE_EVENTS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ereignisse speichern</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TYPE_PROC_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Run Time Type Services</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_EVENT</CMPNAME>
+     <SCONAME>IT_MAPPING</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_EVENT_1</CMPNAME>
+     <SCONAME>IT_MAPPING</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_EVENT_1</CMPNAME>
+     <SCONAME>I_OERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Abstrakte Oberklasse aller globalen Exceptions</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_EXCEPTION</CMPNAME>
+     <SCONAME>I_EVENT_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ereignis-Primärschlüssel</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_EXCEPTION</CMPNAME>
+     <SCONAME>I_OERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Abstrakte Oberklasse aller globalen Exceptions</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_MAPPING</CMPNAME>
+     <SCONAME>IT_MAPPING</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_MAPPING</CMPNAME>
+     <SCONAME>I_EVENT_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ereignis-Primärschlüssel</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

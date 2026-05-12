@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_MIGR_UPD_FIPOS_L2U</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Korrektur Fipos lower 2 upper</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>BLOCK_SIZE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Zeilenindex interner Tabellen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CORRECTION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;X&apos; = Correction, &apos; &apos; = delete only</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TESTMODE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;X&apos; = Testmode on</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>CORRECTION</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;X&apos; = Correction, &apos; &apos; = delete only</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>TESTMODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;X&apos; = Testmode on</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS_BLOCK</CMPNAME>
+     <SCONAME>INDEX</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SYST-TABIX als Struktur</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

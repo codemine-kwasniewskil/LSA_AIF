@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>/THKR/S_MIG_FIPO_MSN</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>Migration: Finanzposition Unterkonten (MSN)</DDTEXT>
+    <EXCLASS>1</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>HAUSHALTSJAHR</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Haushaltsjahr des Unterkontos</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>EINZELPLAN</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000006</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000003</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Dem Titel übergeordneter Einzelplan (siehe AOB)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>KAPITEL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000024</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000012</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Dem Titel übergeordneter Kapitel (siehe KAP)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>TITEL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000012</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000006</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Dem Titel übergeordneter Titel (siehe TIT)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>SCHLUESSEL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000012</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000006</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Vom Nutzer festgelegter Schlüssel des Titel</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>BEZEICHNUNG</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000120</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000060</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Bezeichnung des Unterkontos</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>STATUS</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000002</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000001</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Status des Unterkontos (1=aktiv, 2=inaktiv)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>SPERRE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000002</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000001</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Sperrkennzeichen: (j oder n)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>SPERREVON</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000016</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000008</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Datum Sperre von im Format JJJJMMTT</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>SPERREBIS</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000016</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000008</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Datum Sperre bis im Format JJJJMMTT</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>KENNZEICHENLIMIT</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000002</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000001</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Kennzeichen für limitiertes Unterkonto (j oder n)</DDTEXT>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

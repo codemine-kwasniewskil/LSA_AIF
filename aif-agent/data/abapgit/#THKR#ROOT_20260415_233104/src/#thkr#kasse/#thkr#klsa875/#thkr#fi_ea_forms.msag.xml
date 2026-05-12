@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>FI Berichte für Formularausgabe</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>&amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>&amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Schwerwiegender Fehler bei der Nachrichtenverarbeitung</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Formular &amp;1 ist kein Adobe-Formular</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Es konnte keine PDF-Datei erzeugt werden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Schwerwiegender Fehler bei der Datenselektion</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Fehler bei der Ermittlung der Adresse des Partners &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Fehler bei der Ermittlung des Kontaktpartners</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Kein Anschreiben formuliert</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Kein Text für den Bereich Betreff formuliert</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Feldüberlauf für Feld &apos;Endbetrag&apos; (Neuer Wert = &amp;1, Ursprungswert = &amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Fehler bei der Ermittlung der Kontoauszugsdaten</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Keine Daten zur Selektion gefunden! KurzKey = &amp;1, Satznummer = &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Keine Berechtigung zur Auskunft Benachrichtigungen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Keine Berechtigung zum Versenden von Benachrichtigungen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Fehler beim Versenden einer Benachrichtigung</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Es wurden &amp;1 Benachrichtigungen versendet</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Testlauf: Es werden &amp;1 Benachrichtigungen versendet</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>E-Mailadresse des Empfängers &amp;1 ist ungültig</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Empfängerpostfach &amp;1 existiert nicht</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Keine Daten zur Selektion! Tabelle = &amp;1 mit &amp;2 und &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Bitte Verwahrkassenzeichen im Verwendungszweck hinterlegen!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Keine Daten zur Selektion! Tabelle = &amp;1 mit &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Formular &amp;1 konnte nicht geöffnet werden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Formular &amp;1 konnte nicht verarbeitet werden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>Formular &amp;1 konnte nicht geschlossen werden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>027</MSGNR>
+     <TEXT>Zusammenführung der PDF Dateien nicht möglich!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>028</MSGNR>
+     <TEXT>Archivierung der Ausgabe fehlgeschlagen!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>029</MSGNR>
+     <TEXT>Sendemedium Fax - Bitte Verbindungsdaten pflegen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Sendemedium Mail - Bitte Verbindungsdaten pflegen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Keine Daten zur Selektion! Formular ID = &amp;1, Variante = &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Anhang &amp;1 nicht gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>033</MSGNR>
+     <TEXT>Keine Daten zu Finanzstelle &amp;!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>034</MSGNR>
+     <TEXT>Bitte E-Mail Betreff pflegen!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>035</MSGNR>
+     <TEXT>Keine Finanzkassen in Tabelle &amp; gepflegt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>036</MSGNR>
+     <TEXT>Keine Texte für Bericht &amp; in Tabelle &amp; gepflegt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>037</MSGNR>
+     <TEXT>Es konnten keine Daten zur Selektion gefunden werden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>038</MSGNR>
+     <TEXT>Sendemedium Service-BW - Bitte Verbindungsdaten im OM pflegen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>039</MSGNR>
+     <TEXT>Fehler bei Adressendatenermittlung zu Geschäftspartner ID &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>040</MSGNR>
+     <TEXT>Keine Geschäftspartner ID in Tabelle &amp; hinterlegt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>041</MSGNR>
+     <TEXT>Es wurde nur eine Schlusszahlung vom &amp; gefunden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>042</MSGNR>
+     <TEXT>Es wurde keine 2. Abschlagszahlung gefunden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>043</MSGNR>
+     <TEXT>Es wurden mehr als 2 Abschlagszahlungen gefunden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>044</MSGNR>
+     <TEXT>Es wurde keine Schlusszahlung gefunden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>045</MSGNR>
+     <TEXT>Keine Daten zur Selektion! Tabelle = &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>046</MSGNR>
+     <TEXT>Keine Ausgabeversion gepflegt! Domäne = &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>047</MSGNR>
+     <TEXT>Es wurde keine Abschlagszahlung gefunden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>048</MSGNR>
+     <TEXT>Keine Daten zur Selektion gefunden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>049</MSGNR>
+     <TEXT>Keine Berechtigung für Transaktion &amp;!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>050</MSGNR>
+     <TEXT>Keine Berechtigung für &amp;1 &amp;2!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>051</MSGNR>
+     <TEXT>Eingeschränkte Ausgabe aufgrund fehlender Berechtigung!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>052</MSGNR>
+     <TEXT>Keine Ausgabe aufgrund fehlender Berechtigung!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>053</MSGNR>
+     <TEXT>Bitte alle Service-BW Adressen hinterlegen! Tabelle = &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>054</MSGNR>
+     <TEXT>Bitte Zuordnung zum Arbeitsgebiet hinterlegen! Tabelle = &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>055</MSGNR>
+     <TEXT>Fehler bei der Ermittlung des Rechnungsempfängers</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>056</MSGNR>
+     <TEXT>Datei &amp; konnte nicht geöffnet werden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>057</MSGNR>
+     <TEXT>Fehler bei der Dateiverarbeitung. Datei: &amp;!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>058</MSGNR>
+     <TEXT>Der logische Dateiname &amp; ist nicht vorhanden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>059</MSGNR>
+     <TEXT>Fehler Listausgabe!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>060</MSGNR>
+     <TEXT>Datei &amp; erfolgreich erstellt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>061</MSGNR>
+     <TEXT>Service-BW Versand. Bitte Postfach-ID hinterlegen! Tabelle = &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>062</MSGNR>
+     <TEXT>Änderung Finanzstelle -&gt; Bitte Anschrift und Sendemedium prüfen!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>063</MSGNR>
+     <TEXT>Druckausgabe erfolgreich!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>064</MSGNR>
+     <TEXT>Zur Einschränkung des Buchungszeitraums ist nur ein Intervall erlaubt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_EA_FORMS</ARBGB>
+     <MSGNR>065</MSGNR>
+     <TEXT>Keine Daten zum Kassenzeichen &amp;1 gefunden.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

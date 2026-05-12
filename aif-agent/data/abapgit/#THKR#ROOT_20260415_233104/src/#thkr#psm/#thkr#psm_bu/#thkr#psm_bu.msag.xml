@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/PSM_BU</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>HKT PSM Budgetierung Messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Einnahme-Finanzposition &amp;1 im Verpflichtungsbudget(&amp;2) nicht pflegbar</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>&amp;1 Mittelverteilung nicht erlaubt (Mittel im Sender nicht ausreichend)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Finanzstelle &amp;1 ist in Buchungskontierungen nicht pflegbar</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Die Budgetart &amp;1 darf nicht mit dem gewählten Vorgang verwendet werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Kombination Budgetart DF &amp; Vorgang Umbuchung unzulässig</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Fehler in der Formularerzeugung. ( Error: &amp;1 )</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>PDF konnte nicht erzeugt werden. Bitte Vorgang merken!</TEXT>
+    </T100>
+   </T100>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+   </I18N_LANGS>
+   <T100T>
+    <T100T>
+     <SPRSL>E</SPRSL>
+     <ARBGB>/THKR/PSM_BU</ARBGB>
+     <STEXT>HKT PSM Budgetierung Messages</STEXT>
+    </T100T>
+   </T100T>
+  </asx:values>
+ </asx:abap>
+</abapGit>

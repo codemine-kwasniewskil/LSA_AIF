@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ECTD" serializer_version="v1.0.0">
+ <VERSIONS>
+  <VERSION>
+   <ECTD VERSION="1.5">
+    <ATTRIBUTES>
+     <ETOBJ_GNDT>
+      <VERSION>00000001</VERSION>
+      <TWB_TITLE>Testdaten für PSM Vermerk (Budgettext)</TWB_TITLE>
+      <SOFTCOMP/>
+      <TWB_DEP_RF/>
+      <TWB_DEP_RT/>
+      <TWB_STATUS>X</TWB_STATUS>
+      <TWB_RELE>N</TWB_RELE>
+      <FUSER></FUSER>
+      <FDATE></FDATE>
+      <LUSER></LUSER>
+      <LDATE></LDATE>
+      <LTIME></LTIME>
+      <REL_BAS_F/>
+      <REL_BAS_T/>
+      <SERVICE/>
+      <PVNR/>
+      <BACKUP/>
+     </ETOBJ_GNDT>
+     <ETOBJNOVER>
+      <NAME>/THKR/TDC_PSM_INT_VE</NAME>
+      <TYPE>ECTD</TYPE>
+      <TWB_RESP></TWB_RESP>
+      <TWB_DISTL>B</TWB_DISTL>
+      <TWB_EUBOBJ/>
+      <TWB_EUTYPE/>
+      <DEVCLASS></DEVCLASS>
+      <MASTERLANG>E</MASTERLANG>
+      <TADIR_RESP></TADIR_RESP>
+      <FRANGE>PSM-FM-BCS-BU</FRANGE>
+      <BCSET_MODE/>
+      <API_MODE/>
+      <COL_TSTOBJDATA/>
+      <NO_TRANSLATION/>
+     </ETOBJNOVER>
+     <ETOBJ_DOC>
+      <SEARCH_1/>
+      <SEARCH_2/>
+      <SEARCH_3/>
+      <SEARCH_4/>
+      <SEARCH_5/>
+      <SEARCH_6/>
+      <SEARCH_7/>
+      <SEARCH_8/>
+      <SEARCH_9/>
+      <SEARCH_10/>
+      <S_DOC_ID/>
+      <S_OBJ_ID/>
+      <S_DOC_TITL/>
+     </ETOBJ_DOC>
+     <ETOBJ_CNST>
+      <TWB_DEP_S/>
+      <TWB_DEPV_S/>
+      <TWB_DEP_L/>
+      <TWB_DEPV_L/>
+      <TWB_USE_A/>
+      <TWB_USE_P/>
+      <TWB_USE_H/>
+      <TWB_USE_E/>
+      <REUSE/>
+      <TWB_DEP_C/>
+      <TWB_DEP_VC/>
+      <TWB_DEP_F/>
+      <TWB_DEP_VF/>
+      <TWB_DEP_P/>
+      <TWB_DEP_VP/>
+      <TWB_DEP_DB/>
+      <TWB_DEPVDB/>
+      <TWB_WKREQ>0.0</TWB_WKREQ>
+      <TWB_WKUNIT>MIN</TWB_WKUNIT>
+      <TWB_PRIO>3</TWB_PRIO>
+     </ETOBJ_CNST>
+     <ETSC_TSYS>
+      <SYSTEMDATA/>
+      <TESTSYSTEM/>
+     </ETSC_TSYS>
+     <ETSYS_COMP_TABTYPE/>
+     <ETSYS_REL_TABTYPE/>
+     <ETBF_OBJ_TABTYPE/>
+     <ETBF_VER_TABTYPE/>
+    </ATTRIBUTES>
+    <PARAMETERS>
+     <ETPAR_GUIX>
+      <item>
+       <PNAME>DTO_PSM_VE_CREATE</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>DTO: Vermerke (Budgettexte)</PDESC>
+       <PINDEX>0001</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>/THKR/DTO_CREATE_PSM_VE</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0001</SORT_LNR>
+       <PREF_NAME2>/THKR/DTO_CREATE_PSM_VE</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="_-THKR_-DTO_CREATE_PSM_VE">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/DTO_CREATE_PSM_VE=A=v=L=000000=doc=DTO: Vermerke (Budgettexte)</documentation>
+          </annotation>
+          <sequence>
+           <element name="APPLIC" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMKU_BUDTXT_APPLIC=A=C=L=000002=doc=Applicatio</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TXTCAT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKU_TXTCAT=A=C=L=000004=doc=Budget Text Categ</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TXTTEMPL" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKU_TXTTEMPL=A=C=L=000012=doc=Template for Bu</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="12"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TEXT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKU_TXTTEMPL_SHORT_TEXT=A=C=L=000060=doc=Shor</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="60"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LONGTEXT" minOccurs="0" type="string">
+            <annotation>
+             <documentation>I==O==C==K==D==A=g=L=000000=doc=Langer Text der Textvorlage</documentation>
+            </annotation>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:_-THKR_-DTO_CREATE_PSM_VE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+         <APPLIC/>
+         <TXTCAT/>
+         <TXTTEMPL/>
+         <TEXT/>
+         <LONGTEXT/>
+        </ddic:_-THKR_-DTO_CREATE_PSM_VE>
+       </DEEP_DATA>
+      </item>
+      <item>
+       <PNAME>VERMERK_ID</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>DTO: Schlüsselfelder für PSM-Vermerken (Budgettext)</PDESC>
+       <PINDEX>0002</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>/THKR/DTO_GET_PSM_VE</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0002</SORT_LNR>
+       <PREF_NAME2>/THKR/DTO_GET_PSM_VE</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="_-THKR_-DTO_GET_PSM_VE">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/DTO_GET_PSM_VE=A=u=L=000000=doc=DTO: Schlüsselfelder für PSM-Vermerken (Budgettext)</documentation>
+          </annotation>
+          <sequence>
+           <element name="APPLIC" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FMKU_BUDTXT_APPLIC=A=C=L=000002=doc=Applicatio</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TXTCAT" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKU_TXTCAT=A=C=L=000004=doc=Budget Text Categ</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TXTTEMPL" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKU_TXTTEMPL=A=C=L=000012=doc=Template for Bu</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="12"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:_-THKR_-DTO_GET_PSM_VE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+         <APPLIC/>
+         <TXTCAT/>
+         <TXTTEMPL/>
+        </ddic:_-THKR_-DTO_GET_PSM_VE>
+       </DEEP_DATA>
+      </item>
+     </ETPAR_GUIX>
+     <ETPAR_VARI>
+      <item>
+       <VAR_NAME>CREATE_VE1</VAR_NAME>
+       <VINDEX>0001</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>DTO_PSM_VE_CREATE</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0001</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-DTO_CREATE_PSM_VE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <APPLIC>01</APPLIC>
+           <TXTCAT>BMRB</TXTCAT>
+           <TXTTEMPL>DV</TXTTEMPL>
+           <TEXT>11112222333</TEXT>
+           <LONGTEXT>Test text</LONGTEXT>
+          </ddic:_-THKR_-DTO_CREATE_PSM_VE>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+      <item>
+       <VAR_NAME>READ_VE1</VAR_NAME>
+       <VINDEX>0003</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>VERMERK_ID</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0002</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-DTO_GET_PSM_VE xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <APPLIC>01</APPLIC>
+           <TXTCAT>BMRB</TXTCAT>
+           <TXTTEMPL>BEE001</TXTTEMPL>
+          </ddic:_-THKR_-DTO_GET_PSM_VE>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+     </ETPAR_VARI>
+    </PARAMETERS>
+    <VARIANT_MODE>
+     <ETVAR_EXT></ETVAR_EXT>
+    </VARIANT_MODE>
+   </ECTD>
+  </VERSION>
+ </VERSIONS>
+</abapGit>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/WF_BTE1120</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Nachrichten vom BTE1120</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Exit zum Vier-Augen-Prinzip aktiv. Bitte Tabelle /THKR/C4A_BURKSA pflegen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Beleg wurde nicht vorerfasst.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Sie sind letzter Änderer.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Eine Sachkontenzeile wurde verändert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Eine Kreditorenzeile wurde verändert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Eine Debitorenzeile wurde verändert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Eine Anlagenzeile wurde verändert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Manuelle Belegzeilen hier verboten.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Belegkopf wurde verändert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>009</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Kritischer BSCHL entdeckt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Sie sind der Anleger.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF_BTE1120</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Verletzung des Vier-Augen-Prinzips. Buchung wird abgelehnt.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

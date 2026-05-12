@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>BTE für Anordnungen</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LPSM_AO_BTETOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLPSM_AO_BTE</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/PSM_AO_PROCESS_00107010</FUNCNAME>
+     <SHORT_TEXT>BTE 00107010: Anordnungssubstitution</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_F_PSO02</PARAMETER>
+       <DBFIELD>PSO02</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>C_F_PSO02_SUBST</PARAMETER>
+       <DBFIELD>PSO02_SUBST</DBFIELD>
+      </RSCHA>
+     </CHANGING>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_FLG_CHANGE</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_PSO02S</PARAMETER>
+       <DBSTRUCT>PSO02S</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_PSO02S_SUBST</PARAMETER>
+       <DBSTRUCT>PSO02S_SUBST</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_F_PSO02</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur Zahlungsanordnung ( local government, screen )</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_FLG_CHANGE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Datenelement zur Domäne BOOLE: TRUE (=&apos;X&apos;) und FALSE (=&apos; &apos;)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_PSO02S</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur Zahlungsanordnung - Sachkonteninformation</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_PSO02S_SUBST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>PSO02S-Felder für Substitution in Anordnungen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>C_F_PSO02_SUBST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>PSO02-Felder für Substitution in Anordnungen</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_EASY_ALV</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Basisklasse für ALVs</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>BUILD_TDTO_REF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>tdto_ref erzeugen, falls nach initialize( ) kein DTO überg.</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BUILD_T_DATA_REF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>t_data_ref(incl. T_STYL) aus tdto_ref ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_INPUTFIELD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfe, ob Feld Eingabefeld ist</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INPUTFIELDS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Statusabhängige Eingabefelder zurückgeben</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INPUTFIELDS_BY_LINE_REF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Eingabefelder für aktuelle Zeile ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INPUTFIELDS_CURRENT_ROW</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Eingabefelder für aktuelle Zeile ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_LN_EVENT_BY_LINE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>überschreiben! - Verknüpfungen für Start Ereignisanzeige</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HANDLE_DATA_CHANGED</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ereignisbehandler für Datenänderungen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HANDLE_DATA_CHANGED_FINISHED</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Daten auf externe Tabelle schreiben, Changed-Flag setzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HANDLE_TOOLBAR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ereignisbehandler für Toolbar</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HANDLE_USER_COMMAND</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Bitte bei Redefintion aufrufen! - setzt current_row_index</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INITIALIZE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>AVL initialisieren</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MODIFY_FIELDCATALOG_ENTRY</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Bei Bedarf redefinieren: Feldkatalogzeilen ändern</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>REFRESH_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datentabelle des ALV nach Änderung von A U S S E N  anzeigen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_CURRENT_ROW_INDEX</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>setzt current_row_index</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_EVENT_HANDLER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Bei Bedarf redefinieren</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_FIELDCATALOG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldkatalog erzeugen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_INPUTFIELDS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Statusabhängige Eingabefelder setzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_STYLES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Zeilen-Attribute setzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SHOW_EVENTS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Meldungen anzeigen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>STRUCTURE_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Strukturname oder Feldkatalog sind Pflicht</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>T_FCAT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldkatalog für ListViewerControl</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

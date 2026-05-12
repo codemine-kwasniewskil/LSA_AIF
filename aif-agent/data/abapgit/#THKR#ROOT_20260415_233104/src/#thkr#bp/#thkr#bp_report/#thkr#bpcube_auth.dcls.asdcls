@@ -1,0 +1,13 @@
+@EndUserText.label: 'Berechtigungskontrolle /THKR/BPCUBE'
+@MappingRole: true
+
+define role /THKR/BPCUBE_AUTH {
+    grant 
+        select
+            on
+                /thkr/bpcube
+                    where
+                        ( BPGroup )      = aspect pfcg_auth( B_BUPA_GRP, BEGRU, ACTVT = '03' )
+                    and  ( BusinessArea ) = aspect pfcg_auth( Z_BUPA_GSB, GSBER, ACTVT = '03' )
+                    ;
+}

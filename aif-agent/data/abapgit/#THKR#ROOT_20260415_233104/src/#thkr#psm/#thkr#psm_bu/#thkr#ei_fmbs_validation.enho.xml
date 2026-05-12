@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENHO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOOL>BADI_IMPL</TOOL>
+   <SHORTTEXT>Validation object list of the budget structure</SHORTTEXT>
+   <SPOT_NAME>FMBS_VALID_ADDRESS</SPOT_NAME>
+   <IMPL>
+    <ENH_BADI_IMPL_DATA>
+     <SPOT_NAME>FMBS_VALID_ADDRESS</SPOT_NAME>
+     <BADI_NAME>FMBS_VALID_ADDRESS</BADI_NAME>
+     <IMPL_NAME>/THKR/IMPL_FMBS_VALIDATION</IMPL_NAME>
+     <IMPL_CLASS>/THKR/CL_FMBS_VALIDATION</IMPL_CLASS>
+     <ACTIVE>X</ACTIVE>
+     <IMPL_SHORTTEXT>Implementation: Budget structure: validate address of an object</IMPL_SHORTTEXT>
+     <IMPL_SHORTTEXT_ID>DFD50B6E8D321EEFA9B4EA3B3A277BA2</IMPL_SHORTTEXT_ID>
+     <LOCKED_IN_CUSTOMIZING>X</LOCKED_IN_CUSTOMIZING>
+    </ENH_BADI_IMPL_DATA>
+   </IMPL>
+   <SOTR>
+    <item>
+     <HEADER>
+      <CONCEPT>DFD50B6E8D321EEFA9B4DC36CD09FB66</CONCEPT>
+      <CREA_LAN>E</CREA_LAN>
+      <TRALA_TYPE>1</TRALA_TYPE>
+      <OBJID_VEC>AAI=</OBJID_VEC>
+     </HEADER>
+     <ENTRIES>
+      <SOTR_TEXT>
+       <CONCEPT>DFD50B6E8D321EEFA9B4DC36CD09FB66</CONCEPT>
+       <LANGU>E</LANGU>
+       <LFD_NUM>0001</LFD_NUM>
+       <FLAG_CNTXT>X</FLAG_CNTXT>
+       <STATUS>R</STATUS>
+       <LENGTH>255</LENGTH>
+       <TEXT>Validation object list of the budget structure</TEXT>
+      </SOTR_TEXT>
+     </ENTRIES>
+    </item>
+    <item>
+     <HEADER>
+      <CONCEPT>DFD50B6E8D321EEFA9B4EA3B3A277BA2</CONCEPT>
+      <CREA_LAN>E</CREA_LAN>
+      <TRALA_TYPE>1</TRALA_TYPE>
+      <OBJID_VEC>AAI=</OBJID_VEC>
+     </HEADER>
+     <ENTRIES>
+      <SOTR_TEXT>
+       <CONCEPT>DFD50B6E8D321EEFA9B4EA3B3A277BA2</CONCEPT>
+       <LANGU>E</LANGU>
+       <LFD_NUM>0001</LFD_NUM>
+       <FLAG_CNTXT>X</FLAG_CNTXT>
+       <STATUS>R</STATUS>
+       <LENGTH>255</LENGTH>
+       <TEXT>Implementation: Budget structure: validate address of an object</TEXT>
+      </SOTR_TEXT>
+     </ENTRIES>
+    </item>
+   </SOTR>
+   <SOTR_USE>
+    <SOTR_USE>
+     <PGMID>R3TR</PGMID>
+     <OBJECT>ENHO</OBJECT>
+     <OBJ_NAME>/THKR/EI_FMBS_VALIDATION</OBJ_NAME>
+     <CONCEPT>DFD50B6E8D321EEFA9B4DC36CD09FB66</CONCEPT>
+     <LFD_NUM>0001</LFD_NUM>
+    </SOTR_USE>
+    <SOTR_USE>
+     <PGMID>R3TR</PGMID>
+     <OBJECT>ENHO</OBJECT>
+     <OBJ_NAME>/THKR/EI_FMBS_VALIDATION</OBJ_NAME>
+     <CONCEPT>DFD50B6E8D321EEFA9B4EA3B3A277BA2</CONCEPT>
+     <LFD_NUM>0001</LFD_NUM>
+    </SOTR_USE>
+   </SOTR_USE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

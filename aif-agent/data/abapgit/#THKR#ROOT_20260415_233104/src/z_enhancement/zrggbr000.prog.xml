@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZRGGBR000</NAME>
+    <CLAS>GBAS</CLAS>
+    <SUBC>M</SUBC>
+    <APPL>G</APPL>
+    <SECU>GVAL</SECU>
+    <RLOAD>D</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>100</KEY>
+     <ENTRY>Buchungsdatum überprüfen</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>101</KEY>
+     <ENTRY>Konto Kombination überprüfen.</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>102</KEY>
+     <ENTRY>Beispiel Einzelsatzvalidierung im EIS</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>103</KEY>
+     <ENTRY>Beispiel Matrixvalidierung im EIS</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>500</KEY>
+     <ENTRY>Validierung Zahlweg Adresse</ENTRY>
+     <LENGTH>54</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>600</KEY>
+     <ENTRY>Valiedierung Zahlweg GP-Gruppierung</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>601</KEY>
+     <ENTRY>Valiedierung Zahlweg M  Mandat aktiv</ENTRY>
+     <LENGTH>72</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>602</KEY>
+     <ENTRY>Validierung Zahlweg M SEPA-Mandat freigegeben</ENTRY>
+     <LENGTH>90</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>603</KEY>
+     <ENTRY>Validierung Zahlweg M Unterschiftsdatum vor Fälligkeit</ENTRY>
+     <LENGTH>108</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>604</KEY>
+     <ENTRY>Validierung Zahlweg M Mehrfachmandat für Daueranordnung</ENTRY>
+     <LENGTH>110</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>605</KEY>
+     <ENTRY>Validierung Zahlweg M Gültigkeitsprüfung Datum im Mandat</ENTRY>
+     <LENGTH>112</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>606</KEY>
+     <ENTRY>Validierung Zahlweg X  KassZ existiert in AnnAO</ENTRY>
+     <LENGTH>110</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>A00</KEY>
+     <ENTRY>UserExit : AR Legal Change - RES 177</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Exit routines for Rules</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>E</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>100</KEY>
+       <ENTRY>Check posting date</ENTRY>
+       <LENGTH>24</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>101</KEY>
+       <ENTRY>Check account combination</ENTRY>
+       <LENGTH>29</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>102</KEY>
+       <ENTRY>Example single record validation in EIS</ENTRY>
+       <LENGTH>39</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>103</KEY>
+       <ENTRY>Example matrix validation in EIS</ENTRY>
+       <LENGTH>33</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>A00</KEY>
+       <ENTRY>UserExit : AR Legal Change - RES 177</ENTRY>
+       <LENGTH>36</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Exit Routines for Rules</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

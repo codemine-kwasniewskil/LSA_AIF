@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funktionsgruppe für Statistikkennzeichen</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LPSM_STATKZTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLPSM_STATKZ</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/PSM_SET_STATSKZ</FUNCNAME>
+     <SHORT_TEXT>Setzt Statistikkennzeichen abhängig von Werttyp und Betragsart</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_F_ACCIT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ACCIT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CH_FMIFIIT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FMIFIIT</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_F_ACCIT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Schnittstelle ins Rechnungswesen: Positionsinformation</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CH_FMIFIIT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>FI-Einzelpostentabelle Haushaltsmanagement</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

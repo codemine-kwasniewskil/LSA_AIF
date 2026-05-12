@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>D</LANGUAGE>
+     <ID/>
+     <TEXT>PDF Schnittstelle /THKR/FMBB_ZUWEISUNG</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS/>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>VORGANG</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR15</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>SENDERFINANZPOSITION</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FIPEX</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>BEWST</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FISTL</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>BUDGETLIST_V</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>BUDGETLIST</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>BUDGETLIST_H</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>BUDGETLIST</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LANGTEXT_NAME</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TDOBNAME</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>UKONTO</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR70</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>TCURC</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TCURC</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>ADDRESS_SEND</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZOM_ADDR_OUT</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>SENDERFINANZSTELLE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FISTL</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>ADDRESS_EMPF</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZOM_ADDR_OUT</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>NAME_ZWECK</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR200</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>BUDGETART_EMPF</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>BUCU_BTYP30</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>BUDGETART_SEND</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>BUCU_BTYP30</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>FM01</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FM01</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES>
+      <FPCLINE>TYPES: BEGIN OF budgetlist_spalten,</FPCLINE>
+      <FPCLINE>         gjahr       TYPE  gjahr,</FPCLINE>
+      <FPCLINE>         budget      TYPE  tvalxx9,</FPCLINE>
+      <FPCLINE>         bzugewiesen TYPE  tvalxx9,</FPCLINE>
+      <FPCLINE>         izugewiesen TYPE  tvalxx9,</FPCLINE>
+      <FPCLINE>       END OF budgetlist_spalten.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>TYPES: Budgetlist TYPE TABLE OF budgetlist_spalten.</FPCLINE>
+     </TYPES>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>HEADER</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FMBW_S_HEADER</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>LINES</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FMED_T_LINES</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>DOC_ID</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FMBW_S_DOCID</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>FIRKS</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FIKRS</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL>&apos;1000&apos;</DEFAULTVAL>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>TXTNAME</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TDOBNAME</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS/>
+     <OUTPUT_PARAMETERS/>
+     <INITIALIZATION>
+      <FPCLINE>DATA wa_data TYPE fmed_s_line.</FPCLINE>
+      <FPCLINE>DATA add_att TYPE zom_addr_attr.</FPCLINE>
+      <FPCLINE>DATA add_att_empf TYPE zom_addr_attr.</FPCLINE>
+      <FPCLINE>DATA langtext_id TYPE fmed_s_docid.</FPCLINE>
+      <FPCLINE>DATA langtext12_id TYPE fmed_s_docid.</FPCLINE>
+      <FPCLINE>DATA budget TYPE tvalxx9.</FPCLINE>
+      <FPCLINE>DATA lt_textlines  TYPE TABLE OF tline.</FPCLINE>
+      <FPCLINE>DATA      lv_bez        TYPE c LENGTH 70.</FPCLINE>
+      <FPCLINE>DATA sender_zaehler TYPE i VALUE 0.</FPCLINE>
+      <FPCLINE>DATA empfaenger_zaehler TYPE i VALUE 0.</FPCLINE>
+      <FPCLINE>DATA entr_zaehler TYPE i VALUE 0.</FPCLINE>
+      <FPCLINE>DATA on_budgetlist TYPE abap_bool.</FPCLINE>
+      <FPCLINE>DATA izugewiesen TYPE tvalxx9.</FPCLINE>
+      <FPCLINE>DATA bzugewiesen TYPE tvalxx9.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>** Init Currency Fields</FPCLINE>
+      <FPCLINE>SELECT SINGLE waers FROM fm01</FPCLINE>
+      <FPCLINE>  INTO fm01</FPCLINE>
+      <FPCLINE>  WHERE fikrs = firks.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>SELECT SINGLE waers FROM tcurc</FPCLINE>
+      <FPCLINE>  INTO tcurc</FPCLINE>
+      <FPCLINE>  WHERE waers = fm01-waers.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Vorgang rausfinden</FPCLINE>
+      <FPCLINE>SELECT text15 FROM buprocess_uit</FPCLINE>
+      <FPCLINE>  INTO @vorgang</FPCLINE>
+      <FPCLINE>  WHERE process_ui = @header-process_ui</FPCLINE>
+      <FPCLINE>  AND langu = &apos;D&apos;.</FPCLINE>
+      <FPCLINE>ENDSELECT.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>LOOP AT lines INTO wa_data.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  on_budgetlist = abap_false.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*Budget berechnen</FPCLINE>
+      <FPCLINE>  budget = wa_data-tval01 + wa_data-tval02 + wa_data-tval03 + wa_data-tval04 + wa_data-tval05 + wa_data-tval06 + wa_data-tval07 + wa_data-tval08 + wa_data-tval09 + wa_data-tval10 + wa_data-tval11 + wa_data-tval12 + wa_data-tval13 + wa_data-tval14 +</FPCLINE>
+      <FPCLINE>wa_data-tval15 + wa_data-tval16.</FPCLINE>
+      <FPCLINE>  budget = budget * ( -1 ).</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*  Bisher &amp; Ist zugewiesen berechnen</FPCLINE>
+      <FPCLINE>  SELECT SINGLE SUM( CAST( tsl01 + tsl02 + tsl03 + tsl04 + tsl05 + tsl06 + tsl07 + tsl08 + tsl09 + tsl10 + tsl11 + tsl12 + tsl13 + tsl14 + tsl15 + tsl16 AS DEC( 23, 2 ) ) )</FPCLINE>
+      <FPCLINE>    FROM fmbdt</FPCLINE>
+      <FPCLINE>    WHERE rfundsctr = @wa_data-address-fundsctr</FPCLINE>
+      <FPCLINE>    AND rcmmtitem = @wa_data-address-cmmtitem</FPCLINE>
+      <FPCLINE>    AND budtype_9 = @wa_data-budtype</FPCLINE>
+      <FPCLINE>    AND ceffyear_9 = @wa_data-ceffyear</FPCLINE>
+      <FPCLINE>    INTO @izugewiesen.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  izugewiesen = abs( izugewiesen ).</FPCLINE>
+      <FPCLINE>  bzugewiesen = abs( izugewiesen ) - abs( budget ).</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*  Langtext Beleg</FPCLINE>
+      <FPCLINE>  CONCATENATE firks wa_data-fiscyear doc_id-docnr INTO langtext_name.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*  Richtige Sender Position finden</FPCLINE>
+      <FPCLINE>  IF wa_data-process = &apos;SEND&apos; OR wa_data-process = &apos;TRCS&apos; OR wa_data-process = &apos;COSD&apos; OR wa_data-process = &apos;RBBS&apos;.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*     Budgetart Ausgeschrieben ermitteln</FPCLINE>
+      <FPCLINE>    SELECT SINGLE text30 FROM fmbudtypet</FPCLINE>
+      <FPCLINE>      INTO budgetart_send</FPCLINE>
+      <FPCLINE>       WHERE budtype = wa_data-budtype.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Bezeichnung Finanzposition wenn &gt; 9</FPCLINE>
+      <FPCLINE>    IF strlen( wa_data-address-cmmtitem ) &gt; 9.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>      SELECT bezei</FPCLINE>
+      <FPCLINE>        FROM fmcit</FPCLINE>
+      <FPCLINE>        WHERE fipex = @wa_data-address-cmmtitem</FPCLINE>
+      <FPCLINE>        INTO @ukonto.</FPCLINE>
+      <FPCLINE>      ENDSELECT.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    senderfinanzstelle = wa_data-address-fundsctr.</FPCLINE>
+      <FPCLINE>    senderfinanzposition = wa_data-address-cmmtitem.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*  Sender Adresse ermitteln</FPCLINE>
+      <FPCLINE>*    add_att = VALUE zom_addr_attr( zpgsbr = wa_data-address-fundsctr(4) acc_fcentr = wa_data-address-fundsctr ).</FPCLINE>
+      <FPCLINE>*</FPCLINE>
+      <FPCLINE>*    CALL FUNCTION &apos;Z_OM_FIND_ADDRESS&apos;</FPCLINE>
+      <FPCLINE>*      EXPORTING</FPCLINE>
+      <FPCLINE>*        is_addr_attr = add_att</FPCLINE>
+      <FPCLINE>*      IMPORTING</FPCLINE>
+      <FPCLINE>*        es_addr_out  = address_send</FPCLINE>
+      <FPCLINE>*      EXCEPTIONS</FPCLINE>
+      <FPCLINE>*        OTHERS       = 1.</FPCLINE>
+      <FPCLINE>*</FPCLINE>
+      <FPCLINE>*    IF sy-subrc = 1.</FPCLINE>
+      <FPCLINE>    address_send-line0 = &apos;Keine Adresse gefunden&apos;.</FPCLINE>
+      <FPCLINE>*    ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  ELSEIF wa_data-process = &apos;ENTR&apos; OR wa_data-process = &apos;RETN&apos; OR wa_data-process =&apos;SUPL&apos;.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    on_budgetlist = abap_true.</FPCLINE>
+      <FPCLINE>    entr_zaehler = entr_zaehler + 1.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    IF entr_zaehler &gt; 1.</FPCLINE>
+      <FPCLINE>      IF wa_data-budcat = &apos;9F&apos;.</FPCLINE>
+      <FPCLINE>        budgetlist_H[ 1 ]-budget = budgetlist_H[ 1 ]-budget + budget.</FPCLINE>
+      <FPCLINE>      ENDIF.</FPCLINE>
+      <FPCLINE>    ELSE.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>*  Sender Adresse ermitteln</FPCLINE>
+      <FPCLINE>*      add_att = VALUE zom_addr_attr( zpgsbr = wa_data-address-fundsctr(4) acc_fcentr = wa_data-address-fundsctr ).</FPCLINE>
+      <FPCLINE>*</FPCLINE>
+      <FPCLINE>*      CALL FUNCTION &apos;Z_OM_FIND_ADDRESS&apos;</FPCLINE>
+      <FPCLINE>*        EXPORTING</FPCLINE>
+      <FPCLINE>*          is_addr_attr = add_att</FPCLINE>
+      <FPCLINE>*        IMPORTING</FPCLINE>
+      <FPCLINE>*          es_addr_out  = address_send</FPCLINE>
+      <FPCLINE>*        EXCEPTIONS</FPCLINE>
+      <FPCLINE>*          OTHERS       = 1.</FPCLINE>
+      <FPCLINE>*</FPCLINE>
+      <FPCLINE>*      IF sy-subrc = 1.</FPCLINE>
+      <FPCLINE>      address_send-line0 = &apos;Keine Adresse gefunden&apos;.</FPCLINE>
+      <FPCLINE>*      ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>      senderfinanzstelle = wa_data-address-fundsctr.</FPCLINE>
+      <FPCLINE>      senderfinanzposition = wa_data-address-cmmtitem.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*     Budgetart Ausgeschrieben ermitteln</FPCLINE>
+      <FPCLINE>      SELECT SINGLE text30 FROM fmbudtypet</FPCLINE>
+      <FPCLINE>        INTO budgetart_send</FPCLINE>
+      <FPCLINE>         WHERE budtype = wa_data-budtype.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*     Langtext - Zweckbestimmung Finanzposition</FPCLINE>
+      <FPCLINE>      CONCATENATE firks wa_data-fiscyear wa_data-address-cmmtitem INTO lv_bez.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>      CALL FUNCTION &apos;READ_TEXT&apos;</FPCLINE>
+      <FPCLINE>        EXPORTING</FPCLINE>
+      <FPCLINE>          id       = &apos;FP01&apos;</FPCLINE>
+      <FPCLINE>          language = &apos;D&apos;</FPCLINE>
+      <FPCLINE>          name     = lv_bez</FPCLINE>
+      <FPCLINE>          object   = &apos;FMMD&apos;</FPCLINE>
+      <FPCLINE>        TABLES</FPCLINE>
+      <FPCLINE>          lines    = lt_textlines</FPCLINE>
+      <FPCLINE>        EXCEPTIONS</FPCLINE>
+      <FPCLINE>          OTHERS   = 0.  &quot; alle Fehler ignorieren</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>      IF sy-subrc = 0 AND lt_textlines IS NOT INITIAL.</FPCLINE>
+      <FPCLINE>        LOOP AT lt_textlines ASSIGNING FIELD-SYMBOL(&lt;fs_line2&gt;).</FPCLINE>
+      <FPCLINE>          CONCATENATE name_zweck &lt;fs_line2&gt;-tdline INTO name_zweck.</FPCLINE>
+      <FPCLINE>        ENDLOOP.</FPCLINE>
+      <FPCLINE>      ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Langtext Finanzposition wenn &gt; 9</FPCLINE>
+      <FPCLINE>      IF strlen( wa_data-address-cmmtitem ) &gt; 9.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>        SELECT bezei</FPCLINE>
+      <FPCLINE>          FROM fmcit</FPCLINE>
+      <FPCLINE>          WHERE fipex = @wa_data-address-cmmtitem</FPCLINE>
+      <FPCLINE>          INTO @ukonto.</FPCLINE>
+      <FPCLINE>        ENDSELECT.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>      ENDIF.</FPCLINE>
+      <FPCLINE>    ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  ELSEIF wa_data-process = &apos;RECV&apos; OR wa_data-process = &apos;TRCR&apos; OR wa_data-process = &apos;CORV&apos; OR wa_data-process = &apos;RBBT&apos;.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    on_budgetlist = abap_true.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*       Langtext - Zweckbestimmung Finanzposition</FPCLINE>
+      <FPCLINE>    CONCATENATE firks wa_data-fiscyear wa_data-address-cmmtitem INTO lv_bez.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    CALL FUNCTION &apos;READ_TEXT&apos;</FPCLINE>
+      <FPCLINE>      EXPORTING</FPCLINE>
+      <FPCLINE>        id       = &apos;FP01&apos;</FPCLINE>
+      <FPCLINE>        language = &apos;D&apos;</FPCLINE>
+      <FPCLINE>        name     = lv_bez</FPCLINE>
+      <FPCLINE>        object   = &apos;FMMD&apos;</FPCLINE>
+      <FPCLINE>      TABLES</FPCLINE>
+      <FPCLINE>        lines    = lt_textlines</FPCLINE>
+      <FPCLINE>      EXCEPTIONS</FPCLINE>
+      <FPCLINE>        OTHERS   = 0.  &quot; alle Fehler ignorieren</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    IF sy-subrc = 0 AND lt_textlines IS NOT INITIAL.</FPCLINE>
+      <FPCLINE>      LOOP AT lt_textlines ASSIGNING FIELD-SYMBOL(&lt;fs_line&gt;).</FPCLINE>
+      <FPCLINE>        CONCATENATE name_zweck &lt;fs_line&gt;-tdline INTO name_zweck.</FPCLINE>
+      <FPCLINE>      ENDLOOP.</FPCLINE>
+      <FPCLINE>    ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*     Budgetart Sender Ausgeschrieben ermitteln</FPCLINE>
+      <FPCLINE>    SELECT SINGLE text30 FROM fmbudtypet</FPCLINE>
+      <FPCLINE>      INTO budgetart_empf</FPCLINE>
+      <FPCLINE>       WHERE budtype = wa_data-budtype.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*   Bewirtschaftungsstelle hinzufügen</FPCLINE>
+      <FPCLINE>    bewst = wa_data-address-fundsctr.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>**  Empfänger Adresse ermitteln</FPCLINE>
+      <FPCLINE>*    add_att_empf = VALUE zom_addr_attr( zpgsbr = wa_data-address-fundsctr(4) acc_fcentr = wa_data-address-fundsctr ).</FPCLINE>
+      <FPCLINE>*</FPCLINE>
+      <FPCLINE>*    CALL FUNCTION &apos;Z_OM_FIND_ADDRESS&apos;</FPCLINE>
+      <FPCLINE>*      EXPORTING</FPCLINE>
+      <FPCLINE>*        is_addr_attr = add_att_empf</FPCLINE>
+      <FPCLINE>*      IMPORTING</FPCLINE>
+      <FPCLINE>*        es_addr_out  = address_empf</FPCLINE>
+      <FPCLINE>*      EXCEPTIONS</FPCLINE>
+      <FPCLINE>*        OTHERS       = 1.</FPCLINE>
+      <FPCLINE>*</FPCLINE>
+      <FPCLINE>*    IF sy-subrc = 1.</FPCLINE>
+      <FPCLINE>    address_empf-line0 = &apos;Keine Adresse gefunden&apos;.</FPCLINE>
+      <FPCLINE>*    ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  IF wa_data-budcat = &apos;9F&apos;.</FPCLINE>
+      <FPCLINE>    IF on_budgetlist = abap_true OR ( wa_data-process = &apos;ENTR&apos; AND entr_zaehler = 1 ).</FPCLINE>
+      <FPCLINE>      APPEND VALUE #( gjahr = wa_data-fiscyear budget = budget bzugewiesen = bzugewiesen izugewiesen = izugewiesen ) TO budgetlist_H.</FPCLINE>
+      <FPCLINE>    ENDIF.</FPCLINE>
+      <FPCLINE>  ELSEIF wa_data-budcat = &apos;9G&apos; AND on_budgetlist = abap_true.</FPCLINE>
+      <FPCLINE>    APPEND VALUE #( gjahr = wa_data-ceffyear budget = budget bzugewiesen = bzugewiesen izugewiesen = izugewiesen ) TO budgetlist_V.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>ENDLOOP.</FPCLINE>
+     </INITIALIZATION>
+     <FORMS/>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

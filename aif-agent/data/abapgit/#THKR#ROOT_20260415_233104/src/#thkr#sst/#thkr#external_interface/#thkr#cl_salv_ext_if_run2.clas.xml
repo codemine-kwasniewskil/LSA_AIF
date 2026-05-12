@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_SALV_EXT_IF_RUN2</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Titel pro Verarbeitungslauf (HAVWeb)</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>APPL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendung: Verabeitungssteuerung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_GUI_STATUS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GUI-Status</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_GUI_TITLE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV-Control: Text der Titelzeile</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_NAME_FUGR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionsgruppe mit GUI-Status</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_REPORT_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Abap-Reportname</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>T_HVW</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Datensatz Vearbeitungslauf HAVWeb</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>SHOW_MESSAGES</CMPNAME>
+     <SCONAME>/THKR/CX_LSA1</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmen - Basisklasse</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SHOW_MESSAGES</CMPNAME>
+     <SCONAME>I_SELECTION</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Selektionskriterien Ereignisse</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

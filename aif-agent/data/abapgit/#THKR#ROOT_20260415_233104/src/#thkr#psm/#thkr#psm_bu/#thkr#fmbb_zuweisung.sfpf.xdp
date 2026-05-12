@@ -1,0 +1,1753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V11.0.9.20240424.1.48_SAP" APIVersion="3.6.24095.0"?><xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2026-02-11T15:35:44Z" uuid="40f13cef-02e2-45b1-b7ff-06d067606418">
+<template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.3/">
+   <?formServer defaultPDFRenderFormat acrobat10.0dynamic?>
+   <subform layout="tb" locale="en_US" name="data" restoreState="auto">
+      <pageSet>
+         <pageArea id="Page1" name="Seite1">
+            <contentArea h="284.3mm" w="197.3mm" x="0.25in" y="0.25in"/>
+            <medium long="297mm" short="210mm" stock="a4"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 0?></pageSet>
+      <subform h="284.3mm" name="Seite1" w="197.3mm">
+         <bind match="none"/>
+         <field access="readOnly" h="9mm" id="floatingField018467" name="Sender-line0" presence="hidden" w="62mm" y="0mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.ADDRESS_SEND.LINE0"/>
+         </field>
+         <field access="readOnly" h="9mm" id="floatingField009961" name="Sender-line1" presence="hidden" w="62mm" x="0mm" y="0mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.ADDRESS_SEND.LINE1"/>
+         </field>
+         <field access="readOnly" h="9mm" id="floatingField000491" name="Sender-line2" presence="hidden" w="62mm" x="0mm" y="0mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.ADDRESS_SEND.LINE2"/>
+         </field>
+         <field access="readOnly" h="9mm" id="floatingField002995" name="Sender-line3" presence="hidden" w="62mm" x="0mm" y="0mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.ADDRESS_SEND.LINE3"/>
+         </field>
+         <field access="readOnly" h="9mm" id="floatingField011942" name="Sender-line4" presence="hidden" w="62mm" x="0mm" y="0mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.ADDRESS_SEND.LINE4"/>
+         </field>
+         <field access="readOnly" h="9mm" id="floatingField004827" name="Sender-line5" presence="hidden" w="62mm" x="0mm" y="0mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.ADDRESS_SEND.LINE5"/>
+         </field>
+         <draw h="25.694mm" name="Text1" w="101.6mm" x="12.7mm" y="12.7mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embed="#floatingField018467" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField009961" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField000491" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField002995" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField011942" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField004827" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+               </exData>
+            </value>
+            <font typeface="Arial"/>
+            <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+         </draw>
+         <subform h="222.384mm" name="empfaenger" w="114.404mm">
+            <bind match="none"/>
+            <field access="readOnly" h="9mm" id="floatingField006334" name="Empfaenger-line0" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ADDRESS_EMPF.LINE0"/>
+            </field>
+            <field access="readOnly" h="9mm" id="floatingField005436" name="Empfänger-line1" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ADDRESS_EMPF.LINE1"/>
+            </field>
+            <field access="readOnly" h="9mm" id="floatingField032391" name="Empfänger-line2" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ADDRESS_EMPF.LINE2"/>
+            </field>
+            <field access="readOnly" h="9mm" id="floatingField014604" name="Empfänger-line3" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ADDRESS_EMPF.LINE3"/>
+            </field>
+            <field access="readOnly" h="9mm" id="floatingField003902" name="Empfänger-line4" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ADDRESS_EMPF.LINE4"/>
+            </field>
+            <field access="readOnly" h="9mm" id="floatingField000153" name="Empfänger-line5" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ADDRESS_EMPF.LINE5"/>
+            </field>
+            <draw h="29.928mm" name="Text2" w="101.6mm" x="12.7mm" y="44.45mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html" xliff:rid="C108D55E-9F1C-4063-9E6E-65384CA1FEC2">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">An<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField006334" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField005436" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField032391" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField014604" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField003902" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="letter-spacing:0in"><span xfa:embed="#floatingField000153" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                  </exData>
+               </value>
+               <font typeface="Arial"/>
+               <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+            </draw>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">if (this.rawValue == null) { 
+ this.parent.presence = "hidden";
+}
+else {
+ this.parent.presence="visible";
+}
+
+</script>
+            </event>
+            <?templateDesigner expand 1?></subform>
+         <field access="readOnly" h="9mm" id="floatingField026500" name="Senderfinanzstelle" presence="hidden" w="62mm" x="0mm" y="0mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.SENDERFINANZSTELLE"/>
+         </field>
+         <draw h="8.761mm" name="Text3" w="38.1mm" x="22.225mm" y="79.375mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html" xliff:rid="1DC90E72-1B60-489D-A76B-FDC6C7A903BE">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in">Sender Finanzstelle</p><p style="letter-spacing:0in"><span xfa:embed="#floatingField026500" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+               </exData>
+            </value>
+            <font typeface="Arial"/>
+            <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+            <para hAlign="center"/>
+         </draw>
+         <subform h="88.167mm" w="117.489mm">
+            <bind match="none"/>
+            <field access="readOnly" h="9mm" id="floatingField019169" name="Sendertelefon" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ADDRESS_SEND.TELNR"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">if (this.rawValue == null) { 
+ this.parent.presence = "hidden";
+}
+else {
+ this.parent.presence="visible";
+}
+
+</script>
+               </event>
+            </field>
+            <draw h="8.761mm" name="Text4" w="28.575mm" x="88.9mm" y="79.375mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html" xliff:rid="0EC44826-F843-406E-BA07-A62ADD7498D2">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Telefon</p><p style="text-decoration:none;letter-spacing:0in"><span xfa:embed="#floatingField019169" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                  </exData>
+               </value>
+               <font typeface="Arial"/>
+               <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+               <para hAlign="center"/>
+            </draw>
+            <?templateDesigner expand 1?></subform>
+         <field access="readOnly" h="9mm" id="floatingField015724" name="Datum" presence="hidden" w="62mm" x="0mm" y="0mm">
+            <ui>
+               <dateTimeEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </dateTimeEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para vAlign="middle"/>
+            <value>
+               <date/>
+            </value>
+            <bind match="dataRef" ref="$.HEADER.DOCDATE"/>
+         </field>
+         <draw h="8.761mm" name="Text5" w="29.2864mm" x="146.05mm" y="79.375mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html" xliff:rid="40F5BF02-0263-4D10-935A-9CC28D80F103">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Datum</p><p style="text-decoration:none;letter-spacing:0in"><span xfa:embed="#floatingField015724" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+               </exData>
+            </value>
+            <font typeface="Arial"/>
+            <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+            <para hAlign="center"/>
+         </draw>
+         <draw h="11.23mm" name="Text6" w="119.42mm" x="12.7mm" y="95.25mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <text xliff:rid="4A48EBE8-4968-4500-A5C3-A9C79F8E89E0">Zuweisung von Haushaltsmitteln bzw. Verpflichtungsermächtigungen</text>
+            </value>
+            <font baselineShift="0pt" size="11pt" typeface="Arial"/>
+            <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+            <para hAlign="justify" lineHeight="18pt" marginLeft="0pt" marginRight="0pt" spaceAbove="8pt" spaceBelow="10pt" textIndent="0pt"/>
+         </draw>
+         <subform columnWidths="38.983mm 39.843mm 45.019mm 46.74mm" layout="table" name="Tabelle1" x="12.7mm" y="111.125mm">
+            <border>
+               <edge/>
+            </border>
+            <subform layout="row" name="Zeile1">
+               <assist role="TR"/>
+               <draw h="0.279681in" name="Zelle1">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text xliff:rid="A9444E0A-2375-411D-84D0-8DA1D80EE863">Belegnummer:</text>
+                  </value>
+                  <font typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+               </draw>
+               <field access="readOnly" h="9mm" id="floatingField000041" name="Belegnummer" presence="hidden" w="62mm" x="0mm" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.DOC_ID.DOCNR"/>
+               </field>
+               <draw h="0.279681in" name="Zelle2">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embed="#floatingField000041" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+               </draw>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+               <bind match="none"/>
+               <draw h="0.279681in">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text xliff:rid="7CF296A0-8F69-4441-8C93-1939B1B92F33">Buchungsdatum:</text>
+                  </value>
+                  <font baselineShift="0pt" typeface="Arial" weight="bold"/>
+                  <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+               </draw>
+               <field access="readOnly" h="9mm" id="floatingField011478" name="Buchungsdatum" presence="hidden" w="62mm" x="0mm" y="0mm">
+                  <ui>
+                     <dateTimeEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <date/>
+                  </value>
+                  <bind match="dataRef" ref="$.HEADER.DOCDATE"/>
+               </field>
+               <draw h="0.279681in">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embed="#floatingField011478" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+                  <font baselineShift="0pt" typeface="Arial"/>
+                  <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+               </draw>
+               <?templateDesigner expand 1?></subform>
+            <subform layout="row" name="Zeile3">
+               <assist role="TR"/>
+               <draw h="0.279681in" name="Zelle1">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text xliff:rid="3546B4CB-8BFB-4229-B974-B203D5FC1556">Empfänger FiPos:</text>
+                  </value>
+                  <font typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+               </draw>
+               <field access="readOnly" h="9mm" id="floatingField026962" name="Finanzposition" presence="hidden" w="62mm" x="0mm" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.SENDERFINANZPOSITION"/>
+               </field>
+               <draw h="0.279681in" name="Zelle2">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embed="#floatingField026962" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+               </draw>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+               <bind match="none"/>
+               <subform layout="tb" name="Bewirtschaftungsstelle">
+                  <bind match="none"/>
+                  <draw h="0.279681in" w="44.402mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <value>
+                        <text xliff:rid="5BB44F72-782D-4EC7-B990-23A2A5350E13">Empfänger FiStel:</text>
+                     </value>
+                     <font typeface="Arial" weight="bold"/>
+                     <para vAlign="middle"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border break="open">
+                        <edge presence="hidden">
+                           <color value="255,255,255"/>
+                        </edge>
+                        <corner presence="hidden" thickness="0.176mm">
+                           <color value="255,255,255"/>
+                        </corner>
+                     </border>
+                     <?renderCache.bounds 123030 17303 0 0 1417 1417 0 0?>
+                     <?renderCache.textRun 18 Empfänger FiStel: 0 1417 12964 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+                  <para hAlign="center" vAlign="middle"/>
+                  <field access="readOnly" h="9mm" id="floatingField029358" name="EmpfängerFinanzstelle" presence="hidden" w="62mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.BEWST"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+if (this.rawValue == null) { 
+ this.parent.presence = "hidden";
+}
+else {
+ this.parent.presence="visible";
+}
+</script>
+                     </event>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <draw h="0.279681in">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embed="#floatingField029358" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+                  <font baselineShift="0pt" typeface="Arial"/>
+                  <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+               </draw>
+               <?templateDesigner expand 1?></subform>
+            <subform layout="row" name="Zeile5">
+               <assist role="TR"/>
+               <draw h="0.279681in" name="Zelle1">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text xliff:rid="1CCBB325-B270-41A9-B50A-E6D43B3CC4C4">Bez. Empf. FiPos:</text>
+                  </value>
+                  <font typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+               </draw>
+               <field access="readOnly" h="9mm" id="floatingField028145" name="FinanzpositionZweckbestimmung" presence="hidden" w="62mm" x="0mm" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.NAME_ZWECK"/>
+               </field>
+               <draw colSpan="3" h="0.279681in" name="Zelle2">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embed="#floatingField028145" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+               </draw>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <subform layout="row" name="Zeile6">
+               <assist role="TR"/>
+               <draw h="0.279681in" name="Zelle1">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text xliff:rid="D2A68AEA-7885-4F00-97B3-1AD087731E49">Unterkonto:</text>
+                  </value>
+                  <font typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+               </draw>
+               <field access="readOnly" h="9mm" id="floatingField024464" name="BezeichnungFinanzposition" presence="hidden" w="62mm" x="0mm" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.UKONTO"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+if (this.rawValue == null) { 
+ this.parent.presence = "hidden";
+}
+else {
+ this.parent.presence="visible";
+}
+</script>
+                  </event>
+               </field>
+               <draw colSpan="3" h="0.279681in" name="Zelle2">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embed="#floatingField024464" xfa:embedMode="raw" xfa:embedType="uri"/><span style="xfa-spacerun:yes">    </span></p></body>
+                     </exData>
+                  </value>
+               </draw>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <subform layout="row" name="Zeile7">
+               <assist role="TR"/>
+               <draw h="0.279681in" name="Zelle1">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text xliff:rid="FC18FD2D-8E87-40A5-8B2B-56585C042ACF">Vorgang:</text>
+                  </value>
+                  <font typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+               </draw>
+               <field access="readOnly" h="9mm" id="floatingField005705" name="Textfeld" presence="hidden" w="62mm" x="0mm" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.VORGANG"/>
+               </field>
+               <draw colSpan="3" h="0.279681in" name="Zelle2">
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embed="#floatingField005705" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+               </draw>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <keep intact="contentArea"/>
+            <bind match="none"/>
+            <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+            <subform layout="row" name="Zeile7">
+               <assist role="TR"/>
+               <draw h="0.279681in" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text xliff:rid="0EC0802A-436A-438C-BFB1-2665BA382124">Sender Budgetart:</text>
+                  </value>
+                  <font typeface="Arial" weight="bold"/>
+                  <para vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+               </draw>
+               <field access="readOnly" h="7.104mm" id="floatingField017421" name="Textfeld" presence="hidden" w="62mm" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.BUDGETART_SEND"/>
+               </field>
+               <draw h="0.279681in" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embed="#floatingField017421" xfa:embedMode="raw" xfa:embedType="uri"/><span style="xfa-spacerun:yes"> </span></p></body>
+                     </exData>
+                  </value>
+                  <font baselineShift="0pt" typeface="Arial"/>
+                  <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <border break="open">
+                     <edge presence="hidden">
+                        <color value="255,255,255"/>
+                     </edge>
+                     <corner presence="hidden" thickness="0.176mm">
+                        <color value="255,255,255"/>
+                     </corner>
+                  </border>
+               </draw>
+               <subform layout="tb" name="butext_empf" y="0mm">
+                  <bind match="none"/>
+                  <para hAlign="center" vAlign="middle"/>
+                  <draw h="7.104mm" w="45.019mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <value>
+                        <text xliff:rid="453AE8E6-D5B7-4959-AF39-C2664519A1D3">Empfänger Budgetart:</text>
+                     </value>
+                     <font baselineShift="0pt" typeface="Arial" weight="bold"/>
+                     <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <?renderCache.bounds 124779 17303 0 0 1417 1417 0 0?>
+                     <?renderCache.textRun 21 Empfänger Budgetart: 0 1417 12964 0 0 0 "Arial" 1 0 10000 ISO-8859-1?></draw>
+                  <field access="readOnly" h="9mm" id="floatingField018716" name="budgetart_empf" presence="hidden" w="62mm" y="0mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$record.BUDGETART_EMPF"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">if (this.rawValue == null) { 
+ this.parent.presence = "hidden";
+}
+else {
+ this.parent.presence="visible";
+}
+
+ 
+</script>
+                     </event>
+                  </field>
+                  <?templateDesigner expand 0?></subform>
+               <draw y="0mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embed="#floatingField018716" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Arial"/>
+                  <para vAlign="middle"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+               </draw>
+               <?templateDesigner expand 1?></subform>
+            <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <?templateDesigner expand 1?></subform>
+         <subform layout="tb" name="Teilformular-Block456" w="171.37mm" x="12.7mm" y="156.65mm">
+            <bind match="none"/>
+            <subform layout="tb" name="Teilformular-Block5" w="170.924mm">
+               <bind match="none"/>
+               <?templateDesigner expand 0?>
+               <subform columnWidths="28mm 47.7193mm 47.7193mm 48.637mm" layout="table" name="Tabelle2">
+                  <border>
+                     <edge/>
+                  </border>
+                  <subform layout="row" name="Kopfzeile">
+                     <assist role="TH"/>
+                     <draw h="10mm" name="Zelle1">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text xliff:rid="8A303B0D-89B0-41B3-A425-D78AFADEE084">Haushaltsjahr</text>
+                        </value>
+                        <font typeface="Arial" weight="bold"/>
+                        <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                        <para hAlign="center" vAlign="middle"/>
+                     </draw>
+                     <draw h="10mm" name="Zelle2">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text xliff:rid="B84DBC80-1EB7-4D15-97B2-B54113BA4D0B">Zuweisungsbetrag in €</text>
+                        </value>
+                        <font typeface="Arial" weight="bold"/>
+                        <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                        <para hAlign="center" vAlign="middle"/>
+                     </draw>
+                     <draw h="10mm" name="Zelle3">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html" xliff:rid="5BEEB99D-439A-4222-966C-36BCCDA92AF0">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">bisher zugewiesen<span style="text-decoration:none"> in €</span></p></body>
+                           </exData>
+                        </value>
+                        <font typeface="Arial" weight="bold"/>
+                        <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                        <para hAlign="center" vAlign="middle"/>
+                     </draw>
+                     <draw h="10mm" name="Zelle4">
+                        <border>
+                           <edge/>
+                           <corner thickness="0.1778mm"/>
+                        </border>
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html" xliff:rid="8D170A16-5033-4FC3-80C9-F2897D290298">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Insgesamt zugewiesen<span style="text-decoration:none"> in €</span></p></body>
+                           </exData>
+                        </value>
+                        <font typeface="Arial" weight="bold"/>
+                        <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                        <para hAlign="center" vAlign="middle"/>
+                     </draw>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <bind match="none"/>
+                     <?templateDesigner expand 1?></subform>
+                  <subformSet name="Haushaltsmittelansatz">
+                     <subform layout="row" name="Zeile1">
+                        <assist role="TR"/>
+                        <draw colSpan="-1" h="7mm" name="Zelle1">
+                           <border>
+                              <edge/>
+                              <corner thickness="0.1778mm"/>
+                           </border>
+                           <ui>
+                              <textEdit/>
+                           </ui>
+                           <value>
+                              <text xliff:rid="2E7CD4C5-4C2D-41A5-9D8C-B0B0494825EC">Haushaltsmittelansatz      </text>
+                           </value>
+                           <font baselineShift="0pt" size="12pt" typeface="Arial" weight="bold"/>
+                           <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                           <para hAlign="center" marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                        </draw>
+                        <border>
+                           <edge presence="hidden"/>
+                        </border>
+                        <occur max="-1"/>
+                        <bind match="none"/>
+                        <?templateDesigner expand 1?></subform>
+                     <occur min="0"/>
+                     <subform columnWidths="28mm 48mm 48mm 48mm" layout="table" name="BUDGETLIST_H">
+                        <subform layout="row" name="DATA">
+                           <field h="9mm" name="GJAHR" w="62mm">
+                              <ui>
+                                 <textEdit>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Arial"/>
+                              <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                              <para hAlign="center" vAlign="middle"/>
+                              <value>
+                                 <text maxChars="4"/>
+                              </value>
+                              <bind match="dataRef" ref="$.GJAHR"/>
+                              <desc>
+                                 <text name="Schema-Anmerkung">Geschäftsjahr</text>
+                              </desc>
+                              <border>
+                                 <edge/>
+                              </border>
+                           </field>
+                           <field h="9mm" name="BUDGET" w="62mm" x="2.440944in">
+                              <ui>
+                                 <numericEdit>
+                                    <margin/>
+                                 </numericEdit>
+                              </ui>
+                              <font typeface="Arial"/>
+                              <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                              <para hAlign="right" vAlign="middle"/>
+                              <value>
+                                 <decimal leadDigits="15"/>
+                              </value>
+                              <bind match="dataRef" ref="$.BUDGET"/>
+                              <desc>
+                                 <text name="Schema-Anmerkung">Budgetbetrag in Transaktionswährung</text>
+                              </desc>
+                              <validate nullTest="error"/>
+                              <border>
+                                 <edge/>
+                              </border>
+                           </field>
+                           <field h="7mm" name="BZUGEWIESEN" w="62mm" x="4.881889in">
+                              <ui>
+                                 <numericEdit>
+                                    <margin/>
+                                 </numericEdit>
+                              </ui>
+                              <font typeface="Arial"/>
+                              <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                              <para hAlign="right" vAlign="middle"/>
+                              <value>
+                                 <decimal leadDigits="15"/>
+                              </value>
+                              <bind match="dataRef" ref="$.BZUGEWIESEN"/>
+                              <desc>
+                                 <text name="Schema-Anmerkung">Budgetbetrag in Transaktionswährung</text>
+                              </desc>
+                              <validate nullTest="error"/>
+                              <border>
+                                 <edge/>
+                              </border>
+                           </field>
+                           <field h="9mm" name="IZUGEWIESEN" w="62mm" y="0.354333in">
+                              <ui>
+                                 <numericEdit>
+                                    <margin/>
+                                 </numericEdit>
+                              </ui>
+                              <font typeface="Arial"/>
+                              <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                              <para hAlign="right" vAlign="middle"/>
+                              <value>
+                                 <decimal leadDigits="15"/>
+                              </value>
+                              <bind match="dataRef" ref="$.IZUGEWIESEN"/>
+                              <desc>
+                                 <text name="Schema-Anmerkung">Budgetbetrag in Transaktionswährung</text>
+                              </desc>
+                              <validate nullTest="error"/>
+                              <border>
+                                 <edge/>
+                              </border>
+                           </field>
+                           <assist role="TR"/>
+                           <occur max="-1"/>
+                           <bind match="dataRef" ref="$.DATA[*]"/>
+                           <?templateDesigner expand 1?></subform>
+                        <occur min="0"/>
+                        <bind match="dataRef" ref="$.BUDGETLIST_H"/>
+                        <keep intact="contentArea"/>
+                        <overflow leader="overflowLeader"/>
+                        <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?></subformSet>
+                  <subformSet name="Verpflichtungsermächtigung">
+                     <subform layout="row" name="Zeile1">
+                        <assist role="TR"/>
+                        <draw colSpan="-1" minH="7mm" name="Zelle1" w="6.729292in">
+                           <border>
+                              <edge/>
+                              <corner thickness="0.1778mm"/>
+                           </border>
+                           <ui>
+                              <textEdit/>
+                           </ui>
+                           <value>
+                              <text xliff:rid="77C4ADA2-18E1-46FF-9083-FDF4E7EC3AA1">Verpflichtungsermächtigung</text>
+                           </value>
+                           <font baselineShift="0pt" size="12pt" typeface="Arial" weight="bold"/>
+                           <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                           <para hAlign="center" marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="middle"/>
+                        </draw>
+                        <border>
+                           <edge presence="hidden"/>
+                        </border>
+                        <occur max="-1"/>
+                        <bind match="none"/>
+                        <?templateDesigner expand 1?></subform>
+                     <occur min="0"/>
+                     <subform layout="row" name="Zeile1">
+                        <assist role="TR"/>
+                        <subform colSpan="4" columnWidths="28.1502mm 48mm 48mm 48mm" layout="table" name="BUDGETLIST_V">
+                           <subform layout="row" name="DATA" y="0mm">
+                              <field h="8.1095mm" name="GJAHR" w="62mm" y="0mm">
+                                 <ui>
+                                    <textEdit>
+                                       <margin/>
+                                    </textEdit>
+                                 </ui>
+                                 <font typeface="Arial"/>
+                                 <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                                 <para hAlign="center" vAlign="middle"/>
+                                 <value>
+                                    <text maxChars="4"/>
+                                 </value>
+                                 <bind match="dataRef" ref="$.GJAHR"/>
+                                 <desc>
+                                    <text name="Schema-Anmerkung">Geschäftsjahr</text>
+                                 </desc>
+                                 <border>
+                                    <edge/>
+                                 </border>
+                              </field>
+                              <field h="9mm" name="BUDGET" w="62mm" x="62mm" y="0mm">
+                                 <ui>
+                                    <numericEdit>
+                                       <margin/>
+                                    </numericEdit>
+                                 </ui>
+                                 <font typeface="Arial"/>
+                                 <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                                 <para hAlign="right" vAlign="middle"/>
+                                 <value>
+                                    <decimal leadDigits="15"/>
+                                 </value>
+                                 <bind match="dataRef" ref="$.BUDGET"/>
+                                 <desc>
+                                    <text name="Schema-Anmerkung">Budgetbetrag in Transaktionswährung</text>
+                                 </desc>
+                                 <validate nullTest="error"/>
+                                 <border>
+                                    <edge/>
+                                 </border>
+                              </field>
+                              <field h="7mm" name="BZUGEWIESEN" w="62mm" x="124mm" y="0mm">
+                                 <ui>
+                                    <numericEdit>
+                                       <margin/>
+                                    </numericEdit>
+                                 </ui>
+                                 <font typeface="Arial"/>
+                                 <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                                 <para hAlign="right" vAlign="middle"/>
+                                 <value>
+                                    <decimal leadDigits="15"/>
+                                 </value>
+                                 <bind match="dataRef" ref="$.BZUGEWIESEN"/>
+                                 <desc>
+                                    <text name="Schema-Anmerkung">Budgetbetrag in Transaktionswährung</text>
+                                 </desc>
+                                 <validate nullTest="error"/>
+                                 <border>
+                                    <edge/>
+                                 </border>
+                              </field>
+                              <field h="9mm" name="IZUGEWIESEN" w="62mm" y="9mm">
+                                 <ui>
+                                    <numericEdit>
+                                       <margin/>
+                                    </numericEdit>
+                                 </ui>
+                                 <font typeface="Arial"/>
+                                 <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                                 <para hAlign="right" vAlign="middle"/>
+                                 <value>
+                                    <decimal leadDigits="15"/>
+                                 </value>
+                                 <bind match="dataRef" ref="$.IZUGEWIESEN"/>
+                                 <desc>
+                                    <text name="Schema-Anmerkung">Budgetbetrag in Transaktionswährung</text>
+                                 </desc>
+                                 <validate nullTest="error"/>
+                                 <border>
+                                    <edge/>
+                                 </border>
+                              </field>
+                              <assist role="TR"/>
+                              <occur max="-1"/>
+                              <bind match="dataRef" ref="$.DATA[*]"/>
+                              <?templateDesigner expand 1?></subform>
+                           <occur min="0"/>
+                           <bind match="dataRef" ref="$record.BUDGETLIST_V"/>
+                           <keep intact="contentArea"/>
+                           <border>
+                              <edge/>
+                              <corner thickness="0.1778mm"/>
+                           </border>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?></subformSet>
+                  <keep intact="contentArea"/>
+                  <bind match="none"/>
+                  <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+                  <?templateDesigner expand 1?></subform>
+            </subform>
+            <subform layout="tb" name="Teilformular-Block6" w="171.53mm">
+               <bind match="none"/>
+               <field access="readOnly" h="9mm" id="floatingField000292" name="Textfeld" presence="hidden" w="62mm" x="0mm" y="0mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field access="readOnly" h="9mm" id="floatingField016827" name="KopftextzusatzDAten" presence="hidden" w="62mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.HEADER.TEXT50"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">if (this.rawValue == null) { 
+ this.parent.presence = "hidden";
+}
+else {
+ this.parent.presence="visible";
+}
+
+</script>
+                  </event>
+               </field>
+               <draw h="0.68875in" name="Text7" w="171.53mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html" xliff:rid="4DB5381D-26F4-4FB6-936C-A1E35469B061">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in">Kopftext:</p><p style="text-decoration:none;letter-spacing:0in"><span xfa:embed="#floatingField016827" xfa:embedMode="raw" xfa:embedType="uri"/></p><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="5mm"/>
+               </draw>
+               <?templateDesigner expand 1?></subform>
+            <subform h="66.429mm" name="Teilformular-Block7" w="171.45mm">
+               <bind match="none"/>
+               <field access="readOnly" h="9mm" id="floatingField023281" name="Langtextfmbb" presence="hidden" w="62mm" y="0.501mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.TEXT"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if (this.rawValue == null) { 
+ this.parent.presence = "hidden";
+}
+else {
+ this.parent.presence="visible";
+}
+</script>
+                  </event>
+               </field>
+               <draw h="66.426mm" name="Text8" w="171.45mm" y="0.006mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html" xliff:rid="E5D005B1-308D-4175-AF4C-3A43DB00427E">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Langtext:</p><p style="font-weight:normal;letter-spacing:0in"><span xfa:embed="#floatingField023281" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                     </exData>
+                  </value>
+                  <font baselineShift="0pt" typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                  <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
+               </draw>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">11.0.9.20240425.1.7.0</text>
+      </desc>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 192 49 00030010001100130014001500160017001800240025002700280029002B002E002F003600370039003D0042004400450046004700480049004A004B004C004E004F005000510052005300550056005700580059005A005B005D005E0060006C -.012345ABDEFHKLSTVZ_abcdefghiklmnoprstuvwxz{}ä?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 168 45 00030011001D0025002700280029002B002C002E002F00330036003700380039003D004400450046004700480049004A004B004C004D004E004F00500051005200530055005600570058005A005B005D006C00BC .:BDEFHIKLPSTUVZabcdefghijklmnoprstuwxzä€?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner DefaultCaptionFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?acrobat JavaScript strictScoping?>
+   <?templateDesigner Grid show:1, snap:1, units:1, color:ff8080, origin:(0,0), interval:(79375,79375), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner FormTargetVersion 33?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 153?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+      <common>
+         <template>
+            <base>https://EHMS.HKR.LSA-NET.DE:443/sap/bc/fp/form/layout/</base>
+         </template>
+      </common>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <version>1.7</version>
+         <adobeExtensionLevel>8</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection dataDescription="data" name="_THKR_FMBB_ZUWEISUNG">
+      <uri/>
+      <rootElement>data</rootElement>
+   </xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="data">
+      <data>
+         <HEADER>
+            <PROCESS_UI/>
+            <VERSION/>
+            <CRTUSER/>
+            <CRTDATE/>
+            <CRTTIME/>
+            <CHGUSER/>
+            <CHGDATE/>
+            <CHGTIME/>
+            <DOCDATE/>
+            <POSTDATE/>
+            <REASON_REV/>
+            <RESPPERS/>
+            <TECHORG/>
+            <EXT_DOCNR/>
+            <DOCFAM/>
+            <AWORG/>
+            <AWREF/>
+            <AWSYS/>
+            <AWTYP/>
+            <TEXT50/>
+            <TEXTNAME/>
+            <LTXT_IND/>
+            <DOCSTATE/>
+            <REVSTATE/>
+            <REV_REFNR/>
+            <LOGSYS/>
+            <LAYOUTVAR/>
+            <DOCTYPE/>
+            <COHORT/>
+            <PUBLAW/>
+            <LEGIS/>
+            <FROM_ARCHIVE/>
+            <DUMMY_FMBH_INCL_EEW_PS/>
+            <TRANSFER_AGENCY/>
+            <TRANSFER_ACCOUNT/>
+            <RCOMP/>
+            <FMFGUS_KEY/>
+            <DUMMY_BCS_DOC_EXT/>
+            <PFM_FOA/>
+            <PFM_SPEC/>
+            <FNDSMGMTBDGTDOCISMULTIYEAR/>
+            <XSAPF15XSTATUS/>
+         </HEADER>
+         <DOC_ID>
+            <CLIENT/>
+            <FM_AREA/>
+            <CRTUSER/>
+            <DOCYEAR/>
+            <DOCNR/>
+         </DOC_ID>
+         <LINES dd:minOccur="0">
+            <DATA dd:maxOccur="-1">
+               <DOCLN/>
+               <RPMAX/>
+               <FLG_ADDED/>
+               <CTEM_CATEGORY/>
+               <FISCYEAR/>
+               <CEFFYEAR/>
+               <BUDCAT/>
+               <VALTYPE/>
+               <PROCESS/>
+               <BUDTYPE/>
+               <ADDRESS>
+                  <FUND/>
+                  <FUNDSCTR/>
+                  <CMMTITEM/>
+                  <FUNCAREA/>
+                  <GRANT_NBR/>
+                  <MEASURE/>
+                  <USERDIM/>
+                  <BUDGET_PD/>
+               </ADDRESS>
+               <TCURR/>
+               <TVAL01/>
+               <TVAL02/>
+               <TVAL03/>
+               <TVAL04/>
+               <TVAL05/>
+               <TVAL06/>
+               <TVAL07/>
+               <TVAL08/>
+               <TVAL09/>
+               <TVAL10/>
+               <TVAL11/>
+               <TVAL12/>
+               <TVAL13/>
+               <TVAL14/>
+               <TVAL15/>
+               <TVAL16/>
+               <LVAL01/>
+               <LVAL02/>
+               <LVAL03/>
+               <LVAL04/>
+               <LVAL05/>
+               <LVAL06/>
+               <LVAL07/>
+               <LVAL08/>
+               <LVAL09/>
+               <LVAL10/>
+               <LVAL11/>
+               <LVAL12/>
+               <LVAL13/>
+               <LVAL14/>
+               <LVAL15/>
+               <LVAL16/>
+               <DISTKEY/>
+               <TEXT50/>
+               <DUMMY_FMBL_INCL_EEW_PS/>
+               <DUMMY_EXT/>
+               <BGTSRC/>
+               <BGTDTL/>
+               <PAYTYP/>
+               <PAYKID/>
+               <PROCNO/>
+               <FUNCTIONALAREASUBDIVISIONID/>
+               <FUNCTIONALAREA1SUBDIVISION/>
+               <FUNCTIONALAREA2SUBDIVISION/>
+               <FUNCTIONALAREA3SUBDIVISION/>
+               <COMMITMENTITEMSUBDIVISIONID/>
+               <COMMITMENTITEM1SUBDIVISION/>
+               <COMMITMENTITEM2SUBDIVISION/>
+               <COMMITMENTITEM3SUBDIVISION/>
+               <COMMITMENTITEM4SUBDIVISION/>
+               <COMMITMENTITEM5SUBDIVISION/>
+               <FUNDSCENTERSUBDIVISIONID/>
+               <FUNDSCENTER1SUBDIVISION/>
+               <FUNDSCENTER2SUBDIVISION/>
+               <FUNDSCENTER3SUBDIVISION/>
+               <FUNDSSUBDIVISIONID/>
+               <FUNDS1SUBDIVISION/>
+               <FUNDS2SUBDIVISION/>
+               <TEXT100/>
+            </DATA>
+         </LINES>
+         <UKONTO/>
+         <NAME_ZWECK/>
+         <BUDGETLIST_V dd:minOccur="0">
+            <DATA dd:maxOccur="-1">
+               <GJAHR/>
+               <BUDGET/>
+               <BZUGEWIESEN/>
+               <IZUGEWIESEN/>
+            </DATA>
+         </BUDGETLIST_V>
+         <BUDGETLIST_H dd:minOccur="0">
+            <DATA dd:maxOccur="-1">
+               <GJAHR/>
+               <BUDGET/>
+               <BZUGEWIESEN/>
+               <IZUGEWIESEN/>
+            </DATA>
+         </BUDGETLIST_H>
+         <BEWST/>
+         <ADDRESS_SEND>
+            <OBJID/>
+            <ZZ_BEZEICHNUNG/>
+            <STRAS/>
+            <HAUSN/>
+            <STRS2/>
+            <PSTLZ/>
+            <ORT01/>
+            <CNAME/>
+            <LAND1/>
+            <TELNR/>
+            <FAXNR/>
+            <ZZMAIL/>
+            <ZZ_LOK_DSTL/>
+            <ZZDIGI/>
+            <ZZBEPO/>
+            <ZZEGVP/>
+            <POSTFACHNR/>
+            <POSTPLZ/>
+            <POSTORT/>
+            <POSTLAND/>
+            <LINE0/>
+            <LINE1/>
+            <LINE2/>
+            <LINE3/>
+            <LINE4/>
+            <LINE5/>
+            <OEPNV1/>
+            <OEPNV2/>
+            <INTERNET_ADDR/>
+            <INTERNET_ADDR_2/>
+            <SMTP_ADDR_FORMS/>
+            <UST_ID/>
+            <STEUER_NR/>
+            <RESSORT_TXT_1/>
+            <RESSORT_TXT_2/>
+            <ORG_SHORT_FORMS/>
+            <ORG_LONG_FORMS/>
+         </ADDRESS_SEND>
+         <ADDRESS_EMPF>
+            <OBJID/>
+            <ZZ_BEZEICHNUNG/>
+            <STRAS/>
+            <HAUSN/>
+            <STRS2/>
+            <PSTLZ/>
+            <ORT01/>
+            <CNAME/>
+            <LAND1/>
+            <TELNR/>
+            <FAXNR/>
+            <ZZMAIL/>
+            <ZZ_LOK_DSTL/>
+            <ZZDIGI/>
+            <ZZBEPO/>
+            <ZZEGVP/>
+            <POSTFACHNR/>
+            <POSTPLZ/>
+            <POSTORT/>
+            <POSTLAND/>
+            <LINE0/>
+            <LINE1/>
+            <LINE2/>
+            <LINE3/>
+            <LINE4/>
+            <LINE5/>
+            <OEPNV1/>
+            <OEPNV2/>
+            <INTERNET_ADDR/>
+            <INTERNET_ADDR_2/>
+            <SMTP_ADDR_FORMS/>
+            <UST_ID/>
+            <STEUER_NR/>
+            <RESSORT_TXT_1/>
+            <RESSORT_TXT_2/>
+            <ORG_SHORT_FORMS/>
+            <ORG_LONG_FORMS/>
+         </ADDRESS_EMPF>
+         <SENDERFINANZSTELLE/>
+         <SENDERFINANZPOSITION/>
+         <LANGTEXT_NAME/>
+         <TEXT/>
+         <BUDGETART_EMPF/>
+         <BUDGETART_SEND/>
+         <VORGANG/>
+      </data>
+   </dd:dataDescription>
+</xfa:datasets>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale desc="Englisch (Vereinigte Staaten)" name="en_US">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>January</month>
+            <month>February</month>
+            <month>March</month>
+            <month>April</month>
+            <month>May</month>
+            <month>June</month>
+            <month>July</month>
+            <month>August</month>
+            <month>September</month>
+            <month>October</month>
+            <month>November</month>
+            <month>December</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mar</month>
+            <month>Apr</month>
+            <month>May</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Oct</month>
+            <month>Nov</month>
+            <month>Dec</month>
+         </monthNames>
+         <dayNames>
+            <day>Sunday</day>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>Sun</day>
+            <day>Mon</day>
+            <day>Tue</day>
+            <day>Wed</day>
+            <day>Thu</day>
+            <day>Fri</day>
+            <day>Sat</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>BC</era>
+            <era>AD</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, MMMM D, YYYY</datePattern>
+         <datePattern name="long">MMMM D, YYYY</datePattern>
+         <datePattern name="med">MMM D, YYYY</datePattern>
+         <datePattern name="short">M/D/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">h:MM:SS A Z</timePattern>
+         <timePattern name="long">h:MM:SS A Z</timePattern>
+         <timePattern name="med">h:MM:SS A</timePattern>
+         <timePattern name="short">h:MM A</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$z,zz9.99|($z,zz9.99)</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">.</numberSymbol>
+         <numberSymbol name="grouping">,</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">$</currencySymbol>
+         <currencySymbol name="isoname">USD</currencySymbol>
+         <currencySymbol name="decimal">.</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 9.0-c000 79.cca54b0, 2022/11/26-09:29:55        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2026-02-11T15:35:44Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer 11.0</xmp:CreatorTool>
+         <pdfuaid:part>1</pdfuaid:part>
+         <pdf:Producer>Adobe LiveCycle Designer 11.0</pdf:Producer>
+         <xmpMM:DocumentID>uuid:40f13cef-02e2-45b1-b7ff-06d067606418</xmpMM:DocumentID>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>11.0.9.20240425.1.7.0</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

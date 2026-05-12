@@ -1,0 +1,10 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "BKPF"
+    ],
+    "ASSOCIATED": [
+      "FEBEP"
+    ]
+  }
+}

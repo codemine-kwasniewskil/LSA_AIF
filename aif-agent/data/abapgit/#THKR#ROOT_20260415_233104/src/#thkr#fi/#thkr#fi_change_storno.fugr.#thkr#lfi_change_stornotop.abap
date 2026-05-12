@@ -1,0 +1,3 @@
+FUNCTION-POOL /THKR/FI_CHANGE_STORNO.       "MESSAGE-ID ..
+
+* INCLUDE /THKR/LFI_CHANGE_STORNOD...        " Local class definition

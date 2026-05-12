@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_DE_RUN_AO</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Verarbeitung Anordnungen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONVERT_INPDB_TO_DE_FILE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>de_inpdb nach ../S_DE_FILE konvertieren</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONVERT_TXT_TO_INPDB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Textdaten nach de_inpdb konvertieren</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DE_FILE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Daten im Format ../S_DE_FILE zurückeben</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_T_INPDB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Daten im Unit4-Input-Format zurückgeben.</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PROCESS_IMPORT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Importverarbeitung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>T_AO1</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Verarbeitungslauf Anordnungen: Datensatz</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>T_INPDB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Input-Datensätze Unit4</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_FREMDVERF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fremdverfahren ID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_PATH</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Physischer Pfadname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_TEST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Keine Daten speichern</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_TEST_SUFFIX</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Für Tests: Suffix für Schlüssel</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_INPDB_TO_DE_FILE</CMPNAME>
+     <SCONAME>/THKR/CX_LSA1</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmen HKR Externe Schnittstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_TXT_TO_INPDB</CMPNAME>
+     <SCONAME>/THKR/CX_LSA1</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmen - Basisklasse</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DE_FILE</CMPNAME>
+     <SCONAME>E_DE_FILE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anordnungsschnittstelle: Datei</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_T_INPDB</CMPNAME>
+     <SCONAME>ET_INPDB</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Input-Datensätze Unit4</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS_IMPORT</CMPNAME>
+     <SCONAME>/THKR/CX_EXT_IF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmen HKR Externe Schnittstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS_IMPORT</CMPNAME>
+     <SCONAME>I_DE_SATZ_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Satz-ID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS_IMPORT</CMPNAME>
+     <SCONAME>I_IMPORT_ONLY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datei nur importieren (keine Verarbeitung)</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

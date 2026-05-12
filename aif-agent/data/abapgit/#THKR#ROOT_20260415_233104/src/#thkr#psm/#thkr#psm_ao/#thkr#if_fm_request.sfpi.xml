@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>D</LANGUAGE>
+     <ID/>
+     <TEXT>Schnittstelle für Anordnungen</TEXT>
+    </FPINTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>E</LANGUAGE>
+     <ID/>
+     <TEXT>Interface for Requests</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>IFMREQLINE-BLNBT</VALUE>
+       <UNIT>VBKPF-WAERS</UNIT>
+      </SFPREF>
+     </REFERENCE_FIELDS>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>DUEDATE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>DATUM</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>FACT_CHECKED</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>PPNAM</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>CALCULATED_CORRECT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>PPNAM</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>ORDERED_BY</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>PPNAM</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>QRCODE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>XSTRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>IBAN</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>IBAN</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>BIC</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>SWIFT</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>ADRESSE_ANFOR_DST</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR120</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>STUNDUNG_INTEREST</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WRBTR</TYPENAME>
+       <DEFAULTVAL>0</DEFAULTVAL>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>STUNDUNG_ORIG_BETR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WRBTR</TYPENAME>
+       <DEFAULTVAL>0</DEFAULTVAL>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>ADRESSE_GP</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>/THKR/LINES</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>AMOUNT_RATE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>NUM8</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>LAST_RATE_DATE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>DATUM</TYPENAME>
+       <DEFAULTVAL>0</DEFAULTVAL>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>AO_LIST</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>/THKR/T_AUSAO_LIST</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>NF_LIST</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>/THKR/T_NF_LIST</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>NF_SUM</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WRBTR</TYPENAME>
+       <DEFAULTVAL>0</DEFAULTVAL>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>STUNDUNG_SUM</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WRBTR</TYPENAME>
+       <DEFAULTVAL>0</DEFAULTVAL>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES/>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>GESBTR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WRBTR</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>VBKPF</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>VBKPF</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>IFMKNA1</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>IFMKNA1_T</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>IFMLFA1</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>IFMLFA1_T</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>IFMREQHEAD</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>IFMREQHEAD_T</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>IFMREQLINE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>IFMREQLINE_T</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>IFMBKDF</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>BKDF</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS>
+      <FPPARAMETER>FACT_CHECKED</FPPARAMETER>
+      <FPPARAMETER>CALCULATED_CORRECT</FPPARAMETER>
+      <FPPARAMETER>ORDERED_BY</FPPARAMETER>
+      <FPPARAMETER>QRCODE</FPPARAMETER>
+      <FPPARAMETER>IBAN</FPPARAMETER>
+      <FPPARAMETER>BIC</FPPARAMETER>
+      <FPPARAMETER>STUNDUNG_INTEREST</FPPARAMETER>
+      <FPPARAMETER>STUNDUNG_ORIG_BETR</FPPARAMETER>
+      <FPPARAMETER>AMOUNT_RATE</FPPARAMETER>
+      <FPPARAMETER>AO_LIST</FPPARAMETER>
+     </INPUT_PARAMETERS>
+     <OUTPUT_PARAMETERS/>
+     <INITIALIZATION>
+      <FPCLINE/>
+      <FPCLINE>** Generate QR Code:</FPCLINE>
+      <FPCLINE>qrcode = NEW /thkr/cl_epc_qrcode_generator(</FPCLINE>
+      <FPCLINE>  iban             = &apos;DE21810000000081001500&apos;           &quot; IBAN (International Bank Account Number)</FPCLINE>
+      <FPCLINE>  bic              = &apos;MARKDEF1810&apos;                      &quot; BIC Code</FPCLINE>
+      <FPCLINE>  value            = gesbtr                 &quot; Betrag in Belegwährung</FPCLINE>
+      <FPCLINE>  reference        = CONV char20( vbkpf-xblnr )             &quot; Verwendungszweck</FPCLINE>
+      <FPCLINE>  receiver_name    = &apos;Landeshauptkasse Sachsen-Anhalt&apos;  &quot; Name des Empfängers</FPCLINE>
+      <FPCLINE>  reference_prefix = &apos;&apos;                             &quot; Prefix für Verwendungszweck</FPCLINE>
+      <FPCLINE>                     )-&gt;get_qrcode_as_xstring( ).</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>&quot;** Get IBAN and bic from BP</FPCLINE>
+      <FPCLINE>TRY.</FPCLINE>
+      <FPCLINE>    DATA(fmtreqline) = ifmreqline[ koart = &apos;D&apos; ].</FPCLINE>
+      <FPCLINE>  CATCH cx_sy_itab_line_not_found.</FPCLINE>
+      <FPCLINE>    TRY.</FPCLINE>
+      <FPCLINE>        fmtreqline = ifmreqline[ koart = &apos;K&apos; ].</FPCLINE>
+      <FPCLINE>      CATCH cx_sy_itab_line_not_found.</FPCLINE>
+      <FPCLINE>    ENDTRY.</FPCLINE>
+      <FPCLINE>ENDTRY.</FPCLINE>
+      <FPCLINE>data(fmtreqline_sk) = ifmreqline[ koart = &apos;S&apos; ].</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>IF fmtreqline IS NOT INITIAL.</FPCLINE>
+      <FPCLINE>  SELECT SINGLE FROM bkpf</FPCLINE>
+      <FPCLINE>    FIELDS usnam,</FPCLINE>
+      <FPCLINE>           ppnam</FPCLINE>
+      <FPCLINE>     WHERE bukrs = @fmtreqline-bukrs</FPCLINE>
+      <FPCLINE>       AND belnr = @fmtreqline-belnr</FPCLINE>
+      <FPCLINE>       AND gjahr = @fmtreqline-gjahr</FPCLINE>
+      <FPCLINE>    INTO @DATA(nam).</FPCLINE>
+      <FPCLINE>  IF sy-subrc = 0 AND nam-ppnam IS NOT INITIAL.</FPCLINE>
+      <FPCLINE>    &quot;** Just for released AO:</FPCLINE>
+      <FPCLINE>    ordered_by    = nam-usnam.</FPCLINE>
+      <FPCLINE>  ELSE.</FPCLINE>
+      <FPCLINE>    &quot;** maybe Daueranordnung</FPCLINE>
+      <FPCLINE>    DATA(lotkz) = ifmreqhead[ 1 ]-lotkz.</FPCLINE>
+      <FPCLINE>    SELECT SINGLE FROM psokpf</FPCLINE>
+      <FPCLINE>      FIELDS usnam,</FPCLINE>
+      <FPCLINE>             ppnam</FPCLINE>
+      <FPCLINE>      WHERE lotkz = @lotkz</FPCLINE>
+      <FPCLINE>        AND bukrs = @fmtreqline-bukrs</FPCLINE>
+      <FPCLINE>        AND gjahr = @fmtreqline-gjahr</FPCLINE>
+      <FPCLINE>      INTO @nam.</FPCLINE>
+      <FPCLINE>    IF sy-subrc = 0 AND nam-ppnam IS NOT INITIAL.</FPCLINE>
+      <FPCLINE>      ordered_by    = nam-usnam.</FPCLINE>
+      <FPCLINE>    ENDIF.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE>  &quot;** Assume we just have 1 line :</FPCLINE>
+      <FPCLINE>  fact_checked  =  COND #( WHEN nam-ppnam IS NOT INITIAL THEN nam-ppnam ELSE ifmreqhead[ 1 ]-usnam ).</FPCLINE>
+      <FPCLINE>*  calculated_correct =  fact_checked.&lt;</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  duedate =  fmtreqline-netdt.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  DATA(partner) = COND #( WHEN fmtreqline-koart = &apos;D&apos; THEN fmtreqline-kunnr ELSE fmtreqline-lifnr ).</FPCLINE>
+      <FPCLINE>  SELECT SINGLE FROM but0bk</FPCLINE>
+      <FPCLINE>    FIELDS banks,</FPCLINE>
+      <FPCLINE>           bankl,</FPCLINE>
+      <FPCLINE>           bankn,</FPCLINE>
+      <FPCLINE>           iban</FPCLINE>
+      <FPCLINE>    WHERE partner = @partner</FPCLINE>
+      <FPCLINE>      AND bkvid    = @fmtreqline-bvtyp</FPCLINE>
+      <FPCLINE>  INTO @DATA(bankdata).</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  iban = bankdata-iban.</FPCLINE>
+      <FPCLINE>  DATA(bank_data) = VALUE hrpad_bankdata( banks = bankdata-banks bankl = bankdata-bankl bankn = bankdata-bankn ).</FPCLINE>
+      <FPCLINE>  IF iban IS INITIAL.</FPCLINE>
+      <FPCLINE>    cl_hrpad00_iban=&gt;generate_iban_sepa( CHANGING   bank_data                     = bank_data</FPCLINE>
+      <FPCLINE>                                         EXCEPTIONS conv_bank_data_to_iban_failed = 1</FPCLINE>
+      <FPCLINE>                                                    country_not_available         = 2</FPCLINE>
+      <FPCLINE>                                                    OTHERS                        = 3 ).</FPCLINE>
+      <FPCLINE>    iban = bank_data-iban.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  DATA bnka   TYPE bnka.</FPCLINE>
+      <FPCLINE>  CALL FUNCTION &apos;ISU_DB_BNKA_SINGLE&apos;</FPCLINE>
+      <FPCLINE>    EXPORTING</FPCLINE>
+      <FPCLINE>      x_banks = bank_data-banks</FPCLINE>
+      <FPCLINE>      x_bankl = bank_data-bankl</FPCLINE>
+      <FPCLINE>    IMPORTING</FPCLINE>
+      <FPCLINE>      y_bnka  = bnka</FPCLINE>
+      <FPCLINE>    EXCEPTIONS</FPCLINE>
+      <FPCLINE>      OTHERS  = 3.</FPCLINE>
+      <FPCLINE>  IF sy-subrc = 0.</FPCLINE>
+      <FPCLINE>    bic = bnka-swift.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>** Get address for DST:</FPCLINE>
+      <FPCLINE>  DATA(add_att) = VALUE zom_addr_attr( zpgsbr = fmtreqline-gsber acc_fcentr = fmtreqline_sk-fistl zkostl = fmtreqline_sk-kostl ).</FPCLINE>
+      <FPCLINE>  DATA(add_out) = VALUE zom_addr_out( ).</FPCLINE>
+      <FPCLINE>  CALL FUNCTION &apos;Z_OM_FIND_ADDRESS&apos;</FPCLINE>
+      <FPCLINE>    EXPORTING</FPCLINE>
+      <FPCLINE>      is_addr_attr = add_att</FPCLINE>
+      <FPCLINE>    IMPORTING</FPCLINE>
+      <FPCLINE>      es_addr_out  = add_out</FPCLINE>
+      <FPCLINE>    EXCEPTIONS</FPCLINE>
+      <FPCLINE>      OTHERS       = 1.</FPCLINE>
+      <FPCLINE>  IF sy-subrc = 0.</FPCLINE>
+      <FPCLINE>    adresse_anfor_dst = |{ add_out-line0 } - { add_out-line1 } - { add_out-line2 }|.</FPCLINE>
+      <FPCLINE>  ELSE.</FPCLINE>
+      <FPCLINE>    adresse_anfor_dst = |!!Keine DST Adresse - Adressestr.10 - 39104 Magdeburg!!|.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE>  TRY.</FPCLINE>
+      <FPCLINE>      INSERT CONV #( ifmkna1[ 1 ]-name1 ) INTO TABLE adresse_gp.</FPCLINE>
+      <FPCLINE>      INSERT CONV #( ifmkna1[ 1 ]-stras ) INTO TABLE adresse_gp.</FPCLINE>
+      <FPCLINE>      INSERT CONV #( |{ ifmkna1[ 1 ]-pstlz } { ifmkna1[ 1 ]-ort01 }| ) INTO TABLE adresse_gp.</FPCLINE>
+      <FPCLINE>    CATCH cx_sy_itab_line_not_found.</FPCLINE>
+      <FPCLINE>      &quot;No BP found</FPCLINE>
+      <FPCLINE>  ENDTRY.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE>&quot;&quot; Get Interests for Stundung</FPCLINE>
+      <FPCLINE>TRY.</FPCLINE>
+      <FPCLINE>    &quot;** Sum</FPCLINE>
+      <FPCLINE>    LOOP AT ifmreqhead INTO DATA(head) WHERE intform IS NOT INITIAL.</FPCLINE>
+      <FPCLINE>      stundung_interest  += ifmreqline[ ausbk = head-ausbk belnr = head-belnr ]-wrbtr.</FPCLINE>
+      <FPCLINE>    ENDLOOP.</FPCLINE>
+      <FPCLINE>    &quot;** Interests</FPCLINE>
+      <FPCLINE>    LOOP AT ifmreqhead INTO head WHERE intform IS INITIAL.</FPCLINE>
+      <FPCLINE>      stundung_orig_betr  += ifmreqline[ ausbk = head-ausbk belnr = head-belnr ]-wrbtr.</FPCLINE>
+      <FPCLINE>      amount_rate += 1.</FPCLINE>
+      <FPCLINE>    ENDLOOP.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    DATA(reqlines) = ifmreqline.</FPCLINE>
+      <FPCLINE>    SORT reqlines BY koart netdt DESCENDING.</FPCLINE>
+      <FPCLINE>    last_rate_date = reqlines[ 1 ]-netdt.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  CATCH cx_sy_itab_duplicate_key  .</FPCLINE>
+      <FPCLINE>ENDTRY.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>&quot;&quot; Prepare list if required</FPCLINE>
+      <FPCLINE>TRY.</FPCLINE>
+      <FPCLINE>    DATA(ao_item) = VALUE /thkr/s_ausao_list( ).</FPCLINE>
+      <FPCLINE>    LOOP AT ifmreqline INTO DATA(wa) GROUP BY wa-belnr.</FPCLINE>
+      <FPCLINE>      LOOP AT GROUP wa INTO DATA(line) WHERE koart = &apos;K&apos;.</FPCLINE>
+      <FPCLINE>        ao_item = CORRESPONDING #( ifmlfa1[ lifnr = line-lifnr ] ).</FPCLINE>
+      <FPCLINE>        ao_item = CORRESPONDING #( BASE ( ao_item ) line EXCEPT lifnr ).</FPCLINE>
+      <FPCLINE>      ENDLOOP.</FPCLINE>
+      <FPCLINE>      LOOP AT GROUP wa INTO line WHERE koart = &apos;S&apos;.</FPCLINE>
+      <FPCLINE>        ao_item = CORRESPONDING #( BASE ( ao_item ) line EXCEPT lifnr netdt ).</FPCLINE>
+      <FPCLINE>        INSERT ao_item INTO TABLE ao_list.</FPCLINE>
+      <FPCLINE>      ENDLOOP.</FPCLINE>
+      <FPCLINE>    ENDLOOP.</FPCLINE>
+      <FPCLINE>  CATCH cx_sy_itab_line_not_found.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>ENDTRY.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>&quot;** Stundung reread Nebenforderungen</FPCLINE>
+      <FPCLINE>TRY.</FPCLINE>
+      <FPCLINE>    &quot;** relevant types:</FPCLINE>
+      <FPCLINE>    DATA(belarten) = VALUE bkk_r_blart( sign = &apos;I&apos; option = &apos;EQ&apos; ( low = &apos;GK&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;GO&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;HA&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;HB&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;HO&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;MG&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;MO&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;SG&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;SN&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;VK&apos; )</FPCLINE>
+      <FPCLINE>                                                                 ( low = &apos;VO&apos; ) ).</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    SELECT FROM /thkr/cds_bjcube AS c</FPCLINE>
+      <FPCLINE>      INNER JOIN bseg AS b ON b~bukrs = c~bukrs</FPCLINE>
+      <FPCLINE>                          AND b~gjahr = c~gjahr</FPCLINE>
+      <FPCLINE>                          AND b~belnr = c~knbelnr</FPCLINE>
+      <FPCLINE>                          AND b~koart = &apos;D&apos;</FPCLINE>
+      <FPCLINE>      INNER JOIN /THKR/CBLART2TXT AS bt on blart = c~accountingdocumenttype</FPCLINE>
+      <FPCLINE>      FIELDS c~knbelnr</FPCLINE>
+      <FPCLINE>            ,c~bukrs</FPCLINE>
+      <FPCLINE>            ,c~gjahr</FPCLINE>
+      <FPCLINE>            ,0</FPCLINE>
+      <FPCLINE>            ,b~netdt</FPCLINE>
+      <FPCLINE>            ,bt~ltext</FPCLINE>
+      <FPCLINE>            ,sum( c~offenessoll ) as offenessoll</FPCLINE>
+      <FPCLINE>      WHERE documentreferenceid    = @vbkpf-xblnr</FPCLINE>
+      <FPCLINE>        AND accountingdocumenttype IN @belarten</FPCLINE>
+      <FPCLINE>*        AND offenessoll            &gt; 0</FPCLINE>
+      <FPCLINE>      GROUP BY</FPCLINE>
+      <FPCLINE>            c~knbelnr</FPCLINE>
+      <FPCLINE>            ,c~bukrs</FPCLINE>
+      <FPCLINE>            ,c~gjahr</FPCLINE>
+      <FPCLINE>*            ,c~gezahlt</FPCLINE>
+      <FPCLINE>            ,b~netdt</FPCLINE>
+      <FPCLINE>            ,bt~ltext</FPCLINE>
+      <FPCLINE>      ORDER BY b~netdt</FPCLINE>
+      <FPCLINE>      INTO TABLE @nf_list.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>    nf_sum = REDUCE #( INIT res TYPE wrbtr FOR item IN nf_list NEXT res += item-offenessoll ).</FPCLINE>
+      <FPCLINE>    stundung_sum = gesbtr + nf_sum.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  CATCH cx_sy_itab_line_not_found.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>ENDTRY.</FPCLINE>
+     </INITIALIZATION>
+     <FORMS/>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

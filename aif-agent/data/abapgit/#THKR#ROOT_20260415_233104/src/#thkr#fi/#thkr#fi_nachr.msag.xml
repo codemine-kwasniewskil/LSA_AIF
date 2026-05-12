@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/FI_NACHR</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+   </T100A>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+   </I18N_LANGS>
+   <T100T>
+    <T100T>
+     <SPRSL>E</SPRSL>
+     <ARBGB>/THKR/FI_NACHR</ARBGB>
+    </T100T>
+   </T100T>
+   <T100_TEXTS>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>001</MSGNR>
+     <TEXT>&amp;1 &amp;2</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>002</MSGNR>
+     <TEXT>&amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>010</MSGNR>
+     <TEXT>------- Programm Z_FI_LVM_BNKA ---------</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>011</MSGNR>
+     <TEXT>Keine Berechtigung, Bankdaten zu ändern</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>012</MSGNR>
+     <TEXT>Sperren der BNKA ist zur Zeit nicht möglich</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>013</MSGNR>
+     <TEXT>Keine Daten zur Selektion</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>020</MSGNR>
+     <TEXT>------- Programm Z_FI_BN_NACHR ---------</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>021</MSGNR>
+     <TEXT>Keine Berechtigung zur Auskunft Benachrichtigungen</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>022</MSGNR>
+     <TEXT>Keine Berechtigung zum Versenden von Benachrichtigungen</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>023</MSGNR>
+     <TEXT>Fehler beim Versenden einer Benachrichtigung</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>024</MSGNR>
+     <TEXT>Es wurden &amp;1 Benachrichtigungen versendet</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>025</MSGNR>
+     <TEXT>Testlauf: Es werden &amp;1 Benachrichtigungen versendet</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>026</MSGNR>
+     <TEXT>E-Mailadresse des Empfängers &amp;1 ist ungültig</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>027</MSGNR>
+     <TEXT>Empfängerpostfach &amp;1 existiert nicht</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>028</MSGNR>
+     <TEXT>Keine Verarbeitung aufgrund fehlender Berechtigung! Beleg &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>029</MSGNR>
+     <TEXT>Nachricht wurde erfolgreich versendet</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>030</MSGNR>
+     <TEXT>--------  SepaMandate--------------</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>031</MSGNR>
+     <TEXT>Bitte das Feld GeschBereich mit der Dienststellen-Nr. füllen</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>032</MSGNR>
+     <TEXT>Sie haben keine Berechtigung für dem Geschäftsbereich &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>041</MSGNR>
+     <TEXT>Es werden nicht alle Benachrichtigungen angezeigt - fehlende Berechtigung</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>100</MSGNR>
+     <TEXT>--------Verrechnungen --------------</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>101</MSGNR>
+     <TEXT>Keine Berechtigung zum Ausgleichen</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>102</MSGNR>
+     <TEXT>Verrechnung - Referenz &amp; ist nicht eindeutig</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>103</MSGNR>
+     <TEXT>Keine Annahmeanordnung mit Referenz &amp;1 und Betrag &amp;2</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>104</MSGNR>
+     <TEXT>Keine Betragsgleichheit für AnnahmeAO und AuszahlungsAO mit Referenz &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>105</MSGNR>
+     <TEXT>Fehler beim &amp;1 der Mappe &amp;2 - keine weitere Bearbeitung</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>106</MSGNR>
+     <TEXT>Posten ist zur Zahlung gesperrt</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>107</MSGNR>
+     <TEXT>Buchungskreis &amp;1 wird nicht selektiert - fehlende Berechtigung</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>108</MSGNR>
+     <TEXT>Annahmeanordnung mit Referenz &amp;1 - Berechtigung für Bukrs &amp;2 fehlt</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>121</MSGNR>
+     <TEXT>Es wurde bereits ein Verwahrkassenzeichen &amp; erkannt</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>122</MSGNR>
+     <TEXT>Kein Verwahrkassenzeichen zu Finanzstelle &amp;1 und Jahr &amp;2 erzeugt</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>123</MSGNR>
+     <TEXT>Das Verwahrkassenzeichen &amp; wurde erzeugt, bitte Übernehmen und Sichern</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>124</MSGNR>
+     <TEXT>Bitte gültiges Datum angeben</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>130</MSGNR>
+     <TEXT>&amp; Posten mit Eingangszahlsperre E - kein Ausgleich möglich</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>200</MSGNR>
+     <TEXT>************* Allg APPLICATION - Meldungen **************</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>201</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>202</MSGNR>
+     <TEXT>Entweder Dateiname auf PC oder Server angeben</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>203</MSGNR>
+     <TEXT>Fehler beim Upload der Datei &amp;1 (RC = &amp;2)</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>204</MSGNR>
+     <TEXT>Fehler beim Öffnen der Datei &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>205</MSGNR>
+     <TEXT>Fehler beim Insert in Tabelle &amp;1 (&amp;2)</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>210</MSGNR>
+     <TEXT>Das Feld ZNSI_GROUP konnte in Beleg &amp;1 Bukrs &amp;2 nicht geändert werden</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>301</MSGNR>
+     <TEXT>Customizing zum Kleinbetrag für Buchungskreis &amp;1 fehlt</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>302</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 gibt es eine Anordnung mit Typ &amp;3</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>303</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 gibt es einen Beleg mit Mahnsperre &amp;3</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>304</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 gibt es einen Beleg mit PKH-Kennzeichen</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>305</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 gibt es mehrere Mahnbereiche</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>306</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 ist der Mahnbereich leer</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>307</MSGNR>
+     <TEXT>Beleg &amp;1 wurde im Buchungskreis &amp;2 gebucht</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>308</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 gibt es mind. &amp;3 Belege mit Fälligkeit &gt; &amp;4</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>309</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 gibt es Belege aus RE-FX</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>310</MSGNR>
+     <TEXT>Es liegen keine Belege mit einem Fälligkeitsdatum kleiner &amp;1 vor</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>311</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 liegt ein Ausgleichbeleg &amp;3 Gjahr &amp;4 vor</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>312</MSGNR>
+     <TEXT>Keine Kontierung für die Ausbuchung von Beleg &amp;1 Gjahr &amp;2 ermittelbar</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>313</MSGNR>
+     <TEXT>Mind.eine Teilz., Gutschr. überschreitet den  Betrag im Rechn.bezug</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>314</MSGNR>
+     <TEXT>Zu Debitor &amp;1 Referenz &amp;2 gibt es Belege mit Steueranteil</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>350</MSGNR>
+     <TEXT>Löschen oder Ändern der Notiz ist nicht erlaubt (BAVM)</TEXT>
+    </item>
+    <item>
+     <SPRSL>E</SPRSL>
+     <MSGNR>401</MSGNR>
+     <TEXT>Referenz &amp;1, die höchste Mahnstufe bleibt gleich-kein Mahndruck</TEXT>
+    </item>
+   </T100_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

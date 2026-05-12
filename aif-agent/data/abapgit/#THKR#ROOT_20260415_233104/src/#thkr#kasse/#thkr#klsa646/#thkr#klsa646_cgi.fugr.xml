@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>DMEE: Referenzfelder für das Format CGI_</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LKLSA646_CGITOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLKLSA646_CGI</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/FI_PAYMEDIUM_DMEE_CGI_06</FUNCNAME>
+     <SHORT_TEXT>DMEE: Reference fields for the format CGI_XML_CT</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IS_FPAYH</PARAMETER>
+       <DBFIELD>FPAYH</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IS_FPAYHX</PARAMETER>
+       <DBFIELD>FPAYHX</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_PAYMEDIUM</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XFELD</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ES_FPAYHX</PARAMETER>
+       <DBFIELD>FPAYHX_FREF</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_FPAYP</PARAMETER>
+       <DBSTRUCT>FPAYP</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IS_FPAYH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Zahlungsträger: Daten zur Zahlung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IS_FPAYHX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Zahlungsträger: Aufbereitete Daten zur Zahlung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_PAYMEDIUM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Feld zum Ankreuzen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ES_FPAYHX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Zahlungsträger: Laufende Nummer und Freitextfelder</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_FPAYP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Zahlungsträger: Daten zu bezahlten Posten</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

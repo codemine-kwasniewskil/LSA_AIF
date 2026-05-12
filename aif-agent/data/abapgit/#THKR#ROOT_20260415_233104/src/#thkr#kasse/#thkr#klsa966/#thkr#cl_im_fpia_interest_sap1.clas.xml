@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IM_FPIA_INTEREST_SAP1</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Imp. class for BAdI imp. FPIA_INTEREST_SAP01</DESCRIPT>
+    <STATE>1</STATE>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>COLLECT_ACC</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Collect tables ACCIT and ACCCR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DISTRIBUTE_TAX</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Distribute the tax amount to all the lines</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FIXED_AMOUNT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Process Fixed Amount</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ACC_ASSIGN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get Account Assignment</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_GL_ACCOUNT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get GL Account</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>COLLECT_ACC</CMPNAME>
+     <SCONAME>IS_IPF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>FI Item Interest Calculation: Infos per Form</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DISTRIBUTE_TAX</CMPNAME>
+     <SCONAME>CT_BSEG</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Table Type for BSEG</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FIXED_AMOUNT</CMPNAME>
+     <SCONAME>CT_ACCCR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Accounting Interface: Currency Information</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FIXED_AMOUNT</CMPNAME>
+     <SCONAME>CT_ACCIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Accounting Interface: Item Information</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FIXED_AMOUNT</CMPNAME>
+     <SCONAME>CT_ITEMS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Accounting Interface: Item Information</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FIXED_AMOUNT</CMPNAME>
+     <SCONAME>IS_IPF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>FI Item Interest Calculation: Infos per Form</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FIXED_AMOUNT</CMPNAME>
+     <SCONAME>IS_T001</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Company Codes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ACC_ASSIGN</CMPNAME>
+     <SCONAME>ES_ACCIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Accounting Interface: Item Information</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ACC_ASSIGN</CMPNAME>
+     <SCONAME>IS_ACCCR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Accounting Interface: Currency Information</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ACC_ASSIGN</CMPNAME>
+     <SCONAME>IS_ACCIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Accounting Interface: Item Information</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_GL_ACCOUNT</CMPNAME>
+     <SCONAME>CS_ACCIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Accounting Interface: Item Information</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_GL_ACCOUNT</CMPNAME>
+     <SCONAME>IS_ACCCR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Accounting Interface: Currency Information</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_GL_ACCOUNT</CMPNAME>
+     <SCONAME>IS_IPF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>FI Item Interest Calculation: Infos per Form</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_GL_ACCOUNT</CMPNAME>
+     <SCONAME>IS_ITEMS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>## AUTOMATICALLY GENERATED. DO NOT CHANGE OR RE-USE ! ##</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_GL_ACCOUNT</CMPNAME>
+     <SCONAME>IS_T001</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Company Codes</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>BTE1640 - GP Prüfung</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LFI_BTE1640TOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLFI_BTE1640</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/FI_PERFORM_00001640_E</FUNCNAME>
+     <SHORT_TEXT>Ausführen der Open FI Aktivitäten zum Zeitpunkt 00001640</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_RFXPO</PARAMETER>
+       <DBFIELD>RFXPO</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_KNA1</PARAMETER>
+       <DBFIELD>KNA1</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_LFA1</PARAMETER>
+       <DBFIELD>LFA1</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_SKA1</PARAMETER>
+       <DBFIELD>SKA1</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_SUPPRESS_STANDARD</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_LINES</PARAMETER>
+       <DBSTRUCT>EPTEXT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_RFXPO</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_KNA1</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_LFA1</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_SKA1</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_SUPPRESS_STANDARD</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_LINES</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

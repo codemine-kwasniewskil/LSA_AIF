@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/RUB_MESSG</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Nachrichten für Berechtigungen</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Keine Berechtigungen zum Anlegen des Knotens &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Keine Berechtigungen zum Ändern des Knotens &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Keine Berechtigungen zum Löschen des Knotens &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Keine Berechtigungen zum Anzeigen des Knotens &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Z_FICA_TRG</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Daten wurden nicht gefunden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Fehler im Funktionsbaustein</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Unbekannter Fehler im Funktionsbaustein</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Berechtigungsfehler im Objekt Z_FICA_TRG</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Keine Berechtigungen für kritische Kontierungsmuster</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Berechtigungsfehler im Objekt Z_FICA_UTK</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>100</MSGNR>
+     <TEXT>Keine Berechtigung für &amp;1. Bitte Namensraum beachten!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>101</MSGNR>
+     <TEXT>Keine Berechtigung die Voreinstellung zu verändern</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>102</MSGNR>
+     <TEXT>Keine Berechtigung zum Anlegen einer Variante mit Voreinstellung</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>103</MSGNR>
+     <TEXT>Keine Berechtigung zum Anlegen des Knotens &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>104</MSGNR>
+     <TEXT>Keine Berechtigung zum Ändern des Knotens &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>105</MSGNR>
+     <TEXT>Keine Berechtigung zum Anlegen von &amp;1. Bitte Namensraum beachten!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>106</MSGNR>
+     <TEXT>Keine Berechtigung zum Ändern von &amp;1. Bitte Namensraum beachten!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>107</MSGNR>
+     <TEXT>Keine Berechtigung zum Löschen von &amp;1. Bitte Namensraum beachten!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>108</MSGNR>
+     <TEXT>Keine Berechtigung zur Anlage von Benutzerlayouts</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>109</MSGNR>
+     <TEXT>Bitte geben Sie einen Namen an</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>110</MSGNR>
+     <TEXT>Die Benutzergruppe &amp;1 hat für diese Programm keine Berechtigung</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/RUB_MESSG</ARBGB>
+     <MSGNR>999</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

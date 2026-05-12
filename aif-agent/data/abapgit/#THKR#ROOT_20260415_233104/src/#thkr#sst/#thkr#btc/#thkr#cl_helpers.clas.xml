@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_HELPERS</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Allgemeine Hilfsfunktionen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_DOCUMENT_TO_BDS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datei vom Client ins BDS tranferieren</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ARCHIVE_DOCUMENT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dokument ins Archiv ablegen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_ARCHIV</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>prüfen, ob das Archiv läuft</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>COMPRESS_XSTRING</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>xstring -&gt; komprimiert in Tabelle mit X255</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONVERT_OTF_TO_PDF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>OTF-Smartform in RAW (für PDF-Erzeugung) konvertieren</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONVERT_RANGE_DATUM_TO_TMSTMP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Range Datum in Range Timestamp convertieren</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PDF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>PDF aus Formular erzeugen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DISPLAY_BAPIRET2_T</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit Fehlermeldungen anzeigen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DISPLAY_ERRORS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exception anzeigen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DISPLAY_EXCEPTION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exception anzeigen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DOWNLOAD_XSTRING</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>xstring auf Applikationsserver laden</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FILL_X_STRUCTURE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Für BAPI-Aufrufe: X-Strukur füllen (Feld-Update: j/n)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ADDRESS_IN_PRINTFORM</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Adresse in Landesaufbereitung als String mit Zeilenschaltung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ARCHIVE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>content repository für Objekt ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_FIELDLIST_FROM_STRUCT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldliste mit Bezeichnern zu übergebener Struktur</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Singleton-Referenz</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_LVC_T_FCAT_4_ITAB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get fieldcatalog from internal table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SECONDS_OF_DAY</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sekunden ab 0:00 für Timestamp berechnen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SELECT_CLAUSE_FROM_STRUCT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Select-String aus Struktur aufbauen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_TYPE_OF_PARAMETER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittelt den Typ eines Methodenparameters</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_XML_ESCAPING</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Escaping von XML Sonderzeichen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GUI_DOWNLOAD_XSTRING</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>xstring auf Client laden</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>LSA_HELPERS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Hilfsfunktionen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>REMOVE_LEADING_ZEROS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Entfernt führende &apos;0&apos;</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UNCOMPRESS_XSTRING</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit X255 komprimiert -&gt; xstring</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UNCOMPRESS_XSTRING1</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit X255 komprimiert -&gt; xstring</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>COMPRESS_XSTRING</CMPNAME>
+     <SCONAME>ET_X255</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit X255 (Raw 255)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_RANGE_DATUM_TO_TMSTMP</CMPNAME>
+     <SCONAME>E_RTIMESTAMP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Range: Timestamp</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_RANGE_DATUM_TO_TMSTMP</CMPNAME>
+     <SCONAME>I_RDATUM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rangetabelle für Datum</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONV_CSTRING_TO_XSTRING</CMPNAME>
+     <SCONAME>I_IGNORE_CERR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fehler bei der Konvertierung ignorieren</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>E_REFERENCE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Hilfsfunktionen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_LVC_T_FCAT_4_ITAB</CMPNAME>
+     <SCONAME>ET_FCAT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldkatalog für ListViewerControl</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SELECT_CLAUSE_FROM_STRUCT</CMPNAME>
+     <SCONAME>C_SELECT_CLAUSE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungsdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SELECT_CLAUSE_FROM_STRUCT</CMPNAME>
+     <SCONAME>IT_EXCLUDE_FIELDS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Menge von Feldnamen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UNCOMPRESS_XSTRING</CMPNAME>
+     <SCONAME>IT_X255</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit X255 (Raw 255)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UNCOMPRESS_XSTRING1</CMPNAME>
+     <SCONAME>IT_X255</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit X255 (Raw 255)</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

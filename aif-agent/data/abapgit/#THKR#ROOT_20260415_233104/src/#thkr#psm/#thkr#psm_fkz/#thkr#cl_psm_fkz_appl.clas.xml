@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_FKZ_APPL</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Anwendungsklasse für die Titlegruppe</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>M_FIKRS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_FKZ</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionskennzahl</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>M_GJAHR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>FIKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>FKZ</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionskennzahl</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>GJAHR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>FKZ</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionskennzahl</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>R_INSTANCE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungsklasse für die Titlegruppe</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>/THKR/S_MIG_AO2</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>Migration: Anordnung - Weitere Felder</DDTEXT>
+    <EXCLASS>1</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>POSITIONSNUMMER</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Positionsnummer der Annahmeanordnung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ZAHLWEG</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Schlüssel des verwendeten Zahlweges (siehe Stammdaten ZWG)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ZAHLSTELLE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000002</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000001</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Zahlstelle</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>URKASSENZEICHEN</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000032</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000016</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Urkassenzeichen der Auszahlung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>URPOSITIONSNUMMER</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Urpositionsnummer der Auszahlung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>BETRAG_FREMDWAEHRUNG</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Auszahlungsbetrag in Fremdwährung (bei Auslandszahlung)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>BETRAG_GEBUEHR</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Gebührbetrag (bei Auslandzahlung)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>KASSENEINGANGSDATUM</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Kasseneingangsdatum</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>AUSZAHLUNGSTAG</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000040</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Auszahlungstag</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>TRANSFERDATEI</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000016</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000008</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Name der Transferdatei</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>SEE_KASSENZEICHEN</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000032</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000016</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Kassenzeichen der Annahmeanordnung (aus schnellerfassung)</DDTEXT>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

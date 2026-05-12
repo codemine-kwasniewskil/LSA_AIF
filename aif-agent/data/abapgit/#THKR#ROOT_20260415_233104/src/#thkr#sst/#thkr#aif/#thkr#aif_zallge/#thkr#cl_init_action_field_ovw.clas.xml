@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_INIT_ACTION_FIELD_OVW</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Klasse für Verarbeitungslogik vor Aktion</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHANGE_FIELD_CONTENT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldinhalte überschreiben</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHANGE_FIELD_IN_STRUCTURE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Felder in Wurzelstruktur ändern.</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GC_VMAPNAME_OVERWRITE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Werte-Mapping</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GC_VMAPNS_OVERWRITE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Namensraum</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_COMPONENT_OF_STRUCTURE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kompnenten der Struktur ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_FIELDS_FOR_OVERWRITE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Felder ermitteln, die überschrieben werden sollen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>OVERWRITE_FIELDS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldinhalte über Konfiguration überschreiben</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHANGE_FIELD_IN_STRUCTURE</CMPNAME>
+     <SCONAME>IS_STRUCNAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Struktur</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_COMPONENT_OF_STRUCTURE</CMPNAME>
+     <SCONAME>EV_STRUC_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Struktur</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_COMPONENT_OF_STRUCTURE</CMPNAME>
+     <SCONAME>IV_STRUCNAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Struktur</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

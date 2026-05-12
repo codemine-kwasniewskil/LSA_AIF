@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>/THKR/S_AIF_RAW_BRUECKE</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>Fremdverfahren: RAW import struktur</DDTEXT>
+    <EXCLASS>1</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>ERSTELLUNGSDATUM</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Erstellt</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>VERFAHRENSKENNUNG</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Kennung des Fachverfahrens, welche die Zahlungsdatei generie</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ZAHLUNGSDATEIID</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000020</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000010</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Eindeutige Kennung der Zahlungsdatei</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ANZAHLAUSZAHLUNGEN</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>X</INTTYPE>
+     <INTLEN>000001</INTLEN>
+     <DATATYPE>INT1</DATATYPE>
+     <LENG>000003</LENG>
+     <MASK>  INT1</MASK>
+     <DDTEXT>Prüfsumme der Zahlungsdatei: Anzahl der enthaltenen Zahlunge</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>GESAMTSUMMEAUSZAHLUNGEN</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>P</INTTYPE>
+     <INTLEN>000011</INTLEN>
+     <DATATYPE>DEC</DATATYPE>
+     <LENG>000021</LENG>
+     <DECIMALS>000002</DECIMALS>
+     <MASK>  DEC</MASK>
+     <DDTEXT>Gesamtsumme der Auszahlungen</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>HASH</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000128</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000064</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>HashBewilligungsdatenGesamtSha256 - Hashwert zur eindeutigen</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>VERWENDUNGSZWECK</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Verwendungszweck zur Benennung bei der Auszahlung</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>KOSTENSTELLE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Angabe einer internen Kostenstelle</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>KOSTENTRAEGER</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Angabe eines internen Kostenträgers</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>UEBERWEISUNGSNUMMER</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Dieses Feld ist für eine künftige Ausbaustufe des Standards</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>GEGENKONTO</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Gegenkonto des Kreditors</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>HAUSHALTSTITEL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Haushaltstitel des Kreditors</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>AKTENZEICHEN</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>g</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>STRG</DATATYPE>
+     <MASK>  STRG</MASK>
+     <DDTEXT>Aktenzeichen des Kreditors</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>T_ZAHLUNGSDATEN</FIELDNAME>
+     <ROLLNAME>/THKR/T_AIF_RAW_ZAHLUNGSDATEN</ROLLNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <DATATYPE>TTYP</DATATYPE>
+     <MASK>  TTYPL</MASK>
+     <COMPTYPE>L</COMPTYPE>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_BP_APPL</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Anwendungsklasse für Geschäftspartner Integration</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <RSTAT>T</RSTAT>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CALL_BADI_CVI_DEFAULT_VALUES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aufruf Badi zur Vorbelegung der Daten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CO_ADRKIND_XXDEFAULT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Adressart</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PARTNER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>legt Partner an und liefert Schlüssel zurück</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ADDRESS_GUID_FROM_PARTNER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>selektiert Adress GUID der Standardadresse eines Partners</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>liefert Instanz zurück</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_PARTNER_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>liest GP Daten und liefert DTO zurück</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungsklasse für Geschäftspartner Integration</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_BUT000_DTO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>mapping BUT000 Felde rnach DTO Strukturfelder</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_BUT0BK_DTO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping BUT0BK Daten nach DTO</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DFKKBPTAXNUM_DTO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping Steuernummern nach GP DTO</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DTO_BUS_EI_EXTERN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping DTO nach BUS_EI_EXTERN</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DTO_CMDS_EI_EXTERN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping DTO nach CMDS_EI_EXTERN</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DTO_CVIS_EI_EXTERN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping DTO nach BP Maintain Struktur</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_DTO_VMDS_EI_EXTERN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping DTO nach VMDS_EI_EXTERN</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_FSBP_ADDRESS_DTO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping FSBP Adressdaten zum DTO</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_KNA1_DTO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping KNA1 nach DTO</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_KNB1_DTO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping knb1 nach DTO</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_LFA1_DTO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mapping lfA1 nach DTO</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_LFB1_DTO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>mapping lfb1 nach DTO</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MODIFY_PARTNER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ändert Partner</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_SEPA_CUST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sepa Customizing</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_BPARTNERGUID</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>neue Partner GUID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_OBJECT_TASK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Änderungskennzeichen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>RELEASE_PARTNER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GP Status zurücksetzen</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_BADI_CVI_DEFAULT_VALUES</CMPNAME>
+     <SCONAME>C_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Inbound der Debitoren-/ Kreditorenintegration</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PARTNER</CMPNAME>
+     <SCONAME>E_PARTNER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnernummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PARTNER</CMPNAME>
+     <SCONAME>I_DTO_BP_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PARTNER</CMPNAME>
+     <SCONAME>R_PARTNER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnernummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ADDRESS_GUID_FROM_PARTNER</CMPNAME>
+     <SCONAME>I_PARTNER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnernummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ADDRESS_GUID_FROM_PARTNER</CMPNAME>
+     <SCONAME>R_GUID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Adress UUID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_PARTNER_DATA</CMPNAME>
+     <SCONAME>I_PARTNER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnernummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_BUT000_DTO</CMPNAME>
+     <SCONAME>C_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_BUT000_DTO</CMPNAME>
+     <SCONAME>I_BUT000</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GP: Allgemeine Daten I</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_BUT0BK_DTO</CMPNAME>
+     <SCONAME>C_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_BUT0BK_DTO</CMPNAME>
+     <SCONAME>I_BUT0BK</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SAP-GP: Tabellentyp zur Übergabe von Bankdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DFKKBPTAXNUM_DTO</CMPNAME>
+     <SCONAME>C_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DFKKBPTAXNUM_DTO</CMPNAME>
+     <SCONAME>I_DFKKBPTAXNUM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Steuernummern</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_BUS_EI_EXTERN</CMPNAME>
+     <SCONAME>E_BUS_EI_EXTERN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Komplexe externe Schnittstelle des Geschäftspartners</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_BUS_EI_EXTERN</CMPNAME>
+     <SCONAME>E_SEPA_USE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SEPA-Mandat: Verwendungsdaten mit ext. Schlüssel</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_BUS_EI_EXTERN</CMPNAME>
+     <SCONAME>I_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_CMDS_EI_EXTERN</CMPNAME>
+     <SCONAME>I_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_CMDS_EI_EXTERN</CMPNAME>
+     <SCONAME>R_CMDS_EI_EXTERN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Komplexe externe Schnittstelle des Kunden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_CVIS_EI_EXTERN</CMPNAME>
+     <SCONAME>E_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Inbound der Debitoren-/ Kreditorenintegration</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_CVIS_EI_EXTERN</CMPNAME>
+     <SCONAME>E_SEPA_USE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SEPA-Mandat: Verwendungsdaten mit ext. Schlüssel</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_CVIS_EI_EXTERN</CMPNAME>
+     <SCONAME>I_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_VMDS_EI_EXTERN</CMPNAME>
+     <SCONAME>I_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner Anlage</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_DTO_VMDS_EI_EXTERN</CMPNAME>
+     <SCONAME>R_VMDS_EI_EXTERN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Komplexe externe Schnittstelle des Lieferanten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_FSBP_ADDRESS_DTO</CMPNAME>
+     <SCONAME>C_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_FSBP_ADDRESS_DTO</CMPNAME>
+     <SCONAME>I_ADDRESS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Struktur zur Verwaltung von Adressen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_KNA1_DTO</CMPNAME>
+     <SCONAME>C_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_KNA1_DTO</CMPNAME>
+     <SCONAME>I_KNA1</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kundenstamm (allgemeiner Teil)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_KNB1_DTO</CMPNAME>
+     <SCONAME>C_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_KNB1_DTO</CMPNAME>
+     <SCONAME>I_KNB1</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kundenstamm (Buchungskreis)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_LFA1_DTO</CMPNAME>
+     <SCONAME>C_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_LFA1_DTO</CMPNAME>
+     <SCONAME>I_LFA1</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lieferantenstamm (allgemeiner Teil)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_LFB1_DTO</CMPNAME>
+     <SCONAME>C_DTO_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_LFB1_DTO</CMPNAME>
+     <SCONAME>I_LFB1</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lieferantenstamm (Buchungskreis)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MODIFY_PARTNER</CMPNAME>
+     <SCONAME>I_DTO_BP_MODIFY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Transfer Object für HKR Geschäftspartner Änderung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RELEASE_PARTNER</CMPNAME>
+     <SCONAME>/THKR/CX_BP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RELEASE_PARTNER</CMPNAME>
+     <SCONAME>I_PARTNER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnernummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RELEASE_PARTNER</CMPNAME>
+     <SCONAME>I_TEST_RUN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Flag Testlauf Ja/nein</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

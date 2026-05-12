@@ -1,0 +1,2362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funktionen zur Belegerfassung</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LF0KCF02</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/LF0KCTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLF0KC</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/FI_MIG_PSO_DOC_DI</FUNCNAME>
+     <SHORT_TEXT>Funktionsbaustein zum Buchen von Anordnungen mit Direct Input</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_NODATA</PARAMETER>
+       <DBFIELD>BGR00-NODATA</DBFIELD>
+       <DEFAULT>&apos;/&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DEL_NODATA</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_INTLOT</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>C</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NRKRS_LOT</PARAMETER>
+       <DBFIELD>INRI-NRRANGENR</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_LOTKZ_ALLOC</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_FIELD_STATUS</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_ACC_DETERM</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_INVERSE_POSTING</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_CHECK</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DATE_CONVERT</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_CHECK</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_FI_NUMBER</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_XPRFG</PARAMETER>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XPRFG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DERIVE</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DUE_DATE_DEFERRAL</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_MIG_DATA</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/THKR/S_MIG_PSO_DI_DATA</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_BUKRS</PARAMETER>
+       <DBFIELD>ACCIT-BUKRS</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_GJAHR</PARAMETER>
+       <DBFIELD>ACCIT-GJAHR</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_BELNR</PARAMETER>
+       <DBFIELD>ACCIT-BELNR</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_LOTKZ</PARAMETER>
+       <DBFIELD>ACCIT-LOTKZ</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <DBSTRUCT>BBKPF_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <DBSTRUCT>BBSEG_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <DBSTRUCT>BBTAX_FM</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BWITH</PARAMETER>
+       <DBSTRUCT>BWITH_DI</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_PSO50</PARAMETER>
+       <DBSTRUCT>PSO50</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_NODATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Initialkennzeichen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DEL_NODATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lösche Initialkennzeichen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_INTLOT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Interne Nummernvergabe für Bündelungsnr.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NRKRS_LOT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nummernkreisintervall für Bündelungsnr.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_LOTKZ_ALLOC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Anordnungsnummer vergeben</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_FIELD_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Feldstatus ignorieren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_ACC_DETERM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sachkonto nicht ableiten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_INVERSE_POSTING</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Umkehrbuchung durchführen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_CHECK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Prüfmodus</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DATE_CONVERT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Datumsfelder konvertieren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_CHECK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kein Prüfung im FB FI_PSO_BINPUT_LOTKZ auf Übereinstimmung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_FI_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>FI soll eigene Nummer ziehen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_XPRFG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Beleg vollständig</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DERIVE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ableitung wenn vorerfasst</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DUE_DATE_DEFERRAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aufruf mit Ratenstundung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_MIG_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Migrationsspezifische Zusatzdaten für PSM Funktionen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Buchungkreis</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Geschäftsjahr</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegnummer des Finanzbuchhaltungsbeleges</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_LOTKZ</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bündelungsnummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur des Belegkopfes</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur der Belegpositionen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur der Steuern</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BWITH</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_PSO50</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Halten der Massenverarbeitungsdaten für Rechnungsbezug</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWD</FUNCNAME>
+     <SHORT_TEXT>Funktionsbaustein zum Buchen von Anordnungen mit Direct Input</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_NODATA</PARAMETER>
+       <DBFIELD>BGR00-NODATA</DBFIELD>
+       <DEFAULT>&apos;/&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DEL_NODATA</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_INTLOT</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>C</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NRKRS_LOT</PARAMETER>
+       <DBFIELD>INRI-NRRANGENR</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_LOTKZ_ALLOC</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_FIELD_STATUS</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_ACC_DETERM</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_INVERSE_POSTING</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_CHECK</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DATE_CONVERT</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_CHECK</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_FI_NUMBER</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_XPRFG</PARAMETER>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XPRFG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DERIVE</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_BUKRS</PARAMETER>
+       <DBFIELD>ACCIT-BUKRS</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_GJAHR</PARAMETER>
+       <DBFIELD>ACCIT-GJAHR</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_BELNR</PARAMETER>
+       <DBFIELD>ACCIT-BELNR</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_LOTKZ</PARAMETER>
+       <DBFIELD>ACCIT-LOTKZ</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <DBSTRUCT>BBKPF_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <DBSTRUCT>BBSEG_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <DBSTRUCT>BBTAX_FM</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BWITH</PARAMETER>
+       <DBSTRUCT>BWITH_DI</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_PSO50</PARAMETER>
+       <DBSTRUCT>PSO50</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_NODATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Initialkennzeichen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DEL_NODATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lösche Initialkennzeichen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_INTLOT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Interne Nummernvergabe für Bündelungsnr.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NRKRS_LOT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nummernkreisintervall für Bündelungsnr.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_LOTKZ_ALLOC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Anordnungsnummer vergeben</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_FIELD_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Feldstatus ignorieren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_ACC_DETERM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sachkonto nicht ableiten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_INVERSE_POSTING</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Umkehrbuchung durchführen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_CHECK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Prüfmodus</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DATE_CONVERT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Datumsfelder konvertieren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_CHECK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kein Prüfung im FB FI_PSO_BINPUT_LOTKZ auf Übereinstimmung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_FI_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>FI soll eigene Nummer ziehen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_XPRFG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Beleg vollständig</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DERIVE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ableitung wenn vorerfasst</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Buchungkreis</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Geschäftsjahr</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegnummer des Finanzbuchhaltungsbeleges</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_LOTKZ</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bündelungsnummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur des Belegkopfes</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur der Belegpositionen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur der Steuern</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BWITH</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_PSO50</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Halten der Massenverarbeitungsdaten für Rechnungsbezug</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT</FUNCNAME>
+     <SHORT_TEXT>Funktionsbaustein zum Buchen von Anordnungen mit Direct Input</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_NODATA</PARAMETER>
+       <DBFIELD>BGR00-NODATA</DBFIELD>
+       <DEFAULT>&apos;/&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DEL_NODATA</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_INTLOT</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>C</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NRKRS_LOT</PARAMETER>
+       <DBFIELD>INRI-NRRANGENR</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_LOTKZ_ALLOC</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_FIELD_STATUS</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_ACC_DETERM</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_INVERSE_POSTING</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_CHECK</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DATE_CONVERT</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_CHECK</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NO_FI_NUMBER</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_XPRFG</PARAMETER>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XPRFG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DERIVE</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_DUE_DATE_DEFERRAL</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_BUKRS</PARAMETER>
+       <DBFIELD>ACCIT-BUKRS</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_GJAHR</PARAMETER>
+       <DBFIELD>ACCIT-GJAHR</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_BELNR</PARAMETER>
+       <DBFIELD>ACCIT-BELNR</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_LOTKZ</PARAMETER>
+       <DBFIELD>ACCIT-LOTKZ</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <DBSTRUCT>BBKPF_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <DBSTRUCT>BBSEG_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <DBSTRUCT>BBTAX_FM</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BWITH</PARAMETER>
+       <DBSTRUCT>BWITH_DI</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_PSO50</PARAMETER>
+       <DBSTRUCT>PSO50</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_NODATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Initialkennzeichen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DEL_NODATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lösche Initialkennzeichen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_INTLOT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Interne Nummernvergabe für Bündelungsnr.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NRKRS_LOT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nummernkreisintervall für Bündelungsnr.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_LOTKZ_ALLOC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Anordnungsnummer vergeben</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_FIELD_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Feldstatus ignorieren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_ACC_DETERM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sachkonto nicht ableiten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_INVERSE_POSTING</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Umkehrbuchung durchführen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_CHECK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Prüfmodus</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DATE_CONVERT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Datumsfelder konvertieren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_CHECK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kein Prüfung im FB FI_PSO_BINPUT_LOTKZ auf Übereinstimmung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NO_FI_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>FI soll eigene Nummer ziehen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_XPRFG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Beleg vollständig</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DERIVE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ableitung wenn vorerfasst</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_DUE_DATE_DEFERRAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aufruf mit Ratenstundung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Buchungkreis</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Geschäftsjahr</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegnummer des Finanzbuchhaltungsbeleges</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_LOTKZ</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bündelungsnummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur des Belegkopfes</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur der Belegpositionen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Batch Input Struktur der Steuern</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BWITH</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_PSO50</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Halten der Massenverarbeitungsdaten für Rechnungsbezug</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/PSO_RECURRING_ORDER_POST</FUNCNAME>
+     <SHORT_TEXT>IS-PS: Daueranordnungen buchen</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>T_PSO_OLD</PARAMETER>
+       <DBFIELD>PSO02</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_OKCODE</PARAMETER>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_VBKPF_OLD</PARAMETER>
+       <DBSTRUCT>VBKPF</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_VBSEC_OLD</PARAMETER>
+       <DBSTRUCT>VBSEC</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_VBSEG_OLD</PARAMETER>
+       <DBSTRUCT>VBSEG</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_VBSET_OLD</PARAMETER>
+       <DBSTRUCT>VBSET</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_PSO_NEW</PARAMETER>
+       <DBSTRUCT>PSO02</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_VBKPF_NEW</PARAMETER>
+       <DBSTRUCT>VBKPF</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_VBSEC_NEW</PARAMETER>
+       <DBSTRUCT>VBSEC</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_VBSEG_NEW</PARAMETER>
+       <DBSTRUCT>VBSEG</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_VBSET_NEW</PARAMETER>
+       <DBSTRUCT>VBSET</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_TIBAN</PARAMETER>
+       <DBSTRUCT>TIBAN</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>T_PSO_OLD</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_OKCODE</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBKPF_OLD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegköpfe alt</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBSEC_OLD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CPD-Daten alt</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBSEG_OLD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegpositionen alt</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBSET_OLD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steuern alt</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_PSO_NEW</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBKPF_NEW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegköpfe neu</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBSEC_NEW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CPD-Daten neu</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBSEG_NEW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegpositionen neu</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_VBSET_NEW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steuern neu</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_TIBAN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IBAN</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <LONGTEXTS__-THKR_-FI_MIG_PSO_DOC_DI>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_CHECK</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_CHECK</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen kann ein Prüfmodus ausgewählt werden, ohne daß</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ein Beleg gebucht wird.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_DATE_CONVERT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00010</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_DATE_CONVERT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Feld kann eingestellt werden, ob die auftretenden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder ins interne Format (YYYYMMDD) konvertiert werden müssen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Dies ist z.B. notwendig, wenn bei externer Belegübergabe die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder in der Form DDMMYYYY gefüllt sind.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Bei interner Verwendung dieses Bausteins ist davon auszugehen, daß die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Felder bereits im internen Format vorliegen. Eine Konvertierung der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder führt dann zum Fehler.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn ein Datumsfeld leer ist, wird immer &apos;konvertiert&apos;, bzw. in diesem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Fall das Zielfeld gelöscht. Sonst enthält das Zielfeld möglicherweise</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>einen ungültigen Wert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_DEL_NODATA</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00004</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_DEL_NODATA</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn beim Aufruf des Bausteins die leeren Felder nicht mit dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>I_NODATA-Kennzeichen gefüllt sind, so kann diese Kennzeichen auf &apos;X&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gesetzt werden. Damit wird zu Beginn der Verarbeitung nicht aus allen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Feldern das I_NODATA gelöscht.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_INTLOT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_INTLOT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen wird zwischen interner und externer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Nummernvergabe für die Anordnungsnummer unterschieden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_INVERSE_POSTING</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00011</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_INVERSE_POSTING</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beim Erzeugen von Anordnungen unterscheidet dieser Baustein zwischen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>drei verschiedenen Verarbeitungsabläufen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Verrechnungsanordnung (Anordnungstyp 3)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Stundung, Niederschlagung oder Erlaß (Anordnungstyp 6,7 bzw. 8)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>restliche Anordnungen (Anordnungstyp 1,2,4,5)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im zweiten Fall wird zuerst eine bestehende Anordnung selektiert, die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>dann gestundet, niedergeschlagen oder erlassen wird. Sollte es - z.B.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aus Gründen der Fehlerbehebung - nötig sein, eine Umkehrbuchung zu einer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anordnung mit Anordnungstyp 6, 7 oder 8 durchzuführen, so kann dieses</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Kennzeichen gesetzt werden und es wird eine normale Anordnung (Fall 3)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>jedoch mit Anordnungstyp 6,7 bzw. 8 gebucht.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_LOTKZ_ALLOC</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00012</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_LOTKZ_ALLOC</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im IS-PS Customizing kann je Buchungskreisvariante gesteuert werden, ob</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>das Bündeln von Anordnungen im Direct Input erwünscht ist. Wenn dieses</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>globale Kennzeichen beachtet werden soll, muß der entsprechende Eintrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in der Tabelle PAYAC05 nachgelesen und in diesem Feld an den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Funktionsbaustein entsprechend übergeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ist für eine Buchungskreisvariante das Kennzeichen &quot;Ohne</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anordnungsnummer&quot; gesetzt und damit I_LOTKZ_ALLOC initial, so wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>keine Anordnungsnummer vergeben, unabhängig davon, ob bei den globalen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Einstellungen das nachträgliche Bündeln ausgewählt wurde oder nicht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ist dagegen das Kennzeichen I_LOTKZ_ALOC gesetzt, so werden die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>globalen Einstellungen für das nachträgliche Bündeln berücksichtigt und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die Anordnungsnummer dementsprechend vergeben.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_NODATA</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_NODATA</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieses Feld enthält eine Sonderzeichen, welches die Funktion hat: &apos;Kein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Input für dieses Feld&apos;. Dieses Sonderzeichen ist defaultmäßig das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Zeichen &apos;/&apos;.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_NO_ACC_DETERM</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_NO_ACC_DETERM</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen kann die Ableitung des Sachkontos aus der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>HHM-Kontierung unterbunden werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_NO_FIELD_STATUS</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_NO_FIELD_STATUS</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Standardmäßig wird der Feldstatus für Anordnungen von diesem Baustein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>geprüft. Ist eine Prüfung des Feldstatus nicht erwünscht, so kann das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Kennzeichen entsprechend gesetzt werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_NRKRS_LOT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_NRKRS_LOT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In diesem Feld muß das Nummernkreisintervall bei externen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Nummernvergabe für die Anordnungsnummer mitgegeben werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_MIG_PSO_DOC_DI       I_XPRFG</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_MIG_PSO_DOC_DI       I_XPRFG</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sofern Sie Belege mittels FBV1 vorerfassen wollen,  werden diese</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>standardmäßig immer vollständig vorerfasst. Möchten Sie vorerfasste</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Belege unvollständig sichern,  setzen Sie diesen Parameter auf SPACE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-FI_MIG_PSO_DOC_DI>
+   <LONGTEXTS__-THKR_-FI_PSO_DOC_DIRECT_INPAWD>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_CHECK</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_CHECK</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen kann ein Prüfmodus ausgewählt werden, ohne daß</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ein Beleg gebucht wird.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_DATE_CONVERT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00010</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_DATE_CONVERT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Feld kann eingestellt werden, ob die auftretenden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder ins interne Format (YYYYMMDD) konvertiert werden müssen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Dies ist z.B. notwendig, wenn bei externer Belegübergabe die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder in der Form DDMMYYYY gefüllt sind.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Bei interner Verwendung dieses Bausteins ist davon auszugehen, daß die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Felder bereits im internen Format vorliegen. Eine Konvertierung der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder führt dann zum Fehler.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn ein Datumsfeld leer ist, wird immer &apos;konvertiert&apos;, bzw. in diesem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Fall das Zielfeld gelöscht. Sonst enthält das Zielfeld möglicherweise</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>einen ungültigen Wert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_DEL_NODATA</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00004</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_DEL_NODATA</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn beim Aufruf des Bausteins die leeren Felder nicht mit dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>I_NODATA-Kennzeichen gefüllt sind, so kann diese Kennzeichen auf &apos;X&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gesetzt werden. Damit wird zu Beginn der Verarbeitung nicht aus allen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Feldern das I_NODATA gelöscht.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_INTLOT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_INTLOT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen wird zwischen interner und externer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Nummernvergabe für die Anordnungsnummer unterschieden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_INVERSE_POSTING</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00011</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_INVERSE_POSTING</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beim Erzeugen von Anordnungen unterscheidet dieser Baustein zwischen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>drei verschiedenen Verarbeitungsabläufen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Verrechnungsanordnung (Anordnungstyp 3)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Stundung, Niederschlagung oder Erlaß (Anordnungstyp 6,7 bzw. 8)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>restliche Anordnungen (Anordnungstyp 1,2,4,5)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im zweiten Fall wird zuerst eine bestehende Anordnung selektiert, die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>dann gestundet, niedergeschlagen oder erlassen wird. Sollte es - z.B.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aus Gründen der Fehlerbehebung - nötig sein, eine Umkehrbuchung zu einer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anordnung mit Anordnungstyp 6, 7 oder 8 durchzuführen, so kann dieses</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Kennzeichen gesetzt werden und es wird eine normale Anordnung (Fall 3)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>jedoch mit Anordnungstyp 6,7 bzw. 8 gebucht.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_LOTKZ_ALLOC</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00012</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_LOTKZ_ALLOC</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im IS-PS Customizing kann je Buchungskreisvariante gesteuert werden, ob</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>das Bündeln von Anordnungen im Direct Input erwünscht ist. Wenn dieses</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>globale Kennzeichen beachtet werden soll, muß der entsprechende Eintrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in der Tabelle PAYAC05 nachgelesen und in diesem Feld an den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Funktionsbaustein entsprechend übergeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ist für eine Buchungskreisvariante das Kennzeichen &quot;Ohne</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anordnungsnummer&quot; gesetzt und damit I_LOTKZ_ALLOC initial, so wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>keine Anordnungsnummer vergeben, unabhängig davon, ob bei den globalen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Einstellungen das nachträgliche Bündeln ausgewählt wurde oder nicht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ist dagegen das Kennzeichen I_LOTKZ_ALOC gesetzt, so werden die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>globalen Einstellungen für das nachträgliche Bündeln berücksichtigt und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die Anordnungsnummer dementsprechend vergeben.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_NODATA</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_NODATA</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieses Feld enthält eine Sonderzeichen, welches die Funktion hat: &apos;Kein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Input für dieses Feld&apos;. Dieses Sonderzeichen ist defaultmäßig das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Zeichen &apos;/&apos;.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_NO_ACC_DETERM</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_NO_ACC_DETERM</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen kann die Ableitung des Sachkontos aus der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>HHM-Kontierung unterbunden werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_NO_FIELD_STATUS</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_NO_FIELD_STATUS</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Standardmäßig wird der Feldstatus für Anordnungen von diesem Baustein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>geprüft. Ist eine Prüfung des Feldstatus nicht erwünscht, so kann das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Kennzeichen entsprechend gesetzt werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_NRKRS_LOT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_NRKRS_LOT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In diesem Feld muß das Nummernkreisintervall bei externen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Nummernvergabe für die Anordnungsnummer mitgegeben werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_XPRFG</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPAWDI_XPRFG</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sofern Sie Belege mittels FBV1 vorerfassen wollen,  werden diese</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>standardmäßig immer vollständig vorerfasst. Möchten Sie vorerfasste</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Belege unvollständig sichern,  setzen Sie diesen Parameter auf SPACE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-FI_PSO_DOC_DIRECT_INPAWD>
+   <LONGTEXTS__-THKR_-FI_PSO_DOC_DIRECT_INPUT>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_CHECK</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_CHECK</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen kann ein Prüfmodus ausgewählt werden, ohne daß</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ein Beleg gebucht wird.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_DATE_CONVERT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00010</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_DATE_CONVERT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Feld kann eingestellt werden, ob die auftretenden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder ins interne Format (YYYYMMDD) konvertiert werden müssen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Dies ist z.B. notwendig, wenn bei externer Belegübergabe die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder in der Form DDMMYYYY gefüllt sind.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Bei interner Verwendung dieses Bausteins ist davon auszugehen, daß die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Felder bereits im internen Format vorliegen. Eine Konvertierung der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Datumsfelder führt dann zum Fehler.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn ein Datumsfeld leer ist, wird immer &apos;konvertiert&apos;, bzw. in diesem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Fall das Zielfeld gelöscht. Sonst enthält das Zielfeld möglicherweise</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>einen ungültigen Wert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_DEL_NODATA</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00004</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_DEL_NODATA</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn beim Aufruf des Bausteins die leeren Felder nicht mit dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>I_NODATA-Kennzeichen gefüllt sind, so kann diese Kennzeichen auf &apos;X&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gesetzt werden. Damit wird zu Beginn der Verarbeitung nicht aus allen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Feldern das I_NODATA gelöscht.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_INTLOT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_INTLOT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen wird zwischen interner und externer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Nummernvergabe für die Anordnungsnummer unterschieden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_INVERSE_POSTING</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00011</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_INVERSE_POSTING</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beim Erzeugen von Anordnungen unterscheidet dieser Baustein zwischen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>drei verschiedenen Verarbeitungsabläufen:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Verrechnungsanordnung (Anordnungstyp 3)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Stundung, Niederschlagung oder Erlaß (Anordnungstyp 6,7 bzw. 8)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>restliche Anordnungen (Anordnungstyp 1,2,4,5)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im zweiten Fall wird zuerst eine bestehende Anordnung selektiert, die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>dann gestundet, niedergeschlagen oder erlassen wird. Sollte es - z.B.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aus Gründen der Fehlerbehebung - nötig sein, eine Umkehrbuchung zu einer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anordnung mit Anordnungstyp 6, 7 oder 8 durchzuführen, so kann dieses</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Kennzeichen gesetzt werden und es wird eine normale Anordnung (Fall 3)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>jedoch mit Anordnungstyp 6,7 bzw. 8 gebucht.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_LOTKZ_ALLOC</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00012</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_LOTKZ_ALLOC</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im IS-PS Customizing kann je Buchungskreisvariante gesteuert werden, ob</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>das Bündeln von Anordnungen im Direct Input erwünscht ist. Wenn dieses</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>globale Kennzeichen beachtet werden soll, muß der entsprechende Eintrag</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in der Tabelle PAYAC05 nachgelesen und in diesem Feld an den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Funktionsbaustein entsprechend übergeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ist für eine Buchungskreisvariante das Kennzeichen &quot;Ohne</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anordnungsnummer&quot; gesetzt und damit I_LOTKZ_ALLOC initial, so wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>keine Anordnungsnummer vergeben, unabhängig davon, ob bei den globalen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Einstellungen das nachträgliche Bündeln ausgewählt wurde oder nicht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ist dagegen das Kennzeichen I_LOTKZ_ALOC gesetzt, so werden die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>globalen Einstellungen für das nachträgliche Bündeln berücksichtigt und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die Anordnungsnummer dementsprechend vergeben.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_NODATA</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_NODATA</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieses Feld enthält eine Sonderzeichen, welches die Funktion hat: &apos;Kein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Input für dieses Feld&apos;. Dieses Sonderzeichen ist defaultmäßig das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Zeichen &apos;/&apos;.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_NO_ACC_DETERM</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_NO_ACC_DETERM</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Kennzeichen kann die Ableitung des Sachkontos aus der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>HHM-Kontierung unterbunden werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_NO_FIELD_STATUS</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_NO_FIELD_STATUS</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Standardmäßig wird der Feldstatus für Anordnungen von diesem Baustein</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>geprüft. Ist eine Prüfung des Feldstatus nicht erwünscht, so kann das</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Kennzeichen entsprechend gesetzt werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_NRKRS_LOT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00002</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_NRKRS_LOT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In diesem Feld muß das Nummernkreisintervall bei externen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Nummernvergabe für die Anordnungsnummer mitgegeben werden.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_PSO_DOC_DIRECT_INPUT I_XPRFG</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00003</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_PSO_DOC_DIRECT_INPUT I_XPRFG</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sofern Sie Belege mittels FBV1 vorerfassen wollen,  werden diese</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>standardmäßig immer vollständig vorerfasst. Möchten Sie vorerfasste</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Belege unvollständig sichern,  setzen Sie diesen Parameter auf SPACE.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-FI_PSO_DOC_DIRECT_INPUT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

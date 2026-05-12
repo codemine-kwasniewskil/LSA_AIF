@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/PSM_FM</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Nachrichtenklasse PSM F</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_FM</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;&amp;&amp;&amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_FM</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_FM</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Budgetarten für Sender und Empfänger müssen identisch sein</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_FM</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Finanzposition &amp; nicht ausgeglichen (Sender entspricht nicht Empfänger)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_FM</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Belegpos. &amp;: Erfassung ist nur für Mittelverteiler Stufe MFH erlaubt</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_FM</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Belegpos. &amp;1: Finanzstelle &amp;2 gehört keiner gültigen Hierarchiestufe an</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_FM</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Belegpos. &amp;: Rückgabe ist nur für Mittelverteiler Stufe MFH erlaubt</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_FM</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Belegpos. &amp;: FiPos muss der Haushaltstelle Unterkonto angehören</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

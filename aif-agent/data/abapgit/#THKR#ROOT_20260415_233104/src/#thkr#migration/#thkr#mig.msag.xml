@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/MIG</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Datensatz &amp; ist bereits vorhaden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Finanzstelle &amp; ist nicht vorhanden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Dem Einzelplan &amp; ist kein Buchungskreis zugeordnet (/THKR/MIG_MAP_01)!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Fehler bei der Verarbeitung von Datensatz &amp;1!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Keine Dienstellendaten zu Geschäftsbereich &amp;1 (/THKR/MIG_MAP_01)!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Keine Migrationsobjekt Daten zu &amp;1 (/THKR/MIG_MAP_02) vorhanden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Keine Migrations-Stammdaten zu &amp;1 (/THKR/MIG_MD) vorhanden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Keine Finanzstelle zu &amp;1 &amp;2 (/THKR/MIG_MAP_03) vorhanden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Zu &amp; wurde kein Rückstandskonto gefunden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Zu RK &amp;1 existiert keine Fälligkeit &amp;2!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Zu RK/Fälligkeit &amp;1/&amp;2 existiert keine Forderung vom Typ &amp;3!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>GP &amp;1 wurde aus einem anderen Bukrs übernommen &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Keine Dienstellendaten zu Geschäftsbereich &amp;1 (/thkr/centralmap)!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Keine Finanzstelle zu &amp;1 &amp;2 (/thkr/centralmap) vorhanden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Sachkonto nicht eindeutig aus Finanzposition &amp;1 ableitbar.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Zu RK &amp;1 existiert keine Position &amp;2!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Zu OEH &amp;1: keine eindeutigen Daten aus /thkr/centralmap !</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Zu Einzelplan &amp;1: sind keine Daten in /thkr/centralmap vorhanden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Kontoauszugsdatei MsgId konnte nicht erstellt werden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Keine Dateien in Ordner &amp;1 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Es ist keine Migrationsdatei angegeben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Es ist kein Archivordner angegeben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Datei &amp;1 konnte nicht geöffnet werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Löschen der Datei &amp;1 fehlgeschlagen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Datei &amp;1 verarbeitet.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Satz_ID &amp;1 Objekt &amp;2 Plan &amp;3 KASSZ &amp;4 verarbeitet.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>Process ID &amp;1 Objekt &amp;2 Plan &amp;3 verarbeitet.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>027</MSGNR>
+     <TEXT>Datei im Unterodner &amp;1 verschoben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>028</MSGNR>
+     <TEXT>Datei verarbeitet. &amp;1 Datensätze neu importiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>029</MSGNR>
+     <TEXT>Die Eingabe des Einzelplans ist notwendig!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Start EPL &amp;1 Migrationsobjekt &amp;2 für &amp;3 Datensätze.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Verarbeitung &amp;1 beendet.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Datensatz &amp;1 von &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>033</MSGNR>
+     <TEXT>Status MIG-AO angelegt erforderlich, aktuell: Status &amp;1. Satz-ID: &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>034</MSGNR>
+     <TEXT>Kontoauszugsdatei für Satz-ID &amp;1 in Datei &amp;2 erzeugt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>035</MSGNR>
+     <TEXT>Keine Finanzposition ermittelt zu &amp;1/&amp;2/&amp;3/&amp;4 (/thkr/centralmap)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>036</MSGNR>
+     <TEXT>Kontoauszugsdatei für Satz-ID &amp;1 bereits erzeugt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>037</MSGNR>
+     <TEXT>Datei verarbeitet. &amp;1 Datensätze importiert, davon &amp;2 aktualisiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>038</MSGNR>
+     <TEXT>Verwahrung mit offenem Betrag 0€ werden gemäß TP Kasse AG nicht migriert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>039</MSGNR>
+     <TEXT>Vorschuss mit Ist-Betrag = 0€ werden gemäß TP Kasse AG nicht migriert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>040</MSGNR>
+     <TEXT>Zu &amp;1 / &amp;2 konnte keine IBAN abgeleitet werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>041</MSGNR>
+     <TEXT>Keine offenen Raten vorhanden. Folgebeleg für &amp;1 nicht angelegt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>042</MSGNR>
+     <TEXT>Kassenzeichen &amp;1 bereits vorhanden &lt;&gt; VSA. Daher ignoriert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>043</MSGNR>
+     <TEXT>Anzahl &amp;1 Datensätze übergangen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>044</MSGNR>
+     <TEXT>Kontoauszug Betrag Offen = 0 nur für EPL 50 erlaubt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/MIG</ARBGB>
+     <MSGNR>045</MSGNR>
+     <TEXT>Kassenzeichen &amp;1 bereits vorhanden MigObj &amp;2. Daher ignoriert.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

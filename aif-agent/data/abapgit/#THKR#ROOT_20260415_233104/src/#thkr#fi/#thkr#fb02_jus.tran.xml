@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TRAN" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TSTC>
+    <TCODE>/THKR/FB02_JUS</TCODE>
+    <PGMNA>/THKR/TPBR_FB02</PGMNA>
+    <DYPNO>0100</DYPNO>
+    <CINFO>BA==</CINFO>
+   </TSTC>
+   <TSTCC>
+    <TCODE>/THKR/FB02_JUS</TCODE>
+   </TSTCC>
+   <TSTCT>
+    <SPRSL>D</SPRSL>
+    <TCODE>/THKR/FB02_JUS</TCODE>
+    <TTEXT>FI-Beleg ändern</TTEXT>
+   </TSTCT>
+   <AUTHORIZATIONS>
+    <TSTCA>
+     <TCODE>/THKR/FB02_JUS</TCODE>
+     <OBJCT>F_BKPF_BUK</OBJCT>
+     <FIELD>ACTVT</FIELD>
+     <VALUE>02</VALUE>
+    </TSTCA>
+    <TSTCA>
+     <TCODE>/THKR/FB02_JUS</TCODE>
+     <OBJCT>F_BKPF_BUK</OBJCT>
+     <FIELD>BUKRS</FIELD>
+    </TSTCA>
+   </AUTHORIZATIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

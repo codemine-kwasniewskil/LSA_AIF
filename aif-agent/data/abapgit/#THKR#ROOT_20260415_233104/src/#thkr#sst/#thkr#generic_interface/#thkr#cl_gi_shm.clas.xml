@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_GI_SHM</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Gebietsklasse: SHM-Puffer für Generische Schnittstelle</DESCRIPT>
+    <CATEGORY>45</CATEGORY>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <RSTAT>S</RSTAT>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>AREA_NAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Gebietsklasse</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anfordern einer Lesesperre</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anfordern einer Änderungssperre</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anfordern einer Schreibsperre</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BUILD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Direkter Aufruf des Gebietskonstruktors</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CLASS_CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CLASS_CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DETACH_AREA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aufheben aller Sperren auf alle Instanzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FREE_AREA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Löschen aller Instanzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FREE_INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Löschen einer Instanz</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_GENERATOR_VERSION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Generator-Version abfragen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE_INFOS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Liefert die Namen aller Instanzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INVALIDATE_AREA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aktive Versionen aller Instanzen werden auf veraltet gesetzt</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INVALIDATE_INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aktive Version einer Instanz wird auf veraltet gesetzt</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ROOT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SHM: Modell einer Datenklasse</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_ROOT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Setzt Wurzelobjekt</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_LIFE_CONTEXT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lebensdauer eines Gebiets (Konstanten in CL_SHM_AREA)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_TRACE_ACTIVE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>(intern) Flag: Trace aktiv?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_TRACE_SERVICE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>(intern) Referenz auf Trace-Klasse</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_VERSION_</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>(intern)</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <SCONAME>CX_SHM_CHANGE_LOCK_ACTIVE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Eine Änderungssperre ist schon aktiv</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <SCONAME>CX_SHM_EXCLUSIVE_LOCK_ACTIVE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Instanz ist schon gesperrt</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <SCONAME>CX_SHM_INCONSISTENT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Unterschiedliche Definitionen zwischen Program und Gebiet</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <SCONAME>CX_SHM_NO_ACTIVE_VERSION</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Keine aktive Version für ein Attach vorhanden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <SCONAME>CX_SHM_PARAMETER_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Falscher Parameter übergeben</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <SCONAME>CX_SHM_READ_LOCK_ACTIVE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anforderung einer 2. Lesesperre</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <SCONAME>HANDLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SHM: Modell einer Gebietsklasse</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_READ</CMPNAME>
+     <SCONAME>INST_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Shared Object Instanz eines Areas</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>ATTACH_MODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Modus des ATTACHS (Konstanten in CL_SHM_AREA)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>CX_SHM_CHANGE_LOCK_ACTIVE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Eine Schreibsperre ist schon aktiv</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>CX_SHM_EXCLUSIVE_LOCK_ACTIVE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Instanz ist schon gesperrt</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>CX_SHM_INCONSISTENT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Unterschiedliche Definitionen zwischen Program und Gebiet</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>CX_SHM_NO_ACTIVE_VERSION</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Keine aktive Version für ein Attach vorhanden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>CX_SHM_PARAMETER_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergebener Parameter hat falschen Wert</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>CX_SHM_PENDING_LOCK_REMOVED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Shared Objects: wartende Sperre wurde gelöscht</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>CX_SHM_VERSION_LIMIT_EXCEEDED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Keine weiteren Versionen verfügbar</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>HANDLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SHM: Modell einer Gebietsklasse</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>INST_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Shared Object Instanz eines Areas</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_UPDATE</CMPNAME>
+     <SCONAME>WAIT_TIME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Maximale Wartezeit (in Millisekunden)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>ATTACH_MODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Modus des ATTACHS (Konstanten in CL_SHM_AREA)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>CX_SHM_CHANGE_LOCK_ACTIVE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Eine Schreibsperre ist schon aktiv</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>CX_SHM_EXCLUSIVE_LOCK_ACTIVE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Instanz ist schon gesperrt</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>CX_SHM_PARAMETER_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergebener Parameter hat falschen Wert</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>CX_SHM_PENDING_LOCK_REMOVED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Shared Objects: wartende Sperre wurde gelöscht</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>CX_SHM_VERSION_LIMIT_EXCEEDED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Keine weiteren Versionen verfügbar</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>HANDLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SHM: Modell einer Gebietsklasse</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>INST_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Shared Object Instanz eines Areas</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ATTACH_FOR_WRITE</CMPNAME>
+     <SCONAME>WAIT_TIME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Maximale Wartezeit (in Millisekunden)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD</CMPNAME>
+     <SCONAME>CX_SHMA_INCONSISTENT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SHMA: Inkonsistente Attribut-Kombination</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD</CMPNAME>
+     <SCONAME>CX_SHMA_NOT_CONFIGURED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>SHMA: Gebietseigenschaft ist nicht konfiguriert</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD</CMPNAME>
+     <SCONAME>CX_SHM_BUILD_FAILED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konstruktorlauf ist fehlgeschlagen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BUILD</CMPNAME>
+     <SCONAME>INST_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Shared Object Instanz eines Areas</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DETACH_AREA</CMPNAME>
+     <SCONAME>RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Detach-Rückgabewert (Konstanten in CL_SHM_AREA)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FREE_AREA</CMPNAME>
+     <SCONAME>CX_SHM_PARAMETER_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Falscher Parameter übergeben</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FREE_AREA</CMPNAME>
+     <SCONAME>RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rückgabewert (Konstanten in CL_SHM_AREA)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FREE_AREA</CMPNAME>
+     <SCONAME>TERMINATE_CHANGER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schreiber werden beendet</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FREE_INSTANCE</CMPNAME>
+     <SCONAME>CX_SHM_PARAMETER_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Falscher Parameter übergeben</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FREE_INSTANCE</CMPNAME>
+     <SCONAME>INST_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Shared Object Instanz eines Areas</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FREE_INSTANCE</CMPNAME>
+     <SCONAME>RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rückgabewert (Konstanten in CL_SHM_AREA)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FREE_INSTANCE</CMPNAME>
+     <SCONAME>TERMINATE_CHANGER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schreiber werden beendet</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE_INFOS</CMPNAME>
+     <SCONAME>CLIENT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Mandant bei Shared Objects-Gebieten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE_INFOS</CMPNAME>
+     <SCONAME>INFOS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übersicht aller Instanzen eines SHM-Gebiets</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE_INFOS</CMPNAME>
+     <SCONAME>INST_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Shared Object Instanz eines Areas</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INVALIDATE_AREA</CMPNAME>
+     <SCONAME>CX_SHM_PARAMETER_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Falscher Parameter übergeben</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INVALIDATE_AREA</CMPNAME>
+     <SCONAME>RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Detach-Rückgabewert (Konstanten in CL_SHM_AREA)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INVALIDATE_AREA</CMPNAME>
+     <SCONAME>TERMINATE_CHANGER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aktive Schreiber werden beendet</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INVALIDATE_INSTANCE</CMPNAME>
+     <SCONAME>CX_SHM_PARAMETER_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Falscher Parameter übergeben</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INVALIDATE_INSTANCE</CMPNAME>
+     <SCONAME>INST_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Shared Object Instanz eines Areas</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INVALIDATE_INSTANCE</CMPNAME>
+     <SCONAME>RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Detach-Rückgabewert (Konstanten in CL_SHM_AREA)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INVALIDATE_INSTANCE</CMPNAME>
+     <SCONAME>TERMINATE_CHANGER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aktive Schreiber werden beendet</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ROOT</CMPNAME>
+     <SCONAME>CX_SHM_INITIAL_REFERENCE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Initiale Referenz übergeben</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ROOT</CMPNAME>
+     <SCONAME>CX_SHM_WRONG_HANDLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Falsches Handle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ROOT</CMPNAME>
+     <SCONAME>ROOT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Wurzelobjekt</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

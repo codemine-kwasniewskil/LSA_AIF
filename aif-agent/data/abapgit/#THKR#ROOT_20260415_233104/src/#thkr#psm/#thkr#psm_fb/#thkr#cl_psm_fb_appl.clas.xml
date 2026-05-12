@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_FB_APPL</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Anwendungsklasse für die Funktionsbereich (Kapitel)</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <MSG_ID>/THKR/PSM_INT_FI</MSG_ID>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <DESCRIPTIONS_CLASS>
+    <SEOCLASSTX>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Anwendungsklasse für die Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOCLASSTX>
+   </DESCRIPTIONS_CLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADJUST_HEADER_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Adjust input parameters before object update</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_EXISTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check the existence of the record by key (without period)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_IMPORT_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Checking the correctness of the import data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_FKBER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Creates a new Functional area with the provided data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_FKBER_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Returns the data for a specified Functional area</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Retrieves the unique instance of the Singleton class</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Mapping for the header fields</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Mapping for the text fields</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_AUTHGRP</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>FM: Authorization Group of Functional Area</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_SPRAS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Language Key</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Anwendungsklasse für die Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SAVE_LONG_TEXT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Save long text description for Functional area</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_FKBER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Update of existing Functional Area with the provided data</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADJUST_HEADER_FIELDS</CMPNAME>
+     <SCONAME>C_TFKB_DI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Functional Area Direct Input Data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADJUST_HEADER_FIELDS</CMPNAME>
+     <SCONAME>I_FKBER_ID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Functional Area</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_EXISTANCE</CMPNAME>
+     <SCONAME>I_FKBER_ID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Functional Area</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_IMPORT_DATA</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_IMPORT_DATA</CMPNAME>
+     <SCONAME>I_FB_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_FKBER</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_FKBER</CMPNAME>
+     <SCONAME>I_FB_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_FKBER</CMPNAME>
+     <SCONAME>R_KEY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FKBER_DATA</CMPNAME>
+     <SCONAME>I_FKBER_ID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FKBER_DATA</CMPNAME>
+     <SCONAME>I_FLG_TEXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>General Flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FKBER_DATA</CMPNAME>
+     <SCONAME>R_FKBER</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Vollständige Daten über PSM-Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <SCONAME>I_FB_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <SCONAME>R_TFKB_DI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Functional Area Direct Input Data</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <SCONAME>I_FB_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <SCONAME>R_TFKBT_DI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Functional Area Direct Input Data for texts</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_LONG_TEXT</CMPNAME>
+     <SCONAME>I_FB_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_FKBER</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_FKBER</CMPNAME>
+     <SCONAME>I_FB_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_FKBER</CMPNAME>
+     <SCONAME>R_KEY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Vollständige Daten über PSM-Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

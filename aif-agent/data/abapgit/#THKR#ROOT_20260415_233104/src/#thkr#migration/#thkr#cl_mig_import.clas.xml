@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_MIG_IMPORT</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Importlauf Migration</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ATTR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Migrationsimport</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lauf verarbeiten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TDTO_MIG_AO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TDTO: Migration: Anordnung</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_PROCESS_TYPE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prozess-Art</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_SAVE_PROC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kennzeichen Standardvariante</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_ARCHIV_DIRECTORY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Archiv Ordner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_DIRECTORY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nur Pfad</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_EPL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einzelplan</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_FILENAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Export-Pfad o. Import-Datei mit Pfad</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_FRONTEND</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datei vom Frontend laden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_MIGRATIONSOBJEKT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Migrationsobjekt</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_MOVE_ARCHIV</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datei im Archiv ablegen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_PROT_DETAIL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Protokollierung im Detail</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_UPDATE_ALLOWED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld zum Ankreuzen</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

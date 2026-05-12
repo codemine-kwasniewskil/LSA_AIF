@@ -1,0 +1,3 @@
+FUNCTION-POOL /THKR/ELVIS_PFLEGEVIEW.       "MESSAGE-ID ..
+
+* INCLUDE /THKR/LELVIS_PFLEGEVIEWD...        " Local class definition

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_FI_APPL</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>FI Anwendungsklasse Selektion Anordnung/Beleg Daten</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_GP_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ergänzt die GP Daten in der DTO Zielsttruktur</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_PRESELECT_GP_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ergänzt die GP Daten in der DTO Zielsttruktur (Optimiert)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FILL_DTO_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rückgabe STruktur füllen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ALL_PSM_FI_DOCUMENT_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>liefert zur Selektion alle Belege und Buchungsdaten zurück</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>erzeugt Instanz und liefert sie zurück</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungsklasse fuer FI Methoden</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_SELECTION_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Selektionskriterien</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_CUBE_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegjournal Cube Daten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SELECT_BJCUBE_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Daten von CDF View /THKR/CDS_BJCUBE lesen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SELECT_GP_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Daten von BUT*/ADRC lesen</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_GP_DATA</CMPNAME>
+     <SCONAME>E_PARTNER_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartner Daten für Ist Rückmeldungen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_GP_DATA</CMPNAME>
+     <SCONAME>I_PARTNER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datencontainer mit Belegdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_PRESELECT_GP_DATA</CMPNAME>
+     <SCONAME>E_PARTNER_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartner Daten für Ist Rückmeldungen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_PRESELECT_GP_DATA</CMPNAME>
+     <SCONAME>I_PARTNER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnernummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FILL_DTO_DATA</CMPNAME>
+     <SCONAME>E_DOCUMENT_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit allen Belegdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FILL_DTO_DATA</CMPNAME>
+     <SCONAME>E_KASSENZ_SALDO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit Summen pro Kassenzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ALL_PSM_FI_DOCUMENT_DATA</CMPNAME>
+     <SCONAME>E_DOCUMENT_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit allen Belegdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ALL_PSM_FI_DOCUMENT_DATA</CMPNAME>
+     <SCONAME>E_KASSENZ_SALDO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit Summen pro Kassenzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ALL_PSM_FI_DOCUMENT_DATA</CMPNAME>
+     <SCONAME>I_SELECTION_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Selektionskriterien: FI-Belege</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>R_INSTANCE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungsklasse fuer FI Methoden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SELECT_GP_DATA</CMPNAME>
+     <SCONAME>IT_DOCUMENT_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit Belegdaten</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

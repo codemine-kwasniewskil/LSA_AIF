@@ -1,0 +1,1437 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+
+
+  <xsl:template match="/">
+    <asx:abap version="1.0">
+      <asx:values>
+        <VALUES>
+          <xsl:apply-templates select="//asx:values/VALUES/item"/>
+        </VALUES>
+      </asx:values>
+    </asx:abap>
+  </xsl:template>
+
+  <!-- Шаблон для обработки элемента item -->
+  <xsl:template match="item">
+    <ITEM>
+        <!-- Копирование структуры KEY -->
+        <KEY>
+            <BUKRS>
+              <xsl:value-of select="KEY/BUKRS"/>
+            </BUKRS>
+            <LOTKZ>
+              <xsl:value-of select="KEY/LOTKZ"/>
+            </LOTKZ>
+            <BELNR>
+              <xsl:value-of select="KEY/BELNR"/>
+            </BELNR>
+            <GJAHR>
+              <xsl:value-of select="KEY/GJAHR"/>
+            </GJAHR>
+            <BLART>
+              <xsl:value-of select="KEY/BLART"/>
+            </BLART>
+        </KEY>
+
+        <!-- Обработка таблицы LT_PSO02 -->
+        <LT_PSO02>
+          <xsl:for-each select="LT_PSO02/PSO02">
+            <PSO02>
+              <MANDT>
+                <xsl:value-of select="MANDT"/>
+              </MANDT>
+              <ITABKEY>
+                <xsl:value-of select="ITABKEY"/>
+              </ITABKEY>
+              <AUSBK>
+                <xsl:value-of select="AUSBK"/>
+              </AUSBK>
+              <BUKRS>
+                <xsl:value-of select="BUKRS"/>
+              </BUKRS>
+              <BELNR>
+                <xsl:value-of select="BELNR"/>
+              </BELNR>
+              <GJAHR>
+                <xsl:value-of select="GJAHR"/>
+              </GJAHR>
+              <BSTAT>
+                <xsl:value-of select="BSTAT"/>
+              </BSTAT>
+              <BLART>
+                <xsl:value-of select="BLART"/>
+              </BLART>
+              <BLDAT>
+                <xsl:value-of select="BLDAT"/>
+              </BLDAT>
+              <BUDAT>
+                <xsl:value-of select="BUDAT"/>
+              </BUDAT>
+              <VATDATE>
+                <xsl:value-of select="VATDATE"/>
+              </VATDATE>
+              <MONAT>
+                <xsl:value-of select="MONAT"/>
+              </MONAT>
+              <WWERT>
+                <xsl:value-of select="WWERT"/>
+              </WWERT>
+              <CPUDT>
+                <xsl:value-of select="CPUDT"/>
+              </CPUDT>
+              <CPUTM>
+                <xsl:value-of select="CPUTM"/>
+              </CPUTM>
+              <AEDAT>
+                <xsl:value-of select="AEDAT"/>
+              </AEDAT>
+              <UPDDT>
+                <xsl:value-of select="UPDDT"/>
+              </UPDDT>
+              <USNAM>
+                <xsl:value-of select="USNAM"/>
+              </USNAM>
+              <TCODE>
+                <xsl:value-of select="TCODE"/>
+              </TCODE>
+              <BVORG>
+                <xsl:value-of select="BVORG"/>
+              </BVORG>
+              <XBLNR>
+                <xsl:value-of select="XBLNR"/>
+              </XBLNR>
+              <STBLG>
+                <xsl:value-of select="STBLG"/>
+              </STBLG>
+              <STJAH>
+                <xsl:value-of select="STJAH"/>
+              </STJAH>
+              <BKTXT>
+                <xsl:value-of select="BKTXT"/>
+              </BKTXT>
+              <FIKRS>
+                <xsl:value-of select="FIKRS"/>
+              </FIKRS>
+              <KOARS>
+                <xsl:value-of select="KOARS"/>
+              </KOARS>
+              <XBSET>
+                <xsl:value-of select="XBSET"/>
+              </XBSET>
+              <XSNET>
+                <xsl:value-of select="XSNET"/>
+              </XSNET>
+              <XBWAE>
+                <xsl:value-of select="XBWAE"/>
+              </XBWAE>
+              <WAERS>
+                <xsl:value-of select="WAERS"/>
+              </WAERS>
+              <HWAER>
+                <xsl:value-of select="HWAER"/>
+              </HWAER>
+              <KURSF>
+                <xsl:value-of select="KURSF"/>
+              </KURSF>
+              <XMWST>
+                <xsl:value-of select="XMWST"/>
+              </XMWST>
+              <VBLNR>
+                <xsl:value-of select="VBLNR"/>
+              </VBLNR>
+              <VGJHR>
+                <xsl:value-of select="VGJHR"/>
+              </VGJHR>
+              <XFRGE>
+                <xsl:value-of select="XFRGE"/>
+              </XFRGE>
+              <XPRFG>
+                <xsl:value-of select="XPRFG"/>
+              </XPRFG>
+              <XWFFR>
+                <xsl:value-of select="XWFFR"/>
+              </XWFFR>
+              <LOTKZ>
+                <xsl:value-of select="LOTKZ"/>
+              </LOTKZ>
+              <FRWEG>
+                <xsl:value-of select="FRWEG"/>
+              </FRWEG>
+              <BUZEI>
+                <xsl:value-of select="BUZEI"/>
+              </BUZEI>
+              <BZKEY>
+                <xsl:value-of select="BZKEY"/>
+              </BZKEY>
+              <KOART>
+                <xsl:value-of select="KOART"/>
+              </KOART>
+              <BZALT>
+                <xsl:value-of select="BZALT"/>
+              </BZALT>
+              <BSCHL>
+                <xsl:value-of select="BSCHL"/>
+              </BSCHL>
+              <UMSKZ>
+                <xsl:value-of select="UMSKZ"/>
+              </UMSKZ>
+              <UMSKS>
+                <xsl:value-of select="UMSKS"/>
+              </UMSKS>
+              <SHKZG>
+                <xsl:value-of select="SHKZG"/>
+              </SHKZG>
+              <GSBER>
+                <xsl:value-of select="GSBER"/>
+              </GSBER>
+              <PARGB>
+                <xsl:value-of select="PARGB"/>
+              </PARGB>
+              <MWSKZ>
+                <xsl:value-of select="MWSKZ"/>
+              </MWSKZ>
+              <DMBTR>
+                <xsl:value-of select="DMBTR"/>
+              </DMBTR>
+              <WRBTR>
+                <xsl:value-of select="WRBTR"/>
+              </WRBTR>
+              <HWMET>
+                <xsl:value-of select="HWMET"/>
+              </HWMET>
+              <MWSTS>
+                <xsl:value-of select="MWSTS"/>
+              </MWSTS>
+              <WMWST>
+                <xsl:value-of select="WMWST"/>
+              </WMWST>
+              <HWBAS>
+                <xsl:value-of select="HWBAS"/>
+              </HWBAS>
+              <FWBAS>
+                <xsl:value-of select="FWBAS"/>
+              </FWBAS>
+              <MWART>
+                <xsl:value-of select="MWART"/>
+              </MWART>
+              <KURSR>
+                <xsl:value-of select="KURSR"/>
+              </KURSR>
+              <GBETR>
+                <xsl:value-of select="GBETR"/>
+              </GBETR>
+              <VALUT>
+                <xsl:value-of select="VALUT"/>
+              </VALUT>
+              <ZUONR>
+                <xsl:value-of select="ZUONR"/>
+              </ZUONR>
+              <SGTXT>
+                <xsl:value-of select="SGTXT"/>
+              </SGTXT>
+              <ZINKZ>
+                <xsl:value-of select="ZINKZ"/>
+              </ZINKZ>
+              <FDLEV>
+                <xsl:value-of select="FDLEV"/>
+              </FDLEV>
+              <FDGRP>
+                <xsl:value-of select="FDGRP"/>
+              </FDGRP>
+              <FDWBT>
+                <xsl:value-of select="FDWBT"/>
+              </FDWBT>
+              <FDTAG>
+                <xsl:value-of select="FDTAG"/>
+              </FDTAG>
+              <GEBER>
+                <xsl:value-of select="GEBER"/>
+              </GEBER>
+              <FISTL>
+                <xsl:value-of select="FISTL"/>
+              </FISTL>
+              <XUMSW>
+                <xsl:value-of select="XUMSW"/>
+              </XUMSW>
+              <XCPDD>
+                <xsl:value-of select="XCPDD"/>
+              </XCPDD>
+              <XZEMP>
+                <xsl:value-of select="XZEMP"/>
+              </XZEMP>
+              <XINVE>
+                <xsl:value-of select="XINVE"/>
+              </XINVE>
+              <HKONT>
+                <xsl:value-of select="HKONT"/>
+              </HKONT>
+              <KUNNR>
+                <xsl:value-of select="KUNNR"/>
+              </KUNNR>
+              <LIFNR>
+                <xsl:value-of select="LIFNR"/>
+              </LIFNR>
+              <FILKD>
+                <xsl:value-of select="FILKD"/>
+              </FILKD>
+              <HZUON>
+                <xsl:value-of select="HZUON"/>
+              </HZUON>
+              <ZFBDT>
+                <xsl:value-of select="ZFBDT"/>
+              </ZFBDT>
+              <ZTERM>
+                <xsl:value-of select="ZTERM"/>
+              </ZTERM>
+              <ZBD1T>
+                <xsl:value-of select="ZBD1T"/>
+              </ZBD1T>
+              <ZBD2T>
+                <xsl:value-of select="ZBD2T"/>
+              </ZBD2T>
+              <ZBD3T>
+                <xsl:value-of select="ZBD3T"/>
+              </ZBD3T>
+              <ZBD1P>
+                <xsl:value-of select="ZBD1P"/>
+              </ZBD1P>
+              <ZBD2P>
+                <xsl:value-of select="ZBD2P"/>
+              </ZBD2P>
+              <XSKFB>
+                <xsl:value-of select="XSKFB"/>
+              </XSKFB>
+              <SKFBT>
+                <xsl:value-of select="SKFBT"/>
+              </SKFBT>
+              <SKNTO>
+                <xsl:value-of select="SKNTO"/>
+              </SKNTO>
+              <WSKTO>
+                <xsl:value-of select="WSKTO"/>
+              </WSKTO>
+              <ZLSCH>
+                <xsl:value-of select="ZLSCH"/>
+              </ZLSCH>
+              <ZLSPR>
+                <xsl:value-of select="ZLSPR"/>
+              </ZLSPR>
+              <UZAWE>
+                <xsl:value-of select="UZAWE"/>
+              </UZAWE>
+              <HBKID>
+                <xsl:value-of select="HBKID"/>
+              </HBKID>
+              <BVTYP>
+                <xsl:value-of select="BVTYP"/>
+              </BVTYP>
+              <REBZG>
+                <xsl:value-of select="REBZG"/>
+              </REBZG>
+              <REBZJ>
+                <xsl:value-of select="REBZJ"/>
+              </REBZJ>
+              <REBZZ>
+                <xsl:value-of select="REBZZ"/>
+              </REBZZ>
+              <REBZT>
+                <xsl:value-of select="REBZT"/>
+              </REBZT>
+              <ZOLLT>
+                <xsl:value-of select="ZOLLT"/>
+              </ZOLLT>
+              <ZOLLD>
+                <xsl:value-of select="ZOLLD"/>
+              </ZOLLD>
+              <LZBKZ>
+                <xsl:value-of select="LZBKZ"/>
+              </LZBKZ>
+              <LANDL>
+                <xsl:value-of select="LANDL"/>
+              </LANDL>
+              <DIEKZ>
+                <xsl:value-of select="DIEKZ"/>
+              </DIEKZ>
+              <SAMNR>
+                <xsl:value-of select="SAMNR"/>
+              </SAMNR>
+              <VRSKZ>
+                <xsl:value-of select="VRSKZ"/>
+              </VRSKZ>
+              <VRSDT>
+                <xsl:value-of select="VRSDT"/>
+              </VRSDT>
+              <MSCHL>
+                <xsl:value-of select="MSCHL"/>
+              </MSCHL>
+              <MANSP>
+                <xsl:value-of select="MANSP"/>
+              </MANSP>
+              <MABER>
+                <xsl:value-of select="MABER"/>
+              </MABER>
+              <REWRT>
+                <xsl:value-of select="REWRT"/>
+              </REWRT>
+              <REWWR>
+                <xsl:value-of select="REWWR"/>
+              </REWWR>
+              <STCEG>
+                <xsl:value-of select="STCEG"/>
+              </STCEG>
+              <XHKOM>
+                <xsl:value-of select="XHKOM"/>
+              </XHKOM>
+              <VERTT>
+                <xsl:value-of select="VERTT"/>
+              </VERTT>
+              <VERTN>
+                <xsl:value-of select="VERTN"/>
+              </VERTN>
+              <VBEWA>
+                <xsl:value-of select="VBEWA"/>
+              </VBEWA>
+              <DABRZ>
+                <xsl:value-of select="DABRZ"/>
+              </DABRZ>
+              <BTYPE>
+                <xsl:value-of select="BTYPE"/>
+              </BTYPE>
+              <XEGDR>
+                <xsl:value-of select="XEGDR"/>
+              </XEGDR>
+              <FIPOS>
+                <xsl:value-of select="FIPOS"/>
+              </FIPOS>
+              <ZBFIX>
+                <xsl:value-of select="ZBFIX"/>
+              </ZBFIX>
+              <REPRF>
+                <xsl:value-of select="REPRF"/>
+              </REPRF>
+              <SWAER>
+                <xsl:value-of select="SWAER"/>
+              </SWAER>
+              <MADAT>
+                <xsl:value-of select="MADAT"/>
+              </MADAT>
+              <MANST>
+                <xsl:value-of select="MANST"/>
+              </MANST>
+              <ANFBN>
+                <xsl:value-of select="ANFBN"/>
+              </ANFBN>
+              <ANFBJ>
+                <xsl:value-of select="ANFBJ"/>
+              </ANFBJ>
+              <ANFBU>
+                <xsl:value-of select="ANFBU"/>
+              </ANFBU>
+              <ANFAE>
+                <xsl:value-of select="ANFAE"/>
+              </ANFAE>
+              <EGMLD>
+                <xsl:value-of select="EGMLD"/>
+              </EGMLD>
+              <XEGMD>
+                <xsl:value-of select="XEGMD"/>
+              </XEGMD>
+              <XREF1>
+                <xsl:value-of select="XREF1"/>
+              </XREF1>
+              <XREF2>
+                <xsl:value-of select="XREF2"/>
+              </XREF2>
+              <XZANF>
+                <xsl:value-of select="XZANF"/>
+              </XZANF>
+              <XFDIS>
+                <xsl:value-of select="XFDIS"/>
+              </XFDIS>
+              <AWTYP>
+                <xsl:value-of select="AWTYP"/>
+              </AWTYP>
+              <AWREF>
+                <xsl:value-of select="AWREF"/>
+              </AWREF>
+              <AWORG>
+                <xsl:value-of select="AWORG"/>
+              </AWORG>
+              <AWKEY>
+                <xsl:value-of select="AWKEY"/>
+              </AWKEY>
+              <AWSYS>
+                <xsl:value-of select="AWSYS"/>
+              </AWSYS>
+              <AUGDT>
+                <xsl:value-of select="AUGDT"/>
+              </AUGDT>
+              <AUGCP>
+                <xsl:value-of select="AUGCP"/>
+              </AUGCP>
+              <AUGBL>
+                <xsl:value-of select="AUGBL"/>
+              </AUGBL>
+              <PPNAM>
+                <xsl:value-of select="PPNAM"/>
+              </PPNAM>
+              <PSOXWF>
+                <xsl:value-of select="PSOXWF"/>
+              </PSOXWF>
+              <EMPFB>
+                <xsl:value-of select="EMPFB"/>
+              </EMPFB>
+              <MEASURE>
+                <xsl:value-of select="MEASURE"/>
+              </MEASURE>
+              <PSOTY>
+                <xsl:value-of select="PSOTY"/>
+              </PSOTY>
+              <PSOAK>
+                <xsl:value-of select="PSOAK"/>
+              </PSOAK>
+              <PSOKS>
+                <xsl:value-of select="PSOKS"/>
+              </PSOKS>
+              <PSOSG>
+                <xsl:value-of select="PSOSG"/>
+              </PSOSG>
+              <PSOFN>
+                <xsl:value-of select="PSOFN"/>
+              </PSOFN>
+              <INTFORM>
+                <xsl:value-of select="INTFORM"/>
+              </INTFORM>
+              <INTDATE>
+                <xsl:value-of select="INTDATE"/>
+              </INTDATE>
+              <PSOBT>
+                <xsl:value-of select="PSOBT"/>
+              </PSOBT>
+              <PSOZL>
+                <xsl:value-of select="PSOZL"/>
+              </PSOZL>
+              <PSODT>
+                <xsl:value-of select="PSODT"/>
+              </PSODT>
+              <PSOTM>
+                <xsl:value-of select="PSOTM"/>
+              </PSOTM>
+              <DBMON>
+                <xsl:value-of select="DBMON"/>
+              </DBMON>
+              <DBTAG>
+                <xsl:value-of select="DBTAG"/>
+              </DBTAG>
+              <DBBDT>
+                <xsl:value-of select="DBBDT"/>
+              </DBBDT>
+              <DBATR>
+                <xsl:value-of select="DBATR"/>
+              </DBATR>
+              <DBEDT>
+                <xsl:value-of select="DBEDT"/>
+              </DBEDT>
+              <XDELT>
+                <xsl:value-of select="XDELT"/>
+              </XDELT>
+              <DBZHL>
+                <xsl:value-of select="DBZHL"/>
+              </DBZHL>
+              <DBAKZ>
+                <xsl:value-of select="DBAKZ"/>
+              </DBAKZ>
+              <XFWHW>
+                <xsl:value-of select="XFWHW"/>
+              </XFWHW>
+              <XSFHW>
+                <xsl:value-of select="XSFHW"/>
+              </XSFHW>
+              <XBLLT>
+                <xsl:value-of select="XBLLT"/>
+              </XBLLT>
+              <BUDGET_PD>
+                <xsl:value-of select="BUDGET_PD"/>
+              </BUDGET_PD>
+              <PBUDGET_PD>
+                <xsl:value-of select="PBUDGET_PD"/>
+              </PBUDGET_PD>
+              <PEROP_BEG>
+                <xsl:value-of select="PEROP_BEG"/>
+              </PEROP_BEG>
+              <PEROP_END>
+                <xsl:value-of select="PEROP_END"/>
+              </PEROP_END>
+              <XMARK>
+                <xsl:value-of select="XMARK"/>
+              </XMARK>
+              <XABSE>
+                <xsl:value-of select="XABSE"/>
+              </XABSE>
+              <XPOST>
+                <xsl:value-of select="XPOST"/>
+              </XPOST>
+              <XUMVZ>
+                <xsl:value-of select="XUMVZ"/>
+              </XUMVZ>
+              <XMORE>
+                <xsl:value-of select="XMORE"/>
+              </XMORE>
+              <XNEWP>
+                <xsl:value-of select="XNEWP"/>
+              </XNEWP>
+              <XNEWC>
+                <xsl:value-of select="XNEWC"/>
+              </XNEWC>
+              <XCPDK>
+                <xsl:value-of select="XCPDK"/>
+              </XCPDK>
+              <KTOCD>
+                <xsl:value-of select="KTOCD"/>
+              </KTOCD>
+              <KTOCK>
+                <xsl:value-of select="KTOCK"/>
+              </KTOCK>
+              <PSOEA>
+                <xsl:value-of select="PSOEA"/>
+              </PSOEA>
+              <PSOOB>
+                <xsl:value-of select="PSOOB"/>
+              </PSOOB>
+              <CPDID>
+                <xsl:value-of select="CPDID"/>
+              </CPDID>
+              <NAMID>
+                <xsl:value-of select="NAMID"/>
+              </NAMID>
+              <PSTLZ>
+                <xsl:value-of select="PSTLZ"/>
+              </PSTLZ>
+              <ORT01>
+                <xsl:value-of select="ORT01"/>
+              </ORT01>
+              <PSOSF>
+                <xsl:value-of select="PSOSF"/>
+              </PSOSF>
+              <BNKID>
+                <xsl:value-of select="BNKID"/>
+              </BNKID>
+              <ANLID>
+                <xsl:value-of select="ANLID"/>
+              </ANLID>
+              <STGRD>
+                <xsl:value-of select="STGRD"/>
+              </STGRD>
+              <DBBLG>
+                <xsl:value-of select="DBBLG"/>
+              </DBBLG>
+              <KONTT>
+                <xsl:value-of select="KONTT"/>
+              </KONTT>
+              <KONTL>
+                <xsl:value-of select="KONTL"/>
+              </KONTL>
+              <TEMP_ID>
+                <xsl:value-of select="TEMP_ID"/>
+              </TEMP_ID>
+              <GMVKZ>
+                <xsl:value-of select="GMVKZ"/>
+              </GMVKZ>
+              <SRTYPE>
+                <xsl:value-of select="SRTYPE"/>
+              </SRTYPE>
+              <RESUBMISSION>
+                <xsl:value-of select="RESUBMISSION"/>
+              </RESUBMISSION>
+              <VBUND>
+                <xsl:value-of select="VBUND"/>
+              </VBUND>
+              <REINDAT>
+                <xsl:value-of select="REINDAT"/>
+              </REINDAT>
+            </PSO02>
+          </xsl:for-each>
+        </LT_PSO02>
+
+        <!-- Обработка таблицы LT_PSO02S -->
+        <LT_PSO02S>
+          <xsl:for-each select="LT_PSO02S/PSO02S">
+            <PSO02S>
+              <MANDT>
+                <xsl:value-of select="MANDT"/>
+              </MANDT>
+              <LOTKZ>
+                <xsl:value-of select="LOTKZ"/>
+              </LOTKZ>
+              <BUKRS>
+                <xsl:value-of select="BUKRS"/>
+              </BUKRS>
+              <ITABKEY>
+                <xsl:value-of select="ITABKEY"/>
+              </ITABKEY>
+              <GJAHR>
+                <xsl:value-of select="GJAHR"/>
+              </GJAHR>
+              <BZKEY>
+                <xsl:value-of select="BZKEY"/>
+              </BZKEY>
+              <AUSBK>
+                <xsl:value-of select="AUSBK"/>
+              </AUSBK>
+              <BUZEI>
+                <xsl:value-of select="BUZEI"/>
+              </BUZEI>
+              <BSCHL>
+                <xsl:value-of select="BSCHL"/>
+              </BSCHL>
+              <SHKZG>
+                <xsl:value-of select="SHKZG"/>
+              </SHKZG>
+              <GSBER>
+                <xsl:value-of select="GSBER"/>
+              </GSBER>
+              <PARGB>
+                <xsl:value-of select="PARGB"/>
+              </PARGB>
+              <MWSKZ>
+                <xsl:value-of select="MWSKZ"/>
+              </MWSKZ>
+              <DMBTR>
+                <xsl:value-of select="DMBTR"/>
+              </DMBTR>
+              <DMBE2>
+                <xsl:value-of select="DMBE2"/>
+              </DMBE2>
+              <DMBE3>
+                <xsl:value-of select="DMBE3"/>
+              </DMBE3>
+              <WRBTR>
+                <xsl:value-of select="WRBTR"/>
+              </WRBTR>
+              <HWMET>
+                <xsl:value-of select="HWMET"/>
+              </HWMET>
+              <HWBAS>
+                <xsl:value-of select="HWBAS"/>
+              </HWBAS>
+              <FWBAS>
+                <xsl:value-of select="FWBAS"/>
+              </FWBAS>
+              <MWART>
+                <xsl:value-of select="MWART"/>
+              </MWART>
+              <KURSR>
+                <xsl:value-of select="KURSR"/>
+              </KURSR>
+              <GBETR>
+                <xsl:value-of select="GBETR"/>
+              </GBETR>
+              <ZFBDT>
+                <xsl:value-of select="ZFBDT"/>
+              </ZFBDT>
+              <VALUT>
+                <xsl:value-of select="VALUT"/>
+              </VALUT>
+              <ZUONR>
+                <xsl:value-of select="ZUONR"/>
+              </ZUONR>
+              <SGTXT>
+                <xsl:value-of select="SGTXT"/>
+              </SGTXT>
+              <ZINKZ>
+                <xsl:value-of select="ZINKZ"/>
+              </ZINKZ>
+              <RMVCT>
+                <xsl:value-of select="RMVCT"/>
+              </RMVCT>
+              <FDLEV>
+                <xsl:value-of select="FDLEV"/>
+              </FDLEV>
+              <FDGRP>
+                <xsl:value-of select="FDGRP"/>
+              </FDGRP>
+              <FDWBT>
+                <xsl:value-of select="FDWBT"/>
+              </FDWBT>
+              <FDTAG>
+                <xsl:value-of select="FDTAG"/>
+              </FDTAG>
+              <KOKRS>
+                <xsl:value-of select="KOKRS"/>
+              </KOKRS>
+              <KOSTL>
+                <xsl:value-of select="KOSTL"/>
+              </KOSTL>
+              <AUFNR>
+                <xsl:value-of select="AUFNR"/>
+              </AUFNR>
+              <KDAUF>
+                <xsl:value-of select="KDAUF"/>
+              </KDAUF>
+              <KDPOS>
+                <xsl:value-of select="KDPOS"/>
+              </KDPOS>
+              <PPRCTR>
+                <xsl:value-of select="PPRCTR"/>
+              </PPRCTR>
+              <IMKEY>
+                <xsl:value-of select="IMKEY"/>
+              </IMKEY>
+              <PERNR>
+                <xsl:value-of select="PERNR"/>
+              </PERNR>
+              <XUMSW>
+                <xsl:value-of select="XUMSW"/>
+              </XUMSW>
+              <XSKRL>
+                <xsl:value-of select="XSKRL"/>
+              </XSKRL>
+              <SAKNR>
+                <xsl:value-of select="SAKNR"/>
+              </SAKNR>
+              <HZUON>
+                <xsl:value-of select="HZUON"/>
+              </HZUON>
+              <MATNR>
+                <xsl:value-of select="MATNR"/>
+              </MATNR>
+              <WERKS>
+                <xsl:value-of select="WERKS"/>
+              </WERKS>
+              <MENGE>
+                <xsl:value-of select="MENGE"/>
+              </MENGE>
+              <MEINS>
+                <xsl:value-of select="MEINS"/>
+              </MEINS>
+              <BPMNG>
+                <xsl:value-of select="BPMNG"/>
+              </BPMNG>
+              <EBELN>
+                <xsl:value-of select="EBELN"/>
+              </EBELN>
+              <EBELP>
+                <xsl:value-of select="EBELP"/>
+              </EBELP>
+              <REWRT>
+                <xsl:value-of select="REWRT"/>
+              </REWRT>
+              <REWWR>
+                <xsl:value-of select="REWWR"/>
+              </REWWR>
+              <ZEKKN>
+                <xsl:value-of select="ZEKKN"/>
+              </ZEKKN>
+              <LFBNR>
+                <xsl:value-of select="LFBNR"/>
+              </LFBNR>
+              <LFPOS>
+                <xsl:value-of select="LFPOS"/>
+              </LFPOS>
+              <LFGJA>
+                <xsl:value-of select="LFGJA"/>
+              </LFGJA>
+              <BWKEY>
+                <xsl:value-of select="BWKEY"/>
+              </BWKEY>
+              <BWTAR>
+                <xsl:value-of select="BWTAR"/>
+              </BWTAR>
+              <TBTKZ>
+                <xsl:value-of select="TBTKZ"/>
+              </TBTKZ>
+              <STCEG>
+                <xsl:value-of select="STCEG"/>
+              </STCEG>
+              <PRCTR>
+                <xsl:value-of select="PRCTR"/>
+              </PRCTR>
+              <VNAME>
+                <xsl:value-of select="VNAME"/>
+              </VNAME>
+              <RECID>
+                <xsl:value-of select="RECID"/>
+              </RECID>
+              <EGRUP>
+                <xsl:value-of select="EGRUP"/>
+              </EGRUP>
+              <VPTNR>
+                <xsl:value-of select="VPTNR"/>
+              </VPTNR>
+              <VERTT>
+                <xsl:value-of select="VERTT"/>
+              </VERTT>
+              <VERTN>
+                <xsl:value-of select="VERTN"/>
+              </VERTN>
+              <VBEWA>
+                <xsl:value-of select="VBEWA"/>
+              </VBEWA>
+              <TXJCD>
+                <xsl:value-of select="TXJCD"/>
+              </TXJCD>
+              <DABRZ>
+                <xsl:value-of select="DABRZ"/>
+              </DABRZ>
+              <KSTRG>
+                <xsl:value-of select="KSTRG"/>
+              </KSTRG>
+              <NPLNR>
+                <xsl:value-of select="NPLNR"/>
+              </NPLNR>
+              <AUFPL>
+                <xsl:value-of select="AUFPL"/>
+              </AUFPL>
+              <PS_PSP_PNR>
+                <xsl:value-of select="PS_PSP_PNR"/>
+              </PS_PSP_PNR>
+              <PAOBJNR>
+                <xsl:value-of select="PAOBJNR"/>
+              </PAOBJNR>
+              <PASUBNR>
+                <xsl:value-of select="PASUBNR"/>
+              </PASUBNR>
+              <BTYPE>
+                <xsl:value-of select="BTYPE"/>
+              </BTYPE>
+              <ETYPE>
+                <xsl:value-of select="ETYPE"/>
+              </ETYPE>
+              <XEGDR>
+                <xsl:value-of select="XEGDR"/>
+              </XEGDR>
+              <HRKFT>
+                <xsl:value-of select="HRKFT"/>
+              </HRKFT>
+              <FIPOS>
+                <xsl:value-of select="FIPOS"/>
+              </FIPOS>
+              <KOART>
+                <xsl:value-of select="KOART"/>
+              </KOART>
+              <VPRSV>
+                <xsl:value-of select="VPRSV"/>
+              </VPRSV>
+              <PEINH>
+                <xsl:value-of select="PEINH"/>
+              </PEINH>
+              <KDEIN>
+                <xsl:value-of select="KDEIN"/>
+              </KDEIN>
+              <ANLN1>
+                <xsl:value-of select="ANLN1"/>
+              </ANLN1>
+              <ANLN2>
+                <xsl:value-of select="ANLN2"/>
+              </ANLN2>
+              <SMWSK>
+                <xsl:value-of select="SMWSK"/>
+              </SMWSK>
+              <SWAER>
+                <xsl:value-of select="SWAER"/>
+              </SWAER>
+              <STUNR>
+                <xsl:value-of select="STUNR"/>
+              </STUNR>
+              <ZAEHK>
+                <xsl:value-of select="ZAEHK"/>
+              </ZAEHK>
+              <XFDIS>
+                <xsl:value-of select="XFDIS"/>
+              </XFDIS>
+              <KBLNR>
+                <xsl:value-of select="KBLNR"/>
+              </KBLNR>
+              <KBLPOS>
+                <xsl:value-of select="KBLPOS"/>
+              </KBLPOS>
+              <STTAX>
+                <xsl:value-of select="STTAX"/>
+              </STTAX>
+              <GEBER>
+                <xsl:value-of select="GEBER"/>
+              </GEBER>
+              <BUDGET_PD>
+                <xsl:value-of select="BUDGET_PD"/>
+              </BUDGET_PD>
+              <FISTL>
+                <xsl:value-of select="FISTL"/>
+              </FISTL>
+              <VORNR>
+                <xsl:value-of select="VORNR"/>
+              </VORNR>
+              <ABPER>
+                <xsl:value-of select="ABPER"/>
+              </ABPER>
+              <EREKZ>
+                <xsl:value-of select="EREKZ"/>
+              </EREKZ>
+              <FKBER>
+                <xsl:value-of select="FKBER"/>
+              </FKBER>
+              <VBUND>
+                <xsl:value-of select="VBUND"/>
+              </VBUND>
+              <XREF1>
+                <xsl:value-of select="XREF1"/>
+              </XREF1>
+              <XREF2>
+                <xsl:value-of select="XREF2"/>
+              </XREF2>
+              <XREF3>
+                <xsl:value-of select="XREF3"/>
+              </XREF3>
+              <CCBTC>
+                <xsl:value-of select="CCBTC"/>
+              </CCBTC>
+              <RSTGR>
+                <xsl:value-of select="RSTGR"/>
+              </RSTGR>
+              <GRICD>
+                <xsl:value-of select="GRICD"/>
+              </GRICD>
+              <GRIRG>
+                <xsl:value-of select="GRIRG"/>
+              </GRIRG>
+              <GITYP>
+                <xsl:value-of select="GITYP"/>
+              </GITYP>
+              <IDXSP>
+                <xsl:value-of select="IDXSP"/>
+              </IDXSP>
+              <BUZID>
+                <xsl:value-of select="BUZID"/>
+              </BUZID>
+              <ERLKZ>
+                <xsl:value-of select="ERLKZ"/>
+              </ERLKZ>
+              <FIPEX>
+                <xsl:value-of select="FIPEX"/>
+              </FIPEX>
+              <CHWRB>
+                <xsl:value-of select="CHWRB"/>
+              </CHWRB>
+              <BZDAT>
+                <xsl:value-of select="BZDAT"/>
+              </BZDAT>
+              <KONTT>
+                <xsl:value-of select="KONTT"/>
+              </KONTT>
+              <KONTL>
+                <xsl:value-of select="KONTL"/>
+              </KONTL>
+              <GRANT_NBR>
+                <xsl:value-of select="GRANT_NBR"/>
+              </GRANT_NBR>
+              <FKBER_LONG>
+                <xsl:value-of select="FKBER_LONG"/>
+              </FKBER_LONG>
+              <PRZNR>
+                <xsl:value-of select="PRZNR"/>
+              </PRZNR>
+              <MEASURE>
+                <xsl:value-of select="MEASURE"/>
+              </MEASURE>
+              <PGEBER>
+                <xsl:value-of select="PGEBER"/>
+              </PGEBER>
+              <PBUDGET_PD>
+                <xsl:value-of select="PBUDGET_PD"/>
+              </PBUDGET_PD>
+              <PGRANT_NBR>
+                <xsl:value-of select="PGRANT_NBR"/>
+              </PGRANT_NBR>
+              <BELNR>
+                <xsl:value-of select="BELNR"/>
+              </BELNR>
+              <XMARK>
+                <xsl:value-of select="XMARK"/>
+              </XMARK>
+              <BZALT>
+                <xsl:value-of select="BZALT"/>
+              </BZALT>
+              <PSOVW>
+                <xsl:value-of select="PSOVW"/>
+              </PSOVW>
+              <ANBWA_ANL>
+                <xsl:value-of select="ANBWA_ANL"/>
+              </ANBWA_ANL>
+              <BZDAT_ANL>
+                <xsl:value-of select="BZDAT_ANL"/>
+              </BZDAT_ANL>
+              <HKONT_ANL>
+                <xsl:value-of select="HKONT_ANL"/>
+              </HKONT_ANL>
+              <LNRAN>
+                <xsl:value-of select="LNRAN"/>
+              </LNRAN>
+              <BPRME>
+                <xsl:value-of select="BPRME"/>
+              </BPRME>
+              <PSTYP>
+                <xsl:value-of select="PSTYP"/>
+              </PSTYP>
+              <ANLID>
+                <xsl:value-of select="ANLID"/>
+              </ANLID>
+              <WMWST>
+                <xsl:value-of select="WMWST"/>
+              </WMWST>
+              <MWSTS>
+                <xsl:value-of select="MWSTS"/>
+              </MWSTS>
+              <LSTAR>
+                <xsl:value-of select="LSTAR"/>
+              </LSTAR>
+              <PEROP_BEG>
+                <xsl:value-of select="PEROP_BEG"/>
+              </PEROP_BEG>
+              <PEROP_END>
+                <xsl:value-of select="PEROP_END"/>
+              </PEROP_END>
+            </PSO02S>
+          </xsl:for-each>
+        </LT_PSO02S>
+
+        <!-- Обработка таблицы LT_PSSEC -->
+        <LT_PSSEC>
+          <xsl:for-each select="LT_PSSEC/FMBSEC">
+            <FMBSEC>
+              <ITABKEY>
+                <xsl:value-of select="ITABKEY"/>
+              </ITABKEY>
+              <BSEC>
+                <MANDT>
+                  <xsl:value-of select="BSEC/MANDT"/>
+                </MANDT>
+                <BUKRS>
+                  <xsl:value-of select="BSEC/BUKRS"/>
+                </BUKRS>
+                <BELNR>
+                  <xsl:value-of select="BSEC/BELNR"/>
+                </BELNR>
+                <GJAHR>
+                  <xsl:value-of select="BSEC/GJAHR"/>
+                </GJAHR>
+                <BUZEI>
+                  <xsl:value-of select="BSEC/BUZEI"/>
+                </BUZEI>
+                <NAME1>
+                  <xsl:value-of select="BSEC/NAME1"/>
+                </NAME1>
+                <NAME2>
+                  <xsl:value-of select="BSEC/NAME2"/>
+                </NAME2>
+                <NAME3>
+                  <xsl:value-of select="BSEC/NAME3"/>
+                </NAME3>
+                <NAME4>
+                  <xsl:value-of select="BSEC/NAME4"/>
+                </NAME4>
+                <PSTLZ>
+                  <xsl:value-of select="BSEC/PSTLZ"/>
+                </PSTLZ>
+                <ORT01>
+                  <xsl:value-of select="BSEC/ORT01"/>
+                </ORT01>
+                <LAND1>
+                  <xsl:value-of select="BSEC/LAND1"/>
+                </LAND1>
+                <STRAS>
+                  <xsl:value-of select="BSEC/STRAS"/>
+                </STRAS>
+                <PFACH>
+                  <xsl:value-of select="BSEC/PFACH"/>
+                </PFACH>
+                <PSTL2>
+                  <xsl:value-of select="BSEC/PSTL2"/>
+                </PSTL2>
+                <PSKTO>
+                  <xsl:value-of select="BSEC/PSKTO"/>
+                </PSKTO>
+                <BANKN>
+                  <xsl:value-of select="BSEC/BANKN"/>
+                </BANKN>
+                <BANKL>
+                  <xsl:value-of select="BSEC/BANKL"/>
+                </BANKL>
+                <BANKS>
+                  <xsl:value-of select="BSEC/BANKS"/>
+                </BANKS>
+                <STCD1>
+                  <xsl:value-of select="BSEC/STCD1"/>
+                </STCD1>
+                <STCD2>
+                  <xsl:value-of select="BSEC/STCD2"/>
+                </STCD2>
+                <STKZU>
+                  <xsl:value-of select="BSEC/STKZU"/>
+                </STKZU>
+                <STKZA>
+                  <xsl:value-of select="BSEC/STKZA"/>
+                </STKZA>
+                <REGIO>
+                  <xsl:value-of select="BSEC/REGIO"/>
+                </REGIO>
+                <BKONT>
+                  <xsl:value-of select="BSEC/BKONT"/>
+                </BKONT>
+                <DTAWS>
+                  <xsl:value-of select="BSEC/DTAWS"/>
+                </DTAWS>
+                <DTAMS>
+                  <xsl:value-of select="BSEC/DTAMS"/>
+                </DTAMS>
+                <XCPDK>
+                  <xsl:value-of select="BSEC/XCPDK"/>
+                </XCPDK>
+                <EMPFG>
+                  <xsl:value-of select="BSEC/EMPFG"/>
+                </EMPFG>
+                <SPRAS>
+                  <xsl:value-of select="BSEC/SPRAS"/>
+                </SPRAS>
+                <FITYP>
+                  <xsl:value-of select="BSEC/FITYP"/>
+                </FITYP>
+                <STCDT>
+                  <xsl:value-of select="BSEC/STCDT"/>
+                </STCDT>
+                <STKZN>
+                  <xsl:value-of select="BSEC/STKZN"/>
+                </STKZN>
+                <STCD3>
+                  <xsl:value-of select="BSEC/STCD3"/>
+                </STCD3>
+                <STCD4>
+                  <xsl:value-of select="BSEC/STCD4"/>
+                </STCD4>
+                <BKREF>
+                  <xsl:value-of select="BSEC/BKREF"/>
+                </BKREF>
+                <J_1KFREPRE>
+                  <xsl:value-of select="BSEC/J_1KFREPRE"/>
+                </J_1KFREPRE>
+                <J_1KFTBUS>
+                  <xsl:value-of select="BSEC/J_1KFTBUS"/>
+                </J_1KFTBUS>
+                <J_1KFTIND>
+                  <xsl:value-of select="BSEC/J_1KFTIND"/>
+                </J_1KFTIND>
+                <ANRED>
+                  <xsl:value-of select="BSEC/ANRED"/>
+                </ANRED>
+                <ADRNR>
+                  <xsl:value-of select="BSEC/ADRNR"/>
+                </ADRNR>
+                <XRGUH>
+                  <xsl:value-of select="BSEC/XRGUH"/>
+                </XRGUH>
+                <PO_BOX_NUM>
+                  <xsl:value-of select="BSEC/PO_BOX_NUM"/>
+                </PO_BOX_NUM>
+                <BEGRU>
+                  <xsl:value-of select="BSEC/BEGRU"/>
+                </BEGRU>
+                <STCD5>
+                  <xsl:value-of select="BSEC/STCD5"/>
+                </STCD5>
+                <INTAD>
+                  <xsl:value-of select="BSEC/INTAD"/>
+                </INTAD>
+                <GLO_RE1_OT>
+                  <xsl:value-of select="BSEC/GLO_RE1_OT"/>
+                </GLO_RE1_OT>
+                <ZGBDAT>
+                  <xsl:value-of select="BSEC/ZGBDAT"/>
+                </ZGBDAT>
+              </BSEC>
+            </FMBSEC>
+          </xsl:for-each>
+        </LT_PSSEC>
+
+        <!-- Таблица LT_KBLK -->
+        <LT_KBLK>
+          <xsl:for-each select="LT_KBLK/KBLK">
+            <KBLK>
+              <MANDT>
+                <xsl:value-of select="MANDT"/>
+              </MANDT>
+              <BELNR>
+                <xsl:value-of select="BELNR"/>
+              </BELNR>
+              <BLTYP>
+                <xsl:value-of select="BLTYP"/>
+              </BLTYP>
+              <BLDAT>
+                <xsl:value-of select="BLDAT"/>
+              </BLDAT>
+              <BUDAT>
+                <xsl:value-of select="BUDAT"/>
+              </BUDAT>
+              <ERNAM>
+                <xsl:value-of select="ERNAM"/>
+              </ERNAM>
+              <ERDAT>
+                <xsl:value-of select="ERDAT"/>
+              </ERDAT>
+              <AENAM>
+                <xsl:value-of select="AENAM"/>
+              </AENAM>
+              <AEDAT>
+                <xsl:value-of select="AEDAT"/>
+              </AEDAT>
+              <XBLNR>
+                <xsl:value-of select="XBLNR"/>
+              </XBLNR>
+            </KBLK>
+          </xsl:for-each>
+        </LT_KBLK>
+
+        <!-- Таблица LT_KBLP -->
+        <LT_KBLP>
+          <xsl:for-each select="LT_KBLP/KBLP">
+            <KBLP>
+              <MANDT>
+                <xsl:value-of select="MANDT"/>
+              </MANDT>
+              <BELNR>
+                <xsl:value-of select="BELNR"/>
+              </BELNR>
+              <POSNR>
+                <xsl:value-of select="POSNR"/>
+              </POSNR>
+              <EBELN>
+                <xsl:value-of select="EBELN"/>
+              </EBELN>
+              <EBELP>
+                <xsl:value-of select="EBELP"/>
+              </EBELP>
+              <DMBTR>
+                <xsl:value-of select="DMBTR"/>
+              </DMBTR>
+              <WAERS>
+                <xsl:value-of select="WAERS"/>
+              </WAERS>
+              <FISTL>
+                <xsl:value-of select="FISTL"/>
+              </FISTL>
+              <GEBER>
+                <xsl:value-of select="GEBER"/>
+              </GEBER>
+              <FIPOS>
+                <xsl:value-of select="FIPOS"/>
+              </FIPOS>
+            </KBLP>
+          </xsl:for-each>
+        </LT_KBLP>
+
+        <!-- Таблица LT_KBLE -->
+        <LT_KBLE>
+          <xsl:for-each select="LT_KBLE/KBLE">
+            <KBLE>
+              <MANDT>
+                <xsl:value-of select="MANDT"/>
+              </MANDT>
+              <BELNR>
+                <xsl:value-of select="BELNR"/>
+              </BELNR>
+              <ELEHK>
+                <xsl:value-of select="ELEHK"/>
+              </ELEHK>
+              <FNAME>
+                <xsl:value-of select="FNAME"/>
+              </FNAME>
+              <FVALUE>
+                <xsl:value-of select="FVALUE"/>
+              </FVALUE>
+            </KBLE>
+          </xsl:for-each>
+        </LT_KBLE>
+
+        <!-- Таблица LT_BPDK -->
+        <LT_BPDK>
+          <xsl:for-each select="LT_BPDK/BPDK">
+            <BPDK>
+              <MANDT>
+                <xsl:value-of select="MANDT"/>
+              </MANDT>
+              <BELNR>
+                <xsl:value-of select="BELNR"/>
+              </BELNR>
+              <GJAHR>
+                <xsl:value-of select="GJAHR"/>
+              </GJAHR>
+              <BLDAT>
+                <xsl:value-of select="BLDAT"/>
+              </BLDAT>
+              <BUDAT>
+                <xsl:value-of select="BUDAT"/>
+              </BUDAT>
+              <WAERS>
+                <xsl:value-of select="WAERS"/>
+              </WAERS>
+              <USNAM>
+                <xsl:value-of select="USNAM"/>
+              </USNAM>
+            </BPDK>
+          </xsl:for-each>
+        </LT_BPDK>
+
+        <!-- Таблица LT_BPDJ -->
+        <LT_BPDJ>
+          <xsl:for-each select="LT_BPDJ/BPDJ">
+            <BPDJ>
+              <MANDT>
+                <xsl:value-of select="MANDT"/>
+              </MANDT>
+              <BELNR>
+                <xsl:value-of select="BELNR"/>
+              </BELNR>
+              <GJAHR>
+                <xsl:value-of select="GJAHR"/>
+              </GJAHR>
+              <WRTPP>
+                <xsl:value-of select="WRTPP"/>
+              </WRTPP>
+              <WRBTR>
+                <xsl:value-of select="WRBTR"/>
+              </WRBTR>
+              <WAERS>
+                <xsl:value-of select="WAERS"/>
+              </WAERS>
+            </BPDJ>
+          </xsl:for-each>
+        </LT_BPDJ>
+
+        <!-- Таблица LT_BPDZ -->
+        <LT_BPDZ>
+          <xsl:for-each select="LT_BPDZ/BPDZ">
+            <BPDZ>
+              <MANDT>
+                <xsl:value-of select="MANDT"/>
+              </MANDT>
+              <BELNR>
+                <xsl:value-of select="BELNR"/>
+              </BELNR>
+              <POSNR>
+                <xsl:value-of select="POSNR"/>
+              </POSNR>
+              <WRBTR>
+                <xsl:value-of select="WRBTR"/>
+              </WRBTR>
+              <WAERS>
+                <xsl:value-of select="WAERS"/>
+              </WAERS>
+              <FISTL>
+                <xsl:value-of select="FISTL"/>
+              </FISTL>
+              <GEBER>
+                <xsl:value-of select="GEBER"/>
+              </GEBER>
+            </BPDZ>
+          </xsl:for-each>
+        </LT_BPDZ>
+    </ITEM>
+  </xsl:template>
+</xsl:stylesheet>

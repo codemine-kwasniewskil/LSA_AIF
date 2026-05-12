@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CX_ROOT</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Root Ausnahmeklasse HKR LSA</DESCRIPT>
+    <CATEGORY>40</CATEGORY>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>BAPIRET2</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Returnparameter</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BAPIRET2_TAB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Returntabelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MSGV1</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nachrichtenvariable</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MSGV2</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nachrichtenvariable</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MSGV3</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nachrichtenvariable</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MSGV4</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nachrichtenvariable</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_BAPIRET_TABLE</CMPNAME>
+     <SCONAME>BAIPRET2_TAB</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fehlermeldungen</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

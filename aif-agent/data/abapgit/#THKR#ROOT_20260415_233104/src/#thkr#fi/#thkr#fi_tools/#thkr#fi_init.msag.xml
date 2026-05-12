@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/FI_INIT</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1&amp;2&amp;3&amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Datei kann nicht gelesen werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Konnte nicht gesperrt werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>291</MSGNR>
+     <TEXT>Bei &quot;Jahreswechsel&quot; bitte neues Geschäftsjahr eingeben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>292</MSGNR>
+     <TEXT>Bitte gültigen Wert für neues Geschäftsjahr eingeben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>300</MSGNR>
+     <TEXT>Der Dateiname ist zu lang.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>301</MSGNR>
+     <TEXT>Es sind Fehler aufgetreten. Sichern nicht möglich.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>302</MSGNR>
+     <TEXT>Es konnten keine Daten ermittelt werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>303</MSGNR>
+     <TEXT>Nicht ausreichend freie Kontenfindungsmerkmale vorhanden. (Max: &amp;1)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>304</MSGNR>
+     <TEXT>Die Änderungen wurden erfolgreich in der Tabelle PAYAC01 gespeichert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_INIT</ARBGB>
+     <MSGNR>305</MSGNR>
+     <TEXT>Die Änderungen konnten nicht gespeichert werden.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

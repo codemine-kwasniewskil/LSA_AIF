@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/THKR/GI_ID_ITEM</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DOMNAME>/THKR/GI_ID</DOMNAME>
+    <HEADLEN>34</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>16</SCRLEN2>
+    <SCRLEN3>34</SCRLEN3>
+    <DDTEXT>Generische Schnittstelle Itemdaten</DDTEXT>
+    <REPTEXT>Generische Schnittstelle Itemdaten</REPTEXT>
+    <SCRTEXT_S>GenSSt Itm</SCRTEXT_S>
+    <SCRTEXT_M>GenSSt Itemdaten</SCRTEXT_M>
+    <SCRTEXT_L>Generische Schnittstelle Itemdaten</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

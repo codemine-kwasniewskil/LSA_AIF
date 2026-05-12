@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_VCLS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VCLDIR>
+    <VCLNAME>/THKR/V_GI_TEXT</VCLNAME>
+    <HIEROPSOFF>A</HIEROPSOFF>
+    <TEXT>Texte der Generischen Schnittstelle</TEXT>
+   </VCLDIR>
+   <VLCSTRUC_TAB>
+    <V_VCLSTRUC>
+     <VCLNAME>/THKR/V_GI_TEXT</VCLNAME>
+     <OBJECT>/THKR/C_GI_TEXT</OBJECT>
+     <OBJECTTEXT>Texte</OBJECTTEXT>
+     <PREDOBJECT>/THKR/C_GI_TEXT</PREDOBJECT>
+     <DEPENDENCY>R</DEPENDENCY>
+     <OBJPOS>01</OBJPOS>
+     <OBJLEVEL>01</OBJLEVEL>
+     <STARTOBJ>X</STARTOBJ>
+    </V_VCLSTRUC>
+    <V_VCLSTRUC>
+     <VCLNAME>/THKR/V_GI_TEXT</VCLNAME>
+     <OBJECT>/THKR/V_GITEXTL</OBJECT>
+     <OBJECTTEXT>Zeilen</OBJECTTEXT>
+     <PREDOBJECT>/THKR/C_GI_TEXT</PREDOBJECT>
+     <DEPENDENCY>S</DEPENDENCY>
+     <OBJPOS>02</OBJPOS>
+     <OBJLEVEL>02</OBJLEVEL>
+    </V_VCLSTRUC>
+   </VLCSTRUC_TAB>
+   <VCLSTRUDEP_TAB>
+    <V_VCLSTDEP>
+     <VCLNAME>/THKR/V_GI_TEXT</VCLNAME>
+     <OBJECT>/THKR/C_GI_TEXT</OBJECT>
+     <PREDOBJECT>/THKR/C_GI_TEXT</PREDOBJECT>
+    </V_VCLSTDEP>
+    <V_VCLSTDEP>
+     <VCLNAME>/THKR/V_GI_TEXT</VCLNAME>
+     <OBJECT>/THKR/V_GITEXTL</OBJECT>
+     <OBJFIELD>TEXT_ID</OBJFIELD>
+     <PREDOBJECT>/THKR/C_GI_TEXT</PREDOBJECT>
+     <PREDFIELD>TEXT_ID</PREDFIELD>
+    </V_VCLSTDEP>
+   </VCLSTRUDEP_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

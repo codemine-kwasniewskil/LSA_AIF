@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_FI_UPLOAD_GL_ACCOUNT</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Upload XLS for GL Accounts</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>BUKRS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Buchungskreis</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHANGE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Modus Change</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FIELDMAPS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Key Value Tab</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSERT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Modus Insert</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_AND_GET_FIELD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get field of strc</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_CAREAS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Map Careas</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_CCODES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Map CCODES</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_COA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Map COA</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_NAMES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Map Names to table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MESSAGES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fehlermeldungen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MODE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Modus</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_CCODES</CMPNAME>
+     <SCONAME>CCODES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sachkontenstamm: Buchungskreis (Tabelle)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_COA</CMPNAME>
+     <SCONAME>COA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sachkontenstamm: Kontenplan</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_COA</CMPNAME>
+     <SCONAME>LINE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sachkontenstamm: Kontenplan</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_NAMES</CMPNAME>
+     <SCONAME>NAMES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sachkontenstamm: Bezeichnungen (Tabelle)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>/thkr/cx_LSA_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fehlerkasse Init.</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>BUKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Buchungskreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>MODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;I&apos; = Insert, &apos;C&apos; = Change</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_FILE</CMPNAME>
+     <SCONAME>/thkr/cx_LSA_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse FI Initialer Aufbau</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

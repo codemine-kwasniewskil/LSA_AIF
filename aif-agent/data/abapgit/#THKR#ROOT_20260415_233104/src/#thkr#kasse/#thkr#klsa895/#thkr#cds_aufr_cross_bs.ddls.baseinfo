@@ -1,0 +1,8 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "/THKR/CDS_AUFR_BSID",
+      "/THKR/CDS_AUFR_BSIK"
+    ]
+  }
+}

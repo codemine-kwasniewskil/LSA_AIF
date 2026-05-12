@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>Z_FI_BN_AUSGEBEN</NAME>
+    <SUBC>1</SUBC>
+    <RSTAT>K</RSTAT>
+    <RLOAD>D</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>B01</KEY>
+     <ENTRY>Selektionskriterien</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B02</KEY>
+     <ENTRY>Herkunft und Fehlernummer</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B03</KEY>
+     <ENTRY>Zahllauf</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B04</KEY>
+     <ENTRY>Belegdaten</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B05</KEY>
+     <ENTRY>Abbuchungen</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B06</KEY>
+     <ENTRY>Elektronischer Kontoauszug</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B07</KEY>
+     <ENTRY>Test und Protokoll</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Benachrichtigungen versenden</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_HERK</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>30</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PROT</KEY>
+     <ENTRY>Ausgabe Protokoll</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_TEST</KEY>
+     <ENTRY>Testlauf mit Protokoll</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BLART</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_ERFD</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>23</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FIPOS</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FISTL</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FNR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>20</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_UNAM</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>16</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>Z_FI_BN_AUSGEBEN</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0012</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00049</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z_FI_BN_AUSGEBEN</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00012</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Versenden von Benachrichtigungen zu Fehlern im Zahllauf, zu Rückläufern</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>und zum Ausgleich von allgemeinen Anordnungen im kreditorischen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Lastschrifteinzug.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zur Steuerung der Benachrichtigungen müssen die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Fehlernummern/Fehlertexte, die berücksichtigt werden sollen, die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Aktionen pro Fehlernummer und die Empfängerdaten pro Finanzstelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gepflegt sein. Dafür stehen folgende Transaktionen zur Verfügung. Die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>angegebenen Finanzstellen und Benutzer korrespondieren mit den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>entsprechenden Daten im fehlerhaften Beleg.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>Z_FI_BN_FTEXT ,,,,Pflege von Fehlertexten/Nachrichten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>Z_FI_BN_AKTION,,,,Pflege von Aktionen pro Nachricht</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>Z_FI_BN_EMPF,,,,Pflege Empfänger von Nachrichten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Das Programm versendet, entsprechend den Einstellungen zur Fehlernummer,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zur Finanzstelle und zum Erfasser im fehlerhaften Beleg und zu den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Empfängerdaten, entweder eine interne SAP-Mail an den Nutzer der als</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Empfänger eingetragen ist, oder eine externe E-Mail an die eingetragene</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Empfänger-E-Mail-Adresse oder eine PDF-Datei auf einen Digikom-Server.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Die Ausgabe der Benachrichtigung kann unterdrückt werden, wenn in den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Einstellungen zur Aktion &apos;keine Benachrichtigung&apos; für die Fehlernummer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>eingetragen ist. Die Einstellung &apos;kasseninterne Klärung&apos; bewirkt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ebenfalls keine Ausgabe einer Benachrichtigung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im Testlauf werden keine Benachrichtigungen versendet, es wird aber eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Liste aller ggf. zu versendenden Benachrichtigungen ausgegeben,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>unabhängig von den speziellen Einstellungen für die Finanzstelle oder</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>den Erfasser der Belege.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Über die Parameterfelder im Block Selektionskriterien kann die Ausgabe</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>von Benachrichtigungen eingeschränkt werden. Der Parameter Benutzer ist</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Nutzer, der den fehlerhaften Beleg erfasst hat. Es werden nur</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Benachrichtigungen selektiert, die noch nicht versendet wurden, die also</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>keine Sendedaten beinhalten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Bisher sind nur die Herkunftsschlüssel &apos;Z&apos; für Zahllauf und &apos;R&apos; für</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Rückläufer und die dazugehörigen Parameter relevant. Zurzeit werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>keine Belege zu Abbuchungen gesammelt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit dem Parameter &apos;Testlauf mit Protokoll&apos; wird ein Testlauf gestartet,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der die Liste aller zu versendenden Benachrichtigungen auflistet.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Parameter &apos;Ausgabe Protokoll&apos; bewirkt die Ausgabe einer Liste aller</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erledigten Benachrichtigungen in diesem Lauf. Diese Liste wird nicht</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ausgegeben, wenn das Häkchen am Parameter &apos;Ausgabe Protokoll&apos; nicht</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gesetzt ist.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Es wird eine ALV-Liste erzeugt, die alle in diesem Lauf erzeugten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Benachrichtigungen enthält, wenn der Parameter &apos;Ausgabe Protokoll&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>angekreuzt und kein Testlauf gestartet wurde. Die Sendedaten wie Datum,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Uhrzeit, Benachrichtigungsart und Empfänger sind in der entsprechenden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Benachrichtigungszeile vermerkt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zur Auskunft kann mit Transaktion Z_FI_BN_DISPL ebenfalls eine ALV-Liste</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>angezeigt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

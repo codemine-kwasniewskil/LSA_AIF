@@ -1,0 +1,10 @@
+"Name: \PR:FEB_BSPROC_FE\TY:LCL_CTRL_MAIN\ME:FINALIZE\SE:BEGIN\EI
+ENHANCEMENT 0 /THKR/KONTIERVORL_MESSAGE.
+ IF sy-tcode EQ 'FEB_BSPROC'.
+   DATA: lv_interp_ok TYPE c.
+   IMPORT lv_interp TO lv_interp_ok FROM MEMORY ID 'INTERPRET'.
+   IF lv_interp_ok EQ abap_false.
+*     MESSAGE e005(/thkr/klsa841).
+   ENDIF.
+ ENDIF.
+ENDENHANCEMENT.

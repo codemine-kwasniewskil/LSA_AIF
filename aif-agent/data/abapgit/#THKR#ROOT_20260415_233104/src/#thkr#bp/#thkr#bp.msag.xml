@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/BP</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Allgemeine Nachrichten zu Geschäftspartner</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Es wurde kein Geschäftspartner gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Die Selektion wurde wegen fehlenden Berechtigungen eingeschränkt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Keine Berechtigung für Geschäftsbereich &amp;1!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Fehler im Customizing! Butte Exit der Suchhilfe &amp;1 prüfen!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Fehler in der Suchhilfe!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Der Geschäftspartner &amp;1 ist nicht freigegeben!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Der Geschäftspartner &amp;1 befindet sich noch in einem Freigabeprozess!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Der Geschäftspartner &amp;1 ist zur Archivierung vorgemerkt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Der Buchungskreis &amp;1 des Lieferanten &amp;2 ist zum Buchen gesperrt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Der Buchungskreis &amp;1 des Kunden &amp;2 ist zum Buchen gesperrt!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/BP</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Keine Berechtigung zur Anzeige/Verwendung des Geschäftspartners &amp;1!</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

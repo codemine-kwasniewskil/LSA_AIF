@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_DATA_STORE</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Global Data Store</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Singleton Instance</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ID</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Store ID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSTANCES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Global Data Store</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>STORE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Key Value Tab</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Store ID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET</CMPNAME>
+     <SCONAME>ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Store ID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET</CMPNAME>
+     <SCONAME>SELF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Global Data Store</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ATTR</CMPNAME>
+     <SCONAME>KEY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT> Key</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ATTR</CMPNAME>
+     <SCONAME>VALUE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Value</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ATTR</CMPNAME>
+     <SCONAME>KEY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Key</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ATTR</CMPNAME>
+     <SCONAME>VALUE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Value</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

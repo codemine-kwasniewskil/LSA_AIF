@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>D</LANGUAGE>
+     <ID/>
+     <TEXT>Schnittstelle für Mahnschreiben (PDF-Ausgabe)</TEXT>
+    </FPINTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>E</LANGUAGE>
+     <ID/>
+     <TEXT>Interface for Dunning Notice (PDF Output)</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>H_F150D-MAHNG</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>MHNK-SALHW</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>H_F150D-VVWRSB</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>H_F150D-VVWRHB</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>H_F150D-WRHAB</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>H_F150D-WRSOL</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>H_F150D-DMHAB</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>H_F150D-DMSOL</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+      <SFPREF>
+       <ACTIVE/>
+       <STANDARD/>
+       <DATATYPE>CURR</DATATYPE>
+       <VALUE>MHNK-FAMSM</VALUE>
+       <UNIT>MHNK-WAERS</UNIT>
+      </SFPREF>
+     </REFERENCE_FIELDS>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>AKTENZEICHEN</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>PSOFN</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>SOLLBETRAG</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WRBTR</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GEZAHLT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WRBTR</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>DOC_TYPE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR20</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>KASSZ</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR16</TYPENAME>
+       <DEFAULTVAL>&apos;Nicht gefunden&apos;</DEFAULTVAL>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>BELEG_LISTE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>/THKR/T_KEYVALUE</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>FAEDT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>DATUM</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>QRCODE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>XSTRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>FISTL</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FISTL</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GSBER</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>GSBER</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>ADRESSE_ANFOR_DST</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>/THKR/LINES</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>VERZUG</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WRBTR</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES/>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>T_SALTAB</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FIN_F150_DUNN_T_SALTAB_PDF</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>MHNK</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>MHNK</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>PAYMO</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>PAYMO</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>T047</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>T047</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>SHOW_INTEREST</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>TDBOOL</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>TESTPRINT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>BOOLE_D</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>TH_MHND</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FIN_F150_DUNN_SF_T_MHND_PDF</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>T_SUMTAB</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FIN_F150_DUNN_T_SUMTAB_PDF</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>H_F150D</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>F150D</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>INCL_ITEM</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>BOOLE_D</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>WAERS</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WAERS</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>RECS</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>BOOLE_D</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>UADRNR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ADRNR</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>FIMSG</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FIMSG</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>PAYMI</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>PAYMI</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>F150D_ESR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>F150D_ESR</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>FSABE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>FSABE</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>ADRS</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ADRS</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>UADRS</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ADRS</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>ADRNR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ADRNR</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>T047I</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>T047I</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>T056Z</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>T056Z</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>F150D</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>F150D</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>F150D2</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>F150D2</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>T001</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>T001</TYPENAME>
+       <OPTIONAL>X</OPTIONAL>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS>
+      <FPPARAMETER>MHNK</FPPARAMETER>
+     </INPUT_PARAMETERS>
+     <OUTPUT_PARAMETERS/>
+     <INITIALIZATION>
+      <FPCLINE>CASE mhnk-smaber . &quot;Mahnbereich</FPCLINE>
+      <FPCLINE>  WHEN &apos;P1&apos; OR &apos;P2&apos; OR &apos;P3&apos; OR &apos;P4&apos; OR &apos;M7&apos;.</FPCLINE>
+      <FPCLINE>    doc_type = &apos;Zahlungserinnerung&apos;.</FPCLINE>
+      <FPCLINE>  WHEN OTHERS.</FPCLINE>
+      <FPCLINE>    doc_type = &apos;Mahnung&apos;.</FPCLINE>
+      <FPCLINE>ENDCASE.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>*TRY. &quot; Get missing fields:</FPCLINE>
+      <FPCLINE>&quot;** We can use the firsr</FPCLINE>
+      <FPCLINE>LOOP AT th_mhnd INTO DATA(mahn) WHERE blart CP &apos;D*&apos; AND blart &lt;&gt; &apos;DZ&apos;.</FPCLINE>
+      <FPCLINE>  EXIT.</FPCLINE>
+      <FPCLINE>ENDLOOP.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>IF mahn IS NOT INITIAL.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  &quot;&quot; Get Soll-Betrag der Forderung + SOLL</FPCLINE>
+      <FPCLINE>  &quot;&quot; Get Text für alle Belege</FPCLINE>
+      <FPCLINE>  LOOP AT th_mhnd INTO DATA(line) WHERE blart &lt;&gt; &apos;DZ&apos;.</FPCLINE>
+      <FPCLINE>    sollbetrag += line-dmshb.</FPCLINE>
+      <FPCLINE>    SELECT FROM bseg</FPCLINE>
+      <FPCLINE>     FIELDS sgtxt AS key,</FPCLINE>
+      <FPCLINE>            CAST( @line-dmshb AS CHAR ) AS value</FPCLINE>
+      <FPCLINE>     WHERE bukrs EQ @line-bukrs</FPCLINE>
+      <FPCLINE>       AND belnr EQ @line-belnr</FPCLINE>
+      <FPCLINE>       AND gjahr EQ @line-gjahr</FPCLINE>
+      <FPCLINE>       AND bschl EQ &apos;50&apos;</FPCLINE>
+      <FPCLINE>     APPENDING TABLE @beleg_liste.</FPCLINE>
+      <FPCLINE>  ENDLOOP.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  &quot;&quot; Get all Gezahlt and adjust Soll-Betrag</FPCLINE>
+      <FPCLINE>  LOOP AT th_mhnd INTO line WHERE blart = &apos;DZ&apos;.</FPCLINE>
+      <FPCLINE>    gezahlt += abs( line-dmshb ).</FPCLINE>
+      <FPCLINE>  ENDLOOP.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  kassz = mahn-xblnr.</FPCLINE>
+      <FPCLINE>  faedt = mahn-faedt.</FPCLINE>
+      <FPCLINE>  gsber = mahn-gsber.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  &quot;** Get one line for OM</FPCLINE>
+      <FPCLINE>  SELECT SINGLE FROM bkpf AS h INNER JOIN bseg AS i ON i~bukrs = h~bukrs</FPCLINE>
+      <FPCLINE>                                              AND i~belnr = h~belnr</FPCLINE>
+      <FPCLINE>                                              AND i~gjahr = h~gjahr</FPCLINE>
+      <FPCLINE>     FIELDS h~psofn,</FPCLINE>
+      <FPCLINE>            i~fistl,</FPCLINE>
+      <FPCLINE>            i~kostl</FPCLINE>
+      <FPCLINE>     WHERE h~bukrs EQ @mahn-bukrs</FPCLINE>
+      <FPCLINE>       AND h~belnr EQ @mahn-belnr</FPCLINE>
+      <FPCLINE>       AND h~gjahr EQ @mahn-gjahr</FPCLINE>
+      <FPCLINE>       AND i~bschl EQ &apos;50&apos;</FPCLINE>
+      <FPCLINE>     INTO @DATA(blbseg).</FPCLINE>
+      <FPCLINE>  aktenzeichen  = blbseg-psofn.</FPCLINE>
+      <FPCLINE>  fistl         = blbseg-fistl.</FPCLINE>
+      <FPCLINE>  DATA(kostl)   = blbseg-kostl.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>** Get address for DST:</FPCLINE>
+      <FPCLINE>DATA(add_att) = VALUE zom_addr_attr( zpgsbr = gsber acc_fcentr = fistl zkostl = kostl ).</FPCLINE>
+      <FPCLINE>DATA(add_out) = VALUE zom_addr_out( ).</FPCLINE>
+      <FPCLINE>CALL FUNCTION &apos;Z_OM_FIND_ADDRESS&apos;</FPCLINE>
+      <FPCLINE>  EXPORTING</FPCLINE>
+      <FPCLINE>    is_addr_attr = add_att</FPCLINE>
+      <FPCLINE>  IMPORTING</FPCLINE>
+      <FPCLINE>    es_addr_out  = add_out</FPCLINE>
+      <FPCLINE>  EXCEPTIONS</FPCLINE>
+      <FPCLINE>    OTHERS       = 1.</FPCLINE>
+      <FPCLINE>IF sy-subrc = 0.</FPCLINE>
+      <FPCLINE>  adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( add_out-line0 ) ).</FPCLINE>
+      <FPCLINE>  IF NOT add_out-ressort_txt_2 = &apos;&apos;.</FPCLINE>
+      <FPCLINE>    adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( add_out-ressort_txt_2 ) ).</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE>  adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( add_out-line1 ) ).</FPCLINE>
+      <FPCLINE>  adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( add_out-line2 ) ).</FPCLINE>
+      <FPCLINE>  adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( |Telefon: { add_out-telnr }| ) ).</FPCLINE>
+      <FPCLINE>ELSE.</FPCLINE>
+      <FPCLINE>  adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( &apos;Keine DST Adresse gefunden&apos; ) ).</FPCLINE>
+      <FPCLINE>  adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( &apos;&lt;Fehler&gt;&apos; ) ).</FPCLINE>
+      <FPCLINE>  adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( &apos;&lt;Fehler&gt;&apos; ) ).</FPCLINE>
+      <FPCLINE>  adresse_anfor_dst = VALUE #( BASE  adresse_anfor_dst ( |Telefon: &lt;Fehler&gt;| ) ).</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE>** Generate QR Code:</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>** Verzugszinsen berechnen</FPCLINE>
+      <FPCLINE>TRY.</FPCLINE>
+      <FPCLINE>    verzug = t_sumtab[ 1 ]-wzsbt.</FPCLINE>
+      <FPCLINE>    IF verzug IS INITIAL.</FPCLINE>
+      <FPCLINE>      SELECT SINGLE FROM bseg</FPCLINE>
+      <FPCLINE>        FIELDS wrbtr AS betrag</FPCLINE>
+      <FPCLINE>       WHERE bukrs EQ @mahn-bukrs</FPCLINE>
+      <FPCLINE>         AND gjahr EQ @mahn-gjahr</FPCLINE>
+      <FPCLINE>         AND koart EQ &apos;D&apos;</FPCLINE>
+      <FPCLINE>         AND h_blart EQ &apos;SG&apos;</FPCLINE>
+      <FPCLINE>         AND rebzg EQ @mahn-belnr</FPCLINE>
+      <FPCLINE>       INTO @verzug.</FPCLINE>
+      <FPCLINE>    ENDIF.</FPCLINE>
+      <FPCLINE>  CATCH cx_sy_itab_line_not_found .</FPCLINE>
+      <FPCLINE>    &quot; nothing to do here</FPCLINE>
+      <FPCLINE>ENDTRY.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>DATA total TYPE wrbtr.</FPCLINE>
+      <FPCLINE>total = sollbetrag + verzug + f150d-mhngf - gezahlt .</FPCLINE>
+      <FPCLINE>qrcode = NEW /thkr/cl_epc_qrcode_generator(</FPCLINE>
+      <FPCLINE>  iban             = &apos;DE21810000000081001500&apos;           &quot; IBAN (International Bank Account Number)</FPCLINE>
+      <FPCLINE>  bic              = &apos;MARKDEF1810&apos;                      &quot; BIC Code</FPCLINE>
+      <FPCLINE>  value            = total                &quot; Betrag in Belegwährung</FPCLINE>
+      <FPCLINE>  reference        = CONV char20( kassz )               &quot; Verwendungszweck</FPCLINE>
+      <FPCLINE>  receiver_name    = &apos;Landeshauptkasse Sachsen-Anhalt&apos;  &quot; Name des Empfängers</FPCLINE>
+      <FPCLINE>  reference_prefix = &apos;QR: &apos;                             &quot; Prefix für Verwendungszweck</FPCLINE>
+      <FPCLINE>                     )-&gt;get_qrcode_as_xstring( ).</FPCLINE>
+     </INITIALIZATION>
+     <FORMS/>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

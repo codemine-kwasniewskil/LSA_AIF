@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IM_FM_AUTH_CHECK</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Imp.-Klasse zur BAdI-Imp. /THKR/FM_AUTH_CHECK</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>G_FICTR_AUTH_GRP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Berechtigungsgruppe der Finanzstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>G_FIPEX_AUTH_GRP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Berechtigungsgruppe der Finanzposition</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>G_FIPEX_OLD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzposition - Alt</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>G_FISTL_OLD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle - Alt</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>G_FUNCTION_AREA_AUTH_GRP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Berechtigungsgruppe der Finanzposition</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>G_FUNDED_PROGRAM_AUTH_GRP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Berechtigungsgruppe der Finanzposition</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>G_FUND_AUTH_GRP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Berechtigungsgruppe des Fonds</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>G_OK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>L_COUNTER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Zähler</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

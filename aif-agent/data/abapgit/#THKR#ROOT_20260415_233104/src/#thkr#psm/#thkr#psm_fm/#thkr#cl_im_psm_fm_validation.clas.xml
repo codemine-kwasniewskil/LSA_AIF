@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IM_PSM_FM_VALIDATION</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Beispielimplementierung für mehrjährige Budgetierung</DESCRIPT>
+    <STATE>1</STATE>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADD_MESSAGE_FROM_SYST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Meldung aus SYST aufnehmen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_PROCESS_ENTR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfungen Prozess ENTR - Erfassen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_PROCESS_RETN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfungen Prozess RETN- Rückgabe</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_PROCESS_TRAN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfungen Prozess TRAN - Umbuchung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_BUDART_BEE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetart Budgeterhöhende Einnahme</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_BUDART_DF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetart Deckungsfähig</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_BUDART_VU</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetart Budgeterhöhende Einnahme</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_HSART_A</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Hausaltsart TItel</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_HSART_B</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Hausaltsart Unterkonto</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_RECEIVER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Interner Budgetierungsvorgang</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_SENDER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Interner Budgetierungsvorgang</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_VRG_ENTR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Vorgangsart Erfassen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_VRG_RETN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Vorgangsart Rückgabe</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_VRG_TRAN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Vorgangsart Umbuchen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_FUNDDISTR_LVL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>lesen der HKR Mittelverteilungsebene</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_HSART</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>lesen der Art der Haushaltsstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TTY_CALC</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle Berechnung der Beträge</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TTY_CHECK_HIER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle Hierachieprüfung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TTY_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle Budgetdaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TY_CALC</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Berechnung der Beträge</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TY_CHECK_HIER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Hierachieprüfung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TY_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetdaten</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_MESSAGE_FROM_SYST</CMPNAME>
+     <SCONAME>CT_MESSAGES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nachrichtentabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_MESSAGE_FROM_SYST</CMPNAME>
+     <SCONAME>IS_CONTEXT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nachrichtenkontext</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_MESSAGE_FROM_SYST</CMPNAME>
+     <SCONAME>IS_DETAIL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Beleg als Detail für Nachricht im Anwendungsprotokoll</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_MESSAGE_FROM_SYST</CMPNAME>
+     <SCONAME>IT_PARAM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Parametertabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_MESSAGE_FROM_SYST</CMPNAME>
+     <SCONAME>IV_ALSORT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungs-Log: Sortierkriterium/Gruppierung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_MESSAGE_FROM_SYST</CMPNAME>
+     <SCONAME>IV_DETLEVEL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungs-Log: Detaillierungsgrad</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_MESSAGE_FROM_SYST</CMPNAME>
+     <SCONAME>IV_PROBCLASS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendungs-Log: Problemklasse einer Meldung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PROCESS_ENTR</CMPNAME>
+     <SCONAME>ET_MESSAGES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Returntabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PROCESS_ENTR</CMPNAME>
+     <SCONAME>IS_HEADER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allg. Info für alle an das BAdI weitergegeben Budgetzeilen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PROCESS_RETN</CMPNAME>
+     <SCONAME>ET_MESSAGES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Returntabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PROCESS_RETN</CMPNAME>
+     <SCONAME>IS_HEADER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allg. Info für alle an das BAdI weitergegeben Budgetzeilen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PROCESS_TRAN</CMPNAME>
+     <SCONAME>ET_MESSAGES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Returntabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PROCESS_TRAN</CMPNAME>
+     <SCONAME>IS_HEADER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allg. Info für alle an das BAdI weitergegeben Budgetzeilen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FUNDDISTR_LVL</CMPNAME>
+     <SCONAME>IS_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FUNDDISTR_LVL</CMPNAME>
+     <SCONAME>IS_HEADER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kopfdaten des Erfassungsbelegs weitergegeben an BAdI</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FUNDDISTR_LVL</CMPNAME>
+     <SCONAME>RV_VALUE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR Mittelverteilungsebene</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_HSART</CMPNAME>
+     <SCONAME>IV_FIKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_HSART</CMPNAME>
+     <SCONAME>IV_FIPEX</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzposition</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_HSART</CMPNAME>
+     <SCONAME>IV_GJAHR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_HSART</CMPNAME>
+     <SCONAME>RV_VALUE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Art der Haushaltsstelle</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

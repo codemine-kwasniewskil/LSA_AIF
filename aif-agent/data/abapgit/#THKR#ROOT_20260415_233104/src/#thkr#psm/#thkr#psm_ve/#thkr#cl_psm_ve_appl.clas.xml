@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_VE_APPL</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Anwendungsklasse für den Vermerk (Budgettext)</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <MSG_ID>/THKR/PSM_INT_FI</MSG_ID>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <DESCRIPTIONS_CLASS>
+    <SEOCLASSTX>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Anwendungsklasse für den Vermerk (Budgettext)</DESCRIPT>
+    </SEOCLASSTX>
+   </DESCRIPTIONS_CLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_IMPORT_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Checking the correctness of the import data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_VERMERK</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Creates a new Vermerk with the provided data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GENERATE_TXTTEMPL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Generating an ID for a key field</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Retrieves the unique instance of the Singleton class</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_VERMERK_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Returns the data for a specified Vermerk</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Mapping for the header fields</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Mapping for the text fields</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_APPLIC</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Application for Budget Text</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_SPRAS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Language Key</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Anwendungsklasse für den Vermerk (Budgettext)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SAVE_LONG_TEXT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Save long text description for Vermerk</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_IMPORT_DATA</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_VERMERK</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_VERMERK</CMPNAME>
+     <SCONAME>I_VE_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Vermerke (Budgettexte)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_VERMERK</CMPNAME>
+     <SCONAME>R_KEY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder für PSM-Vermerken (Budgettext)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GENERATE_TXTTEMPL</CMPNAME>
+     <SCONAME>IV_TXTTEMPL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Template for Budget Texts</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GENERATE_TXTTEMPL</CMPNAME>
+     <SCONAME>RV_TXTTEMPL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Template for Budget Texts</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>R_INSTANCE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Anwendungsklasse für den Vermerk (Budgettext)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_VERMERK_DATA</CMPNAME>
+     <SCONAME>I_FLG_TEXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>General Flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_VERMERK_DATA</CMPNAME>
+     <SCONAME>I_VERMERK_ID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder für PSM-Vermerken (Budgettext)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_VERMERK_DATA</CMPNAME>
+     <SCONAME>R_VERMERK</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Vollständige Daten über den PSM-Vermerk (Budgettext)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <SCONAME>I_VE_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Vermerke (Budgettexte)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <SCONAME>RV_TEXTTEMPL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Templates for Budget Texts</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <SCONAME>I_TEXTTEMPL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Templates for Budget Texts</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <SCONAME>I_VE_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Vermerke (Budgettexte)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <SCONAME>RV_TEXTTEMPLT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Texts for Budget Text Templates</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_LONG_TEXT</CMPNAME>
+     <SCONAME>I_TEXTTEMPL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Templates for Budget Texts</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_LONG_TEXT</CMPNAME>
+     <SCONAME>I_VE_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Vermerke (Budgettexte)</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

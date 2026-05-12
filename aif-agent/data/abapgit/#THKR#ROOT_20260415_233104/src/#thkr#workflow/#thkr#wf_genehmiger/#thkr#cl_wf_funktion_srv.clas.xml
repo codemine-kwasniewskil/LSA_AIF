@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_WF_FUNKTION_SRV</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>HKR: Genehmigerfindung nach Workflow-Funktion</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_TESTORG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüft ob die Testorganisation als Grundlage dient</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CLASS_CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CLASS_CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GC_ATTR_COND_KANN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konstante &quot;KANN&quot;</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GC_ATTR_COND_MUSS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: Kondition / Art</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GC_WF_FUNK_OMSP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>OMSP</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GC_WF_FUNK_PRSP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>PRSP</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_APPROVER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittle Genehmiger nach Workflow/Funktion</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SUPPORT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittle zuständigen Support</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_USER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittle User zu ermittelten Planstellen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GO_CLASSDESCR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Run Time Type Services</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GS_PARAM</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: WF Steuerungstabelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_ATTR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: WF - Tabelle für Attribute</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_PLANS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: WF - Tabelle von Planstellen mit Prio</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_WF_CONTROL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: Tabelltentyp Workflow Funktionen Customizing</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_CHECK_RELEVANT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfung WF-Stufe relevant</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_LOG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Protokollierung?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_LOG_ALL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausgabe aller User</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_SUPPORT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Supportermittlung läuft</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_GET_APPROVER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittle Genehmiger nach Workflow/Funktion</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_LOG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Protokolliere</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_ZBTRG_BEST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Betrag von Bestellung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_ZEKGRP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einkäufergruppe</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_ZFIPOS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzposition</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_ZFISTL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_ZFKBER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionsbereich</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_ZFONDS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fonds</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>_ZKOSTL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kostenstelle</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_TESTORG</CMPNAME>
+     <SCONAME>IT_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attribute eines Objektes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_TESTORG</CMPNAME>
+     <SCONAME>RV_RELEVANT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Relevante Planstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_APPROVER</CMPNAME>
+     <SCONAME>IT_ATTR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attributwerte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_APPROVER</CMPNAME>
+     <SCONAME>IV_FUNK</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: Funktion im Workflow</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_APPROVER</CMPNAME>
+     <SCONAME>IV_LOG</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Protokoll</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_APPROVER</CMPNAME>
+     <SCONAME>IV_WF_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: Workflow-Typen (BOR)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_APPROVER</CMPNAME>
+     <SCONAME>IV_WITH_HOLDER_ONLY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nur besetzte Planstellen relevant?</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_APPROVER</CMPNAME>
+     <SCONAME>RT_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: WF - Tabelle von Planstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SUPPORT</CMPNAME>
+     <SCONAME>IT_CONTAINER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Container-Tabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SUPPORT</CMPNAME>
+     <SCONAME>IV_BUKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Buchungskreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SUPPORT</CMPNAME>
+     <SCONAME>IV_FUNK</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: Funktion im Workflow</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SUPPORT</CMPNAME>
+     <SCONAME>IV_GSBER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsbereich</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SUPPORT</CMPNAME>
+     <SCONAME>IV_WF_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: Workflow-Typen (BOR)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SUPPORT</CMPNAME>
+     <SCONAME>IV_WITH_HOLDER_ONLY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nur besetzte Planstellen relevant?</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SUPPORT</CMPNAME>
+     <SCONAME>RT_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: WF - Tabelle von Planstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_USER</CMPNAME>
+     <SCONAME>IT_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: WF - Tabelle von Planstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_GET_APPROVER</CMPNAME>
+     <SCONAME>IT_ATTR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attributwerte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_GET_APPROVER</CMPNAME>
+     <SCONAME>IV_FUNK</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: Funktion im Workflow</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_GET_APPROVER</CMPNAME>
+     <SCONAME>IV_WF_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: Workflow-Typen (BOR)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_GET_APPROVER</CMPNAME>
+     <SCONAME>IV_WITH_HOLDER_ONLY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nur besetzte Planstellen relevant?</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_GET_APPROVER</CMPNAME>
+     <SCONAME>RT_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: WF - Tabelle von Planstellen mit Prio</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_LOG</CMPNAME>
+     <SCONAME>IT_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>HKR: WF - Tabelle von Planstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZBTRG_BEST</CMPNAME>
+     <SCONAME>IS_ATTR_I</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergabestruktur für Container</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZBTRG_BEST</CMPNAME>
+     <SCONAME>IS_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Attributpflege</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZBTRG_BEST</CMPNAME>
+     <SCONAME>IT_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attribute eines Objektes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZBTRG_BEST</CMPNAME>
+     <SCONAME>IV_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Planstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZEKGRP</CMPNAME>
+     <SCONAME>IS_ATTR_I</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergabestruktur für Container</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZEKGRP</CMPNAME>
+     <SCONAME>IS_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Attributpflege</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZEKGRP</CMPNAME>
+     <SCONAME>IT_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attribute eines Objektes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZEKGRP</CMPNAME>
+     <SCONAME>IV_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Planstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFIPOS</CMPNAME>
+     <SCONAME>IS_ATTR_I</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergabestruktur für Container</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFIPOS</CMPNAME>
+     <SCONAME>IS_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Attributpflege</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFIPOS</CMPNAME>
+     <SCONAME>IT_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attribute eines Objektes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFIPOS</CMPNAME>
+     <SCONAME>IV_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Planstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFISTL</CMPNAME>
+     <SCONAME>IS_ATTR_I</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergabestruktur für Container</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFISTL</CMPNAME>
+     <SCONAME>IS_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Attributpflege</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFISTL</CMPNAME>
+     <SCONAME>IT_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attribute eines Objektes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFISTL</CMPNAME>
+     <SCONAME>IV_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Planstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFKBER</CMPNAME>
+     <SCONAME>IS_ATTR_I</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergabestruktur für Container</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFKBER</CMPNAME>
+     <SCONAME>IS_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Attributpflege</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFKBER</CMPNAME>
+     <SCONAME>IT_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attribute eines Objektes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFKBER</CMPNAME>
+     <SCONAME>IV_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Planstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFONDS</CMPNAME>
+     <SCONAME>IS_ATTR_I</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergabestruktur für Container</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFONDS</CMPNAME>
+     <SCONAME>IS_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Attributpflege</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFONDS</CMPNAME>
+     <SCONAME>IT_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attribute eines Objektes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZFONDS</CMPNAME>
+     <SCONAME>IV_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Planstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZKOSTL</CMPNAME>
+     <SCONAME>IS_ATTR_I</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Übergabestruktur für Container</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZKOSTL</CMPNAME>
+     <SCONAME>IS_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Allgemeine Attributpflege</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZKOSTL</CMPNAME>
+     <SCONAME>IT_ATTR_OM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle: Attribute eines Objektes</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_ZKOSTL</CMPNAME>
+     <SCONAME>IV_PLANS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Planstelle</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

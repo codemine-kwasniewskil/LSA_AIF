@@ -1,0 +1,3 @@
+FUNCTION-POOL /THKR/AIF_ZALLGE_MAP_GP.      "MESSAGE-ID ..
+
+* INCLUDE /THKR/LAIF_ZALLGE_MAP_GPD...       " Local class definition

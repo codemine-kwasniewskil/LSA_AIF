@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>ZLSA: WF: Funktionsbausteine Regelaufruf</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LWF_REGELFUBASTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLWF_REGELFUBAS</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/WF_REGEL_AO_01</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Bestimme Bearbeiter über strukturelle Auswertung zu gegebenem Weg</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>WORKFLOW</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/THKR/DTE_WF_WFTYP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FUNKTION</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/THKR/DTE_WF_FUNKTION</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PREVIOUS_AGENTS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>SWP_AGENT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_WITH_HOLDER_ONLY</PARAMETER>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ACTOR_TAB</PARAMETER>
+       <DBSTRUCT>SWHACTOR</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>AC_CONTAINER</PARAMETER>
+       <DBSTRUCT>SWCONT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOBODY_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>WORKFLOW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZLSA: Workflow-Typen (BOR)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FUNKTION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZLSA: Funktion im Workflow</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PREVIOUS_AGENTS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bearbeiter</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_WITH_HOLDER_ONLY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nur besetzte Planstellen relevant</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACTOR_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle, die Treffermenge enthält</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>AC_CONTAINER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Container</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOBODY_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Keinen Bearbeiter gefunden</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/WF_REGEL_BKPF_01</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Bestimme Bearbeiter über strukturelle Auswertung zu gegebenem Weg</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>WORKFLOW</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/THKR/DTE_WF_WFTYP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FUNKTION</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/THKR/DTE_WF_FUNKTION</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PREVIOUS_AGENTS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>SWP_AGENT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_WITH_HOLDER_ONLY</PARAMETER>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ACTOR_TAB</PARAMETER>
+       <DBSTRUCT>SWHACTOR</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>AC_CONTAINER</PARAMETER>
+       <DBSTRUCT>SWCONT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOBODY_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>WORKFLOW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZLSA: Workflow-Typen (BOR)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FUNKTION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZLSA: Funktion im Workflow</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PREVIOUS_AGENTS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bearbeiter</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_WITH_HOLDER_ONLY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nur besetzte Planstellen relevant</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACTOR_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle, die Treffermenge enthält</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>AC_CONTAINER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Container</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOBODY_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Keinen Bearbeiter gefunden</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/WF_REGEL_BP_01</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Bestimme Bearbeiter über strukturelle Auswertung zu gegebenem Weg</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>WORKFLOW</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/THKR/DTE_WF_WFTYP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FUNKTION</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/THKR/DTE_WF_FUNKTION</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PREVIOUS_AGENTS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>SWP_AGENT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_WITH_HOLDER_ONLY</PARAMETER>
+       <DEFAULT>&apos;X&apos;</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ACTOR_TAB</PARAMETER>
+       <DBSTRUCT>SWHACTOR</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>AC_CONTAINER</PARAMETER>
+       <DBSTRUCT>SWCONT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOBODY_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>WORKFLOW</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZLSA: Workflow-Typen (BOR)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FUNKTION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZLSA: Funktion im Workflow</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PREVIOUS_AGENTS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bearbeiter</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_WITH_HOLDER_ONLY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nur besetzte Planstellen relevant</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ACTOR_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle, die Treffermenge enthält</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>AC_CONTAINER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Container</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOBODY_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Keinen Bearbeiter gefunden</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <LONGTEXTS__-THKR_-WF_REGEL_AO_01>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/WF_REGEL_AO_01</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0006</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00014</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/WF_REGEL_AO_01</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00006</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Funktionsbaustein RH_GET_STRUCTURE liest aus dem Container</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ac_container die Containerelemente &apos;PLVAR&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>                                   &apos;OR_AGENT&apos; bzw. &apos;OTYPE&apos; und &apos;OBJID&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>                             sowie &apos;TDEPTH&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Das Containerelement &apos;OR_AGENT&apos; ist eine Verkettung der Elemente</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&apos;OTYPE&apos; und &apos;OBJID&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Die Tabelle actor_tab enthält die Treffermenge der Bearbeiter, die aus</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>den selektierten Containerelementen und einer strukturellen Auswertung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>resultieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Es werden die Bearbeiter einer Workflow-Aufgabe gesucht. Der Container</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ac_container enthält die Elemente, die den Aufgabentyp, sowie dessen Id</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>und die Planvariante beschreiben. In der Tabelle actor_tab werden alle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>möglichen Bearbeiter zurückgegeben. Unter Bearbeiter versteht man</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Objekte mit organisatorischen Aspekten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-WF_REGEL_AO_01>
+   <LONGTEXTS__-THKR_-WF_REGEL_BKPF_01>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/WF_REGEL_BKPF_01</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0006</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00014</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/WF_REGEL_BKPF_01</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00006</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Funktionsbaustein RH_GET_STRUCTURE liest aus dem Container</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ac_container die Containerelemente &apos;PLVAR&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>                                   &apos;OR_AGENT&apos; bzw. &apos;OTYPE&apos; und &apos;OBJID&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>                             sowie &apos;TDEPTH&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Das Containerelement &apos;OR_AGENT&apos; ist eine Verkettung der Elemente</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&apos;OTYPE&apos; und &apos;OBJID&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Die Tabelle actor_tab enthält die Treffermenge der Bearbeiter, die aus</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>den selektierten Containerelementen und einer strukturellen Auswertung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>resultieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Es werden die Bearbeiter einer Workflow-Aufgabe gesucht. Der Container</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ac_container enthält die Elemente, die den Aufgabentyp, sowie dessen Id</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>und die Planvariante beschreiben. In der Tabelle actor_tab werden alle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>möglichen Bearbeiter zurückgegeben. Unter Bearbeiter versteht man</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Objekte mit organisatorischen Aspekten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-WF_REGEL_BKPF_01>
+   <LONGTEXTS__-THKR_-WF_REGEL_BP_01>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/WF_REGEL_BP_01</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0006</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00014</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/WF_REGEL_BP_01</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00006</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Funktionsbaustein RH_GET_STRUCTURE liest aus dem Container</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ac_container die Containerelemente &apos;PLVAR&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>                                   &apos;OR_AGENT&apos; bzw. &apos;OTYPE&apos; und &apos;OBJID&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>                             sowie &apos;TDEPTH&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Das Containerelement &apos;OR_AGENT&apos; ist eine Verkettung der Elemente</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&apos;OTYPE&apos; und &apos;OBJID&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>Die Tabelle actor_tab enthält die Treffermenge der Bearbeiter, die aus</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>den selektierten Containerelementen und einer strukturellen Auswertung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>resultieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Es werden die Bearbeiter einer Workflow-Aufgabe gesucht. Der Container</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ac_container enthält die Elemente, die den Aufgabentyp, sowie dessen Id</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>und die Planvariante beschreiben. In der Tabelle actor_tab werden alle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>möglichen Bearbeiter zurückgegeben. Unter Bearbeiter versteht man</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Objekte mit organisatorischen Aspekten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-WF_REGEL_BP_01>
+  </asx:values>
+ </asx:abap>
+</abapGit>

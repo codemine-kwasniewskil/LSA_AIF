@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENQU" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD25V>
+    <VIEWNAME>/THKR/AIF_SO</VIEWNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <AGGTYPE>E</AGGTYPE>
+    <ROOTTAB>/THKR/AIF_SERIAL</ROOTTAB>
+    <DDTEXT>AIF Sperrobjekt für Serialisierung</DDTEXT>
+   </DD25V>
+   <DD26E_TABLE>
+    <DD26E>
+     <VIEWNAME>/THKR/AIF_SO</VIEWNAME>
+     <TABNAME>/THKR/AIF_SERIAL</TABNAME>
+     <TABPOS>0001</TABPOS>
+     <FORTABNAME>/THKR/AIF_SERIAL</FORTABNAME>
+     <ENQMODE>E</ENQMODE>
+    </DD26E>
+   </DD26E_TABLE>
+   <DD27P_TABLE>
+    <DD27P>
+     <VIEWNAME>/THKR/AIF_SO</VIEWNAME>
+     <OBJPOS>0001</OBJPOS>
+     <VIEWFIELD>MANDT</VIEWFIELD>
+     <TABNAME>/THKR/AIF_SERIAL</TABNAME>
+     <FIELDNAME>MANDT</FIELDNAME>
+     <KEYFLAG>X</KEYFLAG>
+     <ENQMODE>E</ENQMODE>
+    </DD27P>
+    <DD27P>
+     <VIEWNAME>/THKR/AIF_SO</VIEWNAME>
+     <OBJPOS>0002</OBJPOS>
+     <VIEWFIELD>MSGGUID</VIEWFIELD>
+     <TABNAME>/THKR/AIF_SERIAL</TABNAME>
+     <FIELDNAME>MSGGUID</FIELDNAME>
+     <KEYFLAG>X</KEYFLAG>
+     <ENQMODE>E</ENQMODE>
+    </DD27P>
+    <DD27P>
+     <VIEWNAME>/THKR/AIF_SO</VIEWNAME>
+     <OBJPOS>0003</OBJPOS>
+     <VIEWFIELD>SEQNR</VIEWFIELD>
+     <TABNAME>/THKR/AIF_SERIAL</TABNAME>
+     <FIELDNAME>SEQNR</FIELDNAME>
+     <KEYFLAG>X</KEYFLAG>
+     <ENQMODE>E</ENQMODE>
+    </DD27P>
+   </DD27P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

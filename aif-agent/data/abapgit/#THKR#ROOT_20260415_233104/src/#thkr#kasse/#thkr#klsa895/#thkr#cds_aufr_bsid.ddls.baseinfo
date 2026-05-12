@@ -1,0 +1,7 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "BSID_VIEW"
+    ]
+  }
+}

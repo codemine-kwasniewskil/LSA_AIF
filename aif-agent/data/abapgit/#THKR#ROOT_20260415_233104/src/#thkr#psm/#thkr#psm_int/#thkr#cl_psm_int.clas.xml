@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_INT</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>PSM-Integration</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <MSG_ID>/THKR/PSM_INT_FI</MSG_ID>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>E01</KEY>
+     <ENTRY>ECATT: Parameterfehler</ENTRY>
+     <LENGTH>44</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E02</KEY>
+     <ENTRY>ECATT: Fehler beim Erstellen des Objekts</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS_CLASS>
+    <SEOCLASSTX>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Integrationsklasse für den zentralen Zugriff auf die Geschäf</DESCRIPT>
+    </SEOCLASSTX>
+   </DESCRIPTIONS_CLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_BELEG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlegen ein Budgetbelegzeilen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PSM_FB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlegen ein Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PSM_FKZ</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlegen eine FKZ (Funktionskennzahl)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PSM_FO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlegen eine Fonds</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PSM_FP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlegen eine Finanzposition</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PSM_TG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlegen eine TG (Titelgruppe)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_PSM_VE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anlegen eine Vermerks</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DTO_BBELEG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lesen einer Budgetbeleg</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DTO_PSM_FB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lesen ein Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DTO_PSM_FKZ</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lesen einer FKZ (Funktionskennzahl)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DTO_PSM_FO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lesen einer Fonds</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DTO_PSM_FP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lesen einer FP (Finanzposition)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DTO_PSM_TG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lesen einer TG (Titelgruppe)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_DTO_PSM_VE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lesen einer Vermerks</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Factory: Singleton Referenz</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>PSM-Integration</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BBELEG_ADD_PROCESS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetierungsvorgang</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BBELEG_BUDTYPE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetart</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BBELEG_DKEY</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Distribution key</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BBELEG_DOCSTATE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Status eines Budgeterfassungsbelegs</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BBELEG_FUNDSCTR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BBELEG_MEASURE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Haushaltsprogramm</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BBELEG_PROCESS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Budgetierungsvorgang</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_BBELEG_VALTYPE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>BCS-Werttyp</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_DOCTYPE_JAHR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Art des Budgeterfassungsbelegs</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_PSM_FB</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aktualisierung ein Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_PSM_FO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aktualisierung eine Fonds</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_PSM_FP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aktualisierung eine Finanzposition</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_PSM_FP_LONGTEXT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Aktualisierung des Langtextes des Finanzposition</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_BELEG</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_BELEG</CMPNAME>
+     <SCONAME>I_BELEG_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Budgetbelegzeilen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FB</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FB</CMPNAME>
+     <SCONAME>I_FB_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FB</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionsbereich</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FKZ</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FKZ</CMPNAME>
+     <SCONAME>I_DTO_PSM_FKZ_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Funktionskennzahl</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FKZ</CMPNAME>
+     <SCONAME>R_FKZ</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Funktionskennzahl</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FO</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FO</CMPNAME>
+     <SCONAME>I_FO_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FO</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FP</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>usnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_FP</CMPNAME>
+     <SCONAME>E_FIPOS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schlüsselfelder der Finanzpositionen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_TG</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_TG</CMPNAME>
+     <SCONAME>E_PSM_TG</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Titelgruppendaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_TG</CMPNAME>
+     <SCONAME>I_DTO_PSM_TG_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder der Finanzpositionen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_VE</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_VE</CMPNAME>
+     <SCONAME>I_VE_CREATE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Vermerke (Budgettexte)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PSM_VE</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder für PSM-Vermerken (Budgettext)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_BBELEG</CMPNAME>
+     <SCONAME>I_DTO_PSM_BELEG</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer Budgetbelegzeilen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FB</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FB</CMPNAME>
+     <SCONAME>I_FKBER_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FB</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Vollständige Daten über PSM-Funktionsbereich (Kapitel)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FKZ</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FKZ</CMPNAME>
+     <SCONAME>I_DTO_PSM_FKZ</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Funktionskennzahl</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FKZ</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Funktionskennzahl</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FO</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FO</CMPNAME>
+     <SCONAME>I_FOND_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FO</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Vollständige Daten über den PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FP</CMPNAME>
+     <SCONAME>I_DTO_PSM_FP</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schlüsselfelder der Finanzpositionen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_FP</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzposition Kopfdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_TG</CMPNAME>
+     <SCONAME>I_DTO_PSM_TG</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Titelgruppe</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_TG</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Titelgruppendaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_VE</CMPNAME>
+     <SCONAME>I_VERMERK_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder für PSM-Vermerken (Budgettext)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_DTO_PSM_VE</CMPNAME>
+     <SCONAME>R_DTO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Vollständige Daten über den PSM-Vermerk (Budgettext)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>E_INSTANCE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendung: Verabeitungssteuerung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>R_INSTANCE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendung: Verabeitungssteuerung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_FB</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_FO</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_FP</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>usnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_FP</CMPNAME>
+     <SCONAME>E_FIPOS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schlüsselfelder der Finanzpositionen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_FP_LONGTEXT</CMPNAME>
+     <SCONAME>IS_FP_KEY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder der Finanzpositionen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_FP_LONGTEXT</CMPNAME>
+     <SCONAME>IV_LANGU</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Sprachenschlüssel</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_PSM_FP_LONGTEXT</CMPNAME>
+     <SCONAME>IV_TEXT_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Text-ID</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

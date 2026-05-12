@@ -1,0 +1,10 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "/THKR/CDS_BJBSEG",
+      "/THKR/CDS_BJBSEG2",
+      "/THKR/CDS_OEPLHGRFMIFIIT",
+      "I_ACCOUNTINGDOCUMENT"
+    ]
+  }
+}

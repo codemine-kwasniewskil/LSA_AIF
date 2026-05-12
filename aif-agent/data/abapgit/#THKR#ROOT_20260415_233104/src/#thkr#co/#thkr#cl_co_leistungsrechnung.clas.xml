@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_CO_LEISTUNGSRECHNUNG</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>CO: Leistungsrechnung</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>BDC_DYNPRO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dynpro Informationen für Batch Input</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BDC_FIELD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld Informationen für Batch Input</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BELEGE_BUCHEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Buchen der Belege und Erstellen der Fehlermappen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_DATEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfen der Datei und der Datensätze</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_DATEN_ALLGEMEIN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfen des Datensatzes (allgemein)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_USER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfen Berechtigung des Users</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CO_KOKRS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kostenrechnungskreis</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einlesen der LEIST-Datei</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_BDCDATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Batch Input Absprung zu Objekten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GT_LART</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Typ: Zuordnung der Leistungsart zur 1.Stelle der MA-Nummer</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_AK_JUS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>max.Arbeitskrafteanteil, Verechnungsfaktor</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_AK_LGEO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>max.Arbeitskrafteanteil, Verechnungsfaktor</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_CHECK_LV</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schalter, ob Prüfungen auch für LvermGeo erfolgen sollen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_DATEI</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dateiname</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_MAPPENNAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Group Name:  Name einer Batch-Input-Mappe</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SCHREIBEN_PROTOKOLL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schreiben des Protokolldatensatzes der Dateiverarbeitung</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>BDC_DYNPRO</CMPNAME>
+     <SCONAME>E_DYNPRO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>BDC DynproNummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BDC_DYNPRO</CMPNAME>
+     <SCONAME>E_PROGRAM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>BDC Modulpool</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BDC_FIELD</CMPNAME>
+     <SCONAME>E_FNAM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldname für Batch Input</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BDC_FIELD</CMPNAME>
+     <SCONAME>E_FVAL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>BDC-FieldValue</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BELEGE_BUCHEN</CMPNAME>
+     <SCONAME>C_RECIN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TT: Inputstruktur der Leistungsverrechnung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BELEGE_BUCHEN</CMPNAME>
+     <SCONAME>E_RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rückkehrcode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>BELEGE_BUCHEN</CMPNAME>
+     <SCONAME>I_DIENSTSTELLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dienststelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_DATEN</CMPNAME>
+     <SCONAME>C_RECIN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TT: Inputstruktur der Leistungsverrechnung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_DATEN</CMPNAME>
+     <SCONAME>E_RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rückkehrcode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_DATEN</CMPNAME>
+     <SCONAME>I_DIENSTSTELLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dienststelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_DATEN_ALLGEMEIN</CMPNAME>
+     <SCONAME>C_RECIN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TT: Inputstruktur der Leistungsverrechnung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_DATEN_ALLGEMEIN</CMPNAME>
+     <SCONAME>E_RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rückkehrcode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_DATEN_ALLGEMEIN</CMPNAME>
+     <SCONAME>I_DIENSTSTELLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dienststelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_DATEN_ALLGEMEIN</CMPNAME>
+     <SCONAME>I_HERKUNFT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Herkunft der Daten (J - Justiz, L - LvermGeo)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_USER</CMPNAME>
+     <SCONAME>E_RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rückkehrcode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_USER</CMPNAME>
+     <SCONAME>I_DIENSTSTELLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dienststelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>E_DATEI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dateiname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>E_RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rückkehrcode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>E_RECIN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>TT: Inputstruktur der Leistungsverrechnung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DATEI_EINLESEN</CMPNAME>
+     <SCONAME>I_DATEINAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Pfad und Dateiname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SCHREIBEN_PROTOKOLL</CMPNAME>
+     <SCONAME>I_DATEINAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dateiname</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

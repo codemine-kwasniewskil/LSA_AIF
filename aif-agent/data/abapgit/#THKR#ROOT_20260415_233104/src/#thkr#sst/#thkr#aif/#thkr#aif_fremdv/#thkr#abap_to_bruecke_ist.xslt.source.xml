@@ -1,0 +1,38 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns:ddic="http://www.sap.com/abapxml/types/dictionary" xmlns:def="http://www.sap.com/abapxml/types/defined" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi=
+"http://www.w3.org/2001/XMLSchema-instance">
+
+  <xsl:output encoding="UTF-8" indent="yes" method="xml"/>
+  <tt:root name="DATA"/>
+  <tt:root name="METADATA" type="ddic:CHAR40"/>
+
+  <!-- Main template -->
+  <tt:template>
+    <kassensystem.rueckmeldungen.0004 xsi:schemaLocation="xbruecke xsd/xbruecke-zahlungsanweisung.xsd">
+
+      <!-- Metadaten zur Rückmeldungsdatei -->
+      <dateiinformationen>
+        <erstellungsdatum tt:value-ref=".METADATA"/>
+        <verfahrenskennung/>
+      </dateiinformationen>
+      <tt:loop ref=".DATA">
+        <ergebnis>
+          <!-- Ergebnis zu erster Auszahlung -->
+          <tt:attribute name="nummer" value-ref="counter" />
+
+          <antragsnummer tt:value-ref="ANTRAGSNUMMER"/>
+          <kassenzeichen tt:value-ref="KASSENZEICHEN"/>
+          <zahlungErfolgt>
+            <ueberweisungsdatum tt:value-ref="UEBERWEISUNGSDATUM"/>
+            <iban tt:value-ref="IBAN"/>
+            <ueberweisungsbetrag tt:value-ref="UEBERWEISUNGSBETRAG"/>
+            <kontoinhaber tt:value-ref="KONTOINHABER"/>
+            <nameZahlungsempfaenger tt:value-ref="NAMEZAHLUNGSEMPFAENGER"/>
+          </zahlungErfolgt>
+          <kommentar tt:value-ref="KOMMENTAR"/>
+          <nameBewilliger tt:value-ref="NAMEBEWILLIGER"/>
+        </ergebnis>
+      </tt:loop>
+    </kassensystem.rueckmeldungen.0004>
+  </tt:template>
+</tt:transform>

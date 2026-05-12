@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_AUTH_VARIANTS</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Berechtigungsprüfung für ALV Layouts</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ALV_AUTH</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ALV_EXISTS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ALV_AUTH_CHECK</CMPNAME>
+     <SCONAME>IV_AKTVT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ALV_AUTH_CHECK</CMPNAME>
+     <SCONAME>IV_DEFAULT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ALV_AUTH_CHECK</CMPNAME>
+     <SCONAME>IV_VARIANT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Layout</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ALV_AUTH_CHECK</CMPNAME>
+     <SCONAME>NOT_AUTHORIZED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Keine Berechtigung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REP_AUTH_CHECK</CMPNAME>
+     <SCONAME>IV_AKTVT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REP_AUTH_CHECK</CMPNAME>
+     <SCONAME>NOT_AUTHORIZED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Keine Berechtigung</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

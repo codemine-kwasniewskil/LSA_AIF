@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IFDEF_FUNCTIONS</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>AIF Schnittstellendefiniton Routinen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ANONYMISATION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anonymisierung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_LFA_PROP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittlung Eigenschaften aus AIF File Adapter</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ermittlung Schnittstellennummer</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SELECT_ANONYMISATION_CONFIG</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konfiguration für Anonymisierung lesen</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ANONYMISATION</CMPNAME>
+     <SCONAME>IS_FINF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schnittstellendefintion</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_LFA_PROP</CMPNAME>
+     <SCONAME>EV_FIELDNAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_LFA_PROP</CMPNAME>
+     <SCONAME>EV_SEPARATOR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feldtrennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_LFA_PROP</CMPNAME>
+     <SCONAME>IV_STRUC_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name einer Struktur</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SST</CMPNAME>
+     <SCONAME>IS_FINF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schnittstellendefintion</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SST</CMPNAME>
+     <SCONAME>RV_/THKR/SST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>BP: Schnittstellenpartner</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SELECT_ANONYMISATION_CONFIG</CMPNAME>
+     <SCONAME>IV_SST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>BP: Schnittstellenpartner</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

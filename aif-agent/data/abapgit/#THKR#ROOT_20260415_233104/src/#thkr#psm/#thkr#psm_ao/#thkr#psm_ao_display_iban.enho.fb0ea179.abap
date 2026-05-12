@@ -1,0 +1,10 @@
+"Name: \PR:SAPLF0KA\FO:SCREEN_FIELD_OFF\SE:END\EI
+ENHANCEMENT 0 /THKR/PSM_AO_DISPLAY_IBAN.
+LOOP AT SCREEN.
+  IF screen-name = 'PSO02-BNKID'.
+    screen-active = '1'.
+    screen-invisible = '0'.
+    MODIFY SCREEN.
+  ENDIF.
+ENDLOOP.
+ENDENHANCEMENT.

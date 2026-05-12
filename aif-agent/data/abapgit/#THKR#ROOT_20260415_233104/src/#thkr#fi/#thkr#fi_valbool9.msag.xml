@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Nachrichten zu FI: Validierung Boolsche Regel 9</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>------- Validierung -------</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Bei diesem Zahlweg muss ein Partnerbanktyp ausgewählt werden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Beim verwendeten Zahlweg muss eine Adresse im GP hinterlegt sein!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Beim Zahlweg &apos;D&apos; darf die GP-Gruppierung &apos;0012&apos; nicht verwendet werden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Der Status des SEPA-Mandates muss &quot;aktiv&quot; sein!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Das SEPA-Mandat wurde noch nicht freigegeben!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Datum der Mandatsunterschrift muss vor Fälligkeit der Rechnung liegen!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Bei Daueranordnungen muss ein Mehrfachmandat verwendet werden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Es befindet sich bereits eine andere Forderung in der Vollstreckung!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Das SEPA-Mandat ist zum Zeitpunkt der Fälligkeit nicht gültig!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Der Belegkopftext muss einem Kassenzeichen einer AnnAO entsprechen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_VALBOOL9</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Bitte Felder LZB-Kenn. und Liefer-L/R füllen</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

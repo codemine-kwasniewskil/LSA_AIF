@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_ELKO_HELPERS</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Allgemeine Hilffunktionenen für den ELKO</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_NUMBERS_13</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kassenzeichenprüfung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONVERT_STRING</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>String konvertieren</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_NUMBERS_13</CMPNAME>
+     <SCONAME>/THKR/CX_ELKO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für den ELKO</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_NUMBERS_13</CMPNAME>
+     <SCONAME>EV_CDIGIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfziffer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_NUMBERS_13</CMPNAME>
+     <SCONAME>EV_VALID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>boolsche Variable (X=true, -=false, space=unknown)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_NUMBERS_13</CMPNAME>
+     <SCONAME>IV_IDENT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Zeichenkette, für die eine Prüfziffer ermittelt werden soll</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_STRING</CMPNAME>
+     <SCONAME>IV_CONVERT_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konvertierungsname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_STRING</CMPNAME>
+     <SCONAME>RS_CONVERT_STRING</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Konvertierungstring</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IM_BP_CVI_DEF_VAL</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Klasse zur BAdI-Impl.: /THKR/BP_CVI_DEFAULT_VAL</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>BUGROUP_FREMDVERFAHREN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftspartnergruppierung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BUROLE_D_FREMDVERFAHREN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GP-Rollentyp</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BUROLE_D_FREMDVERFAH_INT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GP-Rollentyp</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BUROLE_K_FREMDVERFAHREN</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GP-Rollentyp</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>BUROLE_K_FREMDVERFAH_INT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>GP-Rollentyp</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SORTBY_POSTING_DATE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schlüssel für die Sortierung nach Zuordnungsnummern</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>_SET_DEFAULT_VALUES</CMPNAME>
+     <SCONAME>NEW_COMPANY_CODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Buchungskreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>_SET_DEFAULT_VALUES</CMPNAME>
+     <SCONAME>ROLE_CATEGORIES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Rollentyp</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

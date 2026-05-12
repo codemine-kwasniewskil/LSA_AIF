@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>FI: Nachrichten zu BKPF-Workflows</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Der Zahlweg &amp;1 ist beim Geschäftspartner nicht hinterlegt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>133</MSGNR>
+     <TEXT>Keine Berechtigung zur Bearbeitung vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>134</MSGNR>
+     <TEXT>Der Beleg darf nicht mit der Transaktion /THKR/FB02_JUS geändert werden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>176</MSGNR>
+     <TEXT>Mahnsperre darf nur leer oder 1 sein.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>178</MSGNR>
+     <TEXT>Mahnstufe darf nur bei Wert 0 oder leer geändert werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>179</MSGNR>
+     <TEXT>Es wurden keine Belegpositionen zum Beleg &amp;1 &amp;2 &amp;3 gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>181</MSGNR>
+     <TEXT>Die Mahnsperre darf nur von &apos;2,3,4,5,6&apos; nur auf &apos;1&apos; geändert werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>200</MSGNR>
+     <TEXT>Berechtigungsfehler im Objekt Z_FICA_TRG</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>201</MSGNR>
+     <TEXT>Berechtigungsfehler im Objekt Z_FICA_UTK</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>350</MSGNR>
+     <TEXT>Der Beleg &amp;1/&amp;2/&amp;3 wird bereits unter der Nummer &amp;4 bearbeitet.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>351</MSGNR>
+     <TEXT>Es wurden keine Änderungen an den Daten vorgenommen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>352</MSGNR>
+     <TEXT>Die Änderungen konnten nicht gespeichert werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>356</MSGNR>
+     <TEXT>Der Beleg &amp;1/&amp;2/&amp;3 ist unter der Nummer &amp;4 zum Storno vorgesehen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>357</MSGNR>
+     <TEXT>Zu diesem Beleg wurde bereits ein Workflow gestartet.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>358</MSGNR>
+     <TEXT>Der Workflow konnte nicht gestartet werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>359</MSGNR>
+     <TEXT>Es ist ein unbekannter Fehler bei der Workflowverarbeitung aufgetreten.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>360</MSGNR>
+     <TEXT>Bitte geben Sie Belegnummer, Buchungskreis und Geschäftsjahr an.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>362</MSGNR>
+     <TEXT>Keine Änderung möglich, Beleg ist ausgeglichen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>363</MSGNR>
+     <TEXT>Bitte geben Sie die Belegnummer und das Geschäftsjahr an.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>364</MSGNR>
+     <TEXT>Bitte geben Sie einen Stornogrund an.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>366</MSGNR>
+     <TEXT>Es ist kein Beleg unter der Nummer &amp;1 im Jahr &amp;2 vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>368</MSGNR>
+     <TEXT>Kein Fakturabeleg mit der Nummer &amp;1 vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>369</MSGNR>
+     <TEXT>Kontoart &amp;1 nicht für Änderung per Workflow zulässig.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>370</MSGNR>
+     <TEXT>Daten können nicht gesichert werden. Bitte beheben Sie zuerst die Fehler.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>371</MSGNR>
+     <TEXT>Anlagenbelege müssen Vorgang &amp;1 und Belegart &amp;2 oder &amp;3 oder &amp;4 haben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>373</MSGNR>
+     <TEXT>Storno nur im Rechnungsbelegstatus 5 (Gebucht) erlaubt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>374</MSGNR>
+     <TEXT>Kombination aus Referenzvorgang und Belegart ist für &amp;1 nicht zugelassen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>375</MSGNR>
+     <TEXT>Fehler bei der Ermittlung gültiger Belegarten aus der Parametertabelle.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>376</MSGNR>
+     <TEXT>Buchungsstatus Faktura ungleich &apos;C&apos; ist nicht erlaubt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>377</MSGNR>
+     <TEXT>Für die Belegart &amp;1 ist nur der Zahlweg &apos;C&apos; zugelassen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>378</MSGNR>
+     <TEXT>Der FI-Beleg ist bereits ausgeglichen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>379</MSGNR>
+     <TEXT>Beleg nicht stornierbar, da nicht über den Strono-Workflow freigegeben.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>380</MSGNR>
+     <TEXT>Der Status in /THKR/STORNOC ist nicht für den Stornovorgang zugelassen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>381</MSGNR>
+     <TEXT>Das Geschäftsjahr muss für die Prüfung übergeben werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>383</MSGNR>
+     <TEXT>Der Buchungskreis muss für die Prüfung übergeben werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>384</MSGNR>
+     <TEXT>Fehler bei der Prüfung des Beleges, bitte Admin kontaktieren.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>386</MSGNR>
+     <TEXT>Bitte geben Sie den Buchungskreis und die Vertragsnummer an.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>387</MSGNR>
+     <TEXT>Es sind nur die Stornogründe S1 und S2 erlaubt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>392</MSGNR>
+     <TEXT>Die Vertragsnummer muss für die Prüfung übergeben werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>393</MSGNR>
+     <TEXT>Die Belegnummer muss für die Prüfung übergeben werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>453</MSGNR>
+     <TEXT>Der Buchungskreis &amp;1 ist nicht FÖBIS relevant.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>454</MSGNR>
+     <TEXT>Der Beleg hat keinen Eintrag in Relationship Tabelle für Föbis.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/FI_WF_BKPF</ARBGB>
+     <MSGNR>468</MSGNR>
+    </T100>
+   </T100>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>NA</ID>
+      <OBJECT>/THKR/FI_WF_BKPF134</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0005</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00004</TXTLINES>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_WF_BKPF134</TDNAME>
+      <TDID>NA</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00005</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;CAUSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Die Kontierung des Belegs wurden nicht für die Änderung ohne</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Vier-Augen-Prinzip freigegeben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYSTEM_RESPONSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;WHAT_TO_DO&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Bitte verwenden Sie die Transaktion /THKR/FB02 oder wenden Sie sich an</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>das ZHM.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;SYS_ADMIN&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

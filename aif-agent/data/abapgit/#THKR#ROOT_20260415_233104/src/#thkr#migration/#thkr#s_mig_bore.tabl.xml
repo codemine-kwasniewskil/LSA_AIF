@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>/THKR/S_MIG_BORE</TABNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>Migration: Historie der BO-Reports (BOReporthistorie)</DDTEXT>
+    <EXCLASS>1</EXCLASS>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>MASKE</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000016</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000008</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Maskenname</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>HAUSHALTSJAHR</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Haushaltsjahr</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>KASSENZEICHEN</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000032</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000016</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Kassenzeichen</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ZEITBUCH_NR</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000004</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000002</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Zeitbuchnummer</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>REPOTNAME</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000510</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000255</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Reportname</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>DATUM</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000016</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000008</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Datum, wenn Report ausgeführt wurde</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ZEIT</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000008</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Zeit, wann Repot ausgeführt wurde</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>NUTZER</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000016</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000008</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Sachbearbeiter, welcher den Report ausgeführt hat</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>UUID_IDENTNR</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000072</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000036</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>UUID - eindeutige Schriftgutobjekt-Identnummer (für ERV XML)</DDTEXT>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

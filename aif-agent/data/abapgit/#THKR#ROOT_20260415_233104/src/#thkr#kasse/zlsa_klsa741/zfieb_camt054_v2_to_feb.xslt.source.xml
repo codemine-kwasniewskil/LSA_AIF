@@ -1,0 +1,581 @@
+<!-- 2016 November 11  | FIEB_CAMT054_V2_TO_FEB_20161111 | see note 1729746 -->
+<!-- 2024 September 09 | ZZ_IBAN ergänzt für Leitwegsteuerung kLSA759 jseifert-->
+<!-- 2024 Dezember 19  | PENDING durch BOOK ersetzt jseifert-->
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns0="urn:iso:std:iso:20022:tech:xsd:camt.054.001.02" xmlns:sap="http://www.sap.com/sapxsl" version="1.0">
+  <xsl:template match="ns0:Document ">
+    <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+      <asx:values>
+        <FEB_NTIMES>
+          <xsl:for-each select="ns0:BkToCstmrDbtCdtNtfctn/ns0:Ntfctn">
+            <xsl:variable name="CreDtTm">
+              <xsl:value-of select="ns0:CreDtTm"/>
+            </xsl:variable>
+            <xsl:variable name="AccountCurrency">
+              <xsl:value-of select="ns0:Acct/ns0:Ccy"/>
+            </xsl:variable>
+            <xsl:variable name="TypeOfAccount">
+              <xsl:value-of select="ns0:Acct/ns0:Tp/ns0:Cd"/>
+            </xsl:variable>
+            <xsl:variable name="IBAN">
+              <xsl:value-of select="ns0:Acct/ns0:Id/ns0:IBAN"/>
+            </xsl:variable>
+            <xsl:variable name="AccountNumber">
+              <xsl:value-of select="ns0:Acct/ns0:Id/ns0:Othr/ns0:Id"/>
+            </xsl:variable>
+            <xsl:variable name="BIC">
+              <xsl:value-of select="ns0:Acct/ns0:Svcr/ns0:FinInstnId/ns0:BIC"/>
+            </xsl:variable>
+            <xsl:variable name="BLZ">
+              <xsl:value-of select="ns0:Acct/ns0:Svcr/ns0:FinInstnId/ns0:Othr/ns0:Id"/>
+            </xsl:variable>
+            <xsl:variable name="Name">
+              <xsl:value-of select="ns0:Acct/ns0:Ownr/ns0:Nm"/>
+            </xsl:variable>
+            <xsl:for-each select="ns0:Ntry">
+              <!--Begin: Global Transaction Code-->
+              <xsl:variable name="VGEXT">
+                <xsl:value-of select="ns0:BkTxCd/ns0:Prtry/ns0:Cd"/>
+              </xsl:variable>
+              <xsl:variable name="VGEXT_DOMN">
+                <xsl:value-of select="ns0:BkTxCd/ns0:Domn/ns0:Cd"/>
+              </xsl:variable>
+              <xsl:variable name="VGEXT_Fmly">
+                <xsl:value-of select="ns0:BkTxCd/ns0:Domn/ns0:Fmly/ns0:Cd"/>
+              </xsl:variable>
+              <xsl:variable name="VGEXT_SubFmly">
+                <xsl:value-of select="ns0:BkTxCd/ns0:Domn/ns0:Fmly/ns0:SubFmlyCd"/>
+              </xsl:variable>
+              <!--End: Global Transaction Code-->
+              <xsl:variable name="BookgDt">
+                <xsl:value-of select="ns0:BookgDt/ns0:Dt"/>
+              </xsl:variable>
+              <xsl:variable name="BookgDtTm">
+                <xsl:value-of select="ns0:BookgDt/ns0:DtTm"/>
+              </xsl:variable>
+              <xsl:variable name="ValDt">
+                <xsl:value-of select="ns0:ValDt/ns0:Dt"/>
+              </xsl:variable>
+              <xsl:variable name="ValDtTm">
+                <xsl:value-of select="ns0:ValDt/ns0:DtTm"/>
+              </xsl:variable>
+              <xsl:variable name="CdtDbtInd">
+                <xsl:value-of select="ns0:CdtDbtInd"/>
+              </xsl:variable>
+              <xsl:variable name="Sts">
+                <xsl:value-of select="ns0:Sts"/>
+              </xsl:variable>
+              <FEB>
+                <FEBKO>
+                  <AZIDT/>
+                  <EMKEY/>
+                  <VFDAT/>
+                  <WVDAT/>
+                  <WVTIM/>
+                  <WVART/>
+                  <HKONT/>
+                  <KTONR/>
+                  <!--AccountHolder-->
+                  <KTOIH>
+                    <xsl:value-of select="$Name"/>
+                  </KTOIH>
+                  <KTOSB/>
+                  <AZNUM/>
+                  <AZSNR/>
+                  <AZDAT>
+                    <xsl:value-of select="substring($CreDtTm,1,10)"/>
+                  </AZDAT>
+                  <BUKRS/>
+                  <KTOPL/>
+                  <!--Currency-->
+                  <xsl:if test="$AccountCurrency">
+                    <WAERS>
+                      <xsl:value-of select="$AccountCurrency"/>
+                    </WAERS>
+                  </xsl:if>
+                  <!--Total Debit / Total Credit-->
+                  <xsl:choose>
+                    <xsl:when test="$CdtDbtInd='DBIT'">
+                      <SUMSO>
+                        <xsl:value-of select="ns0:Amt"/>
+                      </SUMSO>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <SUMHA>
+                        <xsl:value-of select="ns0:Amt"/>
+                      </SUMHA>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                  <ESTYP/>
+                  <ESDMB/>
+                  <BLAUF/>
+                  <ELAUF/>
+                  <HZINS/>
+                  <TEILN/>
+                  <!--Type of Bank Account-->
+                  <xsl:if test="$TypeOfAccount">
+                    <BKTOA>
+                      <xsl:value-of select="$TypeOfAccount"/>
+                    </BKTOA>
+                  </xsl:if>
+                  <!--Number of memo records from the bank statement-->
+                  <ANZES>
+                    <xsl:value-of select="ns0:NtryDtls/ns0:Btch/ns0:NbOfTxs"/>
+                  </ANZES>
+                  <HBKID/>
+                  <HKTID/>
+                  <BKREF/>
+                  <DSART/>
+                  <XVERD/>
+                  <XBENR/>
+                  <XBTYP/>
+                  <SEQ_NUMBER/>
+                  <SEQ_STATUS/>
+                  <!--Fill FEBKO-INPUT_FORMAT; used for assigning FEBKO-AZNUM (last statement number + 1)-->
+                  <INPUT_FORMAT>
+                    <xsl:value-of select="'54'"/>
+                  </INPUT_FORMAT>
+                  <!--IBAN-->
+                  <xsl:if test="$IBAN">
+                    <SIBAN>
+                      <xsl:value-of select="$IBAN"/>
+                    </SIBAN>
+                  </xsl:if>
+                  <BANKKEY>
+                    <xsl:choose>
+                      <xsl:when test="$BIC">
+                        <xsl:value-of select="$BIC"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:value-of select="$BLZ"/>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </BANKKEY>
+                  <!--Account Number-->
+                  <BANKACC>
+                    <xsl:value-of select="$AccountNumber"/>
+                  </BANKACC>
+                </FEBKO>
+                <ITEMS_FEB>
+                  <xsl:for-each select="ns0:NtryDtls/ns0:TxDtls">
+                    <xsl:variable name="TxDtls_VGEXT">
+                      <xsl:value-of select="ns0:BkTxCd/ns0:Prtry/ns0:Cd"/>
+                    </xsl:variable>
+                    <xsl:variable name="TxDtls_VGEXT_DOMN">
+                      <xsl:value-of select="ns0:BkTxCd/ns0:Domn/ns0:Cd   "/>
+                    </xsl:variable>
+                    <xsl:variable name="TxDtls_VGEXT_Fmly">
+                      <xsl:value-of select="ns0:BkTxCd/ns0:Domn/ns0:Fmly/ns0:Cd"/>
+                    </xsl:variable>
+                    <xsl:variable name="TxDtls_VGEXT_SubFmly">
+                      <xsl:value-of select="ns0:BkTxCd/ns0:Domn/ns0:Fmly/ns0:SubFmlyCd"/>
+                    </xsl:variable>
+                    <!-- Payment -->
+                    <ITEM_FEB>
+                      <FEBEP>
+                        <ESNUM/>
+                        <BVDAT>
+                          <xsl:choose>
+                            <xsl:when test="$BookgDt != ''">
+                              <xsl:value-of select="substring($BookgDt,1,10) "/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <xsl:value-of select="substring($BookgDtTm,1,10) "/>
+                            </xsl:otherwise>
+                          </xsl:choose>
+                        </BVDAT>
+                        <BUDAT/>
+                        <VALUT>
+                          <xsl:choose>
+                            <xsl:when test="$ValDt != ''">
+                              <xsl:value-of select="substring($ValDt,1,10) "/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <xsl:value-of select="substring($ValDtTm,1,10) "/>
+                            </xsl:otherwise>
+                          </xsl:choose>
+                        </VALUT>
+                        <BUTIM/>
+                        <KWAER>
+                          <xsl:value-of select="ns0:AmtDtls/ns0:TxAmt/ns0:Amt/@Ccy"/>
+                        </KWAER>
+                        <KWBTR>
+                          <xsl:value-of select="ns0:AmtDtls/ns0:TxAmt/ns0:Amt"/>
+                        </KWBTR>
+                        <xsl:if test="ns0:Chrgs">
+                          <SPESK>
+                            <xsl:value-of select="ns0:Chrgs/ns0:Amt"/>
+                          </SPESK>
+                        </xsl:if>
+                        <xsl:if test="ns0:AmtDtls/ns0:InstdAmt">
+                          <FWAER>
+                            <xsl:value-of select="ns0:AmtDtls/ns0:InstdAmt/ns0:Amt/@Ccy "/>
+                          </FWAER>
+                          <FWBTR>
+                            <xsl:value-of select="ns0:AmtDtls/ns0:InstdAmt/ns0:Amt"/>
+                          </FWBTR>
+                        </xsl:if>
+                        <SPESF/>
+                        <!--Transaction Code (GVC);
+                          Add  prefix &amp;amp;lt;54&amp;amp;gt; to distinguish GVCs for debit credit notification (posting area 2 only)
+                          from GVC for bank statement (posting areas 1 and 2) -->
+                        <xsl:choose>
+                          <xsl:when test="$VGEXT != '' or $VGEXT_DOMN != '' or $VGEXT_Fmly != '' or $VGEXT_SubFmly != ''">
+                            <VGEXT>
+                              <xsl:choose>
+                                <xsl:when test="$VGEXT_DOMN != ''">
+                                  <xsl:value-of select="concat('&lt;', '54', '&gt;', $VGEXT_DOMN,  $VGEXT_Fmly, $VGEXT_SubFmly)"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                  <xsl:value-of select="concat('&lt;', '54', '&gt;',  $VGEXT)"/>
+                                </xsl:otherwise>
+                              </xsl:choose>
+                            </VGEXT>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <VGEXT>
+                              <xsl:choose>
+                                <xsl:when test="$TxDtls_VGEXT_DOMN != ''">
+                                  <xsl:value-of select="concat('&lt;', '54', '&gt;', $TxDtls_VGEXT_DOMN,  $TxDtls_VGEXT_Fmly, $TxDtls_VGEXT_SubFmly)"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                  <xsl:value-of select="concat('&lt;', '54', '&gt;',  $TxDtls_VGEXT)                                          "/>
+                                </xsl:otherwise>
+                              </xsl:choose>
+                            </VGEXT>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <VGMAN/>
+                        <KFMOD/>
+                        <BUTXT/>
+                        <ANZSP/>
+                        <XBLNR/>
+                        <ZUONR/>
+                        <!--Partner Details-->
+                        <xsl:if test="$CdtDbtInd">
+                          <xsl:choose>
+                            <xsl:when test="$CdtDbtInd='CRDT'">
+                              <!--'CREDIT' -&amp;amp;gt; Partner = Debtor-->
+                              <PAKTO>
+                                <xsl:value-of select="ns0:RltdPties/ns0:DbtrAcct/ns0:Id/ns0:Othr/ns0:Id"/>
+                              </PAKTO>
+                              <PARTN>
+                                <xsl:choose>
+                                  <xsl:when test="ns0:RltdPties/ns0:Dbtr/ns0:Nm != ' ' or ns0:RltdPties/ns0:Dbtr/ns0:PstlAdr/ns0:AdrLine != ' '">
+                                    <xsl:value-of select="ns0:RltdPties/ns0:Dbtr/ns0:Nm"/>
+                                    <xsl:for-each select="ns0:RltdPties/ns0:Dbtr/ns0:PstlAdr/ns0:AdrLine">
+                                      <xsl:if test="not(position()&gt;3)  ">
+                                        <xsl:text>,  </xsl:text>
+                                        <xsl:value-of select="node()"/>
+                                      </xsl:if>
+                                    </xsl:for-each>
+                                  </xsl:when>
+                                  <xsl:when test="ns0:RltdPties/ns0:UltmtDbtr/ns0:Nm or ns0:RltdPties/ns0:UltmtDbtr/ns0:PstlAdr/ns0:AdrLine">
+                                    <xsl:value-of select="ns0:RltdPties/ns0:UltmtDbtr/ns0:Nm"/>
+                                    <xsl:for-each select="ns0:RltdPties/ns0:UltmtDbtr/ns0:PstlAdr/ns0:AdrLine">
+                                      <xsl:if test="not(position()&gt;3)  ">
+                                        <xsl:text>,  </xsl:text>
+                                        <xsl:value-of select="node()"/>
+                                      </xsl:if>
+                                    </xsl:for-each>
+                                  </xsl:when>
+                                </xsl:choose>
+                              </PARTN>
+                              <PASWI>
+                                <xsl:value-of select="ns0:RltdAgts/ns0:DbtrAgt/ns0:FinInstnId/ns0:BIC"/>
+                              </PASWI>
+<!-- 2024 September 09 | ZZ_IBAN ergänzt für Leitwegsteuerung kLSA759 jseifert-->
+                              <xsl:if test="$VGEXT_SubFmly != 'RRTN'">  <!-- normale Eingangszahlung -->
+                               <ZZ_IBAN>
+                                <xsl:value-of select="ns0:RltdPties/ns0:CdtrAcct/ns0:Id/ns0:IBAN"/>
+                               </ZZ_IBAN>
+                               <PIBAN>
+                                <xsl:value-of select="ns0:RltdPties/ns0:DbtrAcct/ns0:Id/ns0:IBAN"/>
+                               </PIBAN>
+                              </xsl:if>
+                              <xsl:if test="$VGEXT_SubFmly  = 'RRTN'">  <!-- Rücküberweisung = RRTN -->
+                               <ZZ_IBAN>
+                                <xsl:value-of select="ns0:RltdPties/ns0:DbtrAcct/ns0:Id/ns0:IBAN"/>
+                               </ZZ_IBAN>
+                               <PIBAN>
+                                <xsl:value-of select="ns0:RltdPties/ns0:CdtrAcct/ns0:Id/ns0:IBAN"/>
+                               </PIBAN>
+                              </xsl:if>
+                              <PABLZ>
+                                <xsl:value-of select="ns0:RltdAgts/ns0:DbtrAgt/ns0:FinInstnId/ns0:Othr/ns0:Id"/>
+                              </PABLZ>
+                              <PABKS/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <!--'DEBIT'  -&amp;amp;gt; Partner = Creditor-->
+                              <PAKTO>
+                                <xsl:value-of select="ns0:RltdPties/ns0:CdtrAcct/ns0:Id/ns0:Othr/ns0:Id"/>
+                              </PAKTO>
+                              <PARTN>
+                                <xsl:choose>
+                                  <xsl:when test="ns0:RltdPties/ns0:Cdtr/ns0:Nm != ' ' or ns0:RltdPties/ns0:Cdtr/ns0:PstlAdr/ns0:AdrLine != ' '">
+                                    <xsl:value-of select="ns0:RltdPties/ns0:Cdtr/ns0:Nm"/>
+                                    <xsl:for-each select="ns0:RltdPties/ns0:Cdtr/ns0:PstlAdr/ns0:AdrLine">
+                                      <xsl:if test="not(position()&gt;3)  ">
+                                        <xsl:text>,  </xsl:text>
+                                        <xsl:value-of select="node()"/>
+                                      </xsl:if>
+                                    </xsl:for-each>
+                                  </xsl:when>
+                                  <xsl:when test="ns0:RltdPties/ns0:UltmtCdtr/ns0:Nm or ns0:RltdPties/ns0:UltmtCdtr/ns0:PstlAdr/ns0:AdrLine">
+                                    <xsl:value-of select="ns0:RltdPties/ns0:Cdtr/ns0:Nm"/>
+                                    <xsl:for-each select="ns0:RltdPties/ns0:Cdtr/ns0:PstlAdr/ns0:AdrLine">
+                                      <xsl:if test="not(position()&gt;3)  ">
+                                        <xsl:text>,  </xsl:text>
+                                        <xsl:value-of select="node()"/>
+                                      </xsl:if>
+                                    </xsl:for-each>
+                                  </xsl:when>
+                                </xsl:choose>
+                              </PARTN>
+                              <PASWI>
+                                <xsl:value-of select="ns0:RltdAgts/ns0:CdtrAgt/ns0:FinInstnId/ns0:BIC"/>
+                              </PASWI>
+<!-- 2024 September 09 | ZZ_IBAN ergänzt für Leitwegsteuerung kLSA759 jseifert-->
+                              <xsl:if test="$VGEXT_SubFmly != 'UPDD'">  <!-- normale Lastschrift -->
+                               <ZZ_IBAN>
+                                <xsl:value-of select="ns0:RltdPties/ns0:DbtrAcct/ns0:Id/ns0:IBAN"/>
+                               </ZZ_IBAN>
+                               <PIBAN>
+                                <xsl:value-of select="ns0:RltdPties/ns0:CdtrAcct/ns0:Id/ns0:IBAN"/>
+                               </PIBAN>
+                              </xsl:if>
+                              <xsl:if test="$VGEXT_SubFmly  = 'UPDD'">  <!-- Rücklastschrift = UPDD -->
+                               <ZZ_IBAN>
+                                <xsl:value-of select="ns0:RltdPties/ns0:CdtrAcct/ns0:Id/ns0:IBAN"/>
+                               </ZZ_IBAN>
+                               <PIBAN>
+                                <xsl:value-of select="ns0:RltdPties/ns0:DbtrAcct/ns0:Id/ns0:IBAN"/>
+                               </PIBAN>
+                              </xsl:if>
+                              <PABLZ>
+                                <xsl:value-of select="ns0:RltdAgts/ns0:CdtrAgt/ns0:FinInstnId/ns0:Othr/ns0:Id"/>
+                              </PABLZ>
+                              <PABKS/>
+                            </xsl:otherwise>
+                          </xsl:choose>
+                        </xsl:if>
+                        <BUSAB/>
+                        <KOSTL/>
+                        <GSBER/>
+                        <PRCTR/>
+                        <VERTN/>
+                        <VERTT/>
+                        <PNOTA/>
+                        <!--Cheque-->
+                        <xsl:if test="ns0:Refs/ns0:ChqNb">
+                          <CHECT>
+                            <xsl:value-of select="ns0:Refs/ns0:ChqNb"/>
+                          </CHECT>
+                        </xsl:if>
+                        <EPVOZ>
+                          <xsl:choose>
+                            <xsl:when test="$CdtDbtInd='DBIT'">
+                              <xsl:value-of select="'S'"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <xsl:value-of select="'H'"/>
+                            </xsl:otherwise>
+                          </xsl:choose>
+                        </EPVOZ>
+                        <INFO1/>
+                        <INFO2/>
+                        <AVSID/>
+                        <AVKOA/>
+                        <AVKON/>
+                        <BATCH/>
+                        <ITMNR/>
+                        <!--Exchange Rate-->
+                        <xsl:if test="ns0:AmtDtls/ns0:InstdAmt/ns0:CcyXchg/ns0:XchgRate">
+                          <KURSF>
+                            <xsl:value-of select="ns0:AmtDtls/ns0:InstdAmt/ns0:CcyXchg/ns0:XchgRate"/>
+                          </KURSF>
+                        </xsl:if>
+                        <SGTXT/>
+                        <!--Booking status; distinguish booked an advised items. (mis-)using this BoE date field) -->
+                        <JPDAT>
+<!-- 2024 Dezember 19  | PENDING durch BOOK ersetzt jseifert-->
+                          <xsl:value-of select="'BOOK'"/>
+                          <!--xsl:value-of select="$Sts"/-->
+                        </JPDAT>
+                        <POSAG/>
+                        <!--EndToEndIdentification-->
+                        <VGREF>
+                          <xsl:value-of select="ns0:Refs/ns0:EndToEndId "/>
+                        </VGREF>
+                        <XBENR/>
+                        <XBTYP/>
+                        <ARRSK/>
+                        <PFORM/>
+                        <KIDNO/>
+                        <KKREF>
+                          <xsl:value-of select="ns0:RtrInf/ns0:Rsn/ns0:Cd "/>
+                        </KKREF>
+                        <KKRF2/>
+                        <FNAM1/>
+                        <FVAL1/>
+                        <FKOA1/>
+                        <FNAM2/>
+                        <FVAL2/>
+                        <FKOA2/>
+                        <FNAM3/>
+                        <FVAL3/>
+                        <FKOA3/>
+                        <IDENR/>
+                        <TRNID>
+                          <xsl:value-of select="ns0:Refs/ns0:TxId"/>
+                        </TRNID>
+                      </FEBEP>
+                      <!--Note to Payee -->
+                      <!--Create one FEBRE entry for each piece of information -->
+                      <!--Truncate data that is longer than the 65 characters of field VWEZW -->
+                      <VWEZW>
+                        <!-- Erweiterung: -->
+                        <!-- Verwendungszweck als erstes ausgeben -->
+                        <xsl:for-each select="ns0:RmtInf">
+                          <xsl:for-each select="*">
+                            <xsl:variable name="RmtInf">
+                              <xsl:for-each select="node() | @*">
+                                <xsl:value-of select="."/>
+                                <xsl:if test="not(position()=last())  ">*</xsl:if>
+                              </xsl:for-each>
+                            </xsl:variable>
+                            <FEBRE>
+                              <VWEZW>
+                                <xsl:value-of select="$RmtInf"/>
+                              </VWEZW>
+                            </FEBRE>
+                          </xsl:for-each>
+                        </xsl:for-each>
+
+                        <!-- Felder eingefügt Anfang -->
+                        <FEBRE>
+                          <VWEZW>
+                            <xsl:if test="ns0:Refs/ns0:MsgId != ''">
+                              <xsl:value-of select="concat('+KREF+', ns0:Refs/ns0:MsgId)"/>
+                            </xsl:if>
+                          </VWEZW>
+                        </FEBRE>
+                        <FEBRE>
+                          <VWEZW>
+                            <xsl:if test="ns0:Refs/ns0:InstrId != ''">
+                              <xsl:value-of select="concat('+BREF+', ns0:Refs/ns0:InstrId)"/>
+                            </xsl:if>
+                          </VWEZW>
+                        </FEBRE>
+                        <FEBRE>
+                          <VWEZW>
+                            <xsl:if test="ns0:Refs/ns0:EndToEndId != ''">
+                              <xsl:value-of select="concat('+EREF+', ns0:Refs/ns0:EndToEndId)"/>
+                            </xsl:if>
+                          </VWEZW>
+                        </FEBRE>
+                        <FEBRE>
+                          <VWEZW>
+                            <xsl:if test="ns0:Refs/ns0:TxId != ''">
+                              <xsl:value-of select="concat('+TXID+', ns0:Refs/ns0:TxId)"/>
+                            </xsl:if>
+                          </VWEZW>
+                        </FEBRE>
+                        <FEBRE>
+                          <VWEZW>
+                            <xsl:if test="ns0:Refs/ns0:MndtId != ''">
+                              <xsl:value-of select="concat('+MREF+', ns0:Refs/ns0:MndtId)"/>
+                            </xsl:if>
+                          </VWEZW>
+                        </FEBRE>
+                        <FEBRE>
+                          <VWEZW>
+                            <xsl:if test="ns0:RltdPties/ns0:Cdtr/ns0:Nm != ''">
+                              <xsl:value-of select="concat('+CRED+', ns0:RltdPties/ns0:Cdtr/ns0:Nm)"/>
+                            </xsl:if>
+                          </VWEZW>
+                        </FEBRE>
+                        <FEBRE>
+                          <VWEZW>
+                            <xsl:if test="ns0:RltdPties/ns0:UltmtDbtr/ns0:Nm != ''">
+                              <xsl:value-of select="concat('+ABWA+', ns0:RltdPties/ns0:UltmtDbtr/ns0:Nm)"/>
+                            </xsl:if>
+                          </VWEZW>
+                        </FEBRE>
+                        <FEBRE>
+                          <VWEZW>
+                            <xsl:if test="ns0:RltdPties/ns0:UltmtCdtr/ns0:Nm != ''">
+                              <xsl:value-of select="concat('+ABWE+', ns0:RltdPties/ns0:UltmtCdtr/ns0:Nm)"/>
+                            </xsl:if>
+                          </VWEZW>
+                        </FEBRE>
+                        <!-- Felder eingefügt Ende -->
+                        <xsl:comment>
+                        <!-- Anfang Löchung -->
+                          <xsl:for-each select="ns0:Refs">
+                            <xsl:for-each select="*">
+                              <xsl:variable name="Refs">
+                                <xsl:for-each select="node() | @*">
+                                  <xsl:value-of select="."/>
+                                  <xsl:if test="not(position()=last())  ">*</xsl:if>
+                                </xsl:for-each>
+                              </xsl:variable>
+                              <FEBRE>
+                                <VWEZW>
+                                  <xsl:value-of select="$Refs"/>
+                                </VWEZW>
+                              </FEBRE>
+                            </xsl:for-each>
+                          </xsl:for-each>
+                          <xsl:for-each select="ns0:RmtInf">
+                            <xsl:for-each select="*">
+                              <xsl:variable name="RmtInf">
+                                <xsl:for-each select="node() | @*">
+                                  <xsl:value-of select="."/>
+                                  <xsl:if test="not(position()=last())  ">*</xsl:if>
+                                </xsl:for-each>
+                              </xsl:variable>
+                              <FEBRE>
+                                <VWEZW>
+                                  <xsl:value-of select="$RmtInf"/>
+                                </VWEZW>
+                              </FEBRE>
+                            </xsl:for-each>
+                          </xsl:for-each>
+                          <FEBRE>
+                            <VWEZW>
+                              <xsl:value-of select="ns0:AddtlNtryInf"/>
+                            </VWEZW>
+                          </FEBRE>
+                        <!-- Ende Löchung -->
+                        </xsl:comment>
+
+                      </VWEZW>
+                      <FEBCL>
+                        <!--Note to Payee-->
+                        <xsl:for-each select="ns0:NtryDtls">
+                          <FEBCL>
+                            <ESNUM/>
+                            <CSNUM/>
+                            <AGBUK/>
+                            <KOART/>
+                            <AGKON/>
+                            <AGUMS/>
+                            <XFIFO/>
+                            <SELFD/>
+                            <SELVON/>
+                            <SELBIS/>
+                          </FEBCL>
+                        </xsl:for-each>
+                      </FEBCL>
+                    </ITEM_FEB>
+                  </xsl:for-each>
+                </ITEMS_FEB>
+              </FEB>
+            </xsl:for-each>
+          </xsl:for-each>
+        </FEB_NTIMES>
+      </asx:values>
+    </asx:abap>
+  </xsl:template>
+</xsl:transform>

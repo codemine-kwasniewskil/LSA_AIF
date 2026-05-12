@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>Z_FI_BN_NACHR</NAME>
+    <SUBC>1</SUBC>
+    <RSTAT>K</RSTAT>
+    <RLOAD>D</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>B01</KEY>
+     <ENTRY>Selektionskriterien</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B02</KEY>
+     <ENTRY>Herkunft und Fehlernummer</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B03</KEY>
+     <ENTRY>Zahllauf</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B04</KEY>
+     <ENTRY>Belegdaten</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>B05</KEY>
+     <ENTRY>Elektronischer Kontoauszug</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>E10</KEY>
+     <ENTRY>Bitte aktive oder inaktive Fälle wählen</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>S01</KEY>
+     <ENTRY>Aktive Sätze</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>S02</KEY>
+     <ENTRY>und inaktiv</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Benachrichtigungsobjekte anzeigen</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_HERK</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>30</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_VARI</KEY>
+     <ENTRY>Anzeigevariante</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BELNR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>19</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BLART</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BUKRS</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>21</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_ERFD</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>23</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FIPOS</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FISTL</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>20</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_FNR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>20</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_GJAHR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>21</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_KUNNR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>15</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_LIFNR</KEY>
+     <ENTRY>Kreditor</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_UNAM</KEY>
+     <ENTRY>Benutzer/Erfasser</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_XBLNR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>16</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>Z_FI_BN_NACHR</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0018</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00044</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z_FI_BN_NACHR</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00018</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Auskunft zu fehlerhaften Belegen des Zahllaufes, zu Rückläufern und zum</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Ausgleich von allgemeinen Anordnungen im kreditorischen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Lastschrifteinzug.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Das Programm erstellt eine Liste der aktuell vorhandenen Belege mit</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Fehlernummern, die im Echtlauf des Zahllaufes in der Ausnahmeliste</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erscheinen. Dabei werden nur die Fehlernummern berücksichtigt, die in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Steuertabelle für Nachrichtentexte (Pflege mit Transaktion</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Z_FI_BN_FTEXT) aufgenommen wurden. Die Selektion der Daten erfolgt mit</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Herkunftsschlüssel &apos;Z&apos;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im Vorschlagslauf des Zahllaufes werden keine Benachrichtigungen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gesammelt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Daten zu Rückbuchungen im elektronischen Kontoauszug werden ebenfalls</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erfasst. Sie können mit dem Herkunftsschlüssel &apos;R&apos; angezeigt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Für alle hier enthaltenen Belege werden später Benachrichtigungen an die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Dienststellen versendet, die die Belege erstellt haben. Dabei wird der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Empfänger anhand der Finanzstelle und des Erfassers im Beleg</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>identifiziert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Für Benachrichtigungen an die Dienststellen müssen zuvor die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Empfängerdaten (Transaktion Z_FI_BN_EMPF und Transaktion Z_FI_BN_AKTION)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gepflegt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In der Liste kann mit Klick auf eine Belegnummer der FI-Beleg angezeigt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden. Über den Kurzschlüssel gelangt man zur Zeile im elektronischen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Kontoauszug.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit Doppelklick auf eine Zeile kann eine Benachrichtigung erstmalig oder</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erneut versendet werden, dabei können die Versandart und der Empfänger</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>neu festgelegt werden. Somit können auch Benachrichtigungen nachträglich</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>versendet werden, für die in den Einstellungen &apos;keine Benachrichtigung&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>oder &apos;kasseninterne Klärung&apos; ermittelt wurde.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Über die Parameterfelder im Block Selektionskriterien kann die Anzeige</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>eingeschränkt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Parameter Benutzer ist der Nutzer, der den fehlerhaften Beleg</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erfasst hat.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Bisher sind nur die Herkunftsschlüssel &apos;Z&apos; für Zahllauf und &apos;R&apos; für</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Rückläufer und die dazugehörigen Parameter relevant. Zurzeit werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>keine Belege zu Abbuchungen gesammelt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im Parameter Anzeigevariante kann das Layout der Liste festgelegt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden. Es gibt zu jedem Herkunftsschlüssel eine passende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Standardvariante. Die Anzeige der Felder kann später modifiziert und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>erweitert werden. Es können auch personalisierte Varianten gespeichert</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ausgabe einer ALV-Liste.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

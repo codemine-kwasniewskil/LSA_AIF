@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funktionsgruppe für Haushaltsvollzug</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZ_NSI_HHV_FKTGRTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZ_NSI_HHV_FKTGR</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_NSI_CHECK_FILE</FUNCNAME>
+     <SHORT_TEXT>Prüfen, ob die Datei bereits verarbeitet wurde</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_PROGNAME</PARAMETER>
+       <TYP>SYREPID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_VARIANT</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>VARIANT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NAME1</PARAMETER>
+       <TYP>EPSFILNAM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NAME2</PARAMETER>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>EPSFILNAM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_DATENSATZ</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZNSI_CHECK_FILE</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>EINTRAG_GEFUNDEN</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>FEHLER_NEUER_EINTRAG</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_PROGNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ABAP-Programm, aktuelles Rahmenprogramm</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_VARIANT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ABAP: Name einer Variante (ohne Programmname)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NAME1</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>file name</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NAME2</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>file name</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_DATENSATZ</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Datensatz, falls schon ein Eintrag existiert</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EINTRAG_GEFUNDEN</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>es existiert schon ein Eintrag</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FEHLER_NEUER_EINTRAG</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>neuen Eintrag konnte nicht  in Tabelle eingefügt werden</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_NSI_HHV_KZ_PRUEFZIFFER</FUNCNAME>
+     <SHORT_TEXT>Ermitteln der Prüfziffer für das Kassenzeichen</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_XBLNR</PARAMETER>
+       <TYP>XBLNR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EX_PRUEFZIFFER</PARAMETER>
+       <TYP>N</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_XBLNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Referenz-Belegnummer</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_PRUEFZIFFER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ermittelte Prüfziffer</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_NSI_HHV_NEW_XBLNR</FUNCNAME>
+     <SHORT_TEXT>Erzeugen eines neuen Kassenzeichens</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BUKRS</PARAMETER>
+       <TYP>BUKRS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_GJAHR</PARAMETER>
+       <TYP>GJAHR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_XBLNR</PARAMETER>
+       <TYP>XBLNR1</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Buchungskreis</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_GJAHR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Geschäftsjahr</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_XBLNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Referenz-Belegnummer</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

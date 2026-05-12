@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IST_RM_CREATE</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>THKR - IST Rückmeldung</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>MAIN</CMPNAME>
+     <SCONAME>AIF_NAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ID der Laufzeit-Konfigurationsgruppe</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAIN</CMPNAME>
+     <SCONAME>AIF_NS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Namensraum</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAIN</CMPNAME>
+     <SCONAME>FIKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAIN</CMPNAME>
+     <SCONAME>RESEND</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAIN</CMPNAME>
+     <SCONAME>SEND</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAIN</CMPNAME>
+     <SCONAME>SST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>BP: Schnittstellenpartner</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

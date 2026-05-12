@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_WF_FI</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>HKR: FI Beleg ändern</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Read data for CHANGE_DOCUMENT</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_MAHNSPERRE_TO_NF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Set Mahnsperre to NF to AO</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>BELNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegnummer eines Buchhaltungsbeleges</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>BUKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Buchungskreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>GJAHR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>T_BKPF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Standard-Tabellentyp für die BKPF</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>T_BSEC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabellentyp BSEC</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>T_BSED</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegsegment Wechselfelder</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>T_BSEG</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabellenart für BSEG</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>T_BSEG_ADD</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabelle mit BSEG-Zeilen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_DATA</CMPNAME>
+     <SCONAME>T_BSET</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegsegment Steuerdaten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_MAHNSPERRE_TO_NF</CMPNAME>
+     <SCONAME>BUKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Buchungskreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_MAHNSPERRE_TO_NF</CMPNAME>
+     <SCONAME>GJAHR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_MAHNSPERRE_TO_NF</CMPNAME>
+     <SCONAME>LOTKZ</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Bündelungskennzeichen für Belege</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

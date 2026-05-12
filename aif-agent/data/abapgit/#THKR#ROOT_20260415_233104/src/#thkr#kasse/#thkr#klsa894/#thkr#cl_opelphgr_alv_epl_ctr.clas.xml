@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_OPELPHGR_ALV_EPL_CTR</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>ALV Controller Offen EPL HGR</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONTAINER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Container fuer Custom Controls in der Dynpro Area</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>EPL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fonds</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_HGR_LIST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get Column Header List</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GJAHR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>OUTPUT_DATATABLE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Data Table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>S_BLDAT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Belegdatum</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>GJAHR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsjahr</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_HGR_LIST</CMPNAME>
+     <SCONAME>HAUPTGRUPPEN</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Liste von Hauptgruppen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SHOW_FIPOS_POPUP</CMPNAME>
+     <SCONAME>COL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Characterfeld der Länge 10</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SHOW_FIPOS_POPUP</CMPNAME>
+     <SCONAME>ROW</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Characterfeld der Länge 10</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

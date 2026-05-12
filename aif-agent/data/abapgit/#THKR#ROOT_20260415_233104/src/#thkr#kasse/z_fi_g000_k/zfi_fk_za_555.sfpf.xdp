@@ -1,0 +1,2155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xfa generator="AdobeLiveCycleDesigner_V11.0.9.20240424.1.48_SAP" APIVersion="3.6.24095.0"?><xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2025-08-25T07:46:35Z" uuid="522871d0-a5c3-467b-814f-907d96addc5e">
+<template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform layout="tb" locale="de_DE" name="data" restoreState="auto">
+      <pageSet>
+         <pageArea id="Page1" name="Seite1">
+            <contentArea h="240mm" name="TextArea" w="173mm" x="17.5mm" y="47.5mm"/>
+            <medium long="297mm" short="210mm" stock="a4"/>
+            <field access="readOnly" h="9mm" id="floatingField018467" name="TAGESDATUM" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ES_FP_DATA.TAGESDATUM"/>
+               <desc>
+                  <text name="Schema-Anmerkung">Tagesdatum aufbereitet</text>
+               </desc>
+            </field>
+            <draw h="6mm" name="Belegnummer" w="76.222mm" x="114.3mm" y="5mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html" xliff:rid="9DA82374-ECD8-4A95-9D59-8B85C46406C6">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in">Dessau,<span style="xfa-spacerun:yes">  </span><span xfa:embed="#floatingField018467" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                  </exData>
+               </value>
+               <font size="12pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <caption reserve="0in"/>
+               <desc>
+                  <text name="Schema-Anmerkung">Textnamen für Formulartextbaustein Briefkopf</text>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_KOP 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_FK_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_FK_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_FK_FO_TB-TDID</exData>
+               </desc>
+               <para hAlign="right"/>
+            </draw>
+            <field access="protected" h="30mm" name="Sender" presence="hidden" w="90mm" x="17mm" y="5mm">
+               <ui>
+                  <textEdit hScrollPolicy="off" multiLine="1" vScrollPolicy="off">
+                     <border presence="hidden">
+                        <?templateDesigner StyleID aped0?></border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <caption reserve="0in"/>
+               <bind match="dataRef" ref="$.TEXT_ELEMENTE.M001.TEXT"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml"/>
+                  </exData>
+               </value>
+               <desc>
+                  <text name="Schema-Anmerkung">Textnamen für Formulartextbaustein Briefkopf</text>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_KOP 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+               </desc>
+            </field>
+            <field h="9.525mm" hAlign="right" name="Duplikat" w="95.272mm" x="95.25mm" y="15.875mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font posture="italic" size="18pt" typeface="Arial" weight="bold"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para hAlign="right"/>
+               <caption reserve="0in">
+                  <value>
+                     <text>    </text>
+                  </value>
+                  <para hAlign="right"/>
+               </caption>
+               <desc>
+                  <text name="Schema-Anmerkung">Textnamen für Formulartextbaustein Briefkopf</text>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_KOP 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_FK_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_FK_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_FK_FO_TB-TDID</exData>
+               </desc>
+               <bind match="dataRef" ref="$.GV_STATUS_TXT"/>
+               <event activity="ready" name="event__layout_ready" ref="$layout">
+                  <script>if (xfa.record.GV_DUPLIKAT.value &lt;&gt; "X") then
+ $.presence = "hidden"
+endif
+
+</script>
+               </event>
+            </field>
+            <field access="readOnly" h="9mm" id="floatingField006334" name="ORT" presence="hidden" w="62mm" x="133.35mm" y="10mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.GS_USER_DATA.ORT"/>
+               <value>
+                  <text xliff:rid="D6F9E9B8-D399-45A3-8913-C03A3284A830">Magdeburg</text>
+               </value>
+            </field>
+            <field access="readOnly" h="9mm" id="floatingField026500" name="TAGESDATUM" presence="hidden" w="62mm" x="133.35mm" y="10mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ES_FP_DATA.TAGESDATUM"/>
+               <desc>
+                  <text name="Schema-Anmerkung">Tagesdatum aufbereitet</text>
+               </desc>
+            </field>
+            <field h="4mm" hAlign="right" name="DATEINAME" w="90mm" x="100mm" y="290mm">
+               <ui>
+                  <textEdit hScrollPolicy="off"/>
+               </ui>
+               <font size="6pt" typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para hAlign="right"/>
+               <caption reserve="0in">
+                  <value>
+                     <text>    </text>
+                  </value>
+                  <para hAlign="right"/>
+               </caption>
+               <desc>
+                  <text name="Schema-Anmerkung">Textnamen für Formulartextbaustein Briefkopf</text>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ES_SENDER-TXNAM_KOP 
+ LANGUAGE-FIELD = ES_SENDER-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ES_SENDER-TDID</exData>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_FK_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_FK_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_FK_FO_TB-TDID</exData>
+                  <text name="Schema-Anmerkung">Dateiname für Service BW</text>
+               </desc>
+               <bind match="dataRef" ref="$.TEXT_ELEMENTE.M027.TEXT"/>
+               <event activity="ready" name="event__layout_ready" ref="$layout">
+                  <script>if (xfa.record.GV_DUPLIKAT.value == "X") then
+ $.presence = "hidden"
+endif
+
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform name="Seite1" w="17.3cm">
+         <bind match="none"/>
+         <subform name="Adresse" presence="hidden" w="172.999mm" y="0.001mm">
+            <bind match="none"/>
+            <?templateDesigner expand 0?>
+            <field access="protected" h="6mm" hAlign="right" name="Titel" w="85.5mm" x="87.5mm" y="6.124mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Arial" weight="bold"/>
+               <margin bottomInset="0.5mm" leftInset="1mm" rightInset="1mm" topInset="0.5mm"/>
+               <bind match="dataRef" ref="$.TEXT_ELEMENTE.M002.TEXT"/>
+               <desc>
+                  <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+               </desc>
+               <para hAlign="right" vAlign="middle"/>
+            </field>
+            <field h="38mm" name="GV_ANSCHRIFT" w="85mm" y="0.124mm">
+               <ui>
+                  <textEdit hScrollPolicy="off" multiLine="1" vScrollPolicy="off">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="12pt" typeface="Arial"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="1mm" topInset="0.5mm"/>
+               <bind match="dataRef" ref="$.GV_ANSCHRIFT"/>
+               <desc>
+                  <text name="Schema-Anmerkung">Text 30 Stellen</text>
+                  <text name="Schema-Anmerkung">Anschrift</text>
+               </desc>
+               <validate nullTest="warning"/>
+            </field>
+         </subform>
+         <subform h="149.114mm" name="Hauptfenster" w="173mm" y="0.236mm">
+            <bind match="none"/>
+            <field access="readOnly" h="9mm" id="floatingField015724" name="Header" presence="hidden" w="62mm" x="0mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.GV_TYPE_TXT"/>
+            </field>
+            <draw h="13.418mm" name="Text1" w="155.575mm" x="1.55mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <font baselineShift="0pt" size="16pt" typeface="Arial" weight="bold"/>
+               <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embed="#floatingField015724" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                  </exData>
+               </value>
+            </draw>
+            <field access="readOnly" h="9mm" id="floatingField019169" name="Textfeld" presence="hidden" w="62mm" y="0mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.ES_FP_DATA.DIENSTSTELLEN_NR"/>
+            </field>
+            <draw h="9.525mm" name="Text1" w="111.125mm" x="1.55mm" y="9.525mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html" xliff:rid="E894D64B-4B8E-4382-BF1D-A5F33917D35B">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">DST:<span style="xfa-spacerun:yes"> </span><span xfa:embed="#floatingField019169" xfa:embedMode="raw" xfa:embedType="uri"/></p></body>
+                  </exData>
+               </value>
+               <font baselineShift="0pt" size="16pt" typeface="Arial" weight="bold"/>
+               <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
+            </draw>
+            <subform name="Einleitung" presence="hidden" w="172.999mm" x="0.001mm" y="22.53mm">
+               <bind match="none"/>
+               <field access="protected" h="6mm" name="Information_zur_Zahlung" w="172.999mm" y="0.193mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="12pt" typeface="Arial" weight="bold"/>
+                  <margin bottomInset="0.5mm" leftInset="1mm" rightInset="1mm" topInset="0.5mm"/>
+                  <bind match="dataRef" ref="$.TEXT_ELEMENTE.M003.TEXT"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml"/>
+                     </exData>
+                  </value>
+                  <desc>
+                     <exData name="Schema-Anmerkung">Textknoten TEXT
+SAPScript Include-Text 
+ NAME-FIELD = ET_ZFI_EA_FO_TB-TDNAME 
+ LANGUAGE-FIELD = ET_ZFI_EA_FO_TB-TDSPRAS 
+ OBJECT = TEXT 
+ ID-FIELD = ET_ZFI_EA_FO_TB-TDID</exData>
+                  </desc>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <subform columnWidths="60mm 4mm 108.5mm" layout="table" name="Belegreferenzzeilen" y="32.723mm">
+               <border>
+                  <edge presence="hidden"/>
+                  <corner presence="hidden"/>
+               </border>
+               <subform layout="row" name="Kassenzeichen">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M016.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="4B242CF4-C08F-4A34-B8EA-AEB555DAF2A9">Kassenzeichen</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="D1EED547-361F-4C8D-984C-7BB8F62FCC63">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="KASSENZEICHEN" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.KASSENZEICHEN"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Kassenzeichen</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Finanzposition">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M018.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="3DCB7704-52C1-464A-9ADF-89E405020804">Finanzposition</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="AE956E16-AC79-445B-BFD7-85502CAE3372">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="FINANZPOSITION">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.FINANZPOSITION"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Finanzposition</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Aktenzeichen" y="0mm">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M004.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="B692551B-683D-4F77-B70E-16A5E2CA1506">Aktenzeichen</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in" y="0mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="83200338-2ED7-41D5-8CFE-A2A06FCAA44C">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="AKTENZEICHEN" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.AKTENZEICHEN"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Aktenzeichen</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Art">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="TEXT_ELEMENTE.M020.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="78537877-481A-49F7-A8E2-EFCB67D9D78E">Art der Forderung</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw h="6mm" name="Trennzeichen">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="57A8261F-C3EB-4342-8B7B-F5B0EE590774">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="ART_FORDERUNG">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.ART_FORDERUNG"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Mahnbereich</text>
+                        <text name="Schema-Anmerkung">Art der Forderung</text>
+                     </desc>
+                  </field>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="Debitor">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Debitor">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="TEXT_ELEMENTE.M007B.TEXT"/>
+                     <value>
+                        <text maxChars="255"/>
+                     </value>
+                     <caption>
+                        <value>
+                           <text xliff:rid="0C7002A1-709C-4A23-9806-58D62E8D25F8">Zahlungspartner</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <value>
+                        <text xliff:rid="0F6C6E62-2BFB-4882-997F-5760F6B385F4">:</text>
+                     </value>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                  </draw>
+                  <field h="6mm" name="DEBITOR">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.DEBITOR"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Debitor</text>
+                     </desc>
+                  </field>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="Strasse">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M008.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="E0256A22-EA49-4062-A79B-490012AC5DA5">Straße</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="BF04064C-B233-49D8-9014-AD64842417C5">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="STR_HNR" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.STR_HNR"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Strasse und Hausnummer</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="PLZ">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M009.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="C7E8D50A-7F67-4A90-B213-8E3176EAA972">Ort</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="45B3E2F1-D0B9-418F-9FC1-E41BC00DA631">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="PLZ_ORT" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.PLZ_ORT"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Postleitzahl und Ort</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Art">
+                  <assist role="TR"/>
+                  <draw h="6mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                  </draw>
+                  <draw h="6mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                  </draw>
+                  <draw h="6mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                  </draw>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Einzahler">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M007.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="835CFB7E-4D62-4047-B6FC-5F11F9B67C0F">Einzahler</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="102DCA40-2143-4FCA-A36C-23697C811FD4">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="EINZAHLER" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.EINZAHLER"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Einzahler</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="Bankreferenznummer" presence="hidden">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M021.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="9E286599-F49B-428E-94D9-245627AAC517">BIC</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="0C28CF25-155E-4304-B91E-D871E481998B">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="BANKREFERENZ">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial" weight="bold"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.BANKREFERENZ"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">KontoID</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="IBAN">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M012.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="BA4754CA-6BBA-4F99-92F5-9A18BF669405">IBAN / BIC</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="8461CAB5-7C78-481D-8F58-01E7C14169FF">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="GV_IBAN_BIC">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.GV_IBAN_BIC"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">IBAN Einzahler</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Verwendungszweck" y="0mm">
+                  <assist role="TR"/>
+                  <field h="20mm" minW="1mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M006.TEXT"/>
+                     <caption reserve="0mm">
+                        <font typeface="Arial"/>
+                        <value>
+                           <text xliff:rid="055D305D-FF55-4508-A04D-FB2C2CD4E961">Verwendungszweck</text>
+                        </value>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in" y="0mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="CE00E86F-85F3-4108-9ECA-988430EF5714">:</text>
+                     </value>
+                  </draw>
+                  <field h="20mm" name="VERWENDUNGSZWECK" y="0mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.VERWENDUNGSZWECK"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Verwendugszweck</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Betrag">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M005.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="B3F5A05E-648C-4AD3-9BCD-C55D9A7843E4">Ist-Betrag</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="33B46104-9D9E-4839-A7FE-283C16AA95FD">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="BETRAG" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.GV_GESAMTBETRAG"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Betrag</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Einzahlungstag">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M014.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="4F3D1C5A-1943-4108-BDDB-7E4602A945E9">Geldeingangsdatum</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="77B05DEC-C174-4A00-8475-994648F9447E">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="EINZAHLUNGSTAG">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.EINZAHLUNGSTAG"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Valutadatum Bank</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Buchungstag">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M015.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="344D7EBD-2BA8-430D-84E6-2FCCE8516937">Buchungsdatum</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="4CE98769-0C84-4453-8A05-6C480098591A">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="BUCHUNGSTAG" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.BUCHUNGSTAG"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Buchungsdatum aufbereitet</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="row" name="Haushaltsjahr">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M017.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="39A066FF-79ED-4D34-8C9D-00F233E72B65">Haushaltsjahr</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="BF8521D4-3744-41C9-B9C3-EC9FDC2C2DF9">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="BELEGREFERENZ">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.HHJAHR"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Beleg-Nr, Buchungskreis und Haushaltsjahr</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Beleg_Nr">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M017.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="FBDCA3C5-25EA-4C4E-B9AB-39B24CEF4770">Buchungsnummer</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="B004ED1D-2369-4684-A79B-8A961BDF1ABE">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="BELEGREFERENZ">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.BUCHUNGSNUMMER"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Beleg-Nr, Buchungskreis und Haushaltsjahr</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Zahlart" presence="hidden" y="0mm">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M010.TEXT"/>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="8B00C898-29C2-46AE-A34B-0B4936EE850D">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="ZAHLART" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.ZAHLART"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Zahlart/Belegart</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Zahlweg" presence="hidden" y="0mm">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M011.TEXT"/>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="77CE9651-7DC9-4DF8-A9C7-E795AA3489CF">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="ZAHLWEG">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.ZAHLWEG"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Zahlweg</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Kontonummer" presence="hidden" y="0mm">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M013.TEXT"/>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="E2EA62BC-402E-41A1-AC75-0002BA7B85C7">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="GV_KTO_BLZ">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.GV_KTO_BLZ"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Kontonummer Einzahler</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform layout="row" name="Finanzstelle" presence="hidden" y="0mm">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M019.TEXT"/>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="A67333A8-82DB-4F2B-9103-62BF043845F9">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="Finanzstelle">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.FISTL"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Dienststellennummer</text>
+                        <text name="Schema-Anmerkung">Finanzstelle</text>
+                     </desc>
+                     <value>
+                        <text maxChars="16"/>
+                     </value>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <keep intact="contentArea"/>
+               <bind match="none"/>
+               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <subform layout="row" name="Zeitbuchnummer">
+                  <assist role="TR"/>
+                  <field h="6mm" name="Bezeichner">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.TEXT_ELEMENTE.M017.TEXT"/>
+                     <caption>
+                        <value>
+                           <text xliff:rid="5148A511-A4EA-4B14-87E2-E855D523BAAA">Zeitbuchnummer</text>
+                        </value>
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <draw minH="6mm" name="Trennzeichen" w="0.196847in">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <value>
+                        <text xliff:rid="EA7B6790-8DB5-4B22-950D-A559A54203B1">:</text>
+                     </value>
+                  </draw>
+                  <field h="6mm" name="BELEGREFERENZ">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="12pt" typeface="Arial"/>
+                     <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden" thickness="0.1778mm"/>
+                     </border>
+                     <bind match="dataRef" ref="$.ES_FP_DATA.ZEITBUCHNUMMER"/>
+                     <desc>
+                        <text name="Schema-Anmerkung">Beleg-Nr, Buchungskreis und Haushaltsjahr</text>
+                     </desc>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <bind match="none"/>
+                  <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
+         <field h="48.8mm" name="Anmerkung" w="173mm" y="155.7mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <bind match="dataRef" ref="$.TEXT_ELEMENTE.M023.TEXT"/>
+            <value>
+               <exData contentType="text/html"/>
+            </value>
+            <caption>
+               <value>
+                  <text xliff:rid="5EA7A14D-F665-48B3-BF2C-21CB44C7D118">Bemerkung</text>
+               </value>
+            </caption>
+            <border>
+               <edge/>
+               <corner thickness="0.176mm"/>
+            </border>
+         </field>
+         <field h="10mm" hAlign="center" name="Hinweis" w="173mm" y="209.5mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para hAlign="center" vAlign="bottom"/>
+            <bind match="dataRef" ref="$.TEXT_ELEMENTE.M024.TEXT"/>
+            <caption reserve="0in">
+               <para hAlign="center" vAlign="bottom"/>
+            </caption>
+            <value>
+               <exData contentType="text/html"/>
+            </value>
+         </field>
+         <field h="10mm" hAlign="center" name="Rückfragen" w="173mm" y="221.5mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para hAlign="center" vAlign="bottom"/>
+            <bind match="dataRef" ref="$.TEXT_ELEMENTE.M025.TEXT"/>
+            <caption reserve="0in">
+               <para hAlign="center" vAlign="bottom"/>
+            </caption>
+            <value>
+               <exData contentType="text/html"/>
+            </value>
+         </field>
+         <field h="6mm" hAlign="center" name="Maschinell_erstellt" w="173mm" y="234mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial"/>
+            <margin bottomInset="1mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+            <para hAlign="center" vAlign="bottom"/>
+            <bind match="dataRef" ref="$.TEXT_ELEMENTE.M026.TEXT"/>
+            <caption reserve="0in">
+               <para hAlign="center" vAlign="bottom"/>
+            </caption>
+            <value>
+               <exData contentType="text/html"/>
+            </value>
+         </field>
+         <event activity="ready" name="event__form_ready" ref="$form">
+            <script> if (xfa.record.GV_AMOUNT_SIGN.value == "0") then
+ $.presence = "hidden"
+ endif
+ if (xfa.record.GV_AMOUNT_SIGN.value == "1") then
+ $.presence = "hidden"
+ endif
+
+</script>
+         </event>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">11.0.1.20160216.1.905378.null</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 188 48 0003000F00100012001D002400250026002700280029002A002B002C002E0030003100320036003700380039003D00440045004600470048004A004B004C004D004E004F00500051005200530055005600570058005A005D005E00600089 ,-/:ABCDEFGHIKMNOSTUVZabcdeghijklmnoprstuwz{}ß?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 64 16 0003001D0027002B003600370044004700480049004F00550057005B005E0060 :DHSTadeflrtx{}?>
+      <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 4 1 0003 ?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Grid show:0, snap:1, units:1, color:ff8080, origin:(0,0), interval:(79375,79375), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner DefaultLanguage FormCalc?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultCaptionFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Arial;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 1?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 103?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+      <common>
+         <template>
+            <base>https://EHMS.HKR.LSA-NET.DE:443/sap/bc/fp/form/layout/</base>
+         </template>
+      </common>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font posture="normal" psName="OCRAStd" typeface="OCR A Std" weight="normal"/>
+   </psMap>
+</config>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection dataDescription="data" name="ZFI_FK_ZA_555">
+      <uri/>
+      <rootElement>data</rootElement>
+   </xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="data">
+      <data>
+         <DATE/>
+         <TIME/>
+         <GV_ANSCHRIFT/>
+         <GV_VARIANT/>
+         <GV_BUDAT/>
+         <GV_MONAT/>
+         <GV_HAUSHALTSJAHR/>
+         <GV_GESAMTBETRAG/>
+         <GV_WAERS/>
+         <GV_BEARBEITER/>
+         <GV_FUNKTION/>
+         <GV_DATUM/>
+         <GV_DUPLIKAT/>
+         <GV_IBAN_BIC/>
+         <GV_KTO_BLZ/>
+         <GV_DATEINAME/>
+         <ES_FP_DATA>
+            <VARIANT/>
+            <ADDR_Z1/>
+            <ADDR_Z2/>
+            <ADDR_Z3/>
+            <ADDR_Z4/>
+            <ADDR_Z5/>
+            <ADDR_Z6/>
+            <WAERS/>
+            <BUDAT/>
+            <HHJAHR/>
+            <BELNR/>
+            <BUKRS/>
+            <BETRAG/>
+            <EINZAHLUNGSTAG/>
+            <BUCHUNGSTAG/>
+            <TAGESDATUM/>
+            <EINZAHLER/>
+            <DEBITOR/>
+            <STR_HNR/>
+            <PLZ_ORT/>
+            <ZAHLART/>
+            <ZAHLWEG/>
+            <IBAN/>
+            <BIC/>
+            <KONTO_NR/>
+            <BLZ/>
+            <AKTENZEICHEN/>
+            <KASSENZEICHEN/>
+            <VERWENDUNGSZWECK/>
+            <BELEGREFERENZ/>
+            <FINANZPOSITION/>
+            <DIENSTSTELLEN_NR/>
+            <ART_FORDERUNG/>
+            <BANKREFERENZ/>
+            <GESCHAEFTSZEICHEN/>
+            <FISTL/>
+            <ADRESSE_LOK>
+               <NAME/>
+               <PLZ_ORT/>
+               <ORT/>
+               <STR/>
+               <HNR/>
+               <POSTFACH/>
+               <PLZ_POSTFACH/>
+               <ORT_POSTFACH/>
+               <MAIL/>
+               <AUSSENSTELLE/>
+               <ADRESSE_DATUM/>
+               <ADRESSE_ABSENDER/>
+               <ADRESSE_POSTFACH/>
+               <ADRESSE_PLZ/>
+               <TELNR/>
+               <FAXNR/>
+            </ADRESSE_LOK>
+            <ABSENDER_LOK/>
+            <SACHBEARBEITER/>
+            <SB_TELNR/>
+            <SB_TELFX/>
+            <VERZUG_BIS/>
+            <ANORDNUNGSBETRAG/>
+            <GEFORDERTE_LEISTUNG/>
+            <RATENBETRAG/>
+            <RATEN_BIS/>
+            <ANZAHL_RATEN/>
+            <FAELLIGE_RATEN/>
+            <ANZAHL_FAELLIGE_RATEN/>
+            <GELEISTETE_ZAHLUNGEN/>
+            <SALDO/>
+            <SALDO_ART/>
+            <OFD_HEADER/>
+            <RATENAENDERUNGEN dd:minOccur="0">
+               <DATA dd:maxOccur="-1">
+                  <FKDAT/>
+                  <FAKWR/>
+                  <WAERS/>
+               </DATA>
+            </RATENAENDERUNGEN>
+            <DUPLIKAT/>
+            <RECIPIENT/>
+            <DATEINAME/>
+            <ALREADY_SENT/>
+            <FEHLERNUMMER/>
+            <BUCHUNGSNUMMER/>
+            <ZEITBUCHNUMMER/>
+         </ES_FP_DATA>
+         <TEXT_ELEMENTE>
+            <H001 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </H001>
+            <H002 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </H002>
+            <H003 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </H003>
+            <M001 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M001>
+            <M002 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M002>
+            <M003 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M003>
+            <M005 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M005>
+            <M006 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M006>
+            <M007 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M007>
+            <M008 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M008>
+            <M009 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M009>
+            <M010 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M010>
+            <M011 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M011>
+            <M012 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M012>
+            <M013 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M013>
+            <M014 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M014>
+            <M015 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M015>
+            <M016 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M016>
+            <M017 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M017>
+            <M018 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M018>
+            <M019 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M019>
+            <M020 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M020>
+            <M021 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M021>
+            <M022 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M022>
+            <M023 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M023>
+            <M024 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M024>
+            <M025 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M025>
+            <M026 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M026>
+            <M027 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M027>
+            <M028 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M028>
+            <M029 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M029>
+            <M030 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M030>
+            <M004 dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M004>
+            <M007B dd:minOccur="0">
+               <TDNAME/>
+               <TDID/>
+               <TDSPRAS/>
+               <TEXT/>
+            </M007B>
+         </TEXT_ELEMENTE>
+         <GV_STATUS_TXT/>
+         <GV_TYPE_TXT/>
+      </data>
+   </dd:dataDescription>
+</xfa:datasets>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale desc="Deutsch (Deutschland)" name="de_DE">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>Januar</month>
+            <month>Februar</month>
+            <month>März</month>
+            <month>April</month>
+            <month>Mai</month>
+            <month>Juni</month>
+            <month>Juli</month>
+            <month>August</month>
+            <month>September</month>
+            <month>Oktober</month>
+            <month>November</month>
+            <month>Dezember</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mrz</month>
+            <month>Apr</month>
+            <month>Mai</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Okt</month>
+            <month>Nov</month>
+            <month>Dez</month>
+         </monthNames>
+         <dayNames>
+            <day>Sonntag</day>
+            <day>Montag</day>
+            <day>Dienstag</day>
+            <day>Mittwoch</day>
+            <day>Donnerstag</day>
+            <day>Freitag</day>
+            <day>Samstag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>So</day>
+            <day>Mo</day>
+            <day>Di</day>
+            <day>Mi</day>
+            <day>Do</day>
+            <day>Fr</day>
+            <day>Sa</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>vorm.</meridiem>
+            <meridiem>nachm.</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>v. Chr.</era>
+            <era>n. Chr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMMM YYYY</datePattern>
+         <datePattern name="med">DD.MM.YYYY</datePattern>
+         <datePattern name="short">DD.MM.YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H:MM' Uhr 'Z</timePattern>
+         <timePattern name="long">HH:MM:SS Z</timePattern>
+         <timePattern name="med">HH:MM:SS</timePattern>
+         <timePattern name="short">HH:MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GjMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">€</currencySymbol>
+         <currencySymbol name="isoname">EUR</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+         <typeface name="Adobe Devanagari"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.4-c005 78.150055, 2013/08/07-22:58:47        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <xmp:MetadataDate>2025-08-25T07:46:35Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer 11.0</xmp:CreatorTool>
+         <pdf:Producer>Adobe LiveCycle Designer 11.0</pdf:Producer>
+         <xmpMM:DocumentID>uuid:522871d0-a5c3-467b-814f-907d96addc5e</xmpMM:DocumentID>
+         <pdfuaid:part>1</pdfuaid:part>
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>11.0.1.20160216.1.905378.null</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>DB Aenderungen zu Benachrichtigungen</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZ_FI_DB_BENTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZ_FI_DB_BEN</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_FI_BN_NACHRICHT_UPDATE</FUNCNAME>
+     <UPDATE_TASK>1</UPDATE_TASK>
+     <SHORT_TEXT>Z_FI_BN_NACHRICHT Verbucher</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_FI_BN_NACHRICHT</PARAMETER>
+       <DBSTRUCT>ZFI_BN_NACHRICHT</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_FI_BN_NACHRICHT_DEL</PARAMETER>
+       <DBSTRUCT>ZFI_BN_NACHRICHT</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>FEHLER</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>T_FI_BN_NACHRICHT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der Benachrichtigungen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_FI_BN_NACHRICHT_DEL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der Benachrichtigungen zum Löschen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FEHLER</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Fehler bei Änderung</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

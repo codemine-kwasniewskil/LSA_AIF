@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>BTE1120 Business Partner Sperrprüfung</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LBP_BTE1120TOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLBP_BTE1120</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/BP_PROCESS_BTE1120</FUNCNAME>
+     <SHORT_TEXT>Verarbeitung BTE1120 für Business Partner</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BKDF</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BKDF</TYP>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>I_BKDFSUB</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BKDF_SUBST</TYP>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_BKPF</PARAMETER>
+       <DBSTRUCT>BKPF</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BSEG</PARAMETER>
+       <DBSTRUCT>BSEG</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BKPFSUB</PARAMETER>
+       <DBSTRUCT>BKPF_SUBST</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BSEGSUB</PARAMETER>
+       <DBSTRUCT>BSEG_SUBST</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BSEC</PARAMETER>
+       <DBSTRUCT>BSEC</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BKDF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegkopfergänzung für Dauerbuchung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegkopf für Buchhaltung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsegment Buchhaltung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BKPFSUB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Prozess-Schnittstellen: Substituierbare Felder beim Buchen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSEGSUB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Prozess-Schnittstellen: Substituierbare Felder beim Buchen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSEC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsegment CPD-Daten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BKDFSUB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Prozess-Schnittstellen: Substituierbare Felder beim Buchen</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

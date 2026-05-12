@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_FUNDCTR_HIER_CRAWLER</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Fund Center Hierarchy Crawler</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FIKRS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Singleton Getter</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ALL_NODES_PATH_UP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get the path upwards from node to root</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_CHILD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get Child of FundCtr</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_NODE_PATH_UP</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get the path upwards from node to root</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_PARENT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get Parent of FundCtr</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HIERARCHY</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Tabellentyp für Hierarchiezuordnung Finanzstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>HIVARNT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Hierarchietabelle der Finanzstellen in einer HiVariante</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSTANCE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fund Center Hierarchy Crawler</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_PARENT_CHILD_RELATION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Check if given FundCtr in Parent-Child Releationship</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>FIKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>HIVARNT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Hierarchievariante</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET</CMPNAME>
+     <SCONAME>FIKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzkreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET</CMPNAME>
+     <SCONAME>HIVARNT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Hierarchievariante der Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET</CMPNAME>
+     <SCONAME>SELF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fund Center Hierarchy Crawler</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ALL_NODES_PATH_UP</CMPNAME>
+     <SCONAME>FICTR_FROM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_ALL_NODES_PATH_UP</CMPNAME>
+     <SCONAME>NODES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Bereich von Finanzstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_CHILD</CMPNAME>
+     <SCONAME>CHILD</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_CHILD</CMPNAME>
+     <SCONAME>FICTR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_NODE_PATH_UP</CMPNAME>
+     <SCONAME>FICTR_FROM</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_NODE_PATH_UP</CMPNAME>
+     <SCONAME>FICTR_TO</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_NODE_PATH_UP</CMPNAME>
+     <SCONAME>NODES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Bereich von Finanzstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_PARENT</CMPNAME>
+     <SCONAME>FICTR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_PARENT</CMPNAME>
+     <SCONAME>PARENT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_PARENT_CHILD_RELATION</CMPNAME>
+     <SCONAME>FICTR_CHILD</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_PARENT_CHILD_RELATION</CMPNAME>
+     <SCONAME>FICTR_PARENT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Finanzstelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_PARENT_CHILD_RELATION</CMPNAME>
+     <SCONAME>IS_CORRECT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Bereich von Finanzstellen</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

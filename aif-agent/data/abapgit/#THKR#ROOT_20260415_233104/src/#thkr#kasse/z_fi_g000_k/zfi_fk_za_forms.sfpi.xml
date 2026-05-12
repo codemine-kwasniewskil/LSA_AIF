@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SFPI" serializer_version="v1.0.0">
+ <asx:abap version="1.0" xmlns:asx="http://www.sap.com/abapxml">
+  <asx:values>
+   <VERSION>1</VERSION>
+   <TYPE/>
+   <INTERFACE href="#o1"/>
+   <INTERFACET>
+    <FPINTERFACET>
+     <NAME/>
+     <STATE/>
+     <LANGUAGE>D</LANGUAGE>
+     <ID/>
+     <TEXT>Schnittstelle Zahlungsanzeige/Zahlungsanzeige PKH</TEXT>
+    </FPINTERFACET>
+   </INTERFACET>
+  </asx:values>
+  <asx:heap xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abap="http://www.sap.com/abapxml/types/built-in" xmlns:cls="http://www.sap.com/abapxml/classes/global" xmlns:dic="http://www.sap.com/abapxml/types/dictionary">
+   <cls:CL_FP_INTERFACE_DATA id="o1">
+    <CL_FP_INTERFACE_DATA classVersion="1">
+     <CODING href="#o5"/>
+     <PARAMETERS href="#o4"/>
+     <GLOBAL_DEFINITIONS href="#o3"/>
+     <REFERENCE_FIELDS href="#o2"/>
+     <XSD_DEFINITIONS/>
+    </CL_FP_INTERFACE_DATA>
+   </cls:CL_FP_INTERFACE_DATA>
+   <cls:CL_FP_REFERENCE_FIELDS id="o2">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_REFERENCE_FIELDS classVersion="1">
+     <REFERENCE_FIELDS/>
+    </CL_FP_REFERENCE_FIELDS>
+   </cls:CL_FP_REFERENCE_FIELDS>
+   <cls:CL_FP_GLOBAL_DEFINITIONS id="o3">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_GLOBAL_DEFINITIONS classVersion="1">
+     <GLOBAL_DATA>
+      <SFPGDATA>
+       <NAME>GV_ANSCHRIFT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_MONAT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_BUDAT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_DATUM</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_HAUSHALTSJAHR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_VARIANT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZFI_EA_VARIANT</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_FORMTYPE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZFI_EA_FORMTYPE</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_FUNKTION</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_BEARBEITER</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GS_USER_DATA</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>GS_USER_DATA_TYPE</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_LOGO_LBW</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>XSTRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_LOGO_LOEWE</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>XSTRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_GESAMTBETRAG</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_WAEHRUNG</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_WAERS</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>WAERS</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_DUPLIKAT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>XFELD</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_SB_TELNR</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_SB_TELFX</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_SALDO_ART</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>CHAR1</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_ANZAHL_RATEN</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_KASSENZEICHEN</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_ANZAHL_FAELLIGE_RATEN</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_IBAN_BIC</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_KTO_BLZ</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_DATEINAME</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_STATUS_TXT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+      <SFPGDATA>
+       <NAME>GV_TYPE_TXT</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>STRING</TYPENAME>
+       <DEFAULTVAL/>
+       <CONSTANT/>
+      </SFPGDATA>
+     </GLOBAL_DATA>
+     <TYPES>
+      <FPCLINE/>
+      <FPCLINE>TYPES:</FPCLINE>
+      <FPCLINE>  BEGIN OF gs_user_data_type,</FPCLINE>
+      <FPCLINE>    name     TYPE string,</FPCLINE>
+      <FPCLINE>    tel      TYPE string,</FPCLINE>
+      <FPCLINE>    fax      TYPE string,</FPCLINE>
+      <FPCLINE>    function TYPE string,</FPCLINE>
+      <FPCLINE>    ort      TYPE string,</FPCLINE>
+      <FPCLINE>  END OF gs_user_data_type.</FPCLINE>
+     </TYPES>
+     <FIELDSYMBOLS/>
+    </CL_FP_GLOBAL_DEFINITIONS>
+   </cls:CL_FP_GLOBAL_DEFINITIONS>
+   <cls:CL_FP_PARAMETERS id="o4">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_PARAMETERS classVersion="1">
+     <IMPORT_PARAMETERS>
+      <SFPIOPAR>
+       <NAME>ES_FP_DATA</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZFI_FK_ZA_FP_DATA</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+      <SFPIOPAR>
+       <NAME>ET_ZFI_FK_FO_TB</NAME>
+       <TYPING>TYPE</TYPING>
+       <TYPENAME>ZFI_FK_FO_TB_T</TYPENAME>
+       <OPTIONAL/>
+       <BYVALUE/>
+       <DEFAULTVAL/>
+       <STANDARD/>
+       <CONSTANT/>
+      </SFPIOPAR>
+     </IMPORT_PARAMETERS>
+     <EXPORT_PARAMETERS/>
+     <TABLE_PARAMETERS/>
+     <EXCEPTIONS/>
+    </CL_FP_PARAMETERS>
+   </cls:CL_FP_PARAMETERS>
+   <cls:CL_FP_CODING id="o5">
+    <CL_FP_INTERFACE_DATA_CHANGED classVersion="1">
+     <INTERFACE_DATA href="#o1"/>
+    </CL_FP_INTERFACE_DATA_CHANGED>
+    <CL_FP_CODING classVersion="1">
+     <INPUT_PARAMETERS>
+      <FPPARAMETER>ES_FP_DATA</FPPARAMETER>
+      <FPPARAMETER>GS_USER_DATA</FPPARAMETER>
+     </INPUT_PARAMETERS>
+     <OUTPUT_PARAMETERS>
+      <FPPARAMETER>GV_ANSCHRIFT</FPPARAMETER>
+      <FPPARAMETER>GV_WAERS</FPPARAMETER>
+      <FPPARAMETER>GV_VARIANT</FPPARAMETER>
+      <FPPARAMETER>GV_FORMTYPE</FPPARAMETER>
+      <FPPARAMETER>GV_FUNKTION</FPPARAMETER>
+      <FPPARAMETER>GV_BEARBEITER</FPPARAMETER>
+      <FPPARAMETER>GV_LOGO_LOEWE</FPPARAMETER>
+      <FPPARAMETER>GV_LOGO_LBW</FPPARAMETER>
+      <FPPARAMETER>GS_USER_DATA</FPPARAMETER>
+      <FPPARAMETER>GV_BUDAT</FPPARAMETER>
+      <FPPARAMETER>GV_MONAT</FPPARAMETER>
+      <FPPARAMETER>GV_DATUM</FPPARAMETER>
+      <FPPARAMETER>GV_HAUSHALTSJAHR</FPPARAMETER>
+      <FPPARAMETER>GV_GESAMTBETRAG</FPPARAMETER>
+      <FPPARAMETER>GV_DUPLIKAT</FPPARAMETER>
+      <FPPARAMETER>GV_SB_TELNR</FPPARAMETER>
+      <FPPARAMETER>GV_SB_TELFX</FPPARAMETER>
+      <FPPARAMETER>GV_SALDO_ART</FPPARAMETER>
+      <FPPARAMETER>GV_ANZAHL_RATEN</FPPARAMETER>
+      <FPPARAMETER>GV_ANZAHL_FAELLIGE_RATEN</FPPARAMETER>
+      <FPPARAMETER>GV_KASSENZEICHEN</FPPARAMETER>
+      <FPPARAMETER>GV_IBAN_BIC</FPPARAMETER>
+      <FPPARAMETER>GV_KTO_BLZ</FPPARAMETER>
+      <FPPARAMETER>GV_DATEINAME</FPPARAMETER>
+      <FPPARAMETER>GV_STATUS_TXT</FPPARAMETER>
+      <FPPARAMETER>GV_TYPE_TXT</FPPARAMETER>
+     </OUTPUT_PARAMETERS>
+     <INITIALIZATION>
+      <FPCLINE>DATA: lt_tel       TYPE TABLE OF bapiadtel,</FPCLINE>
+      <FPCLINE>      ls_tel       TYPE bapiadtel,</FPCLINE>
+      <FPCLINE>      lt_fax       TYPE TABLE OF bapiadfax,</FPCLINE>
+      <FPCLINE>      ls_fax       TYPE bapiadfax,</FPCLINE>
+      <FPCLINE>      lt_return    TYPE TABLE OF bapiret2,</FPCLINE>
+      <FPCLINE>      ls_febre     TYPE febre,</FPCLINE>
+      <FPCLINE>      lv_counter   TYPE i,</FPCLINE>
+      <FPCLINE>      lv_obname    TYPE tdobname,</FPCLINE>
+      <FPCLINE>      ls_address   TYPE bapiaddr3,</FPCLINE>
+      <FPCLINE>      lv_pic_bmp   TYPE xstring,</FPCLINE>
+      <FPCLINE>      lv_help_text TYPE char5,</FPCLINE>
+      <FPCLINE>      lv_retcode   TYPE sysubrc.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Benutzerdaten lesen</FPCLINE>
+      <FPCLINE>CALL FUNCTION &apos;BAPI_USER_GET_DETAIL&apos;</FPCLINE>
+      <FPCLINE>  EXPORTING</FPCLINE>
+      <FPCLINE>    username = sy-uname</FPCLINE>
+      <FPCLINE>  IMPORTING</FPCLINE>
+      <FPCLINE>    address  = ls_address</FPCLINE>
+      <FPCLINE>  TABLES</FPCLINE>
+      <FPCLINE>    return   = lt_return.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>IF NOT ls_address IS INITIAL.</FPCLINE>
+      <FPCLINE>* Telefon</FPCLINE>
+      <FPCLINE>  IF NOT ls_address-tel1_ext IS INITIAL.</FPCLINE>
+      <FPCLINE>    CONCATENATE ls_address-tel1_numbr &apos;-&apos; ls_address-tel1_ext INTO gs_user_data-tel.</FPCLINE>
+      <FPCLINE>  ELSE.</FPCLINE>
+      <FPCLINE>    MOVE ls_address-tel1_numbr TO gs_user_data-tel.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE>* Fax</FPCLINE>
+      <FPCLINE>  IF NOT ls_address-fax_extens IS INITIAL.</FPCLINE>
+      <FPCLINE>    CONCATENATE ls_address-fax_number &apos;-&apos; ls_address-fax_extens INTO gs_user_data-fax.</FPCLINE>
+      <FPCLINE>  ELSE.</FPCLINE>
+      <FPCLINE>    MOVE ls_address-fax_number TO gs_user_data-fax.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE>* Nachname</FPCLINE>
+      <FPCLINE>  IF NOT ls_address-title_p IS INITIAL.</FPCLINE>
+      <FPCLINE>    CONCATENATE ls_address-title_p ls_address-lastname</FPCLINE>
+      <FPCLINE>    INTO gs_user_data-name SEPARATED BY space.</FPCLINE>
+      <FPCLINE>  ELSE.</FPCLINE>
+      <FPCLINE>    MOVE ls_address-lastname TO gs_user_data-name.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE>* Funktion - Bereich und Kennung</FPCLINE>
+      <FPCLINE>  MOVE ls_address-function TO gs_user_data-function.</FPCLINE>
+      <FPCLINE>  MOVE ls_address-function TO gv_funktion.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Ort</FPCLINE>
+      <FPCLINE>  MOVE ls_address-city TO gs_user_data-ort.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Sachbearbeiter</FPCLINE>
+      <FPCLINE>IF NOT es_fp_data-sachbearbeiter IS INITIAL.</FPCLINE>
+      <FPCLINE>  gv_bearbeiter = es_fp_data-sachbearbeiter.</FPCLINE>
+      <FPCLINE>ELSEIF es_fp_data-duplikat EQ &apos;X&apos;.</FPCLINE>
+      <FPCLINE>  MOVE gs_user_data-name TO gv_bearbeiter.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Verbindungen Sachbearbeiter</FPCLINE>
+      <FPCLINE>gv_sb_telnr = es_fp_data-sb_telnr.</FPCLINE>
+      <FPCLINE>gv_sb_telfx = es_fp_data-sb_telfx.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>IF es_fp_data-duplikat EQ &apos;X&apos;.</FPCLINE>
+      <FPCLINE>  IF gv_sb_telnr IS INITIAL.</FPCLINE>
+      <FPCLINE>    gv_sb_telnr = ls_address-tel1_numbr.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  IF gv_sb_telfx IS INITIAL.</FPCLINE>
+      <FPCLINE>    gv_sb_telfx = ls_address-fax_number.</FPCLINE>
+      <FPCLINE>  ENDIF.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>lv_obname = &apos;Z_LBW_WAPPEN_KLEIN&apos;.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>PERFORM read_picture_bds USING lv_obname &apos;BCOL&apos;</FPCLINE>
+      <FPCLINE>                   CHANGING gv_logo_lbw</FPCLINE>
+      <FPCLINE>                            lv_retcode.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>lv_obname = &apos;Z_LBW_LOEWE&apos;.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>PERFORM read_picture_bds USING lv_obname &apos;BMON&apos;</FPCLINE>
+      <FPCLINE>                   CHANGING gv_logo_loewe</FPCLINE>
+      <FPCLINE>                            lv_retcode.</FPCLINE>
+      <FPCLINE>* Variante</FPCLINE>
+      <FPCLINE>gv_variant       = es_fp_data-variant.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Anschrift</FPCLINE>
+      <FPCLINE>CONCATENATE es_fp_data-addr_z1 cl_abap_char_utilities=&gt;newline</FPCLINE>
+      <FPCLINE>            es_fp_data-addr_z2 cl_abap_char_utilities=&gt;newline</FPCLINE>
+      <FPCLINE>            es_fp_data-addr_z3 cl_abap_char_utilities=&gt;newline</FPCLINE>
+      <FPCLINE>            es_fp_data-addr_z4 cl_abap_char_utilities=&gt;newline</FPCLINE>
+      <FPCLINE>            es_fp_data-addr_z5 cl_abap_char_utilities=&gt;newline</FPCLINE>
+      <FPCLINE>            es_fp_data-addr_z6</FPCLINE>
+      <FPCLINE>INTO gv_anschrift.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Haushaltsjahr</FPCLINE>
+      <FPCLINE>gv_haushaltsjahr = es_fp_data-hhjahr.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Kassenzeichen</FPCLINE>
+      <FPCLINE>gv_kassenzeichen = es_fp_data-kassenzeichen.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Datum</FPCLINE>
+      <FPCLINE>gv_datum = es_fp_data-tagesdatum.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Währungscode</FPCLINE>
+      <FPCLINE>gv_waers = es_fp_data-waers.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Duplikat</FPCLINE>
+      <FPCLINE>gv_duplikat = es_fp_data-duplikat.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>gv_gesamtbetrag =  es_fp_data-betrag.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>&quot;** Check if it&apos;s &quot;DRAFT&quot;</FPCLINE>
+      <FPCLINE>IF es_fp_data-duplikat = abap_true.</FPCLINE>
+      <FPCLINE>  gv_status_txt = &apos;Probedruck&apos;.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE>&quot;** Check if it&apos;s &quot;COPIED&quot;</FPCLINE>
+      <FPCLINE>IF es_fp_data-already_sent = abap_true.</FPCLINE>
+      <FPCLINE>  gv_status_txt = &apos;Kopie&apos;.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>&quot;** Set Header Text</FPCLINE>
+      <FPCLINE>gv_type_txt = &apos;Einzahlung auf eine Annahmeanordnung&apos;.</FPCLINE>
+      <FPCLINE>if es_fp_data-fehlernummer = 210.</FPCLINE>
+      <FPCLINE>  gv_type_txt = &apos;Stornierung der Einzahlung auf eine Annahmeanordnung&apos;.</FPCLINE>
+      <FPCLINE>endif.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>gv_saldo_art = es_fp_data-saldo_art.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>gv_anzahl_raten = es_fp_data-anzahl_raten.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>gv_anzahl_faellige_raten = es_fp_data-anzahl_faellige_raten.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Dateiname</FPCLINE>
+      <FPCLINE>gv_dateiname = es_fp_data-dateiname.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>* IBAN und BIC</FPCLINE>
+      <FPCLINE>gv_iban_bic = es_fp_data-iban.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>IF NOT es_fp_data-bic IS INITIAL.</FPCLINE>
+      <FPCLINE>  CONCATENATE gv_iban_bic &apos;/&apos; es_fp_data-bic INTO</FPCLINE>
+      <FPCLINE>    gv_iban_bic SEPARATED BY space.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>* Kontonummer und BLZ</FPCLINE>
+      <FPCLINE>gv_kto_blz = es_fp_data-konto_nr.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>IF NOT es_fp_data-blz IS INITIAL.</FPCLINE>
+      <FPCLINE>  CONCATENATE gv_kto_blz &apos;/&apos; es_fp_data-blz INTO</FPCLINE>
+      <FPCLINE>    gv_kto_blz SEPARATED BY space.</FPCLINE>
+      <FPCLINE>ENDIF.</FPCLINE>
+     </INITIALIZATION>
+     <FORMS>
+      <FPCLINE>*&amp;---------------------------------------------------------------------*</FPCLINE>
+      <FPCLINE>*&amp;      Form  read_picture_bds</FPCLINE>
+      <FPCLINE>*&amp;---------------------------------------------------------------------*</FPCLINE>
+      <FPCLINE>*       Grafikdatei aus BDS als BMP lesen</FPCLINE>
+      <FPCLINE>*----------------------------------------------------------------------*</FPCLINE>
+      <FPCLINE>*      CS_PIC_BMP Binärdaten des Bild als BMP</FPCLINE>
+      <FPCLINE>*      CV_RETCODE Returncode</FPCLINE>
+      <FPCLINE>*----------------------------------------------------------------------*</FPCLINE>
+      <FPCLINE>FORM read_picture_bds USING value(iv_obname) TYPE tdobname</FPCLINE>
+      <FPCLINE>                            cv_btype   TYPE tdbtype</FPCLINE>
+      <FPCLINE>                   CHANGING cv_pic_bmp TYPE xstring</FPCLINE>
+      <FPCLINE>                            cv_retcode TYPE sysubrc.</FPCLINE>
+      <FPCLINE>                            .</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  DATA: lv_object TYPE tdobjectgr,</FPCLINE>
+      <FPCLINE>        lv_name   TYPE tdobname,</FPCLINE>
+      <FPCLINE>        lv_id     TYPE tdidgr,</FPCLINE>
+      <FPCLINE>        lv_btype  TYPE tdbtype.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  CLEAR: cv_pic_bmp.</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE>  lv_object = &apos;GRAPHICS&apos;.</FPCLINE>
+      <FPCLINE>  lv_id     = &apos;BMAP&apos;.</FPCLINE>
+      <FPCLINE>* lv_btype  = &apos;BMON&apos;.  &quot;(farbige Grafik) für Schwarz-Weiß BMON (Domäne TDBTYPE)</FPCLINE>
+      <FPCLINE/>
+      <FPCLINE/>
+      <FPCLINE>* Grafik aus BDS (Transaktion SE78) als BMP lesen</FPCLINE>
+      <FPCLINE>  CALL METHOD cl_ssf_xsf_utilities=&gt;get_bds_graphic_as_bmp</FPCLINE>
+      <FPCLINE>    EXPORTING</FPCLINE>
+      <FPCLINE>      p_object       = lv_object</FPCLINE>
+      <FPCLINE>      p_name         = iv_obname</FPCLINE>
+      <FPCLINE>      p_id           = lv_id</FPCLINE>
+      <FPCLINE>      p_btype        = cv_btype</FPCLINE>
+      <FPCLINE>    RECEIVING</FPCLINE>
+      <FPCLINE>      p_bmp          = cv_pic_bmp</FPCLINE>
+      <FPCLINE>    EXCEPTIONS</FPCLINE>
+      <FPCLINE>      not_found      = 1</FPCLINE>
+      <FPCLINE>      internal_error = 2</FPCLINE>
+      <FPCLINE>      OTHERS         = 3.</FPCLINE>
+      <FPCLINE>  cv_retcode = sy-subrc.</FPCLINE>
+      <FPCLINE>ENDFORM.                    &quot;read_picture_bds</FPCLINE>
+     </FORMS>
+    </CL_FP_CODING>
+   </cls:CL_FP_CODING>
+  </asx:heap>
+ </asx:abap>
+</abapGit>

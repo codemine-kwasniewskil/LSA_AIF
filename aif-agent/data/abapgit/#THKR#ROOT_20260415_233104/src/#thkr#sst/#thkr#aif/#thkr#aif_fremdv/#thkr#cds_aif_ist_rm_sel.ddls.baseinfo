@@ -1,0 +1,20 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "/THKR/CDS_AIF_IST_RM_CUBE",
+      "/THKR/CDS_AIF_IST_RM_IBAN",
+      "FEBEP"
+    ],
+    "ASSOCIATED": [
+      "/THKR/CDS_AIF_IST_RM_IBAN",
+      "I_COMMITMENTITEM",
+      "I_COMPANYCODE",
+      "I_FINANCIALMANAGEMENTAREA",
+      "I_FISCALYEARFORFINMGMTAREA",
+      "I_FUNDSCENTER"
+    ],
+    "BASE": [
+      "/THKR/CDS_AIF_IST_RM_CUBE"
+    ]
+  }
+}

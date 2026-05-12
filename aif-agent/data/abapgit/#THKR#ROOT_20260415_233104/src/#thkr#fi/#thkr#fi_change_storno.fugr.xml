@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funkt.Grup. für Ändern und Stornieren FI</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LFI_CHANGE_STORNOTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLFI_CHANGE_STORNO</SOBJ_NAME>
+   </INCLUDES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

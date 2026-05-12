@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PMW_EXIT</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>PWM Eweiterungen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_TEXT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfung zugelassener Zeichen im Text Geschäftspartner</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_TEXT</CMPNAME>
+     <SCONAME>EV_GTEXT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsbereichsbezeichnung</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_TEXT</CMPNAME>
+     <SCONAME>IV_GTEXT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsbereichsbezeichnung</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

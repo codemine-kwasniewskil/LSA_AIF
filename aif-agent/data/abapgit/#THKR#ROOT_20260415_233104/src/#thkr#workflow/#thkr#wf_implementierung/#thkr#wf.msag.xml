@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/WF</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>HKR: Workflow Nachrichten</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Es konnten keine Kontierungsdaten ermittelt werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Keine Positionen zur Freigabe gefunden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Mittelbindung konnte nicht freigegeben werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>107</MSGNR>
+     <TEXT>Es wurden keine Events zum Objekttyp &amp;1 gefunden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>108</MSGNR>
+     <TEXT>Es wurden keine Einträge selektiert, keine Änderung der Daten</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>109</MSGNR>
+     <TEXT>Fehler beim Update der Kopplungen</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>110</MSGNR>
+     <TEXT>Die Kopplungen wurden erfolgreich aktualisiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>111</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>200</MSGNR>
+     <TEXT>Fehler bei Partner-ID: &amp;1. Meldung: &amp;2!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>201</MSGNR>
+     <TEXT>Die Geschäftspartner-ID: &amp;1 &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/WF</ARBGB>
+     <MSGNR>202</MSGNR>
+     <TEXT>Modus: &amp;1</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

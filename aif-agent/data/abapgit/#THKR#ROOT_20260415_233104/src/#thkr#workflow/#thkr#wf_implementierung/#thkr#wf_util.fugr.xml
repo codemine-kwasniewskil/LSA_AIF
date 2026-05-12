@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Fubas für allgemeine WF Funktionen</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LWF_UTILTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLWF_UTIL</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/WF_OBJ_RELAT_CREATE</FUNCNAME>
+     <SHORT_TEXT>Anhängen von WF-Anlagen zu Business Object</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_OBJKEY</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SWO_TYPEID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_OBJTYPE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SWO_OBJTYP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_WI_ID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SWW_WIID</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>RELATION_COULD_NOT_CREATE</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>ERROR_READING_ATTACHEMENTS</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>ERROR_READING_ATTACHEMENT_TYPE</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_OBJKEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Objektschlüssel</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_OBJTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Objekttyp</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_WI_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Workitem-Kennung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RELATION_COULD_NOT_CREATE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Keine Verknüpfung erzeugt</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ERROR_READING_ATTACHEMENTS</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Anlagen konnten nicht gelesen werden</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ERROR_READING_ATTACHEMENT_TYPE</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Fehler beim Auslesen des Anlagentyps</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

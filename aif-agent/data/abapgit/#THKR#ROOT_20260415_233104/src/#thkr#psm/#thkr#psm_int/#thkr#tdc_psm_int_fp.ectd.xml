@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ECTD" serializer_version="v1.0.0">
+ <VERSIONS>
+  <VERSION>
+   <ECTD VERSION="1.5">
+    <ATTRIBUTES>
+     <ETOBJ_GNDT>
+      <VERSION>00000001</VERSION>
+      <TWB_TITLE>Testdaten für PSM Finanzposition</TWB_TITLE>
+      <SOFTCOMP/>
+      <TWB_DEP_RF/>
+      <TWB_DEP_RT/>
+      <TWB_STATUS>X</TWB_STATUS>
+      <TWB_RELE>N</TWB_RELE>
+      <FUSER></FUSER>
+      <FDATE></FDATE>
+      <LUSER></LUSER>
+      <LDATE></LDATE>
+      <LTIME></LTIME>
+      <REL_BAS_F/>
+      <REL_BAS_T/>
+      <SERVICE/>
+      <PVNR/>
+      <BACKUP/>
+     </ETOBJ_GNDT>
+     <ETOBJNOVER>
+      <NAME>/THKR/TDC_PSM_INT_FP</NAME>
+      <TYPE>ECTD</TYPE>
+      <TWB_RESP></TWB_RESP>
+      <TWB_DISTL>B</TWB_DISTL>
+      <TWB_EUBOBJ/>
+      <TWB_EUTYPE/>
+      <DEVCLASS></DEVCLASS>
+      <MASTERLANG>D</MASTERLANG>
+      <TADIR_RESP></TADIR_RESP>
+      <FRANGE>PSM-FM</FRANGE>
+      <BCSET_MODE/>
+      <API_MODE/>
+      <COL_TSTOBJDATA/>
+      <NO_TRANSLATION/>
+     </ETOBJNOVER>
+     <ETOBJ_DOC>
+      <SEARCH_1/>
+      <SEARCH_2/>
+      <SEARCH_3/>
+      <SEARCH_4/>
+      <SEARCH_5/>
+      <SEARCH_6/>
+      <SEARCH_7/>
+      <SEARCH_8/>
+      <SEARCH_9/>
+      <SEARCH_10/>
+      <S_DOC_ID/>
+      <S_OBJ_ID/>
+      <S_DOC_TITL/>
+     </ETOBJ_DOC>
+     <ETOBJ_CNST>
+      <TWB_DEP_S/>
+      <TWB_DEPV_S/>
+      <TWB_DEP_L/>
+      <TWB_DEPV_L/>
+      <TWB_USE_A/>
+      <TWB_USE_P/>
+      <TWB_USE_H/>
+      <TWB_USE_E/>
+      <REUSE/>
+      <TWB_DEP_C/>
+      <TWB_DEP_VC/>
+      <TWB_DEP_F/>
+      <TWB_DEP_VF/>
+      <TWB_DEP_P/>
+      <TWB_DEP_VP/>
+      <TWB_DEP_DB/>
+      <TWB_DEPVDB/>
+      <TWB_WKREQ>0.0</TWB_WKREQ>
+      <TWB_WKUNIT>MIN</TWB_WKUNIT>
+      <TWB_PRIO>3</TWB_PRIO>
+     </ETOBJ_CNST>
+     <ETSC_TSYS>
+      <SYSTEMDATA/>
+      <TESTSYSTEM/>
+     </ETSC_TSYS>
+     <ETSYS_COMP_TABTYPE/>
+     <ETSYS_REL_TABTYPE/>
+     <ETBF_OBJ_TABTYPE/>
+     <ETBF_VER_TABTYPE/>
+    </ATTRIBUTES>
+    <PARAMETERS>
+     <ETPAR_GUIX>
+      <item>
+       <PNAME>DTO_FP_CREATE</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>DTO: Daten zur Erstellung einer Finanzpositionen</PDESC>
+       <PINDEX>0002</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>/THKR/DTO_CREATE_PSM_FP</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0001</SORT_LNR>
+       <PREF_NAME2>/THKR/DTO_CREATE_PSM_FP</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="_-THKR_-DTO_CREATE_PSM_FP">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/DTO_CREATE_PSM_FP=A=v=L=000000=doc=DTO: Daten zur Erstellung einer Finanzpositionen</documentation>
+          </annotation>
+          <sequence>
+           <element name="FIKRS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FIKRS=A=C=L=000004=doc=Financial Management Ar</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="GJAHR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=GJAHR=A=N=L=000004=doc=Fiscal Year</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FIPEX" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_FIPEX=A=C=L=000024=doc=Commitment Item</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="KATEG" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_KATEG=A=N=L=000001=doc=Postable</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FIVOR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_FIVOR=A=N=L=000002=doc=Financial transactio</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="POTYP" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_POTYP=A=N=L=000001=doc=Commitment Item Cate</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="AUGRP" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_AUTHGRP=A=C=L=000010=doc=Authorization Grou</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="STVAR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_STVAR=A=C=L=000001=doc=Standard Variant</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HSART" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_HSART=A=C=L=000001=doc=Commitment Item Type</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FPART" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_FPART=A=C=L=000003=doc=Commitment Item Type</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="3"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="STATS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_STATS=A=C=L=000001=doc=Funds Management Sta</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="CFFLG" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_CFFLG=A=C=L=000001=doc=Able to Carry Forwar</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="NEGBUD" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_NEG_BUDGET_FLG=A=C=L=000001=doc=Negative Bu</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_FKZ" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/FKZ=A=C=L=000003=doc=Functional code</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="3"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_TG" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/TG=A=C=L=000002=doc=Title group</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_NON_AVK" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/NON_AVK=A=C=L=000001=doc=Exception AVK</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_OZ1" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/OZ1=A=C=L=000024=doc=Hauptziel </documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_OZ2" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/OZ2=A=C=L=000024=doc=Nebenziel 1</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_OZ3" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/OZ3=A=C=L=000024=doc=Nebenziel 2</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_OZ4" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/OZ4=A=C=L=000024=doc=Nebenziel 3</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_OZ5" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/OZ5=A=C=L=000024=doc=Nebenziel 4</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="ZZ_UZ1" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=/THKR/UZ1=A=C=L=000024=doc=Unterziel</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="SPRAS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=SPRAS=A=C=L=000001=doc=Language Key</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BEZEI" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_BEZEICH=A=C=L=000020=doc=Name</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="20"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TEXT1" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_BESCHR0=A=C=L=000050=doc=Description</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="50"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TEXT2" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_BESCHR2=A=C=L=000050=doc=Description 2</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="50"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="TEXT3" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_BESCHR3=A=C=L=000050=doc=Description 3</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="50"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LONGTEXT" minOccurs="0" type="string">
+            <annotation>
+             <documentation>I==O==C==K==D==A=g=L=000000=doc=Long Text</documentation>
+            </annotation>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:_-THKR_-DTO_CREATE_PSM_FP xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+         <FIKRS/>
+         <GJAHR/>
+         <FIPEX/>
+         <KATEG/>
+         <FIVOR/>
+         <POTYP/>
+         <AUGRP/>
+         <STVAR/>
+         <HSART/>
+         <FPART/>
+         <STATS/>
+         <CFFLG/>
+         <NEGBUD/>
+         <ZZ_FKZ/>
+         <ZZ_TG/>
+         <ZZ_NON_AVK/>
+         <ZZ_OZ1/>
+         <ZZ_OZ2/>
+         <ZZ_OZ3/>
+         <ZZ_OZ4/>
+         <ZZ_OZ5/>
+         <ZZ_UZ1/>
+         <SPRAS/>
+         <BEZEI/>
+         <TEXT1/>
+         <TEXT2/>
+         <TEXT3/>
+         <LONGTEXT/>
+        </ddic:_-THKR_-DTO_CREATE_PSM_FP>
+       </DEEP_DATA>
+      </item>
+      <item>
+       <PNAME>DTO_FP</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>DTO: Schlüsselfelder der Finanzpositionen</PDESC>
+       <PINDEX>0001</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>/THKR/DTO_PSM_FP_KEY</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0002</SORT_LNR>
+       <PREF_NAME2>/THKR/DTO_PSM_FP_KEY</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="_-THKR_-DTO_PSM_FP_KEY">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/DTO_PSM_FP_KEY=A=u=L=000000=doc=DTO: Schlüsselfelder der Finanzpositionen</documentation>
+          </annotation>
+          <sequence>
+           <element name="FIKRS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FIKRS=A=C=L=000004=doc=Financial Management Ar</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="GJAHR" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=GJAHR=A=N=L=000004=doc=Fiscal Year</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="FIPEX" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_FIPEX=A=C=L=000024=doc=Commitment Item</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:_-THKR_-DTO_PSM_FP_KEY xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+         <FIKRS/>
+         <GJAHR/>
+         <FIPEX/>
+        </ddic:_-THKR_-DTO_PSM_FP_KEY>
+       </DEEP_DATA>
+      </item>
+     </ETPAR_GUIX>
+     <ETPAR_VARI>
+      <item>
+       <VAR_NAME>CREATE_FP</VAR_NAME>
+       <VAR_DESC>Anlegen eine Finanzposition</VAR_DESC>
+       <VINDEX>0001</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>DTO_FP_CREATE</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0002</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-DTO_CREATE_FP xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <FIKRS>1000</FIKRS>
+           <GJAHR>2024</GJAHR>
+           <FIPEX>Test123</FIPEX>
+           <KATEG>2</KATEG>
+           <FIVOR>30</FIVOR>
+           <POTYP>2</POTYP>
+           <AUGRP>0000</AUGRP>
+           <STVAR>X</STVAR>
+           <HSART>A</HSART>
+           <ZZ_FKZ>244</ZZ_FKZ>
+           <SPRAS>DE</SPRAS>
+           <BEZEI>ECatt test Data</BEZEI>
+           <TEXT1>ECatt test Data 1</TEXT1>
+           <TEXT2>ECatt test Data 2</TEXT2>
+           <TEXT3>ECatt test Data 3</TEXT3>
+           <LONGTEXT>ECatt test Long Text</LONGTEXT>
+          </ddic:_-THKR_-DTO_CREATE_FP>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+      <item>
+       <VAR_NAME>GET_PSM_FP</VAR_NAME>
+       <VAR_DESC>Lesen einer FP (Finanzposition)</VAR_DESC>
+       <VINDEX>0003</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>DTO_FP</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0001</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-DTO_FP_KEY xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <FIKRS>1000</FIKRS>
+           <GJAHR>2024</GJAHR>
+           <FIPEX>030223102</FIPEX>
+          </ddic:_-THKR_-DTO_FP_KEY>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+     </ETPAR_VARI>
+    </PARAMETERS>
+    <VARIANT_MODE>
+     <ETVAR_EXT></ETVAR_EXT>
+    </VARIANT_MODE>
+   </ECTD>
+  </VERSION>
+ </VERSIONS>
+</abapGit>

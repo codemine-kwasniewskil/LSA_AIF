@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_XLS_UPLOAD</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Upload XLS</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHANGE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Modus Change</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FIELDMAPS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Key Value Tab</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INSERT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Modus Insert</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_AND_GET_FIELD</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Get field of strc</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MESSAGES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fehlermeldungen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PATH</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Filepath</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_AND_GET_FIELD</CMPNAME>
+     <SCONAME>/THKR/CX_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse FI Initialer Aufbau</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>/THKR/CX_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse FI Initialer Aufbau</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS_FILE</CMPNAME>
+     <SCONAME>/THKR/CX_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse FI Initialer Aufbau</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_FILE</CMPNAME>
+     <SCONAME>/THKR/CX_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse FI Initialer Aufbau</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

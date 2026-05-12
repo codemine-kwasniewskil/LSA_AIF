@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>/THKR/MIG_OBJ_AO</DOMNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000008</LENG>
+    <OUTPUTLEN>000008</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>Migrationsobjekt (Anordnungen)</DDTEXT>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SSTE</DOMVALUE_L>
+     <DDTEXT>SSTE Einzel-Annahmeanordnungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SSTS</DOMVALUE_L>
+     <DDTEXT>SSTS Splitt-Annahmeanordnungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>AWD</DOMVALUE_L>
+     <DDTEXT>AWD Dauer-Auszahlungsanordnungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SSTW</DOMVALUE_L>
+     <DDTEXT>SSTW Dauer-Annahmeanordnungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SSTA</DOMVALUE_L>
+     <DDTEXT>SSTA Allgemeine Annahme AO</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0006</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>ALL</DOMVALUE_L>
+     <DDTEXT>ALL Allgemeine AuszAO</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0007</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>IOS</DOMVALUE_L>
+     <DDTEXT>IOS Offene Einzelverwahrungen</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0008</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>VSA</DOMVALUE_L>
+     <DDTEXT>VSA Offene Einzelvorschüsse</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0009</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>MVW</DOMVALUE_L>
+     <DDTEXT>MVW Lastschriftmandate</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0010</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>LIF</DOMVALUE_L>
+     <DDTEXT>LIF Zahlungspartner</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0011</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>NF</DOMVALUE_L>
+     <DDTEXT>Offene Posten der Kasse</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0012</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SEE_A</DOMVALUE_L>
+     <DDTEXT>SEE_A Allgemeine Annahme AO Kasse</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0013</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SEA_A</DOMVALUE_L>
+     <DDTEXT>SEA_A Allgemeine Auszahlungs AO Kasse</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <VALPOS>0014</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>SEE_E</DOMVALUE_L>
+     <DDTEXT>SEE_E Einzel-Annahme AO Kasse</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

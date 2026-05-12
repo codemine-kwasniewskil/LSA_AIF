@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_FI_STORNO</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Storno Funktionen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_STORNO_AUTH</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>prüft Berechtigungen für Storno</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_STORNO_BELEG_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>prüft FI Beleg Daten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_MODUL_FI</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Modul FI</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_STATUS_ABBRUCH_45</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>WF Status Abbruch</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_STATUS_ABGELEHNT_40</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>WF Status Abgelehnt</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>C_STATUS_START_10</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>WF Status Start</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_FI_STORNO_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Schlüssel Daten für Storno Funktion</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_STORNO_BKPF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>BKPF Daten des Beleg</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_LFDNR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Laufende Nr im WF für FI Beleg</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>START_FI_STORNO</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>startet Storno Workflow Funktion</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>START_STORNO_WF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>startet Storno WF</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_STORNO_AUTH</CMPNAME>
+     <SCONAME>/THKR/CX_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für FI</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_STORNO_BELEG_DATA</CMPNAME>
+     <SCONAME>/THKR/CX_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für FI</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_FI_BELEG_STORNO_DATA</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>FI Beleg Schlüssel und Storno Daten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>START_FI_STORNO</CMPNAME>
+     <SCONAME>/THKR/CX_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für FI</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>START_STORNO_WF</CMPNAME>
+     <SCONAME>/THKR/CX_FI</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse für FI</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TTYP" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD40V>
+    <TYPENAME>/THKR/T_DE_INPDB</TYPENAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <ROWTYPE>/THKR/S_DE_INPDB</ROWTYPE>
+    <ROWKIND>S</ROWKIND>
+    <DATATYPE>STRU</DATATYPE>
+    <ACCESSMODE>T</ACCESSMODE>
+    <KEYDEF>K</KEYDEF>
+    <KEYKIND>N</KEYKIND>
+    <KEYFDCOUNT>0004</KEYFDCOUNT>
+    <DDTEXT>Input-Datensätze Unit4</DDTEXT>
+   </DD40V>
+   <DD42V>
+    <DD42V>
+     <TYPENAME>/THKR/T_DE_INPDB</TYPENAME>
+     <KEYFDPOS>0001</KEYFDPOS>
+     <ROWTYPEPOS>0001</ROWTYPEPOS>
+     <KEYFIELD>BTYP</KEYFIELD>
+    </DD42V>
+    <DD42V>
+     <TYPENAME>/THKR/T_DE_INPDB</TYPENAME>
+     <KEYFDPOS>0002</KEYFDPOS>
+     <ROWTYPEPOS>0005</ROWTYPEPOS>
+     <KEYFIELD>QUELLE</KEYFIELD>
+    </DD42V>
+    <DD42V>
+     <TYPENAME>/THKR/T_DE_INPDB</TYPENAME>
+     <KEYFDPOS>0003</KEYFDPOS>
+     <ROWTYPEPOS>0006</ROWTYPEPOS>
+     <KEYFIELD>QBELNR</KEYFIELD>
+    </DD42V>
+    <DD42V>
+     <TYPENAME>/THKR/T_DE_INPDB</TYPENAME>
+     <KEYFDPOS>0004</KEYFDPOS>
+     <ROWTYPEPOS>0007</ROWTYPEPOS>
+     <KEYFIELD>QPOSNR</KEYFIELD>
+    </DD42V>
+   </DD42V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

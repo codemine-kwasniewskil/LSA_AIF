@@ -1,0 +1,14 @@
+# Secrets — never commit
+aif-agent/.env
+aif-agent/data/agent_state.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

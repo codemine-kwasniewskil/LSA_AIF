@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_FO_APPL</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Anwendungsklasse für die Fonds (Einzelplan)</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <MSG_ID>/THKR/PSM_INT_FI</MSG_ID>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <DESCRIPTIONS_CLASS>
+    <SEOCLASSTX>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Anwendungsklasse für die Fonds (Einzelplan)</DESCRIPT>
+    </SEOCLASSTX>
+   </DESCRIPTIONS_CLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ADJUST_HEADER_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Adjust input parameters before object update</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_EXISTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check the existence of the record by key (without period)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_IMPORT_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Checking the correctness of the import data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_FOND</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Creates a new Fond with the provided data</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_FOND_DATA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Returns the data for a specified Fond</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Retrieves the unique instance of the Singleton class</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Mapping for the header fields</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Mapping for the text fields</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_AUGRP</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fund Authorization Group</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_SPRAS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Language Key</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Anwendungsklasse für die Fonds (Einzelplan)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SAVE_LONG_TEXT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Save long text description for Fond</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>UPDATE_FOND</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Update of the existing Fond</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADJUST_HEADER_FIELDS</CMPNAME>
+     <SCONAME>C_FMFINCODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>FIFM: Financing code</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_EXISTANCE</CMPNAME>
+     <SCONAME>I_FOND_KEY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_EXISTANCE</CMPNAME>
+     <SCONAME>RV_RETURN</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Boolean Variable (X = True, - = False, Space = Unknown)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_IMPORT_DATA</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_IMPORT_DATA</CMPNAME>
+     <SCONAME>I_FO_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_FOND</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_FOND</CMPNAME>
+     <SCONAME>I_FO_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_FOND</CMPNAME>
+     <SCONAME>R_KEY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FOND_DATA</CMPNAME>
+     <SCONAME>I_FLG_TEXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>General Flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FOND_DATA</CMPNAME>
+     <SCONAME>I_FOND_ID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FOND_DATA</CMPNAME>
+     <SCONAME>R_FOND</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Vollständige Daten über den PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>R_INSTANCE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Anwendungsklasse für die Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <SCONAME>I_FO_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_HEADER_FIELDS</CMPNAME>
+     <SCONAME>R_FMFINCODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>FIFM: Financing code</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <SCONAME>I_FO_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MAP_TEXT_FIELDS</CMPNAME>
+     <SCONAME>R_FMFINT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>FIFM: Fund texts</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_LONG_TEXT</CMPNAME>
+     <SCONAME>I_FO_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_FOND</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_INT_FI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Ausnahmeklasse für Geschäftsobjekte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_FOND</CMPNAME>
+     <SCONAME>I_FO_CREATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Daten zur Erstellung einer PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>UPDATE_FOND</CMPNAME>
+     <SCONAME>R_KEY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>DTO: Schlüsselfelder PSM-Fonds (Einzelplan)</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

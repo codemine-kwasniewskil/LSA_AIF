@@ -1,0 +1,11 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "/THKR/CDS_AIF_IST_V2",
+      "I_ADDRESS",
+      "I_BUSINESSPARTNER",
+      "I_BUSINESSPARTNERDEFAULTADDR",
+      "I_COUNTRY"
+    ]
+  }
+}

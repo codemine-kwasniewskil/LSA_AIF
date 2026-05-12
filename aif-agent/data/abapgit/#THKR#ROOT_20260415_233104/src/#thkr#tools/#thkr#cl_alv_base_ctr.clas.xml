@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_ALV_BASE_CTR</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>ALV Controller Base</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONTAINER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Container fuer Custom Controls in der Dynpro Area</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>LAYOUT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Layout</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>DISPLAY_DATA</CMPNAME>
+     <SCONAME>CX_SALV_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV: Allg. Fehlerklasse (wird bei Syntaxprüfung geprüft)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ALV_COLUMNS</CMPNAME>
+     <SCONAME>CX_SALV_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV: Allg. Fehlerklasse (wird bei Syntaxprüfung geprüft)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ALV_DISPLAY</CMPNAME>
+     <SCONAME>CX_SALV_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV: Allg. Fehlerklasse (wird bei Syntaxprüfung geprüft)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ALV_HEADER</CMPNAME>
+     <SCONAME>CX_SALV_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV: Allg. Fehlerklasse (wird bei Syntaxprüfung geprüft)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ALV_HOTSPOT_COLUMNS</CMPNAME>
+     <SCONAME>COLUMNS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Spalten einer ALV Liste</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_ALV_SORTS</CMPNAME>
+     <SCONAME>CX_SALV_ERROR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>ALV: Allg. Fehlerklasse (wird bei Syntaxprüfung geprüft)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SHOW_POPUP</CMPNAME>
+     <SCONAME>COL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Characterfeld der Länge 10</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SHOW_POPUP</CMPNAME>
+     <SCONAME>ROW</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Characterfeld der Länge 10</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

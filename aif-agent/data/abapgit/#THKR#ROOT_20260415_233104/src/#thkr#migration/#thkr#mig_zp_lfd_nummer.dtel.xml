@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/THKR/MIG_ZP_LFD_NUMMER</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <HEADLEN>31</HEADLEN>
+    <SCRLEN1>07</SCRLEN1>
+    <SCRLEN2>11</SCRLEN2>
+    <SCRLEN3>31</SCRLEN3>
+    <DDTEXT>Zahlungspartner laufende Nummer</DDTEXT>
+    <REPTEXT>Zahlungspartner laufende Nummer</REPTEXT>
+    <SCRTEXT_S>ZPLfdNr</SCRTEXT_S>
+    <SCRTEXT_M>ZP lfd. Nr.</SCRTEXT_M>
+    <SCRTEXT_L>Zahlungspartner laufende Nummer</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <DATATYPE>NUMC</DATATYPE>
+    <LENG>000004</LENG>
+    <OUTPUTLEN>000004</OUTPUTLEN>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/THKR/GI_DTO_FIELD_LINE_NR</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <HEADLEN>20</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>18</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Feld der Aussgangsstabelle mit der Zeilennummer</DDTEXT>
+    <REPTEXT>Feld mit Zeilenummer</REPTEXT>
+    <SCRTEXT_S>Fld. Z-Nr.</SCRTEXT_S>
+    <SCRTEXT_M>Feld mit Zeilennr.</SCRTEXT_M>
+    <SCRTEXT_L>Feld mit Zeilenummer</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000030</LENG>
+    <OUTPUTLEN>000030</OUTPUTLEN>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

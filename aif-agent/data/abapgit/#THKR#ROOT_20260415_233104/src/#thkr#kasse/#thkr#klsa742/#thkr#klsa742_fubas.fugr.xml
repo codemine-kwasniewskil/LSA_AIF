@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funktionsgruppe für ELKO Fubas</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LKLSA742_FUBASTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLKLSA742_FUBAS</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/ELKO_GET_POSTING</FUNCNAME>
+     <SHORT_TEXT>Buchungsregel und evtl. Algorithmus für MT940 ermitteln</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_VGEXT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>VGEXT_EB</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_TEXTS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>TEXTS_EB</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_VOZEI</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>EPVOZ_EB</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BUTXT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BUTXT_EB</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_KUKEY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>KUKEY_EB</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_ESNUM</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ESNUM_EB</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_VGINT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>VGINT_EB</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_INTAG</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>INTAG_EB</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_VGEXT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Geschäftsvorgang Extern</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_TEXTS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Textschlüssel</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_VOZEI</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vorzeichen Einzelposten (S/H) aus Banksicht</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BUTXT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Buchungstext der Bankbuchung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_KUKEY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kurzschlüssel (Surrogat)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_ESNUM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Einzelsatznummer (Nr. des Einzelpostens im Kontoauszug)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_VGINT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Buchungsregel</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_INTAG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Interpretationsalgorithmus</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/FI_BTE_PROCESS_00107050</FUNCNAME>
+     <SHORT_TEXT>BTE 00107050: RFFMKG03 Anordnung ändern</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BELNR</PARAMETER>
+       <DBFIELD>KBLE-BELNR</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BLPOS</PARAMETER>
+       <DBFIELD>KBLE-BLPOS</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BPENT</PARAMETER>
+       <DBFIELD>KBLE-BPENT</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BKPF</PARAMETER>
+       <DBFIELD>BKPF</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_BSEG</PARAMETER>
+       <DBSTRUCT>BSEG</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BSEC</PARAMETER>
+       <DBSTRUCT>BSEC</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BSET</PARAMETER>
+       <DBSTRUCT>BSET</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <DBSTRUCT>BBKPF_FM</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <DBSTRUCT>BBSEG_FM</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <DBSTRUCT>BBTAX_FM</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BELNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegnummer Mittelvormerkung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BLPOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegposition Mittelvormerkung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BPENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegpositionsentwicklung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegkopf für Buchhaltung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsegment Buchhaltung</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSEC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsegment CPD-Daten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BSET</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsegment Steuerdaten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegkopf für Buchhaltungsbeleg (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsegment Buchhaltung für IS-PS (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsteuern (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <LONGTEXTS__-THKR_-FI_BTE_PROCESS_00107050>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/FI_BTE_PROCESS_00107050</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00030</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/FI_BTE_PROCESS_00107050</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;RFFMKG03: Anordnung ändern&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00107050&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PROCESS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieser Prozess wird im Programm RFFMKG03 (Erzeuge Anordnungen aus</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anzahlungen auf Mittelvormerkungen) aufgerufen, bevor eine Anordnung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verbucht wird.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im Rahmen des Prozesses können Sie die Anordnung mit Zusatzdaten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>anreichern oder bereits vorbelegte Feldinhalte verändern.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>An den Prozess werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Nummer der Mittelreservierung (I_BELNR),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Postion der Mittelreservierung (I_BLPOS),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Belegpositionsentwicklung der Mittelreservierung (I_BPENT),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>der Belegkopf der Anzahlung (I_BKPF),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Belegzeilen der Anzahlung (T_BSEG),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die CPD-Daten der Anzahlung, falls vorhanden (T_BSEC) und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Steuerdaten der Anzahlung, falls vorhanden (T_BSET)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>übergeben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Für die Buchung der Anordnung sind darüber hinaus</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>der Belegkopf (T_BBKPF),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Belegzeilen (T_BBSEG) und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Steuerinformationen (T_BBTAX)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>mit den bereits vorhandenen Daten gefüllt. Die Daten dieser drei</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Tabellen können Sie in diesem Business Transaction Event verändern.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im Anschluss an den Aufruf dieses Business Transaction Events wird die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anordnung über das Direct-Input-Verfahren analog zum Programm RFBIBLK0</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Übernahme von Anordnungen aus Vorverfahren) verbucht.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Weitere Informationen zum Aufbau und Füllen der Tabellen T_BBKPF,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>T_BBSEG und T_BBTAX entnehmen Sie der Programmdokumentation des</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Programms &lt;DS:RE.RFBIBLK0&gt;RFBIBLK0&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-FI_BTE_PROCESS_00107050>
+  </asx:values>
+ </asx:abap>
+</abapGit>

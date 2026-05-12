@@ -1,0 +1,3 @@
+FUNCTION-POOL /THKR/AIF_FREMDV_SERID.       "MESSAGE-ID ..
+
+* INCLUDE /THKR/LAIF_FREMDV_SERIDD...        " Local class definition

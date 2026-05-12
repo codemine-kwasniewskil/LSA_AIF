@@ -1,0 +1,3117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Suchhilfen BUPA</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LBP_SHLPF00</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/LBP_SHLPI00</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/LBP_SHLPT00</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/LBP_SHLPTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLBP_SHLP</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/BP_EXIT_FILTER_RESULTS</FUNCNAME>
+     <SHORT_TEXT>Exit für Filterung von Suchergebnissen</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RESULTS</PARAMETER>
+       <TYP>BUS_LOCATOR_SEARCH_RESULT_T</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>RESULTS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ergebnisse, welche zu filtern sind</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/BP_F4IF_CLASS_STD_EXIT</FUNCNAME>
+     <SHORT_TEXT>Ausführen der Standardsuchhilfe</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SHLP</PARAMETER>
+       <TYP>SHLP_DESCR</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <DBFIELD>DDSHF4CTRL</DBFIELD>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <TYP>SHLP_DESCT</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <DBSTRUCT>SEAHLPRES</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der elementaren Suchhilfen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trefferliste</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Einzelne (aktuelle) Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steuerung des F4-Ablaufs</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/BP_F4IF_CREATE_FILTER</FUNCNAME>
+     <SHORT_TEXT>Erstelle Selektionsoption, welche auf Daten angewendet werden können</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IT_CHECK_PARTNERS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BUP_PARTNER_GUID_T</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_F4_TYPE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR30</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_USE_GUID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FLAG</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_SELOPTS_PARTNER</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BUS_PARTNER_RANGE_T</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_SELOPTS_GUID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BUS_PARTNER_GUID_RANGE_T</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_SELOPTS_BUKRS_KNR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/THKR/T_BP_BUKRS_RANGE</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_SELOPTS_BUKRS_LIEF</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/THKR/T_BP_BUKRS_RANGE</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_SELOPTS_PARTNER_CP</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>PIQ_SELOPT_T</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_SELOPTS_PARTNER_HASH</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/THKR/T_BP_SHLP_HASH</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_SELOPTS</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_CHECK_PARTNERS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabellentyp für Partnernummer und Partner-GUID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_F4_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Welche Art der Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_USE_GUID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Benutzer GUID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_SELOPTS_PARTNER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>GP: Ranges Tabelle für BU_PARTNER</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_SELOPTS_GUID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>GP: Ranges Tabelle für BU_PARTNER_GUID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_SELOPTS_BUKRS_KNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabellentyp Buchungskreis GP-Suche</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_SELOPTS_BUKRS_LIEF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabellentyp Buchungskreis GP-Suche</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_SELOPTS_PARTNER_CP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Select options</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_SELOPTS_PARTNER_HASH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabellentyp für GP Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_SELOPTS</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Keine Einschränkungen vorhanden</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/BP_F4IF_SHLP_EXIT_DEBI</FUNCNAME>
+     <SHORT_TEXT>Exit für Debitor-Suchhilfe</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SHLP</PARAMETER>
+       <TYP>SHLP_DESCR</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <DBFIELD>DDSHF4CTRL</DBFIELD>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <TYP>SHLP_DESCT</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <DBSTRUCT>SEAHLPRES</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der elementaren Suchhilfen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trefferliste</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Einzelne (aktuelle) Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steuerung des F4-Ablaufs</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/BP_F4IF_SHLP_EXIT_DISP</FUNCNAME>
+     <SHORT_TEXT>generelle Suchhilfe für BP</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_PARAM</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR30</TYP>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SHLP</PARAMETER>
+       <TYP>SHLP_DESCR</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <DBFIELD>DDSHF4CTRL</DBFIELD>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <TYP>SHLP_DESCT</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <DBSTRUCT>SEAHLPRES</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_PARAM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Parameter für Partner in der Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der elementaren Suchhilfen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trefferliste</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Einzelne (aktuelle) Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steuerung des F4-Ablaufs</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/BP_F4IF_SHLP_EXIT_GP</FUNCNAME>
+     <SHORT_TEXT>Exit für Geschäftspartner-Suchhilfen</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SHLP</PARAMETER>
+       <TYP>SHLP_DESCR</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <DBFIELD>DDSHF4CTRL</DBFIELD>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <TYP>SHLP_DESCT</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <DBSTRUCT>SEAHLPRES</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der elementaren Suchhilfen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trefferliste</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Einzelne (aktuelle) Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steuerung des F4-Ablaufs</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/BP_F4IF_SHLP_EXIT_KRED</FUNCNAME>
+     <SHORT_TEXT>Exit für Kreditor-Suchhilfen</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SHLP</PARAMETER>
+       <TYP>SHLP_DESCR</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <DBFIELD>DDSHF4CTRL</DBFIELD>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <TYP>SHLP_DESCT</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <DBSTRUCT>SEAHLPRES</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der elementaren Suchhilfen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trefferliste</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Einzelne (aktuelle) Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steuerung des F4-Ablaufs</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/BUS_SHLP_EXIT1</FUNCNAME>
+     <SHORT_TEXT>Suchhilfe-Exit für Sammelsuchhilfen</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SHLP</PARAMETER>
+       <TYP>SHLP_DESCR_T</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <DBFIELD>DDSHF4CTRL</DBFIELD>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <TYP>SHLP_DESCR_TAB_T</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <DBSTRUCT>SEAHLPRES</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der elementaren Suchhilfen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trefferliste</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Einzelne (aktuelle) Suchhilfe</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Steuerung des F4-Ablaufs</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>TABLEFRAME_/THKR/BP_SHLP</FUNCNAME>
+     <SHORT_TEXT>erweiterte Tabellenpflege obere Ebene</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>VIEW_ACTION</PARAMETER>
+       <DEFAULT>&apos;S&apos;</DEFAULT>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VIEW_NAME</PARAMETER>
+       <DBFIELD>DD02V-TABNAME</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CORR_NUMBER</PARAMETER>
+       <DBFIELD>E070-TRKORR</DBFIELD>
+       <DEFAULT>&apos; &apos;</DEFAULT>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>DBA_SELLIST</PARAMETER>
+       <DBSTRUCT>VIMSELLIST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>DPL_SELLIST</PARAMETER>
+       <DBSTRUCT>VIMSELLIST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>EXCL_CUA_FUNCT</PARAMETER>
+       <DBSTRUCT>VIMEXCLFUN</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>X_HEADER</PARAMETER>
+       <DBSTRUCT>VIMDESC</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>X_NAMTAB</PARAMETER>
+       <DBSTRUCT>VIMNAMTAB</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>MISSING_CORR_NUMBER</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>VIEW_ACTION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aktion mit Tabelle: anz./änd./transp. (S/U/T)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VIEW_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name der Tabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CORR_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Korrekturnummer für durchgeführte Änderungen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DBA_SELLIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selektionsbedingungen für den DB-Zugriff</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DPL_SELLIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selektionsbedingungen für die Anzeige</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXCL_CUA_FUNCT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle mit dynam. zu deaktivierenden CUA-Funkt.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>X_HEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrollblocktabelle für die Tabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>X_NAMTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrollblocktabelle für die Tabellen-Felder</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MISSING_CORR_NUMBER</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Korrekturnummer fehlt</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>TABLEPROC_/THKR/BP_SHLP</FUNCNAME>
+     <GLOBAL_FLAG>X</GLOBAL_FLAG>
+     <SHORT_TEXT>erweiterte Tabellenpflege untere Ebene</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>FCODE</PARAMETER>
+       <DEFAULT>&apos;RDED&apos;</DEFAULT>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VIEW_ACTION</PARAMETER>
+       <DEFAULT>&apos;S&apos;</DEFAULT>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VIEW_NAME</PARAMETER>
+       <DBFIELD>DD02V-TABNAME</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CORR_NUMBER</PARAMETER>
+       <DBFIELD>E070-TRKORR</DBFIELD>
+       <DEFAULT>&apos; &apos;</DEFAULT>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>LAST_ACT_ENTRY</PARAMETER>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>UCOMM</PARAMETER>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>UPDATE_REQUIRED</PARAMETER>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>CORR_KEYTAB</PARAMETER>
+       <DBSTRUCT>E071K</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>DBA_SELLIST</PARAMETER>
+       <DBSTRUCT>VIMSELLIST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>DPL_SELLIST</PARAMETER>
+       <DBSTRUCT>VIMSELLIST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>EXCL_CUA_FUNCT</PARAMETER>
+       <DBSTRUCT>VIMEXCLFUN</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>EXTRACT</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TOTAL</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>X_HEADER</PARAMETER>
+       <DBSTRUCT>VIMDESC</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>X_NAMTAB</PARAMETER>
+       <DBSTRUCT>VIMNAMTAB</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>MISSING_CORR_NUMBER</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>SAVING_CORRECTION_FAILED</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>FCODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>gewünschte Funktion des Bausteins</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VIEW_ACTION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aktion mit Tabelle: anz./änd./transp. (S/U/T)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VIEW_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name der Tabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CORR_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Korrekturnummer für durchgeführte Änderungen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LAST_ACT_ENTRY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Index der Cursorposition in der Anzeigetabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UCOMM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>letztes User-command innerhalb der Viewpflege</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UPDATE_REQUIRED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Flag: Einträge verändert, Sichern erforderlich</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CORR_KEYTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle mit den Keys der zu transport. Einträge</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DBA_SELLIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selektionsbedingungen für den DB-Zugriff</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DPL_SELLIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selektionsbedingungen für die Anzeige</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXCL_CUA_FUNCT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tab. der nicht zu aktivierenden CUA-Funktionen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXTRACT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tab. der gerade sichtbaren Daten (Anzeigetabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TOTAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle, mit allen von der DB gelesenen Daten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>X_HEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrollblocktabelle für die Tabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>X_NAMTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrollblocktabelle für die Tabellen-Felder</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MISSING_CORR_NUMBER</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Korrekturnummer fehlt</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SAVING_CORRECTION_FAILED</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Fehler beim Sichern der Korrektureinträge</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>/THKR/SAPLBP_SHLP</PROGRAM>
+      <SCREEN>0001</SCREEN>
+      <LANGUAGE>D</LANGUAGE>
+      <DESCRIPT>Viewpflege: Übersichtsbild /THKR/CBPF4STDEX</DESCRIPT>
+      <TYPE>N</TYPE>
+      <NEXTSCREEN>0001</NEXTSCREEN>
+      <LINES>061</LINES>
+      <COLUMNS>255</COLUMNS>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+      <RPY_DYCATT>
+       <TYPE>TABLE_CTRL</TYPE>
+       <NAME>TCTRL_/THKR/CBPF4STDEX</NAME>
+       <ELEMENT_OF>SCREEN</ELEMENT_OF>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>255</LENGTH>
+       <HEIGHT>059</HEIGHT>
+       <C_RESIZE_V>X</C_RESIZE_V>
+       <C_RESIZE_H>X</C_RESIZE_H>
+       <C_SCROLL_V>X</C_SCROLL_V>
+       <C_SCROLL_H>X</C_SCROLL_H>
+       <TC_TABTYPE>ENTRY</TC_TABTYPE>
+       <TC_SEPAR_V>X</TC_SEPAR_V>
+       <TC_SEPAR_H>X</TC_SEPAR_H>
+       <TC_TITLE>X</TC_TITLE>
+       <TC_HEADER>X</TC_HEADER>
+       <TC_CONFIG>X</TC_CONFIG>
+       <TC_SEL_LNS>MULTIPLE</TC_SEL_LNS>
+       <TC_SEL_CLS>NONE</TC_SEL_CLS>
+       <TC_LSEL_CL>X</TC_LSEL_CL>
+       <TC_FIXCOL>001</TC_FIXCOL>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>PUSH_TMPL</TYPE>
+       <NAME>VIM_POSI_PUSH</NAME>
+       <TEXT>____________________</TEXT>
+       <LINE>061</LINE>
+       <COLUMN>019</COLUMN>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <PUSH_FCODE>POSI</PUSH_FCODE>
+       <FORMAT>CHAR</FORMAT>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <REQU_ENTRY>N</REQU_ENTRY>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>VIM_POSITION_INFO</NAME>
+       <TEXT>______________________________</TEXT>
+       <LINE>061</LINE>
+       <COLUMN>040</COLUMN>
+       <LENGTH>030</LENGTH>
+       <VISLENGTH>030</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <UP_LOWER>X</UP_LOWER>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <OUTPUTONLY>X</OUTPUTONLY>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <_--32_DIMENS>X</_--32_DIMENS>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <NAME>OK_CODE</NAME>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/CBPF4STDEX</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>VIM_FRAME_FIELD</NAME>
+       <TEXT>____________________________________________________________</TEXT>
+       <LINE>001</LINE>
+       <LENGTH>060</LENGTH>
+       <VISLENGTH>060</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <UP_LOWER>X</UP_LOWER>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_TITLE>X</TC_TITLE>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/CBPF4STDEX</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/CBPF4STDEX-SUCHHILFE</NAME>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>040</LENGTH>
+       <VISLENGTH>030</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/CBPF4STDEX</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/CBPF4STDEX-EXIT_NAME</NAME>
+       <LINE>001</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>040</LENGTH>
+       <VISLENGTH>030</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>V</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/CBPF4STDEX</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/CBPF4STDEX-PARTNERTYP</NAME>
+       <TEXT>Geschäftspartnerart__________________________________</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>003</COLUMN>
+       <LENGTH>053</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>F</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/CBPF4STDEX</CONT_NAME>
+       <TYPE>CHECK</TYPE>
+       <NAME>VIM_MARKED</NAME>
+       <LINE>001</LINE>
+       <LENGTH>001</LENGTH>
+       <VISLENGTH>001</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <TC_SELCOL>X</TC_SELCOL>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/CBPF4STDEX</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/THKR/CBPF4STDEX-SUCHHILFE</NAME>
+       <TEXT>______________________________</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>030</LENGTH>
+       <VISLENGTH>030</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <GROUP1>KEY</GROUP1>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <PARAM_ID>SHLP</PARAM_ID>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <REQU_ENTRY>N</REQU_ENTRY>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/CBPF4STDEX</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/THKR/CBPF4STDEX-EXIT_NAME</NAME>
+       <TEXT>______________________________</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>030</LENGTH>
+       <VISLENGTH>030</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/CBPF4STDEX</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/THKR/CBPF4STDEX-PARTNERTYP</NAME>
+       <TEXT>____________________</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>003</COLUMN>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+    </item>
+   </DYNPROS>
+   <LONGTEXTS__-THKR_-BP_F4IF_CLASS_STD_EXIT>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_CLASS_STD_EXIT</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00018</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_CLASS_STD_EXIT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieser Baustein dient nur als Beispiel für die Schnittstelle und die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Gestaltung von &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Suchhilfe-Exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Suchhilfen&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Alle hier definierten Schnittstellenparameter sind für einen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Funktionsbaustein, der als Suchhilfe-Exit dienen soll, obligatorisch,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>weil der Rufer des Bausteins nicht weiß, welche Parameter intern</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wirklich benutzt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ein Suchhilfe-Exit wird zu mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkten&lt;/&gt; während des F4-Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aufgerufen. In CALLCONTROL-STEP wird der jeweilige Schritt des Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>mitgegeben. Wenn der Baustein nur einige Modifikationen vor dem Schritt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>durchführen möchte, sollte CALLCONTROL-STEP unverändert bleiben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn der Schritt dagegen vollständig von dem Baustein übernommen wird,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>muß in CALLCONTROL-STEP der Folgeschritt zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beachten Sie hierzu bitte die ausführliche Dokumentation zum Konzept</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Suchhilfe-Exits.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Baustein muß auf alle Schritte, die er nicht kennt, bzw. die er</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>nicht behandeln will, mit einem sofortigen EXIT reagieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_CLASS_STD_EXIT</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <TXTLINES>00017</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_CLASS_STD_EXIT</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This module has been created as an example for the interface and design</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Search help exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Search help&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>All the interface parameters defined here are mandatory for a function</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>module to be used as a search help exit, because the calling program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>does not know which parameters are actually used internally.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>A search help exit is called repeatedly in connection with several</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;events&lt;/&gt; during the F4 process. The relevant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>step of the process is passed on in the CALLCONTROL step. If the module</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is intended to perform only a few modifications before the step,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>CALLCONTROL-STEP should remain unchanged.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>However, if the step is performed completely by the module, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following step must be returned in CALLCONTROL-STEP.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>For more detailed information please refer to the documentation</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>describing the concept of the search help exit.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The module must react with an immediate EXIT to all steps that it does</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>not know or does not want to handle.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_CLASS_STD_EXIT  RECORD_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00006</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_CLASS_STD_EXIT  RECORD_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Selektion vom Suchhilfe-Exit übernommen wird (Step</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELECT), muß die Trefferliste in interner Darstellung in dieser Tabelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Anzeige vom Suchhilfe-Exit übernommen wird (Step DISP),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird die Trefferliste in dieser Tabelle in interner Darstellung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>übergeben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_CLASS_STD_EXIT  SHLP</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00008</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_CLASS_STD_EXIT  SHLP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Aktuelle Suchhilfe vom Typ</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt; SELONE wird die direkt dem Feld</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zugeordnete Suchhilfe übergeben. Dabei kann es sich auch um eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sammelsuchhilfe handeln. Die zugehörigen elementaren Suchhilfen stehen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in SHLP_TAB. Zu allen späteren Zeitpunkten wird die elementare</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe übergeben, die entweder im Dialog ausgewählt wurde, oder von</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anfang an direkt dem Feld zugeordnet war.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_CLASS_STD_EXIT  SHLP_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0005</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00016</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_CLASS_STD_EXIT  SHLP_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00005</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Diese Tabelle ist vor allem für den &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELONE (Selektion einer elementaren Suchhilfe aus mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Möglichkeiten) relevant.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sie enthält pro Zeile die vollständige Beschreibung einer elementaren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe (Zeilentyp ist</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;). Die Anzahl elementarer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfen, kann durch Manipulation von SHLP_TAB eingeschränkt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Als Folgeschritt kann in der Regel SELONE beibehalten werden. Dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Benutzer wird dann die eingeschränkte Menge elementarer Suchhilfen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zur Auswahl angeboten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum Zeitpunkt SELONE steht die zugehörige Sammelsuchhilfe im Parameter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SHLP zur Verfügung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Nur wenn zum Zeitpunkt SELONE mehr als ein Eintrag in SHLP_TAB</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verbleibt aber trotzdem das Auswahlpopup nicht angezeigt werden soll,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sollte der Folgeschritt auf PRESEL1 geändert werden. Die zu benutzende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe ist dann vorab aus SHLP_TAB in SHLP zu übertragen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-BP_F4IF_CLASS_STD_EXIT>
+   <LONGTEXTS__-THKR_-BP_F4IF_SHLP_EXIT_DEBI>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DEBI</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00018</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DEBI</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieser Baustein dient nur als Beispiel für die Schnittstelle und die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Gestaltung von &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Suchhilfe-Exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Suchhilfen&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Alle hier definierten Schnittstellenparameter sind für einen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Funktionsbaustein, der als Suchhilfe-Exit dienen soll, obligatorisch,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>weil der Rufer des Bausteins nicht weiß, welche Parameter intern</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wirklich benutzt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ein Suchhilfe-Exit wird zu mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkten&lt;/&gt; während des F4-Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aufgerufen. In CALLCONTROL-STEP wird der jeweilige Schritt des Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>mitgegeben. Wenn der Baustein nur einige Modifikationen vor dem Schritt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>durchführen möchte, sollte CALLCONTROL-STEP unverändert bleiben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn der Schritt dagegen vollständig von dem Baustein übernommen wird,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>muß in CALLCONTROL-STEP der Folgeschritt zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beachten Sie hierzu bitte die ausführliche Dokumentation zum Konzept</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Suchhilfe-Exits.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Baustein muß auf alle Schritte, die er nicht kennt, bzw. die er</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>nicht behandeln will, mit einem sofortigen EXIT reagieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DEBI</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <TXTLINES>00017</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DEBI</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This module has been created as an example for the interface and design</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Search help exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Search help&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>All the interface parameters defined here are mandatory for a function</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>module to be used as a search help exit, because the calling program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>does not know which parameters are actually used internally.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>A search help exit is called repeatedly in connection with several</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;events&lt;/&gt; during the F4 process. The relevant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>step of the process is passed on in the CALLCONTROL step. If the module</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is intended to perform only a few modifications before the step,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>CALLCONTROL-STEP should remain unchanged.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>However, if the step is performed completely by the module, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following step must be returned in CALLCONTROL-STEP.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>For more detailed information please refer to the documentation</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>describing the concept of the search help exit.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The module must react with an immediate EXIT to all steps that it does</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>not know or does not want to handle.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DEBI  RECORD_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00006</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DEBI  RECORD_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Selektion vom Suchhilfe-Exit übernommen wird (Step</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELECT), muß die Trefferliste in interner Darstellung in dieser Tabelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Anzeige vom Suchhilfe-Exit übernommen wird (Step DISP),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird die Trefferliste in dieser Tabelle in interner Darstellung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>übergeben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DEBI  SHLP</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00008</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DEBI  SHLP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Aktuelle Suchhilfe vom Typ</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt; SELONE wird die direkt dem Feld</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zugeordnete Suchhilfe übergeben. Dabei kann es sich auch um eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sammelsuchhilfe handeln. Die zugehörigen elementaren Suchhilfen stehen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in SHLP_TAB. Zu allen späteren Zeitpunkten wird die elementare</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe übergeben, die entweder im Dialog ausgewählt wurde, oder von</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anfang an direkt dem Feld zugeordnet war.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DEBI  SHLP_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0005</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00016</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DEBI  SHLP_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00005</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Diese Tabelle ist vor allem für den &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELONE (Selektion einer elementaren Suchhilfe aus mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Möglichkeiten) relevant.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sie enthält pro Zeile die vollständige Beschreibung einer elementaren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe (Zeilentyp ist</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;). Die Anzahl elementarer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfen, kann durch Manipulation von SHLP_TAB eingeschränkt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Als Folgeschritt kann in der Regel SELONE beibehalten werden. Dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Benutzer wird dann die eingeschränkte Menge elementarer Suchhilfen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zur Auswahl angeboten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum Zeitpunkt SELONE steht die zugehörige Sammelsuchhilfe im Parameter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SHLP zur Verfügung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Nur wenn zum Zeitpunkt SELONE mehr als ein Eintrag in SHLP_TAB</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verbleibt aber trotzdem das Auswahlpopup nicht angezeigt werden soll,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sollte der Folgeschritt auf PRESEL1 geändert werden. Die zu benutzende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe ist dann vorab aus SHLP_TAB in SHLP zu übertragen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-BP_F4IF_SHLP_EXIT_DEBI>
+   <LONGTEXTS__-THKR_-BP_F4IF_SHLP_EXIT_DISP>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DISP</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00018</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DISP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieser Baustein dient nur als Beispiel für die Schnittstelle und die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Gestaltung von &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Suchhilfe-Exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Suchhilfen&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Alle hier definierten Schnittstellenparameter sind für einen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Funktionsbaustein, der als Suchhilfe-Exit dienen soll, obligatorisch,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>weil der Rufer des Bausteins nicht weiß, welche Parameter intern</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wirklich benutzt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ein Suchhilfe-Exit wird zu mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkten&lt;/&gt; während des F4-Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aufgerufen. In CALLCONTROL-STEP wird der jeweilige Schritt des Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>mitgegeben. Wenn der Baustein nur einige Modifikationen vor dem Schritt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>durchführen möchte, sollte CALLCONTROL-STEP unverändert bleiben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn der Schritt dagegen vollständig von dem Baustein übernommen wird,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>muß in CALLCONTROL-STEP der Folgeschritt zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beachten Sie hierzu bitte die ausführliche Dokumentation zum Konzept</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Suchhilfe-Exits.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Baustein muß auf alle Schritte, die er nicht kennt, bzw. die er</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>nicht behandeln will, mit einem sofortigen EXIT reagieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DISP</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <TXTLINES>00017</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DISP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This module has been created as an example for the interface and design</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Search help exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Search help&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>All the interface parameters defined here are mandatory for a function</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>module to be used as a search help exit, because the calling program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>does not know which parameters are actually used internally.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>A search help exit is called repeatedly in connection with several</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;events&lt;/&gt; during the F4 process. The relevant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>step of the process is passed on in the CALLCONTROL step. If the module</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is intended to perform only a few modifications before the step,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>CALLCONTROL-STEP should remain unchanged.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>However, if the step is performed completely by the module, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following step must be returned in CALLCONTROL-STEP.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>For more detailed information please refer to the documentation</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>describing the concept of the search help exit.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The module must react with an immediate EXIT to all steps that it does</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>not know or does not want to handle.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DISP  RECORD_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00006</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DISP  RECORD_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Selektion vom Suchhilfe-Exit übernommen wird (Step</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELECT), muß die Trefferliste in interner Darstellung in dieser Tabelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Anzeige vom Suchhilfe-Exit übernommen wird (Step DISP),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird die Trefferliste in dieser Tabelle in interner Darstellung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>übergeben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DISP  SHLP</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00008</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DISP  SHLP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Aktuelle Suchhilfe vom Typ</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt; SELONE wird die direkt dem Feld</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zugeordnete Suchhilfe übergeben. Dabei kann es sich auch um eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sammelsuchhilfe handeln. Die zugehörigen elementaren Suchhilfen stehen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in SHLP_TAB. Zu allen späteren Zeitpunkten wird die elementare</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe übergeben, die entweder im Dialog ausgewählt wurde, oder von</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anfang an direkt dem Feld zugeordnet war.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_DISP  SHLP_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0005</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00016</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_DISP  SHLP_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00005</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Diese Tabelle ist vor allem für den &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELONE (Selektion einer elementaren Suchhilfe aus mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Möglichkeiten) relevant.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sie enthält pro Zeile die vollständige Beschreibung einer elementaren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe (Zeilentyp ist</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;). Die Anzahl elementarer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfen, kann durch Manipulation von SHLP_TAB eingeschränkt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Als Folgeschritt kann in der Regel SELONE beibehalten werden. Dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Benutzer wird dann die eingeschränkte Menge elementarer Suchhilfen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zur Auswahl angeboten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum Zeitpunkt SELONE steht die zugehörige Sammelsuchhilfe im Parameter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SHLP zur Verfügung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Nur wenn zum Zeitpunkt SELONE mehr als ein Eintrag in SHLP_TAB</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verbleibt aber trotzdem das Auswahlpopup nicht angezeigt werden soll,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sollte der Folgeschritt auf PRESEL1 geändert werden. Die zu benutzende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe ist dann vorab aus SHLP_TAB in SHLP zu übertragen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-BP_F4IF_SHLP_EXIT_DISP>
+   <LONGTEXTS__-THKR_-BP_F4IF_SHLP_EXIT_GP>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_GP</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00018</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_GP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieser Baustein dient nur als Beispiel für die Schnittstelle und die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Gestaltung von &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Suchhilfe-Exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Suchhilfen&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Alle hier definierten Schnittstellenparameter sind für einen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Funktionsbaustein, der als Suchhilfe-Exit dienen soll, obligatorisch,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>weil der Rufer des Bausteins nicht weiß, welche Parameter intern</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wirklich benutzt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ein Suchhilfe-Exit wird zu mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkten&lt;/&gt; während des F4-Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aufgerufen. In CALLCONTROL-STEP wird der jeweilige Schritt des Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>mitgegeben. Wenn der Baustein nur einige Modifikationen vor dem Schritt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>durchführen möchte, sollte CALLCONTROL-STEP unverändert bleiben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn der Schritt dagegen vollständig von dem Baustein übernommen wird,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>muß in CALLCONTROL-STEP der Folgeschritt zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beachten Sie hierzu bitte die ausführliche Dokumentation zum Konzept</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Suchhilfe-Exits.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Baustein muß auf alle Schritte, die er nicht kennt, bzw. die er</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>nicht behandeln will, mit einem sofortigen EXIT reagieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_GP</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <TXTLINES>00017</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_GP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This module has been created as an example for the interface and design</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Search help exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Search help&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>All the interface parameters defined here are mandatory for a function</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>module to be used as a search help exit, because the calling program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>does not know which parameters are actually used internally.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>A search help exit is called repeatedly in connection with several</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;events&lt;/&gt; during the F4 process. The relevant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>step of the process is passed on in the CALLCONTROL step. If the module</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is intended to perform only a few modifications before the step,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>CALLCONTROL-STEP should remain unchanged.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>However, if the step is performed completely by the module, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following step must be returned in CALLCONTROL-STEP.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>For more detailed information please refer to the documentation</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>describing the concept of the search help exit.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The module must react with an immediate EXIT to all steps that it does</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>not know or does not want to handle.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_GP    RECORD_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00006</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_GP    RECORD_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Selektion vom Suchhilfe-Exit übernommen wird (Step</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELECT), muß die Trefferliste in interner Darstellung in dieser Tabelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Anzeige vom Suchhilfe-Exit übernommen wird (Step DISP),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird die Trefferliste in dieser Tabelle in interner Darstellung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>übergeben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_GP    SHLP</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00008</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_GP    SHLP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Aktuelle Suchhilfe vom Typ</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt; SELONE wird die direkt dem Feld</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zugeordnete Suchhilfe übergeben. Dabei kann es sich auch um eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sammelsuchhilfe handeln. Die zugehörigen elementaren Suchhilfen stehen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in SHLP_TAB. Zu allen späteren Zeitpunkten wird die elementare</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe übergeben, die entweder im Dialog ausgewählt wurde, oder von</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anfang an direkt dem Feld zugeordnet war.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_GP    SHLP_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0005</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00016</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_GP    SHLP_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00005</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Diese Tabelle ist vor allem für den &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELONE (Selektion einer elementaren Suchhilfe aus mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Möglichkeiten) relevant.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sie enthält pro Zeile die vollständige Beschreibung einer elementaren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe (Zeilentyp ist</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;). Die Anzahl elementarer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfen, kann durch Manipulation von SHLP_TAB eingeschränkt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Als Folgeschritt kann in der Regel SELONE beibehalten werden. Dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Benutzer wird dann die eingeschränkte Menge elementarer Suchhilfen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zur Auswahl angeboten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum Zeitpunkt SELONE steht die zugehörige Sammelsuchhilfe im Parameter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SHLP zur Verfügung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Nur wenn zum Zeitpunkt SELONE mehr als ein Eintrag in SHLP_TAB</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verbleibt aber trotzdem das Auswahlpopup nicht angezeigt werden soll,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sollte der Folgeschritt auf PRESEL1 geändert werden. Die zu benutzende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe ist dann vorab aus SHLP_TAB in SHLP zu übertragen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-BP_F4IF_SHLP_EXIT_GP>
+   <LONGTEXTS__-THKR_-BP_F4IF_SHLP_EXIT_KRED>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_KRED</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00018</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_KRED</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Dieser Baustein dient nur als Beispiel für die Schnittstelle und die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Gestaltung von &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Suchhilfe-Exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Suchhilfen&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Alle hier definierten Schnittstellenparameter sind für einen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Funktionsbaustein, der als Suchhilfe-Exit dienen soll, obligatorisch,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>weil der Rufer des Bausteins nicht weiß, welche Parameter intern</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wirklich benutzt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ein Suchhilfe-Exit wird zu mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkten&lt;/&gt; während des F4-Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>aufgerufen. In CALLCONTROL-STEP wird der jeweilige Schritt des Ablaufs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>mitgegeben. Wenn der Baustein nur einige Modifikationen vor dem Schritt</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>durchführen möchte, sollte CALLCONTROL-STEP unverändert bleiben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn der Schritt dagegen vollständig von dem Baustein übernommen wird,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>muß in CALLCONTROL-STEP der Folgeschritt zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beachten Sie hierzu bitte die ausführliche Dokumentation zum Konzept</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>der Suchhilfe-Exits.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Baustein muß auf alle Schritte, die er nicht kennt, bzw. die er</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>nicht behandeln will, mit einem sofortigen EXIT reagieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_KRED</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0004</VERSION>
+      <TXTLINES>00017</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_KRED</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This module has been created as an example for the interface and design</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of &lt;DS:TX.DDDOK_SHLP_EXIT&gt;Search help exits&lt;/&gt; in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SEARCHHELP&gt;Search help&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>All the interface parameters defined here are mandatory for a function</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>module to be used as a search help exit, because the calling program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>does not know which parameters are actually used internally.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>A search help exit is called repeatedly in connection with several</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_STEP&gt;events&lt;/&gt; during the F4 process. The relevant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>step of the process is passed on in the CALLCONTROL step. If the module</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is intended to perform only a few modifications before the step,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>CALLCONTROL-STEP should remain unchanged.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>However, if the step is performed completely by the module, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following step must be returned in CALLCONTROL-STEP.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>For more detailed information please refer to the documentation</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>describing the concept of the search help exit.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The module must react with an immediate EXIT to all steps that it does</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>not know or does not want to handle.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_KRED  RECORD_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0003</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00006</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_KRED  RECORD_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00003</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Selektion vom Suchhilfe-Exit übernommen wird (Step</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELECT), muß die Trefferliste in interner Darstellung in dieser Tabelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zurückgegeben werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn die Daten-Anzeige vom Suchhilfe-Exit übernommen wird (Step DISP),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird die Trefferliste in dieser Tabelle in interner Darstellung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>übergeben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_KRED  SHLP</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00008</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_KRED  SHLP</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Aktuelle Suchhilfe vom Typ</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt; SELONE wird die direkt dem Feld</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zugeordnete Suchhilfe übergeben. Dabei kann es sich auch um eine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sammelsuchhilfe handeln. Die zugehörigen elementaren Suchhilfen stehen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in SHLP_TAB. Zu allen späteren Zeitpunkten wird die elementare</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe übergeben, die entweder im Dialog ausgewählt wurde, oder von</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anfang an direkt dem Feld zugeordnet war.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/BP_F4IF_SHLP_EXIT_KRED  SHLP_TAB</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0005</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00016</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/BP_F4IF_SHLP_EXIT_KRED  SHLP_TAB</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00005</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;MEANING&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Diese Tabelle ist vor allem für den &lt;DS:TX.DDDOK_SHLP_STEP&gt;Zeitpunkt&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SELONE (Selektion einer elementaren Suchhilfe aus mehreren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Möglichkeiten) relevant.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sie enthält pro Zeile die vollständige Beschreibung einer elementaren</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe (Zeilentyp ist</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TX.DDDOK_SHLP_SHLP_DESCR_T&gt;SHLP_DESCR_T&lt;/&gt;). Die Anzahl elementarer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfen, kann durch Manipulation von SHLP_TAB eingeschränkt werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Als Folgeschritt kann in der Regel SELONE beibehalten werden. Dem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Benutzer wird dann die eingeschränkte Menge elementarer Suchhilfen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zur Auswahl angeboten.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Zum Zeitpunkt SELONE steht die zugehörige Sammelsuchhilfe im Parameter</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SHLP zur Verfügung.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Nur wenn zum Zeitpunkt SELONE mehr als ein Eintrag in SHLP_TAB</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verbleibt aber trotzdem das Auswahlpopup nicht angezeigt werden soll,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sollte der Folgeschritt auf PRESEL1 geändert werden. Die zu benutzende</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Suchhilfe ist dann vorab aus SHLP_TAB in SHLP zu übertragen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RANGE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DEFAULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-BP_F4IF_SHLP_EXIT_KRED>
+  </asx:values>
+ </asx:abap>
+</abapGit>

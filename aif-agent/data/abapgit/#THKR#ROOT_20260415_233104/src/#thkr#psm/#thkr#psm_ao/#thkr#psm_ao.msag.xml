@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/PSM_AO</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Nachrichten des AO Pakets</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_AO</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Fehler Prüfung Anordung: &amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_AO</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>AO kann nicht geändert werden. Kein vorerfasster Beleg.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_AO</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Fehlende Angaben zur Ratengenerierung.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/PSM_AO</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Methode nur für Ratenstundung erlaubt.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

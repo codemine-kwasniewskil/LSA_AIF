@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_KASSENZEICHEN</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Anlegen/Prüfen Kassenzeichen</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kassenzeichen prüfen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kassenzeichen generieren/anlegen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_PRUEFZIFFER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfziffer ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK</CMPNAME>
+     <SCONAME>E_PRUEFZIFFER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK</CMPNAME>
+     <SCONAME>E_RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einstelliges Kennzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK</CMPNAME>
+     <SCONAME>IS_KASS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Gültigkeit Kassenzeichen pro Belegart</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK</CMPNAME>
+     <SCONAME>I_XBLNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Referenz-Belegnummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>E_KAZ</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kassenzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>E_RC</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Returncode</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>I_FONDS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fonds</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>I_GSBER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Geschäftsbereich</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE</CMPNAME>
+     <SCONAME>I_NRNR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nummernkreisnummer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_PRUEFZIFFER</CMPNAME>
+     <SCONAME>E_PRUEFZIFFER</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfziffer</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_PRUEFZIFFER</CMPNAME>
+     <SCONAME>I_KAZ</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kassenzeichen</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

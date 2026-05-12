@@ -1,0 +1,193 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xbruecke="xbruecke" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+  <xsl:output encoding="UTF-8" indent="yes" method="xml"/>
+
+  <!-- root element -->
+  <xsl:template match="/">
+    <asx:abap xmlns:asx="http://www.sap.com/abapxml">
+      <asx:values>
+        <FILE>
+          <T_BRUECKE>
+            <_-THKR_-S_AIF_RAW_BRUECKE>
+              <!-- xbruecke:dateiinformationen - Metadaten zur Zahlungsdatei -->
+              <ERSTELLUNGSDATUM>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:dateiinformationen/xbruecke:erstellungsdatum"/>
+              </ERSTELLUNGSDATUM>
+              <VERFAHRENSKENNUNG>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:dateiinformationen/xbruecke:verfahrenskennung"/>
+              </VERFAHRENSKENNUNG>
+              <ZAHLUNGSDATEIID>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:dateiinformationen/xbruecke:zahlungsdateiID"/>
+              </ZAHLUNGSDATEIID>
+              <ANZAHLAUSZAHLUNGEN>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:dateiinformationen/xbruecke:anzahlAuszahlungen"/>
+              </ANZAHLAUSZAHLUNGEN>
+              <GESAMTSUMMEAUSZAHLUNGEN>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:dateiinformationen/xbruecke:gesamtsummeAuszahlungen"/>
+              </GESAMTSUMMEAUSZAHLUNGEN>
+              <HASH>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:dateiinformationen/xbruecke:hashBewilligungsdatenGesamtSha256"/>
+              </HASH>
+
+              <!-- xbruecke:stammdaten - Vom Zahlungsverantwortlichen verwaltete Stammdaten (Antragsteller-übergreifend) -->
+              <VERWENDUNGSZWECK>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:stammdaten/xbruecke:verwendungszweck"/>
+              </VERWENDUNGSZWECK>
+              <KOSTENSTELLE>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:stammdaten/xbruecke:kostenstelle"/>
+              </KOSTENSTELLE>
+              <KOSTENTRAEGER>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:stammdaten/xbruecke:kostentraeger"/>
+              </KOSTENTRAEGER>
+              <UEBERWEISUNGSNUMMER>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:stammdaten/xbruecke:ueberweisungsnummer"/>
+              </UEBERWEISUNGSNUMMER>
+              <GEGENKONTO>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:stammdaten/xbruecke:gegenkonto"/>
+              </GEGENKONTO>
+              <HAUSHALTSTITEL>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:stammdaten/xbruecke:haushaltstitel"/>
+              </HAUSHALTSTITEL>
+              <AKTENZEICHEN>
+                <xsl:value-of select="xbruecke:zahlungsanweisungen.anweisung.0001/xbruecke:stammdaten/xbruecke:aktenzeichen"/>
+              </AKTENZEICHEN>
+
+              <!-- Tabelle <xbruecke:zahlungsdaten> - Zahlungsdaten-Block für den ersten Antragsteller -->
+              <T_ZAHLUNGSDATEN>
+                <xsl:for-each select="//xbruecke:zahlungsdaten">
+                  <_-THKR_-S_AIF_RAW_ZAHLUNGSDATEN>
+                    <!-- xbruecke:antragsdaten - Antragstellerdaten aus dem Antrag -->
+                    <ANTRAGSNUMMER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:antragsnummer"/>
+                    </ANTRAGSNUMMER>
+                    <ANREDE>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:anrede"/>
+                    </ANREDE>
+                    <TITEL>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:titel"/>
+                    </TITEL>
+                    <VORNAME>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:vorname"/>
+                    </VORNAME>
+                    <FAMILIENNAME>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:familienname"/>
+                    </FAMILIENNAME>
+                    <UNTERNEHMENSNAME>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:unternehmensname"/>
+                    </UNTERNEHMENSNAME>
+                    <RECHTSFORM>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:rechtsform"/>
+                    </RECHTSFORM>
+                    <BRANCHE>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:branche"/>
+                    </BRANCHE>
+                    <HANDELSREGISTERNUMMER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:handelsregisternummer"/>
+                    </HANDELSREGISTERNUMMER>
+                    <STEUERNUMMER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:steuernummer"/>
+                    </STEUERNUMMER>
+                    <STEUERLICHEIDENTIFIKATIONSNUMM>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:steuerlicheIdentifikationsnummer"/>
+                    </STEUERLICHEIDENTIFIKATIONSNUMM>
+                    <UMSATZSTEUERID>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:umsatzsteuerId"/>
+                    </UMSATZSTEUERID>
+                    <ZUSTAENDIGESFINANZAMT>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:zustaendigesFinanzamt"/>
+                    </ZUSTAENDIGESFINANZAMT>
+                    <STRASSE>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:strasse"/>
+                    </STRASSE>
+                    <HAUSNUMMER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:hausnummer"/>
+                    </HAUSNUMMER>
+                    <BRANCHENSCHLUESSEL>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:branchenschluessel"/>
+                    </BRANCHENSCHLUESSEL>
+                    <POSTLEITZAHL>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:postleitzahl"/>
+                    </POSTLEITZAHL>
+                    <ORT>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:ort"/>
+                    </ORT>
+                    <LANDKREIS>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:landkreis"/>
+                    </LANDKREIS>
+                    <BUNDESLAND>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:bundesland"/>
+                    </BUNDESLAND>
+                    <TELEFONNUMMER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:telefonnummer"/>
+                    </TELEFONNUMMER>
+                    <FAXNUMMER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:faxnummer"/>
+                    </FAXNUMMER>
+                    <EMAILADRESSE>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:emailadresse"/>
+                    </EMAILADRESSE>
+                    <KONTOINHABER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:kontoinhaber"/>
+                    </KONTOINHABER>
+                    <IBAN>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:iban"/>
+                    </IBAN>
+                    <BIC>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:bic"/>
+                    </BIC>
+                    <KREDITINSTITUT>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:kreditinstitut"/>
+                    </KREDITINSTITUT>
+                    <KUNDENNUMMER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:kundennummer"/>
+                    </KUNDENNUMMER>
+                    <VORGANGSNUMMER>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:vorgangsnummer"/>
+                    </VORGANGSNUMMER>
+                    <REFERENZERSTANTRAG>
+                      <xsl:value-of select="xbruecke:antragsdaten/xbruecke:referenzErstantrag"/>
+                    </REFERENZERSTANTRAG>
+
+                    <!-- xbruecke:foerderdaten - Angaben zur Förderung, z.B. Förderhöhe und Herkunft der Mittel -->
+                    <ANTRAGSDATUM>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:antragsdatum"/>
+                    </ANTRAGSDATUM>
+                    <BEWILLIGUNGSDATUM>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:bewilligungsdatum"/>
+                    </BEWILLIGUNGSDATUM>
+                    <VERBLEIBENDEGESAMTFOERDERHOEHE>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:verbleibendeGesamtfoerderhoehe"/>
+                    </VERBLEIBENDEGESAMTFOERDERHOEHE>
+                    <NAMELAENDERSPEZIFISCHESPROGRAM>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:nameLaenderspezifischesProgramm"/>
+                    </NAMELAENDERSPEZIFISCHESPROGRAM>
+                    <BETRAGLAENDERSPEZIFISCHESPROGR>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:betragLaenderspezifischesProgramm"/>
+                    </BETRAGLAENDERSPEZIFISCHESPROGR>
+                    <NAMEBUNDESPROGRAMM>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:nameBundesprogramm"/>
+                    </NAMEBUNDESPROGRAMM>
+                    <BETRAGBUNDESPROGRAMM>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:betragBundesprogramm"/>
+                    </BETRAGBUNDESPROGRAMM>
+                    <AUSZAHLUNGSBETRAG>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:auszahlungsbetrag"/>
+                    </AUSZAHLUNGSBETRAG>
+                    <WAEHRUNG>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:waehrung"/>
+                    </WAEHRUNG>
+                    <AUSZAHLUNGSGRUND>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:auszahlungsgrund"/>
+                    </AUSZAHLUNGSGRUND>
+                    <HASHBEWILLIGUNGSDATENSHA256>
+                      <xsl:value-of select="xbruecke:foerderdaten/xbruecke:hashBewilligungsdatenSha256"/>
+                    </HASHBEWILLIGUNGSDATENSHA256>
+                  </_-THKR_-S_AIF_RAW_ZAHLUNGSDATEN>
+                </xsl:for-each>
+              </T_ZAHLUNGSDATEN>
+            </_-THKR_-S_AIF_RAW_BRUECKE>
+          </T_BRUECKE>
+        </FILE>
+      </asx:values>
+    </asx:abap>
+  </xsl:template>
+</xsl:stylesheet>

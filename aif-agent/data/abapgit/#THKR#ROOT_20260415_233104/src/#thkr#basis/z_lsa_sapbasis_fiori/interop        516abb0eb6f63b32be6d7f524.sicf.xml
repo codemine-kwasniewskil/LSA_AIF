@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SICF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <URL>/sap/opu/odata/ui2/interop/</URL>
+   <ICFSERVICE>
+    <ICF_NAME>INTEROP</ICF_NAME>
+    <ICF_LANGU>D</ICF_LANGU>
+    <KIND401>Y</KIND401>
+    <FALLTHRU>X</FALLTHRU>
+    <SYSLOG401>X</SYSLOG401>
+    <LOG_FLAG>X</LOG_FLAG>
+    <LOG_ORDER>AUTH_SERVI,AUTH_SSO,AUTH_ASSERT,AUTH_BASIC,AUTH_SAP,AUTH_SAMLBEARER,OB,AUTH_SPNEGO,AUTH_SAML,OI,AUTH_CERT,AUTH_FIELD</LOG_ORDER>
+    <LOGIN_PROCESS>L</LOGIN_PROCESS>
+    <ORIG_NAME>interop</ORIG_NAME>
+    <ICFALTNME>INTEROP</ICFALTNME>
+    <ICFALTNME_ORIG>interop</ICFALTNME_ORIG>
+   </ICFSERVICE>
+   <ICFHANDLER_TABLE>
+    <ICFHANDLER>
+     <ICF_NAME>INTEROP</ICF_NAME>
+     <ICFORDER>01</ICFORDER>
+     <ICFTYP>A</ICFTYP>
+     <ICFHANDLER>/IWFND/CL_SODATA_HTTP_HANDLER</ICFHANDLER>
+    </ICFHANDLER>
+   </ICFHANDLER_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

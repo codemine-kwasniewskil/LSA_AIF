@@ -1,0 +1,21 @@
+---
+applications:
+  - name: aif-knowledge-agent
+    memory: 512M
+    disk_quota: 512M
+    instances: 1
+    buildpacks:
+      - python_buildpack
+    # 1 worker — in-memory sessions must not be split across processes
+    command: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+    health-check-type: http
+    health-check-http-endpoint: /health
+    env:
+      DATA_DIR: data
+      PYTHONPATH: .
+      MAX_DAILY_TOKENS: "500000"
+      MAX_SESSION_TOKENS: "50000"
+      MAX_SESSION_REQUESTS: "30"
+      # Set secrets separately — never commit these:
+      #   cf set-env aif-knowledge-agent ANTHROPIC_API_KEY sk-ant-...
+      #   cf set-env aif-knowledge-agent ADMIN_TOKEN your-password

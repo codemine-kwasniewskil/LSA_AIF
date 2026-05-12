@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_DE_RUN_BASE</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Basisklasse für Verarbeitungsläufe</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>APPL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Anwendung: Verabeitungssteuerung</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_EXPORT_FILE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exportdatei schreiben</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DTO_FV_PR_ART</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>DTO: Customizing/STammdaten Verarbeitungsprozess Fremdverf.</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>EXCH_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Austauschdaten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FILL_FILENAME_EXPORT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Name/Pfad der Exportdatei ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FILL_FILENAME_IMPORT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Zu importierende Datei ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FI_DOC_SELECTION</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Selektionskriterien: FI-Belege</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FREMDVERF</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fremdverfahren ID</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GENERATE_FILENAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exportdateiname erzeugen -&gt; ggf. redefinieren</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_PROC_DATA</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Nutzdaten als XML-String</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GI_APPL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Generische Schnittstelle</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_TEST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Feld zum Ankreuzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>KZ_IE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kennzeichen: Import/Export</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PATH</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Physischer Pfadname</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lauf verarbeiten</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_FILE</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Daten einlesen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TEST_SUFFIX</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Für Tests: Suffix für Schlüssel</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TYPE_HANDLE_HEADER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Type Handle für Austauschdatei / Kopfsatz</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TYPE_HANDLE_ITEM</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Type Handle für Austauschdatensatz</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TYPE_HANDLE_T_ITEM</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Type Handle für Tabelle mit Austauschdatensätzen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TYPE_HANDLE_T_ITEM_SORTED</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Type Handle für sortierte Tabelle mit Austauschdatensätzen</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_FREMDVERF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Fremdverfahren ID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_PATH</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Physischer Pfadname</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_TEST</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Keine Daten speichern</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>I_TEST_SUFFIX</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Für Tests: Suffix für Schlüssel</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_EXPORT_FILE</CMPNAME>
+     <SCONAME>/THKR/CX_LSA1</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmen HKR Externe Schnittstellen</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FILL_FILENAME_IMPORT</CMPNAME>
+     <SCONAME>E_ANOTHER_FILE_EXISTS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Weitere Datei vorhanden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FILL_FILENAME_IMPORT</CMPNAME>
+     <SCONAME>I_FILENAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datei mit Pfad</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>FILL_FILENAME_IMPORT</CMPNAME>
+     <SCONAME>I_FRONTEND</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datei vom Frontend laden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GENERATE_FILENAME</CMPNAME>
+     <SCONAME>E_FILENAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Filename</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>E_ANOTHER_FILE_EXISTS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Weitere Datei vorhanden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_DE_SATZ_ID</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Einzelsatz verarbeiten</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_DONT_MOVE_FILES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dateien nicht ins Archivverzeichnis verschieben</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_FILENAME</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Export-Pfad o. Import-Datei mit Pfad</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_FRONTEND</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datei vom Frontend laden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <SCONAME>I_IMPORT_ONLY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Datei nur importieren (keine Verarbeitung)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_FILE</CMPNAME>
+     <SCONAME>/THKR/CX_EXT_IF</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmen HKR Externe Schnittstellen</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

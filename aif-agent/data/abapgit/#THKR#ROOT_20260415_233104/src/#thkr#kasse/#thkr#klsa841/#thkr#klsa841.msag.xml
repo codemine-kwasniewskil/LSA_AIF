@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/THKR/KLSA841</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Meldungen zu Kassenzeichen (kLSA841)</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Kassenzeichen: Fehler bei der Erstellung des Kassenzeichens</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Kassenzeichen: Fehler bei der Überprüfung des Kassenzeichens</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Kassenzeichen: Das Kassenzeichen existiert bereits</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Bitte Kontoauszugsposition sichern.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Bitte erst den Verwendungszweck untersuchen.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Anlegen Kassenzeichen: Nummernkreisintervall existiert nicht</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Anlegen Kassenzeichen: Nummernkreis hat keine interne Nummernvergabe</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Anlegen Kassenzeichen: Nummernkreisobjekt existiert nicht</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Anlegen Kassenzeichen: Keine Nummer erstellt</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Anlegen Kassenzeichen: Nummer ist nicht eindeutig</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Anlegen Kassenzeichen: Nummernkreisintervall hat keine freien Nummern</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Anlegen Kassenzeichen: Pufferung des Nummernkreisintervalls schlug fehl</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Prüfung Kassenzeichen: Prüfziffer stimmt nicht</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Prüfung Kassenzeichen: Kassenzeichen wird bereits verwendet (BKPF)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Prüfung Kassenzeichen: Kassenzeichen wird bereits verwendet (KBLK)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Prüfung Kassenzeichen: Bitte nur Kassenzeichen der Länge 13 verwenden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/THKR/KLSA841</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Kassenzeichen: Länge stimmt nicht gem.Customizing (Tabelle /THKR/T_KASS)</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

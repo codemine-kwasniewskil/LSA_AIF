@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>ELVIS Pflegeview</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LELVIS_PFLEGEVIEWTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLELVIS_PFLEGEVIEW</SOBJ_NAME>
+   </INCLUDES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

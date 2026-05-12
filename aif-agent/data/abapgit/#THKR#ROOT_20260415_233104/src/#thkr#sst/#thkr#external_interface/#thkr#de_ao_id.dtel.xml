@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/THKR/DE_AO_ID</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DOMNAME>/THKR/DE_AO_ID</DOMNAME>
+    <HEADLEN>12</HEADLEN>
+    <SCRLEN1>05</SCRLEN1>
+    <SCRLEN2>12</SCRLEN2>
+    <SCRLEN3>12</SCRLEN3>
+    <DDTEXT>Fremdverfahren: Anordnung-ID (LOTKZ)</DDTEXT>
+    <REPTEXT>Anordnung-ID</REPTEXT>
+    <SCRTEXT_S>AO-ID</SCRTEXT_S>
+    <SCRTEXT_M>Anordnung-ID</SCRTEXT_M>
+    <SCRTEXT_L>Anordnung-ID</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

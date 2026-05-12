@@ -1,0 +1,10 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "/THKR/CDS_AIF_IST_RM_IBAN",
+      "/THKR/CDS_AIF_IST_V2",
+      "BSEG",
+      "FEBEP"
+    ]
+  }
+}

@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ECTD" serializer_version="v1.0.0">
+ <VERSIONS>
+  <VERSION>
+   <ECTD VERSION="1.5">
+    <ATTRIBUTES>
+     <ETOBJ_GNDT>
+      <VERSION>00000001</VERSION>
+      <TWB_TITLE>FI Anwendungs Testdatencontainer</TWB_TITLE>
+      <SOFTCOMP/>
+      <TWB_DEP_RF/>
+      <TWB_DEP_RT/>
+      <TWB_STATUS>X</TWB_STATUS>
+      <TWB_RELE>N</TWB_RELE>
+      <FUSER></FUSER>
+      <FDATE></FDATE>
+      <LUSER></LUSER>
+      <LDATE></LDATE>
+      <LTIME></LTIME>
+      <REL_BAS_F/>
+      <REL_BAS_T/>
+      <SERVICE/>
+      <PVNR/>
+      <BACKUP/>
+     </ETOBJ_GNDT>
+     <ETOBJNOVER>
+      <NAME>/THKR/TDC_FI_INT</NAME>
+      <TYPE>ECTD</TYPE>
+      <TWB_RESP></TWB_RESP>
+      <TWB_DISTL>B</TWB_DISTL>
+      <TWB_EUBOBJ/>
+      <TWB_EUTYPE/>
+      <DEVCLASS></DEVCLASS>
+      <MASTERLANG>D</MASTERLANG>
+      <TADIR_RESP></TADIR_RESP>
+      <FRANGE>PSM-FM</FRANGE>
+      <BCSET_MODE/>
+      <API_MODE/>
+      <COL_TSTOBJDATA/>
+      <NO_TRANSLATION/>
+     </ETOBJNOVER>
+     <ETOBJ_DOC>
+      <SEARCH_1/>
+      <SEARCH_2/>
+      <SEARCH_3/>
+      <SEARCH_4/>
+      <SEARCH_5/>
+      <SEARCH_6/>
+      <SEARCH_7/>
+      <SEARCH_8/>
+      <SEARCH_9/>
+      <SEARCH_10/>
+      <S_DOC_ID/>
+      <S_OBJ_ID/>
+      <S_DOC_TITL/>
+     </ETOBJ_DOC>
+     <ETOBJ_CNST>
+      <TWB_DEP_S/>
+      <TWB_DEPV_S/>
+      <TWB_DEP_L/>
+      <TWB_DEPV_L/>
+      <TWB_USE_A/>
+      <TWB_USE_P/>
+      <TWB_USE_H/>
+      <TWB_USE_E/>
+      <REUSE/>
+      <TWB_DEP_C/>
+      <TWB_DEP_VC/>
+      <TWB_DEP_F/>
+      <TWB_DEP_VF/>
+      <TWB_DEP_P/>
+      <TWB_DEP_VP/>
+      <TWB_DEP_DB/>
+      <TWB_DEPVDB/>
+      <TWB_WKREQ>0.0</TWB_WKREQ>
+      <TWB_WKUNIT>MIN</TWB_WKUNIT>
+      <TWB_PRIO>3</TWB_PRIO>
+     </ETOBJ_CNST>
+     <ETSC_TSYS>
+      <SYSTEMDATA/>
+      <TESTSYSTEM/>
+     </ETSC_TSYS>
+     <ETSYS_COMP_TABTYPE/>
+     <ETSYS_REL_TABTYPE/>
+     <ETBF_OBJ_TABTYPE/>
+     <ETBF_VER_TABTYPE/>
+    </ATTRIBUTES>
+    <PARAMETERS>
+     <ETPAR_GUIX>
+      <item>
+       <PNAME>SELECTION_DATA</PNAME>
+       <PTYP>V</PTYP>
+       <PDESC>Selektionsdaten</PDESC>
+       <PINDEX>0001</PINDEX>
+       <XMLREF_TYP>D</XMLREF_TYP>
+       <PSTRUC_TYP>T</PSTRUC_TYP>
+       <PREF_NAME>/THKR/S_FI_DOCUMENT_SELECTION</PREF_NAME>
+       <PDATLEN>0000</PDATLEN>
+       <PINTLEN>000000</PINTLEN>
+       <PDECIMALS>000000</PDECIMALS>
+       <SORT_LNR>0001</SORT_LNR>
+       <PREF_NAME2>/THKR/S_FI_DOCUMENT_SELECTION</PREF_NAME2>
+       <VALUE>&lt;INITIAL&gt;</VALUE>
+       <VAL_TYPE>T</VAL_TYPE>
+       <TAB_INDEX>0</TAB_INDEX>
+       <DEEP_STRU>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.sap.com/2003/05/eCATT/ddic" version="1.0">
+         <xsd:complexType name="_-THKR_-S_FI_DOCUMENT_SELECTION">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_FI_DOCUMENT_SELECTION=A=v=L=000000=do=doc=Selektionskriterien: FI-Belege</documentation>
+          </annotation>
+          <sequence>
+           <element name="FIKRS" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FIKRS=A=C=L=000004=doc=Finanzkreis</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="BUKRS_RA" minOccurs="0" type="TRGR_COMPANY_CODE"/>
+           <element name="GJAHR_RA" minOccurs="0" type="FAC_T_GJAHR_RA"/>
+           <element name="BELNR_RA" minOccurs="0" type="PSM_RANGE_BELNR_TAB"/>
+           <element name="BLART_RA" minOccurs="0" type="BKK_R_BLART"/>
+           <element name="BUDAT_RA" minOccurs="0" type="BKK_R_BUDAT"/>
+           <element name="LOTKZ_RA" minOccurs="0" type="_-THKR_-T_FI_LOTKZ_RA"/>
+           <element name="FIPEX_RA" minOccurs="0" type="_-THKR_-T_FI_FIPEX_RA"/>
+           <element name="FICTR_RA" minOccurs="0" type="_-THKR_-T_FI_FICTR_RA"/>
+           <element name="XBLNR_RA" minOccurs="0" type="_-THKR_-T_FI_XBLNR_RA"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="TRGR_COMPANY_CODE">
+          <annotation>
+           <documentation>I==O==C=T=K==D=TRGR_COMPANY_CODE=A=h=L=000000=doc=Rangetabel</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="TRGS_COMPANY_CODE" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="FAC_T_GJAHR_RA">
+          <annotation>
+           <documentation>I==O==C=T=K==D=FAC_T_GJAHR_RA=A=h=L=000000=doc=</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="FAC_S_GJAHR_RA" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="PSM_RANGE_BELNR_TAB">
+          <annotation>
+           <documentation>I==O==C=T=K==D=PSM_RANGE_BELNR_TAB=A=h=L=000000=doc=BELNR Ra</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="PSM_RANGE_BELNR_WA" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="BKK_R_BLART">
+          <annotation>
+           <documentation>I==O==C=T=K==D=BKK_R_BLART=A=h=L=000000=doc=Ranges Tabellent</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="IBKK_R_BLART" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="BKK_R_BUDAT">
+          <annotation>
+           <documentation>I==O==C=T=K==D=BKK_R_BUDAT=A=h=L=000000=doc=Ranges Tabellent</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="IBKK_R_BUDAT" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-T_FI_LOTKZ_RA">
+          <annotation>
+           <documentation>I==O==C=T=K==D=/THKR/T_FI_LOTKZ_RA=A=h=L=000000=doc=Range fü</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="_-THKR_-S_FI_LOTKZ_RA" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-T_FI_FIPEX_RA">
+          <annotation>
+           <documentation>I==O==C=T=K==D=/THKR/T_FI_FIPEX_RA=A=h=L=000000=doc=Range fü</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="_-THKR_-S_FI_FIPEX_RA" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-T_FI_FICTR_RA">
+          <annotation>
+           <documentation>I==O==C=T=K==D=/THKR/T_FI_FICTR_RA=A=h=L=000000=doc=Bereich</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="_-THKR_-S_FI_FICTR_RA" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-T_FI_XBLNR_RA">
+          <annotation>
+           <documentation>I==O==C=T=K==D=/THKR/T_FI_XBLNR_RA=A=h=L=000000=doc=Bereich</documentation>
+          </annotation>
+          <sequence>
+           <element name="item" type="_-THKR_-S_FI_XBLNR_RA" minOccurs="0" maxOccurs="unbounded"/>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="TRGS_COMPANY_CODE">
+          <annotation>
+           <documentation>I==O==C=S=K==D=TRGS_COMPANY_CODE=A=u=L=000000=doc=Range-Stru</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKRS=A=C=L=000004=doc=Buchungskreis</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUKRS=A=C=L=000004=doc=Buchungskreis</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="FAC_S_GJAHR_RA">
+          <annotation>
+           <documentation>I==O==C=S=K==D=FAC_S_GJAHR_RA=A=u=L=000000=doc=Ranges-Strukt</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=GJAHR=A=N=L=000004=doc=Geschäftsjahr</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=GJAHR=A=N=L=000004=doc=Geschäftsjahr</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="\d+"/>
+              <maxLength value="4"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="PSM_RANGE_BELNR_WA">
+          <annotation>
+           <documentation>I==O==C=S=K==D=PSM_RANGE_BELNR_WA=A=u=L=000000=doc=Ranges -</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BELNR_D=A=C=L=000010=doc=Belegnummer eines Buc</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BELNR_D=A=C=L=000010=doc=Belegnummer eines Buc</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="IBKK_R_BLART">
+          <annotation>
+           <documentation>I==O==C=S=K==D=IBKK_R_BLART=A=u=L=000000=doc=Struktur für Ra</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BLART=A=C=L=000002=doc=Belegart</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BLART=A=C=L=000002=doc=Belegart</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="IBKK_R_BUDAT">
+          <annotation>
+           <documentation>I==O==C=S=K==D=IBKK_R_BUDAT=A=u=L=000000=doc=Struktur für Ra</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUDAT=A=D=L=000008=doc=Buchungsdatum im Beleg</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=BUDAT=A=D=L=000008=doc=Buchungsdatum im Beleg</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <pattern value="....-..-.."/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-S_FI_LOTKZ_RA">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_FI_LOTKZ_RA=A=u=L=000000=doc=Range ty</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=PSO_LOTKZ=A=C=L=000010=doc=Bündelungsnummer fü</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=PSO_LOTKZ=A=C=L=000010=doc=Bündelungsnummer fü</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="10"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-S_FI_FIPEX_RA">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_FI_FIPEX_RA=A=u=L=000000=doc=Bereich</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_FIPEX=A=C=L=000024=doc=Finanzposition</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_FIPEX=A=C=L=000024=doc=Finanzposition</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="24"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-S_FI_FICTR_RA">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_FI_FICTR_RA=A=u=L=000000=doc=Bereich</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_FICTR=A=C=L=000016=doc=Finanzstelle</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=FM_FICTR=A=C=L=000016=doc=Finanzstelle</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+         <xsd:complexType name="_-THKR_-S_FI_XBLNR_RA">
+          <annotation>
+           <documentation>I==O==C=S=K==D=/THKR/S_FI_XBLNR_RA=A=u=L=000000=doc=Bereich</documentation>
+          </annotation>
+          <sequence>
+           <element name="SIGN" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDSIGN=A=C=L=000001=doc=Typ der Komponente SIG</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="1"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="OPTION" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=DDOPTION=A=C=L=000002=doc=Typ der Komponente O</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="2"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="LOW" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=XBLNR=A=C=L=000016=doc=Referenz-Belegnummer</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+           <element name="HIGH" minOccurs="0">
+            <annotation>
+             <documentation>I==O==C==K==D=XBLNR=A=C=L=000016=doc=Referenz-Belegnummer</documentation>
+            </annotation>
+            <simpleType>
+             <restriction base="string">
+              <maxLength value="16"/>
+             </restriction>
+            </simpleType>
+           </element>
+          </sequence>
+         </xsd:complexType>
+        </xsd:schema>
+       </DEEP_STRU>
+       <DEEP_DATA>
+        <ddic:_-THKR_-S_FI_DOCUMENT_SELECTION xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+         <FIKRS/>
+         <BUKRS_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </BUKRS_RA>
+         <GJAHR_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </GJAHR_RA>
+         <BELNR_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </BELNR_RA>
+         <BLART_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </BLART_RA>
+         <BUDAT_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </BUDAT_RA>
+         <LOTKZ_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </LOTKZ_RA>
+         <FIPEX_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </FIPEX_RA>
+         <FICTR_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </FICTR_RA>
+         <XBLNR_RA empty="true">
+          <item>
+           <SIGN/>
+           <OPTION/>
+           <LOW/>
+           <HIGH/>
+          </item>
+         </XBLNR_RA>
+        </ddic:_-THKR_-S_FI_DOCUMENT_SELECTION>
+       </DEEP_DATA>
+      </item>
+     </ETPAR_GUIX>
+     <ETPAR_VARI>
+      <item>
+       <VAR_NAME>GET_KSZ_SALDO_VAR1</VAR_NAME>
+       <VAR_DESC>Offener Betrag und Saldo 0</VAR_DESC>
+       <VINDEX>0002</VINDEX>
+       <SORTLNR></SORTLNR>
+       <PAR_VALUES>
+        <item>
+         <PNAME>SELECTION_DATA</PNAME>
+         <PTYP>V</PTYP>
+         <PINDEX>0001</PINDEX>
+         <VALUE>&lt;VALUE&gt;</VALUE>
+         <VAL_TYPE>X</VAL_TYPE>
+         <DEEP_DATA>
+          <ddic:_-THKR_-S_FI_DOCUMENT_SELECTION xmlns:ddic="http://xml.sap.com/2003/05/eCATT/ddic">
+           <FIKRS>1000</FIKRS>
+           <BUKRS_RA>
+            <item>
+             <SIGN>I</SIGN>
+             <OPTION>EQ</OPTION>
+             <LOW>T111</LOW>
+            </item>
+           </BUKRS_RA>
+           <GJAHR_RA>
+            <item>
+             <SIGN>I</SIGN>
+             <OPTION>EQ</OPTION>
+             <LOW>2024</LOW>
+            </item>
+           </GJAHR_RA>
+           <XBLNR_RA>
+            <item>
+             <SIGN>I</SIGN>
+             <OPTION>EQ</OPTION>
+             <LOW>30072024</LOW>
+            </item>
+            <item>
+             <SIGN>I</SIGN>
+             <OPTION>EQ</OPTION>
+             <LOW>2252019000039</LOW>
+            </item>
+           </XBLNR_RA>
+          </ddic:_-THKR_-S_FI_DOCUMENT_SELECTION>
+         </DEEP_DATA>
+        </item>
+       </PAR_VALUES>
+      </item>
+     </ETPAR_VARI>
+    </PARAMETERS>
+    <VARIANT_MODE>
+     <ETVAR_EXT></ETVAR_EXT>
+    </VARIANT_MODE>
+   </ECTD>
+  </VERSION>
+ </VERSIONS>
+</abapGit>

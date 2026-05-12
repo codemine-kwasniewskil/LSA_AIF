@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_PSM_BSP_UPLOAD</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Upload Tool PSM BSP</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_PATH_FOR_FILE_OR_DIR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Prüfung ob es sich um eine Datei handelt oder nicht</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_FILES</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Dateien aus dem Verzeichns ermitteln</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PATH_FOR_FILE_OR_DIR</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_TOOLS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exceptionclass PSM Tools</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PATH_FOR_FILE_OR_DIR</CMPNAME>
+     <SCONAME>IV_IS_DIR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PATH_FOR_FILE_OR_DIR</CMPNAME>
+     <SCONAME>IV_IS_FILE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PATH_FOR_FILE_OR_DIR</CMPNAME>
+     <SCONAME>IV_PATH</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Filename</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_PATH_FOR_FILE_OR_DIR</CMPNAME>
+     <SCONAME>RV_PATH_OK</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_BO_OBJECT</CMPNAME>
+     <SCONAME>TESTMODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;X&apos; = Mode on</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_PO_OBJECT</CMPNAME>
+     <SCONAME>TESTMODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;X&apos; = Mode on</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DELETE_BO_OBJECT</CMPNAME>
+     <SCONAME>TESTMODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;X&apos; = Mode on</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FILES</CMPNAME>
+     <SCONAME>/THKR/CX_PSM_TOOLS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Exceptionclass PSM Tools</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FILES</CMPNAME>
+     <SCONAME>ET_FILE_TABLE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>file_table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FILES</CMPNAME>
+     <SCONAME>IV_IS_DIR</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FILES</CMPNAME>
+     <SCONAME>IV_IS_FILE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>allgemeines flag</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FILES</CMPNAME>
+     <SCONAME>IV_PATH</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lokale Datei für Upload bzw. Download</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_FILE</CMPNAME>
+     <SCONAME>PATH</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lokale Datei für Upload bzw. Download</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RUN</CMPNAME>
+     <SCONAME>DELETE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>neue Eingabewerte</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RUN</CMPNAME>
+     <SCONAME>PATH</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Lokale Datei für Upload bzw. Download</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RUN</CMPNAME>
+     <SCONAME>TESTMODE</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>&apos;X&apos; = Testmode on</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

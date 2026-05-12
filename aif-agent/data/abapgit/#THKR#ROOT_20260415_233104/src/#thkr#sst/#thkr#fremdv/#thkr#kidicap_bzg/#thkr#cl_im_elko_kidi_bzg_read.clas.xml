@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_IM_ELKO_KIDI_BZG_READ</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Kidicap File Reader</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>CONSTRUCTOR</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DEFAULT_IMPL</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Klasse zur BAdI-Impl.: FEB_BSIMP_BANK_STATEMENT_X</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FILENAME</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Char 20</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>S_COUNT</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Numerisch 8stellig</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>S_FORMAT_X</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Format des elektronischen Auszugs</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

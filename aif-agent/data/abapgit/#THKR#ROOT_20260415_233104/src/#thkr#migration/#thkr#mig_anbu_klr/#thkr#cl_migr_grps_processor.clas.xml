@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/THKR/CL_MIGR_GRPS_PROCESSOR</CLSNAME>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Migration: Groups Implmentation</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>COSTCENTER_GROUPS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Processing Costcenter-Groups</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>COSTELEMENT_GROUPS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Processing Costelement Groups</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>INTERNALORDER_GROUPS</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Processing Internal Order Groups</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>COSTCENTER_GROUPS</CMPNAME>
+     <SCONAME>/THKR/CX_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse FI Initialer Aufbau</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>COSTCENTER_GROUPS</CMPNAME>
+     <SCONAME>HIERARCHY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Gruppen - Hierarchietabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>COSTCENTER_GROUPS</CMPNAME>
+     <SCONAME>KOKRS</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kostenrechnungskreis</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>COSTCENTER_GROUPS</CMPNAME>
+     <SCONAME>VALUES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT> Intervalle in der Hierarchie</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>COSTELEMENT_GROUPS</CMPNAME>
+     <SCONAME>/THKR/CX_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse FI Initialer Aufbau</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>COSTELEMENT_GROUPS</CMPNAME>
+     <SCONAME>HIERARCHY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Gruppen - Hierarchietabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>COSTELEMENT_GROUPS</CMPNAME>
+     <SCONAME>KTOPL</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Kontenplan</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>COSTELEMENT_GROUPS</CMPNAME>
+     <SCONAME>VALUES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT> Intervalle in der Hierarchie</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INTERNALORDER_GROUPS</CMPNAME>
+     <SCONAME>/THKR/CX_FI_INIT</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Ausnahmeklasse FI Initialer Aufbau</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INTERNALORDER_GROUPS</CMPNAME>
+     <SCONAME>HIERARCHY</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Gruppen - Hierarchietabelle</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>INTERNALORDER_GROUPS</CMPNAME>
+     <SCONAME>VALUES</SCONAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT> Intervalle in der Hierarchie</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,5 @@
+"Name: \PR:RFEBBU00\FO:CHECK_BS_ITEM_PROC_BY_FDC_FULL\SE:BEGIN\EI
+ENHANCEMENT 0 /THKR/RFEBBU00_GRPNR.
+  /thkr/cl_elko_appl=>set_iban_2_into_grpnr( CHANGING xs_febep = febep ).
+
+ENDENHANCEMENT.

@@ -1,0 +1,1506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funktionsbausteine zu kLSA841 Kassenz.</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>/THKR/LKLSA841_FGF00</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/LKLSA841_FGI00</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/LKLSA841_FGT00</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/LKLSA841_FGTOP</SOBJ_NAME>
+    <SOBJ_NAME>/THKR/SAPLKLSA841_FG</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>/THKR/KLSA841_BTE_00001703</FUNCNAME>
+     <SHORT_TEXT>Mahnen: Parameter vor Selektion ändern</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_LAUFD</PARAMETER>
+       <DBFIELD>F150V-LAUFD</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_LAUFI</PARAMETER>
+       <DBFIELD>F150V-LAUFI</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_SEL_CC</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_SEL_CUST</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_SEL_VEN</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_LOG_CUST</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_LOG_VEND</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_SEL_FILTER</PARAMETER>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_LAUFD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Datum, an dem das Programm laufen soll</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_LAUFI</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Zusätzliches Identifikationsmerkmal</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_SEL_CC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges-Tabelle der Buchungskreise</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_SEL_CUST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges-Tabelle der Debitoren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_SEL_VEN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges-Tabelle der Kreditoren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_LOG_CUST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges-Tabelle der Debitoren mit Protokoll</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_LOG_VEND</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ranges-Tabelle der Kreditoren mit Protokoll</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_SEL_FILTER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle der freien Abgrenzungen</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/KLSA841_BTE_00103020</FUNCNAME>
+     <SHORT_TEXT>Prozess 00103020: Mahnzinsen buchen</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_F_MHND</PARAMETER>
+       <DBFIELD>MHND</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_F_MHNK</PARAMETER>
+       <DBFIELD>MHNK</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_F_PSKW4</PARAMETER>
+       <DBFIELD>PSKW4</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_RFFMINTCALC</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BOOLE-BOOLE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_NOTIFY_DATE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>FM_NOTIFY_DATE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <DBSTRUCT>BBKPF_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <DBSTRUCT>BBSEG_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <DBSTRUCT>BBTAX_FM</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_F_MHND</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Mahndaten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_F_MHNK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Mahndaten (Kontoeintraege)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_F_PSKW4</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Zusatzdaten Hauhaltsmanagement zum Mahnverfahren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_RFFMINTCALC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Datenelement zur Domäne BOOLE: TRUE (=&apos;X&apos;) und FALSE (=&apos; &apos;)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_NOTIFY_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Bescheiddatum</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegkopf für Buchhaltungsbeleg (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsegment Buchhaltung (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsteuern (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/KLSA841_BTE_00103025</FUNCNAME>
+     <SHORT_TEXT>Prozess 00103025: Mahngebühren buchen</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_F_MHNK</PARAMETER>
+       <DBFIELD>MHNK</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_F_PSKW4</PARAMETER>
+       <DBFIELD>PSKW4</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_MHND</PARAMETER>
+       <DBSTRUCT>MHND</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <DBSTRUCT>BBKPF_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <DBSTRUCT>BBSEG_FM</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <DBSTRUCT>BBTAX_FM</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_F_MHNK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Mahndaten (Kontoeintraege)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_F_PSKW4</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Zusatzdaten Hauhaltsmanagement zum Mahnverfahren</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_MHND</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Mahndaten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBKPF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegkopf für Buchhaltungsbeleg (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBSEG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsegment Buchhaltung (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_BBTAX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Belegsteuern (Batch-Input-Struktur)</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>/THKR/KLSA841_BTE_00107040</FUNCNAME>
+     <SHORT_TEXT>Schnittstellenbeschr. Prozeß 00107040 (Anordnungssubstit.)</SHORT_TEXT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_FLG_CHANGE</PARAMETER>
+       <DBFIELD>BOOLE-BOOLE</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>U_T_PSO02</PARAMETER>
+       <DBSTRUCT>PSO02</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>U_T_PSO02S</PARAMETER>
+       <DBSTRUCT>PSO02S</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>C_T_PSO02_SUBST</PARAMETER>
+       <DBSTRUCT>PSO02_SUBST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>C_T_PSO02S_SUBST</PARAMETER>
+       <DBSTRUCT>PSO02S_SUBST</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>E_FLG_CHANGE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Datenelement zur Domäne BOOLE: TRUE (=&apos;X&apos;) und FALSE (=&apos; &apos;)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>U_T_PSO02</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur Zahlungsanordnung ( local government, screen )</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>U_T_PSO02S</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur Zahlungsanordnung - Sachkonteninformation</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>C_T_PSO02_SUBST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Struktur Zahlungsanordnung - Sachkonteninformation</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>C_T_PSO02S_SUBST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>PSO02S-Felder für Substitution in Anordnungen</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>TABLEFRAME_/THKR/KLSA841_FG</FUNCNAME>
+     <SHORT_TEXT>erweiterte Tabellenpflege obere Ebene</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>VIEW_ACTION</PARAMETER>
+       <DEFAULT>&apos;S&apos;</DEFAULT>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VIEW_NAME</PARAMETER>
+       <DBFIELD>DD02V-TABNAME</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CORR_NUMBER</PARAMETER>
+       <DBFIELD>E070-TRKORR</DBFIELD>
+       <DEFAULT>&apos; &apos;</DEFAULT>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>DBA_SELLIST</PARAMETER>
+       <DBSTRUCT>VIMSELLIST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>DPL_SELLIST</PARAMETER>
+       <DBSTRUCT>VIMSELLIST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>EXCL_CUA_FUNCT</PARAMETER>
+       <DBSTRUCT>VIMEXCLFUN</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>X_HEADER</PARAMETER>
+       <DBSTRUCT>VIMDESC</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>X_NAMTAB</PARAMETER>
+       <DBSTRUCT>VIMNAMTAB</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>MISSING_CORR_NUMBER</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>VIEW_ACTION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aktion mit Tabelle: anz./änd./transp. (S/U/T)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VIEW_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name der Tabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CORR_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Korrekturnummer für durchgeführte Änderungen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DBA_SELLIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selektionsbedingungen für den DB-Zugriff</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DPL_SELLIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selektionsbedingungen für die Anzeige</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXCL_CUA_FUNCT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle mit dynam. zu deaktivierenden CUA-Funkt.</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>X_HEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrollblocktabelle für die Tabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>X_NAMTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrollblocktabelle für die Tabellen-Felder</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MISSING_CORR_NUMBER</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Korrekturnummer fehlt</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>TABLEPROC_/THKR/KLSA841_FG</FUNCNAME>
+     <GLOBAL_FLAG>X</GLOBAL_FLAG>
+     <SHORT_TEXT>erweiterte Tabellenpflege untere Ebene</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>FCODE</PARAMETER>
+       <DEFAULT>&apos;RDED&apos;</DEFAULT>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VIEW_ACTION</PARAMETER>
+       <DEFAULT>&apos;S&apos;</DEFAULT>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VIEW_NAME</PARAMETER>
+       <DBFIELD>DD02V-TABNAME</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CORR_NUMBER</PARAMETER>
+       <DBFIELD>E070-TRKORR</DBFIELD>
+       <DEFAULT>&apos; &apos;</DEFAULT>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>LAST_ACT_ENTRY</PARAMETER>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>UCOMM</PARAMETER>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>UPDATE_REQUIRED</PARAMETER>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>CORR_KEYTAB</PARAMETER>
+       <DBSTRUCT>E071K</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>DBA_SELLIST</PARAMETER>
+       <DBSTRUCT>VIMSELLIST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>DPL_SELLIST</PARAMETER>
+       <DBSTRUCT>VIMSELLIST</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>EXCL_CUA_FUNCT</PARAMETER>
+       <DBSTRUCT>VIMEXCLFUN</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>EXTRACT</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TOTAL</PARAMETER>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>X_HEADER</PARAMETER>
+       <DBSTRUCT>VIMDESC</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>X_NAMTAB</PARAMETER>
+       <DBSTRUCT>VIMNAMTAB</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>MISSING_CORR_NUMBER</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>SAVING_CORRECTION_FAILED</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>FCODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>gewünschte Funktion des Bausteins</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VIEW_ACTION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Aktion mit Tabelle: anz./änd./transp. (S/U/T)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VIEW_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name der Tabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CORR_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Korrekturnummer für durchgeführte Änderungen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LAST_ACT_ENTRY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Index der Cursorposition in der Anzeigetabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UCOMM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>letztes User-command innerhalb der Viewpflege</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UPDATE_REQUIRED</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Flag: Einträge verändert, Sichern erforderlich</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CORR_KEYTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle mit den Keys der zu transport. Einträge</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DBA_SELLIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selektionsbedingungen für den DB-Zugriff</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DPL_SELLIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Selektionsbedingungen für die Anzeige</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXCL_CUA_FUNCT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tab. der nicht zu aktivierenden CUA-Funktionen</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXTRACT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tab. der gerade sichtbaren Daten (Anzeigetabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TOTAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabelle, mit allen von der DB gelesenen Daten</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>X_HEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrollblocktabelle für die Tabelle</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>X_NAMTAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrollblocktabelle für die Tabellen-Felder</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>MISSING_CORR_NUMBER</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Korrekturnummer fehlt</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SAVING_CORRECTION_FAILED</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Fehler beim Sichern der Korrektureinträge</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>/THKR/SAPLKLSA841_FG</PROGRAM>
+      <SCREEN>0001</SCREEN>
+      <LANGUAGE>D</LANGUAGE>
+      <DESCRIPT>Viewpflege: Übersichtsbild /THKR/T_KASS</DESCRIPT>
+      <TYPE>N</TYPE>
+      <NEXTSCREEN>0001</NEXTSCREEN>
+      <LINES>061</LINES>
+      <COLUMNS>255</COLUMNS>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+      <RPY_DYCATT>
+       <TYPE>TABLE_CTRL</TYPE>
+       <NAME>TCTRL_/THKR/T_KASS</NAME>
+       <ELEMENT_OF>SCREEN</ELEMENT_OF>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>255</LENGTH>
+       <HEIGHT>059</HEIGHT>
+       <C_RESIZE_V>X</C_RESIZE_V>
+       <C_RESIZE_H>X</C_RESIZE_H>
+       <C_SCROLL_V>X</C_SCROLL_V>
+       <C_SCROLL_H>X</C_SCROLL_H>
+       <TC_TABTYPE>ENTRY</TC_TABTYPE>
+       <TC_SEPAR_V>X</TC_SEPAR_V>
+       <TC_SEPAR_H>X</TC_SEPAR_H>
+       <TC_TITLE>X</TC_TITLE>
+       <TC_HEADER>X</TC_HEADER>
+       <TC_CONFIG>X</TC_CONFIG>
+       <TC_SEL_LNS>MULTIPLE</TC_SEL_LNS>
+       <TC_SEL_CLS>NONE</TC_SEL_CLS>
+       <TC_LSEL_CL>X</TC_LSEL_CL>
+       <TC_FIXCOL>001</TC_FIXCOL>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>PUSH_TMPL</TYPE>
+       <NAME>VIM_POSI_PUSH</NAME>
+       <TEXT>____________________</TEXT>
+       <LINE>061</LINE>
+       <COLUMN>019</COLUMN>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <PUSH_FCODE>POSI</PUSH_FCODE>
+       <FORMAT>CHAR</FORMAT>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <REQU_ENTRY>N</REQU_ENTRY>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>VIM_POSITION_INFO</NAME>
+       <TEXT>______________________________</TEXT>
+       <LINE>061</LINE>
+       <COLUMN>040</COLUMN>
+       <LENGTH>030</LENGTH>
+       <VISLENGTH>030</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <UP_LOWER>X</UP_LOWER>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <OUTPUTONLY>X</OUTPUTONLY>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <_--32_DIMENS>X</_--32_DIMENS>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <NAME>OK_CODE</NAME>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>VIM_FRAME_FIELD</NAME>
+       <TEXT>____________________________________________________________</TEXT>
+       <LINE>001</LINE>
+       <LENGTH>060</LENGTH>
+       <VISLENGTH>060</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <UP_LOWER>X</UP_LOWER>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_TITLE>X</TC_TITLE>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/T_KASS-BLART</NAME>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>040</LENGTH>
+       <VISLENGTH>006</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/T_KASS-LAENGE_VON</NAME>
+       <LINE>001</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>040</LENGTH>
+       <VISLENGTH>009</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>2</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/T_KASS-LAENGE_BIS</NAME>
+       <LINE>001</LINE>
+       <COLUMN>003</COLUMN>
+       <LENGTH>040</LENGTH>
+       <VISLENGTH>009</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>2</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/T_KASS-X_KRED</NAME>
+       <LINE>001</LINE>
+       <COLUMN>004</COLUMN>
+       <LENGTH>040</LENGTH>
+       <VISLENGTH>010</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/T_KASS-X_DEBI</NAME>
+       <LINE>001</LINE>
+       <COLUMN>005</COLUMN>
+       <LENGTH>040</LENGTH>
+       <VISLENGTH>010</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>*/THKR/T_KASS-X_AO</NAME>
+       <LINE>001</LINE>
+       <COLUMN>006</COLUMN>
+       <LENGTH>040</LENGTH>
+       <VISLENGTH>010</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>1</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <TC_HEADING>X</TC_HEADING>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>CHECK</TYPE>
+       <NAME>VIM_MARKED</NAME>
+       <LINE>001</LINE>
+       <LENGTH>001</LENGTH>
+       <VISLENGTH>001</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <TC_SELCOL>X</TC_SELCOL>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/THKR/T_KASS-BLART</NAME>
+       <TEXT>__</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>002</LENGTH>
+       <VISLENGTH>006</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <GROUP1>KEY</GROUP1>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <PARAM_ID>BAR</PARAM_ID>
+       <FOREIGNKEY>X</FOREIGNKEY>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <DICT_I_FKY>X</DICT_I_FKY>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/THKR/T_KASS-LAENGE_VON</NAME>
+       <TEXT>__</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>002</COLUMN>
+       <LENGTH>002</LENGTH>
+       <VISLENGTH>009</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>NUMC</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <LEAD_ZEROS>X</LEAD_ZEROS>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/THKR/T_KASS-LAENGE_BIS</NAME>
+       <TEXT>__</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>003</COLUMN>
+       <LENGTH>002</LENGTH>
+       <VISLENGTH>009</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>NUMC</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <LEAD_ZEROS>X</LEAD_ZEROS>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>CHECK</TYPE>
+       <NAME>/THKR/T_KASS-X_KRED</NAME>
+       <LINE>001</LINE>
+       <COLUMN>004</COLUMN>
+       <LENGTH>001</LENGTH>
+       <VISLENGTH>010</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <DICT_I_VAL>X</DICT_I_VAL>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>CHECK</TYPE>
+       <NAME>/THKR/T_KASS-X_DEBI</NAME>
+       <LINE>001</LINE>
+       <COLUMN>005</COLUMN>
+       <LENGTH>001</LENGTH>
+       <VISLENGTH>010</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <DICT_I_VAL>X</DICT_I_VAL>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>TABLE_CTRL</CONT_TYPE>
+       <CONT_NAME>TCTRL_/THKR/T_KASS</CONT_NAME>
+       <TYPE>CHECK</TYPE>
+       <NAME>/THKR/T_KASS-X_AO</NAME>
+       <LINE>001</LINE>
+       <COLUMN>006</COLUMN>
+       <LENGTH>001</LENGTH>
+       <VISLENGTH>010</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+       <DICT_I_VAL>X</DICT_I_VAL>
+      </RPY_DYFATC>
+     </FIELDS>
+    </item>
+   </DYNPROS>
+   <LONGTEXTS__-THKR_-KLSA841_BTE_00001703>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/KLSA841_BTE_00001703</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0009</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00009</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/KLSA841_BTE_00001703</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00009</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Mahnen: Ändern der Parameter vor der Selektion&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00001703&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;INTERFACE&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>EVENT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Zeitpunkt wird aus dem Programm SAPF150S2 aufgerufen, vor der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Selektion der Posten. Es besteht die Möglichkeit, die Parameter des</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Mahnlaufs (Buchungskreise, Debitoren, Kreditoren, freie Abgrenzungen,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Konten für Zusatzprotokoll) zu verändern.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-KLSA841_BTE_00001703>
+   <LONGTEXTS__-THKR_-KLSA841_BTE_00103020>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/KLSA841_BTE_00103020</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00018</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/KLSA841_BTE_00103020</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Mahnzinsen buchen&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00103020&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PROCESS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Prozeß wird sowohl im Mahnprogramm als auch im Report RFFMINTCALC</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Verzinsung von ausgeglichenen Belegen) aufgerufen, bevor Mahnzinsen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>verbucht werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im Rahmen des Prozesses kann der zu buchende Mahnzinsbeleg mit</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Zusatzdaten angereichert werden, bzw. es können bereits vorbelegte</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Feldinhalte verändert werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>An den Prozess werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Mahnposition (I_F_MHND),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>der Mahnkopf (I_F_MHNK) sowie</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die IS-PS-Zusatzdaten zum Mahnverfahren (I_F_PSKW4)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>übergeben. Die für die Buchung des Belegs benötigten Tabellen T_BBKPF,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>T_BBSEG und T_BBTAX sind bereits mit den vorhandenen Daten gefüllt und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>können in diesem Prozess verändert werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/KLSA841_BTE_00103020</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <TXTLINES>00018</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/KLSA841_BTE_00103020</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Post Dunning Interest&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00103020&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PROCESS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This process is called in the dunning program and in program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>RFFMINTCALC (interest calculation for cleared documents) before the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>posting of dunning interest.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In this process, supplementary data can be added to the dunning</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>interest documents you want to post and you can make changes to fields</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>that have predefined entries.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The following are transferred to the process:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Dunning line item (I_F_MHND)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Dunning document header (I_F_MHNK)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Additional IS-PS data on dunning procedure (I_F_PSKW4)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The tables required for the posting of the document (tables T_BBKPF,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>T_BBSEG and T_BBTAX) already contain the existing data and can be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>changed during this process.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-KLSA841_BTE_00103020>
+   <LONGTEXTS__-THKR_-KLSA841_BTE_00103025>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/KLSA841_BTE_00103025</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00017</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/KLSA841_BTE_00103025</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Mahngebühren buchen&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00103025&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PROCESS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Prozeß wird im Mahnprogramm aufgerufen, bevor Mahngebühren verbucht</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Im Rahmen des Prozesses kann der zu buchende Mahngebührbeleg mit</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Zusatzdaten angereichert werden, bzw. es können bereits vorbelegte</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Feldinhalte verändert werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>An den Prozess werden</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>der Mahnkopf (I_F_MHNK),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>die Mahnpositionen (T_MHND)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>sowie die IS-PS-Zusatzdaten zum Mahnverfahren (I_F_PSKW4)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>übergeben. Die für die Buchung des Belegs benötigten Tabellen T_BBKPF,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>T_BBSEG und T_BBTAX sind bereits mit den vorhandenen Daten gefüllt und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>können in diesem Prozess verändert werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/KLSA841_BTE_00103025</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0002</VERSION>
+      <TXTLINES>00017</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/KLSA841_BTE_00103025</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp;  = &apos;Post Dunning Charges&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00103025&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp;  = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PROCESS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This process is called during the dunning program before the posting of</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>dunning charges.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In this process, supplementary data can be added to the dunning charge</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>documents you want to post and you can make changes to fields that have</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>predefined entries.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The following data is transferred to the process:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Dunning header (I_F_MHNK)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Dunning line items (T_MHND)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B1</TDFORMAT>
+       <TDLINE>Additional IS-PS data on dunning procedure (I_F_PSKW4)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The tables required for the posting of the document (tables T_BBKPF,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>T_BBSEG and T_BBTAX) already contain the existing data and can be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>changed during this process.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-KLSA841_BTE_00103025>
+   <LONGTEXTS__-THKR_-KLSA841_BTE_00107040>
+    <item>
+     <DOKIL>
+      <ID>FU</ID>
+      <OBJECT>/THKR/KLSA841_BTE_00107040</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>T</TYP>
+      <VERSION>0006</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00039</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>/THKR/KLSA841_BTE_00107040</TDNAME>
+      <TDID>FU</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00006</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TEXT&amp; = &apos;Substitution von Feldern in den Anordnungen&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;EVENT&amp; = &apos;00107040&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>DEFINE &amp;TYPE&amp; = &apos;PROCESS&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/:</TDFORMAT>
+       <TDLINE>INCLUDE FI_OPEN_FI_DOCUMENTATION_1 OBJECT DOKU ID TX</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>Prozeß</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Prozess wird bei der Sicherung von Anordnungen durchlaufen. Auf</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>diese Weise ist sichergestellt, dass die Zuweisung der neuen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Feldinhalte erst dann erfolgt, wenn die Bearbeitung der Anordnung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>abgeschlossen ist.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Mit diesem Prozess können Sie den Anordnungen beispielsweise</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>organisationsinterne Nummern zuweisen, die den Geschäftsvorfall</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>identifizieren.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>Schnittstelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beim Speichern werden in der Tabelle U_T_PSO02 die Kopf- und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Personendaten einer Anordnung übergeben. Bei der Verrechnungsanordnung</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sind in der Tabelle U_T_PSO02 nur die Kopfdaten enthalten. Die Tabelle</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>U_T_PSO02S enthält in beiden Fällen die Sachkontenzeilen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In diesem Prozess dürfen jedoch &lt;ZH&gt;nicht&lt;/&gt; alle Felder geändert</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden. Sie dürfen nur die in den Strukturen PSO02_SUBST (für Kopf- und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Personendaten) und PSO02S_SUBST (Sachkontendaten) aufgeführten Felder</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>füllen bzw. ändern, da für diese Felder keine speziellen Prüfungen in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>den Anordnungen notwendig sind. Bei den Kopf- und Personendaten darf</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>also nur die Tabelle C_T_PSO02_SUBST geändert werden. Änderungen an den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sachkonten sind auf der Tabelle C_T_PSO02S_SUBST durchzuführen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Zusammenhang zwischen der Tabelle U_T_PSO02 d.h. den Kopf- und</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Personenkontendaten und der Tabelle U_T_PSO02S d.h. den Sachkontendaten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wird über das Feld &lt;ZH&gt;ITABKEY&lt;/&gt; hergestellt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>&lt;ZH&gt;Wichtig&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Die in den Strukturen PSO02_SUBST und PSO02S_SUBST enthaltenen Felder</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;ZH&gt;ITABKEY&lt;/&gt; und &lt;ZH&gt;BZKEY&lt;/&gt; werden zur internen Verwaltung der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Anordnungszeilen benötigt. Sie dürfen nicht verändert werden. Auch</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sollten Sie keine Sortierung der Sachkontenzeilen vornehmen, da sonst</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>eine Übernahme der Änderungen nicht durchgeführt werden kann.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn Sie in diesem Prozess eine Feldänderung durchgeführt haben, müssen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sie den Parameter E_FLG_CHANGE setzen. Dann werden die Änderungen in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>die Anordnung übernommen. Wenn dieser Parameter nicht gesetzt ist, wird</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>nicht geprüft, ob Sie Änderungen durchgeführt haben. Dies dient der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Zeitersparnis, falls der Prozess nicht verwendet wird, bzw. wenn der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>von Ihnen angelegte Baustein mehrmals ohne Änderung durchlaufen wird.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FURTHER_SOURCES_OF_INF&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS__-THKR_-KLSA841_BTE_00107040>
+  </asx:values>
+ </asx:abap>
+</abapGit>

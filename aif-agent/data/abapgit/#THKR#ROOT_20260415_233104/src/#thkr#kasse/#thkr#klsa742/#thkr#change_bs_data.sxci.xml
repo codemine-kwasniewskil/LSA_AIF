@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SXCI" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SXCI>
+    <IMPLEMENTATION_DATA>
+     <IMP_NAME>/THKR/CHANGE_BS_DATA</IMP_NAME>
+     <TEXT>ELKO Ableitung der Buchungsregel lt. Tabelle /THKR/MT940</TEXT>
+     <IMP_CLASS>/THKR/CL_IM_CHANGE_BS_DATA</IMP_CLASS>
+     <EXIT_NAME>FIEB_CHANGE_BS_DATA</EXIT_NAME>
+     <INTER_NAME>IF_EX_FIEB_CHANGE_BS_DATA</INTER_NAME>
+     <ACTIVE>X</ACTIVE>
+    </IMPLEMENTATION_DATA>
+   </SXCI>
+  </asx:values>
+ </asx:abap>
+</abapGit>
