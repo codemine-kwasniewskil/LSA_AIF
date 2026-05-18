@@ -72,6 +72,9 @@ public section.
       !IV_CP type DMC_CPAGE optional
       !IV_WIDTH type I optional
       !IV_EOL type STRING
+      !IV_REC_TABNAME     type TABNAME   optional
+      !IV_KEYFIELD        type FIELDNAME optional
+      !IV_KEYVALUE        type CLIKE     optional
     changing
       !CV_SUCCESS type /AIF/SUCCESSFLAG
       !CT_RETURN_TAB type BAPIRET2_T .
@@ -142,7 +145,7 @@ public section.
       !IV_IFNAME          type /AIF/IFNAME
       !IV_IFVERSION       type /AIF/IFVERSION
       !IV_EOL             type STRING
-      !IV_TABNAME         type TABNAME   optional
+      !IV_REC_TABNAME     type TABNAME   optional
       !IV_KEYFIELD        type FIELDNAME optional
       !IV_KEYVALUE        type CLIKE     optional
     changing
@@ -156,6 +159,9 @@ public section.
       !IV_CP              type DMC_CPAGE optional
       !IV_WIDTH           type I optional
       !IV_EOL             type STRING
+      !IV_REC_TABNAME     type TABNAME   optional
+      !IV_KEYFIELD        type FIELDNAME optional
+      !IV_KEYVALUE        type CLIKE     optional
     changing
       !CV_SUCCESS         type /AIF/SUCCESSFLAG
       !CT_RETURN_TAB      type BAPIRET2_T .
@@ -165,6 +171,9 @@ public section.
       !IT_ROWS            type STRING_TABLE
       !IV_DIENSTNR        type CHAR4
       !IV_EOL             type STRING
+      !IV_REC_TABNAME     type TABNAME   optional
+      !IV_KEYFIELD        type FIELDNAME optional
+      !IV_KEYVALUE        type CLIKE     optional
     changing
       !CV_SUCCESS         type /AIF/SUCCESSFLAG
       !CT_RETURN_TAB      type BAPIRET2_T .
@@ -1602,9 +1611,9 @@ SELECT SINGLE NSRECIP, RECIPIENT
     ENDIF.
 
     " --- Secondary: additional recipient from dynamic table by dynamic key field ---
-    IF iv_tabname IS SUPPLIED AND iv_keyfield IS SUPPLIED AND iv_keyvalue IS NOT INITIAL.
+    IF iv_rec_tabname IS SUPPLIED AND iv_keyfield IS SUPPLIED AND iv_keyvalue IS NOT INITIAL.
       DATA(ls_dyn_recipient) = get_recipient_dynamic(
-        iv_tabname  = iv_tabname
+        iv_tabname  = iv_rec_tabname
         iv_keyfield = iv_keyfield
         iv_keyvalue = iv_keyvalue ).
 
@@ -1664,22 +1673,41 @@ SELECT SINGLE NSRECIP, RECIPIENT
       EXIT.
     ENDIF.
 
+    " --- Primary: recipient from /THKR/T_PROT_MSD (NS/IFNAME/IFVERSION) ---
     DATA(ls_recipient_list) = get_recipient_list(
       EXPORTING
-        iv_ns             = iv_ns                 " Namensraum
-        iv_ifname         = iv_ifname                 " Schnittstellenname
-        iv_ifversion      = iv_ifversion                 " Schnittstellenversion
-    ).
-    IF ls_recipient_list IS NOT INITIAL.
-      CALL METHOD get_mails_for_recipient_list EXPORTING is_recipient_list = ls_recipient_list CHANGING ct_mail_recipients = lt_mail_recipients.
+        iv_ns        = iv_ns
+        iv_ifname    = iv_ifname
+        iv_ifversion = iv_ifversion ).
 
-      IF lt_mail_recipients IS NOT INITIAL.
-        cv_success = send_mail(
-          EXPORTING
-            it_mail_recipients    = lt_mail_recipients
-            iv_attachment_content = lv_content
-            iv_attachment_name    = iv_output_filename ).
+    IF ls_recipient_list IS NOT INITIAL.
+      CALL METHOD get_mails_for_recipient_list
+        EXPORTING is_recipient_list  = ls_recipient_list
+        CHANGING  ct_mail_recipients = lt_mail_recipients.
+    ENDIF.
+
+    " --- Secondary: additional recipient from dynamic table by dynamic key field ---
+    IF iv_rec_tabname IS SUPPLIED AND iv_keyfield IS SUPPLIED AND iv_keyvalue IS NOT INITIAL.
+      DATA(ls_dyn_recipient) = get_recipient_dynamic(
+        iv_tabname  = iv_rec_tabname
+        iv_keyfield = iv_keyfield
+        iv_keyvalue = iv_keyvalue ).
+
+      IF ls_dyn_recipient IS NOT INITIAL.
+        get_mails_for_recipient_list(
+          EXPORTING is_recipient_list  = ls_dyn_recipient
+          CHANGING  ct_mail_recipients = lt_mail_recipients ).
       ENDIF.
+    ENDIF.
+
+    SORT lt_mail_recipients.
+    DELETE ADJACENT DUPLICATES FROM lt_mail_recipients.
+
+    IF lt_mail_recipients IS NOT INITIAL.
+      cv_success = send_mail(
+        it_mail_recipients    = lt_mail_recipients
+        iv_attachment_content = lv_content
+        iv_attachment_name    = iv_output_filename ).
     ENDIF.
 
   ENDMETHOD.
@@ -1842,28 +1870,41 @@ SELECT SINGLE NSRECIP, RECIPIENT
       RETURN.
     ENDIF.
 
+    " --- Primary: recipient from /THKR/T_AIF_REC by DIENSTNR ---
     SELECT SINGLE nsrecip, recipient
       FROM /thkr/t_aif_rec
       WHERE dienstnr = @iv_dienstnr
       INTO (@lv_nsrecip, @lv_recipient).
-    IF sy-subrc <> 0 OR lv_nsrecip IS INITIAL.
-      RETURN.
+
+    IF sy-subrc = 0 AND lv_nsrecip IS NOT INITIAL.
+      get_mails_for_recipient_list(
+        EXPORTING is_recipient_list  = VALUE #( ns = lv_nsrecip recipient = lv_recipient )
+        CHANGING  ct_mail_recipients = lt_mail_recipients ).
     ENDIF.
 
-    get_mails_for_recipient_list(
-      EXPORTING
-        is_recipient_list  = VALUE #( ns = lv_nsrecip recipient = lv_recipient )
-      CHANGING
-        ct_mail_recipients = lt_mail_recipients ).
+    " --- Secondary: additional recipient from dynamic table by dynamic key field ---
+    IF iv_rec_tabname IS SUPPLIED AND iv_keyfield IS SUPPLIED AND iv_keyvalue IS NOT INITIAL.
+      DATA(ls_dyn_recipient) = get_recipient_dynamic(
+        iv_tabname  = iv_rec_tabname
+        iv_keyfield = iv_keyfield
+        iv_keyvalue = iv_keyvalue ).
 
-    IF lt_mail_recipients IS INITIAL.
-      RETURN.
+      IF ls_dyn_recipient IS NOT INITIAL.
+        get_mails_for_recipient_list(
+          EXPORTING is_recipient_list  = ls_dyn_recipient
+          CHANGING  ct_mail_recipients = lt_mail_recipients ).
+      ENDIF.
     ENDIF.
 
-    cv_success = send_mail(
-      it_mail_recipients    = lt_mail_recipients
-      iv_attachment_content = lv_content
-      iv_attachment_name    = iv_output_filename ).
+    SORT lt_mail_recipients.
+    DELETE ADJACENT DUPLICATES FROM lt_mail_recipients.
+
+    IF lt_mail_recipients IS NOT INITIAL.
+      cv_success = send_mail(
+        it_mail_recipients    = lt_mail_recipients
+        iv_attachment_content = lv_content
+        iv_attachment_name    = iv_output_filename ).
+    ENDIF.
   ENDMETHOD.
 
 
@@ -1885,29 +1926,42 @@ SELECT SINGLE NSRECIP, RECIPIENT
       RETURN.
     ENDIF.
 
+    " --- Primary: recipient from /THKR/T_AIF_REC by DIENSTNR ---
     SELECT SINGLE nsrecip, recipient
       FROM /thkr/t_aif_rec
       WHERE dienstnr = @iv_dienstnr
       INTO (@lv_nsrecip, @lv_recipient).
-    IF sy-subrc <> 0 OR lv_nsrecip IS INITIAL.
-      RETURN.
+
+    IF sy-subrc = 0 AND lv_nsrecip IS NOT INITIAL.
+      get_mails_for_recipient_list(
+        EXPORTING is_recipient_list  = VALUE #( ns = lv_nsrecip recipient = lv_recipient )
+        CHANGING  ct_mail_recipients = lt_mail_recipients ).
     ENDIF.
 
-    get_mails_for_recipient_list(
-      EXPORTING
-        is_recipient_list  = VALUE #( ns = lv_nsrecip recipient = lv_recipient )
-      CHANGING
-        ct_mail_recipients = lt_mail_recipients ).
+    " --- Secondary: additional recipient from dynamic table by dynamic key field ---
+    IF iv_rec_tabname IS SUPPLIED AND iv_keyfield IS SUPPLIED AND iv_keyvalue IS NOT INITIAL.
+      DATA(ls_dyn_recipient) = get_recipient_dynamic(
+        iv_tabname  = iv_rec_tabname
+        iv_keyfield = iv_keyfield
+        iv_keyvalue = iv_keyvalue ).
 
-    IF lt_mail_recipients IS INITIAL.
-      RETURN.
+      IF ls_dyn_recipient IS NOT INITIAL.
+        get_mails_for_recipient_list(
+          EXPORTING is_recipient_list  = ls_dyn_recipient
+          CHANGING  ct_mail_recipients = lt_mail_recipients ).
+      ENDIF.
     ENDIF.
 
-    cv_success = send_mail(
-      it_mail_recipients    = lt_mail_recipients
-      iv_attachment_content = lv_content
-      iv_attachment_name    = iv_output_filename
-      iv_attachment_type    = 'txt' ).
+    SORT lt_mail_recipients.
+    DELETE ADJACENT DUPLICATES FROM lt_mail_recipients.
+
+    IF lt_mail_recipients IS NOT INITIAL.
+      cv_success = send_mail(
+        it_mail_recipients    = lt_mail_recipients
+        iv_attachment_content = lv_content
+        iv_attachment_name    = iv_output_filename
+        iv_attachment_type    = 'txt' ).
+    ENDIF.
   ENDMETHOD.
 
 
