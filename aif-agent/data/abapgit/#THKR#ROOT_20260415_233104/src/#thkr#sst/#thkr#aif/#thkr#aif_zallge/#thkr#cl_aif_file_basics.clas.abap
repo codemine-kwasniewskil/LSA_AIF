@@ -145,6 +145,26 @@ public section.
     changing
       !CV_SUCCESS         type /AIF/SUCCESSFLAG
       !CT_RETURN_TAB      type BAPIRET2_T .
+  methods WRITE_AND_SEND_FILE_BY_DEPT
+    importing
+      !IV_OUTPUT_FILENAME type STRING
+      !IT_ROWS            type STRING_TABLE
+      !IV_DIENSTNR        type CHAR4
+      !IV_CP              type DMC_CPAGE optional
+      !IV_WIDTH           type I optional
+      !IV_EOL             type STRING
+    changing
+      !CV_SUCCESS         type /AIF/SUCCESSFLAG
+      !CT_RETURN_TAB      type BAPIRET2_T .
+  methods WRITE_AND_SEND_FILE_CSV_BY_DEPT
+    importing
+      !IV_OUTPUT_FILENAME type STRING
+      !IT_ROWS            type STRING_TABLE
+      !IV_DIENSTNR        type CHAR4
+      !IV_EOL             type STRING
+    changing
+      !CV_SUCCESS         type /AIF/SUCCESSFLAG
+      !CT_RETURN_TAB      type BAPIRET2_T .
   methods GET_PROCESSING_STATUS
     importing
       !IS_DATA type /THKR/S_AIF_SAP
@@ -1764,5 +1784,105 @@ SELECT SINGLE NSRECIP, RECIPIENT
                           ELSE lv_st ).
       APPEND LINES OF is_data-storno[ glblid = iv_glblid ]-msg TO et_msgs.
     ENDIF.
+  ENDMETHOD.
+
+
+  METHOD write_and_send_file_by_dept.
+    DATA: lv_content         TYPE string VALUE '',
+          lt_mail_recipients TYPE bcsy_smtpa,
+          lv_nsrecip         TYPE /aif/ns,
+          lv_recipient       TYPE /aif/alrt_rec.
+
+    LOOP AT it_rows INTO DATA(row).
+      IF sy-tabix = lines( it_rows ).
+        lv_content = COND #( WHEN iv_width IS SUPPLIED
+                             THEN |{ lv_content }{ row WIDTH = 80 }|
+                             ELSE |{ lv_content }{ row }| ).
+      ELSE.
+        lv_content = COND #( WHEN iv_width IS SUPPLIED
+                             THEN |{ lv_content }{ row WIDTH = 80 }{ iv_eol }|
+                             ELSE |{ lv_content }{ row }{ iv_eol }| ).
+      ENDIF.
+    ENDLOOP.
+
+    CALL METHOD write_file_from_string
+      EXPORTING
+        iv_output_filename = iv_output_filename
+        iv_content         = lv_content
+        iv_cp              = iv_cp
+      CHANGING
+        ct_return_tab      = ct_return_tab
+        cv_success         = cv_success.
+
+    IF cv_success = 'N'.
+      RETURN.
+    ENDIF.
+
+    SELECT SINGLE nsrecip, recipient
+      FROM /thkr/t_aif_rec
+      WHERE dienstnr = @iv_dienstnr
+      INTO (@lv_nsrecip, @lv_recipient).
+    IF sy-subrc <> 0 OR lv_nsrecip IS INITIAL.
+      RETURN.
+    ENDIF.
+
+    get_mails_for_recipient_list(
+      EXPORTING
+        is_recipient_list  = VALUE #( ns = lv_nsrecip recipient = lv_recipient )
+      CHANGING
+        ct_mail_recipients = lt_mail_recipients ).
+
+    IF lt_mail_recipients IS INITIAL.
+      RETURN.
+    ENDIF.
+
+    cv_success = send_mail(
+      it_mail_recipients    = lt_mail_recipients
+      iv_attachment_content = lv_content
+      iv_attachment_name    = iv_output_filename ).
+  ENDMETHOD.
+
+
+  METHOD write_and_send_file_csv_by_dept.
+    DATA(lv_content)         = concat_lines_of( table = it_rows sep = iv_eol ).
+    DATA(lt_mail_recipients) = VALUE bcsy_smtpa( ).
+    DATA: lv_nsrecip   TYPE /aif/ns,
+          lv_recipient TYPE /aif/alrt_rec.
+
+    write_file_from_string(
+      EXPORTING
+        iv_output_filename = iv_output_filename
+        iv_content         = lv_content
+      CHANGING
+        ct_return_tab      = ct_return_tab
+        cv_success         = cv_success ).
+
+    IF cv_success = 'N'.
+      RETURN.
+    ENDIF.
+
+    SELECT SINGLE nsrecip, recipient
+      FROM /thkr/t_aif_rec
+      WHERE dienstnr = @iv_dienstnr
+      INTO (@lv_nsrecip, @lv_recipient).
+    IF sy-subrc <> 0 OR lv_nsrecip IS INITIAL.
+      RETURN.
+    ENDIF.
+
+    get_mails_for_recipient_list(
+      EXPORTING
+        is_recipient_list  = VALUE #( ns = lv_nsrecip recipient = lv_recipient )
+      CHANGING
+        ct_mail_recipients = lt_mail_recipients ).
+
+    IF lt_mail_recipients IS INITIAL.
+      RETURN.
+    ENDIF.
+
+    cv_success = send_mail(
+      it_mail_recipients    = lt_mail_recipients
+      iv_attachment_content = lv_content
+      iv_attachment_name    = iv_output_filename
+      iv_attachment_type    = 'txt' ).
   ENDMETHOD.
 ENDCLASS.
