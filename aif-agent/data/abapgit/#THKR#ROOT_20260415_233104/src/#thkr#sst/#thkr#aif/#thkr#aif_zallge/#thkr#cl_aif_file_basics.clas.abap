@@ -142,6 +142,9 @@ public section.
       !IV_IFNAME          type /AIF/IFNAME
       !IV_IFVERSION       type /AIF/IFVERSION
       !IV_EOL             type STRING
+      !IV_TABNAME         type TABNAME   optional
+      !IV_KEYFIELD        type FIELDNAME optional
+      !IV_KEYVALUE        type CLIKE     optional
     changing
       !CV_SUCCESS         type /AIF/SUCCESSFLAG
       !CT_RETURN_TAB      type BAPIRET2_T .
@@ -232,6 +235,13 @@ private section.
       !IV_IFVERSION type /AIF/IFVERSION
     returning
       value(RS_RECIPIENT_LIST) type TY_S_RECIPIENT_LIST .
+  methods GET_RECIPIENT_DYNAMIC
+    importing
+      !IV_TABNAME  type TABNAME
+      !IV_KEYFIELD type FIELDNAME
+      !IV_KEYVALUE type CLIKE
+    returning
+      value(RS_RECIPIENT) type TY_S_RECIPIENT_LIST .
   methods GET_TREASURY_ID
     importing
       !IV_BELNR type BELNR_D
@@ -1579,20 +1589,34 @@ SELECT SINGLE NSRECIP, RECIPIENT
       RETURN.
     ENDIF.
 
+    " --- Primary: existing recipient from /THKR/T_PROT_MSD (NS/IFNAME/IFVERSION) ---
     DATA(ls_recipient_list) = get_recipient_list(
       iv_ns        = iv_ns
       iv_ifname    = iv_ifname
       iv_ifversion = iv_ifversion ).
 
-    IF ls_recipient_list IS INITIAL.
-      RETURN.
+    IF ls_recipient_list IS NOT INITIAL.
+      get_mails_for_recipient_list(
+        EXPORTING is_recipient_list  = ls_recipient_list
+        CHANGING  ct_mail_recipients = lt_mail_recipients ).
     ENDIF.
 
-    get_mails_for_recipient_list(
-      EXPORTING
-        is_recipient_list  = ls_recipient_list
-      CHANGING
-        ct_mail_recipients = lt_mail_recipients ).
+    " --- Secondary: additional recipient from dynamic table by dynamic key field ---
+    IF iv_tabname IS SUPPLIED AND iv_keyfield IS SUPPLIED AND iv_keyvalue IS NOT INITIAL.
+      DATA(ls_dyn_recipient) = get_recipient_dynamic(
+        iv_tabname  = iv_tabname
+        iv_keyfield = iv_keyfield
+        iv_keyvalue = iv_keyvalue ).
+
+      IF ls_dyn_recipient IS NOT INITIAL.
+        get_mails_for_recipient_list(
+          EXPORTING is_recipient_list  = ls_dyn_recipient
+          CHANGING  ct_mail_recipients = lt_mail_recipients ).
+      ENDIF.
+    ENDIF.
+
+    SORT lt_mail_recipients.
+    DELETE ADJACENT DUPLICATES FROM lt_mail_recipients.
 
     IF lt_mail_recipients IS INITIAL.
       RETURN.
@@ -1884,5 +1908,25 @@ SELECT SINGLE NSRECIP, RECIPIENT
       iv_attachment_content = lv_content
       iv_attachment_name    = iv_output_filename
       iv_attachment_type    = 'txt' ).
+  ENDMETHOD.
+
+
+  METHOD get_recipient_dynamic.
+    DATA: lv_nsrecip   TYPE /aif/ns,
+          lv_recipient TYPE /aif/alrt_rec,
+          lv_where     TYPE string.
+
+    lv_where = |{ iv_keyfield } = '{ iv_keyvalue }'|.
+
+    SELECT SINGLE nsrecip, recipient
+      FROM (iv_tabname)
+      WHERE (lv_where)
+      INTO (@lv_nsrecip, @lv_recipient).
+
+    IF sy-subrc <> 0 OR lv_nsrecip IS INITIAL.
+      RETURN.
+    ENDIF.
+
+    rs_recipient = VALUE #( ns = lv_nsrecip recipient = lv_recipient ).
   ENDMETHOD.
 ENDCLASS.
