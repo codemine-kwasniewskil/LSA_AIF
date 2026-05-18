@@ -97,6 +97,13 @@ FUNCTION /thkr/aif_zallge_act_apn .
   Lv_logical_filename = |/THKR/AIF_{ lv_ifname }_APN|.
   lv_output_filename = lo_protokoll->get_filepath( iv_logical_filename = lv_logical_filename iv_filename = CONV string( <ls_data>-common-dateiname ) ).
 
+  " ifname pattern I_NNNN_VVV — offset 2 length 4 gives the interface number
+  DATA(lv_dienstnr) = COND char4(
+    WHEN lv_ifname+2(4) = '0008'
+      OR lv_ifname+2(4) = '0009'
+      OR lv_ifname+2(4) = '0010'
+    THEN <ls_data>-apn_kopf-dienststelle ).
+
   CALL METHOD lo_protokoll->write_and_send_file
     EXPORTING
       iv_output_filename = lv_output_filename
@@ -105,7 +112,10 @@ FUNCTION /thkr/aif_zallge_act_apn .
       iv_ifname          = lv_ifname
       iv_ifversion       = lv_ifversion
       iv_width           = 80
-      iv_eol              = conv string( cl_abap_char_utilities=>newline )
+      iv_eol             = CONV string( cl_abap_char_utilities=>newline )
+      iv_rec_tabname     = COND #( WHEN lv_dienstnr IS NOT INITIAL THEN '/THKR/T_AIF_REC' )
+      iv_keyfield        = COND #( WHEN lv_dienstnr IS NOT INITIAL THEN 'DIENSTNR' )
+      iv_keyvalue        = lv_dienstnr
     CHANGING
       cv_success         = success
       ct_return_tab      = return_tab[].
